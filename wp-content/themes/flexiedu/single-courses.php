@@ -6,6 +6,8 @@ get_header();
 
     $banner_image_sin_course = get_field('banner_image_sin_course');
 
+    $currency_symbol_flexiedu = get_field('currency_symbol_flexiedu', 'option');
+
     if(empty($banner_image_sin_course)){
         $banner_image_sin_course = get_template_directory_uri().'/assets/images/product-details-banner.jpg';
     }
@@ -23,8 +25,8 @@ get_header();
 
   <section class="course-details space-mr">
     <div class="container">
-      <div class="row">
-        <div class="col-md-8">
+      <div class="row gy-lg-0 gy-4">
+        <div class="col-lg-8">
           <section class="training-section">
             <div class="training-header">
               <h2><?php the_title(); ?></h2>
@@ -151,7 +153,7 @@ get_header();
 
 
         </div>
-        <div class="col-md-4">
+        <div class="col-lg-4">
           <?php 
           
            if(has_post_thumbnail()){
@@ -203,7 +205,7 @@ get_header();
 
 
                     
-          ?>
+          
           <div class="course-card-rgt">
             <div class="course-image1">
               <img src="<?php echo $courseImg; ?>" alt="<?php the_title(); ?>" />

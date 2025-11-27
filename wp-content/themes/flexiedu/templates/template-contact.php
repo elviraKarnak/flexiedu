@@ -33,11 +33,11 @@ get_header();
     
   <section class="contact-section space-mr">
     <div class="container">
-      <div class="row row1">
+      <div class="row row1 gy-xl-0 gy-5">
         
         <?php if($form_shortcode_cu){ ?>
         <!-- Left Column: Contact Form -->
-        <div class="col-md-7">
+        <div class="col-xl-7">
             <?php if($from_title_cu){ ?>
                 <h2 class="sc-hd"><?php echo $from_title_cu; ?></h2>
             <?php } ?>
@@ -54,7 +54,7 @@ get_header();
 
         <?php if(have_rows('contact_us_cu')) { ?>
                 <!-- Right Column: Contact Info -->
-            <div class="col-md-5 mt-5 mt-md-0 btm-sc rgt-sc d-flex align-items-center">
+            <div class="col-xl-5 mt-5 mt-md-0 btm-sc rgt-sc d-flex align-items-center mt-lg-0 mt-5">
                 <div class="w-100">
                     <?php while(have_rows('contact_us_cu')){ 
                         the_row();
@@ -140,7 +140,7 @@ get_header();
         </div>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-md-4">
 
       <?php
       

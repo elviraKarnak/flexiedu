@@ -83,6 +83,8 @@ jQuery(document).ready(function($){
                 $("#course-results").html(response);
 
                 $("#loader_coursefilter").hide();
+                
+                $('.filter-sidebar').removeClass('active');
             }
         });
 
@@ -134,6 +136,7 @@ jQuery(document).ready(function($){
             success: function (response) {
                 $("#course-results").html(response);
                  $("#loader_coursefilter").hide();
+                 $('.filter-sidebar').removeClass('active');
             }
         });
 
@@ -214,6 +217,7 @@ jQuery(document).ready(function($){
 
 
                 $("#loader_coursefilter").hide();
+                $('.filter-sidebar').removeClass('active');
             }
         });
 

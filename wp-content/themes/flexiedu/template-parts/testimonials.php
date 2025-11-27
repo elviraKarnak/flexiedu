@@ -6,6 +6,9 @@
  $author_box_tst_flexiedu = get_field('author_box_tst_flexiedu', 'option');
  $number_sts_lnr_tst_flexiedu = get_field('number_sts_lnr_tst_flexiedu', 'option');
  $text_sts_lnr_tst_flexiedu = get_field('text_sts_lnr_tst_flexiedu', 'option');
+
+ $star_ratings_tst_flexiedu = get_field('star_ratings_tst_flexiedu_1', 'option');
+ $feedback_tst_flexiedu = get_field('feedback_tst_flexiedu_1', 'option');
  
 
  ?>
@@ -51,7 +54,7 @@
 
                 <div class="stat-item start-item2 d-flex align-items-center">
                         <?php if($star_ratings_tst_flexiedu){ ?>
-                            <div class="stat-number"><?php echo $star_ratings_tst_flexiedu; ?></div>
+                            <div class="stars"><img src="<?php echo get_template_directory_uri(); ?>'/assets/images/stars.png'" alt="star"> </div>
                         <?php } ?>
                         <?php if($feedback_tst_flexiedu){ ?>
                             <div class="stat-label"><?php echo $feedback_tst_flexiedu; ?></div>
@@ -78,7 +81,7 @@
                 <div class="testimonial-card">
                     <?php if($star_ratings_tst_sin){ ?>
                         <div class="testimonial-stars">
-                            <?php echo $star_ratings_tst_sin; ?>
+                           <img src="<?php echo get_template_directory_uri(); ?>'/assets/images/stars.png'" alt="star">  
                         </div>
                     <?php } ?>
 

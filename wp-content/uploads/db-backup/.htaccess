@@ -1,4 +1,3 @@
-
 # Disable public access to this folder
 <IfModule mod_authz_core.c>
     Require all denied

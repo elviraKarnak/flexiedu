@@ -56,7 +56,7 @@ get_header();
         </div>
 
         <?php if( $description_os)?>
-        <div class="col-md-5">
+        <div class="col-xl-8">
           <p class="mb-0"><?php echo $description_os; ?></p>
         </div>
       </div>

@@ -103,6 +103,7 @@ function filter_courses_cb() {
 
                 <div class="col-xl-4 col-md-6">
                     <div class="course-card">
+                        <a href="<?php the_permalink(); ?>">
                         <?php if(has_post_thumbnail()){?>
                         <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="course-image" width="500"
                         height="300">
@@ -110,9 +111,10 @@ function filter_courses_cb() {
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/feature1.jpg" alt="Health & Safety Online Training" class="course-image" width="500"
                                         height="300">
                         <?php } ?> 
+                        </a>
                         <div class="course-content">
                         <div>
-                            <h3 class="course-title"><?php the_title(); ?></h3>
+                           <a href="<?php the_permalink(); ?>"> <h3 class="course-title"><?php the_title(); ?></h3></a>
                             <p class="course-description"><?php echo wp_trim_words(get_the_excerpt(), 15, '...' ); ?>
                             </p>
                         </div>
@@ -162,10 +164,13 @@ function filter_courses_cb() {
         </div>
 
             
-   <?php } else {
-        echo '<p>No courses found.</p>';
-    }
+    <?php } else {?>
+    
+    <div class="no-course-found">
+        <p>Looks like no courses match your current options. Try selecting different ones.</p>
+    </div>
 
+    <?php } 
     wp_reset_postdata();
     echo ob_get_clean();
     wp_die();

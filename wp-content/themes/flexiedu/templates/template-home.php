@@ -67,8 +67,8 @@ $video_cover_hb = get_field('video_cover_hb');
     <div class="container">
       <div class="row justify-content-between align-items-center">
         <div class="col-md-6">
-          <?php if($sub_title_hb){ ?>
-            <div class="top-title"><?php echo $sub_title_hb; ?></div>
+          <?php if($sub_title_wu){ ?>
+            <div class="top-title"><?php echo $sub_title_wu; ?></div>
           <?php } ?>
           <?php if($title_wu){ ?>
             <h2 class="sc-hd mb-0"><?php echo $title_wu; ?></h2>
@@ -169,6 +169,7 @@ $video_cover_hb = get_field('video_cover_hb');
           ?>
     
           <div class="course-card">
+            <a href="<?php the_permalink(); ?>">
             <?php if(has_post_thumbnail()){?>
             <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="course-image" width="500"
               height="300">
@@ -176,9 +177,10 @@ $video_cover_hb = get_field('video_cover_hb');
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/feature1.jpg" alt="Health & Safety Online Training" class="course-image" width="500"
                             height="300">
               <?php } ?> 
+              </a>
             <div class="course-content">
               <div>
-                <h3 class="course-title"><?php the_title(); ?></h3>
+               <a href="<?php the_permalink(); ?>"><h3 class="course-title"><?php the_title(); ?></h3></a> 
                 <p class="course-description"><?php echo wp_trim_words(get_the_excerpt(), 15, '...' ); ?>
                 </p>
               </div>
