@@ -1,0 +1,181 @@
+= [3.0.5] 2026-02-11 =
+
+* Fix - CSV and XLS download buttons now work correctly in the Student Quiz Results table.".
+* Fix - Fixed a Learners Pass/Fail Rate Block not working on a custom page without other blocks.
+* Fix - Fixed missing quiz categories in the bulk export report.
+* Fix - Fixed overly precise decimals in the `Earned Points` column in the `Quiz Reports` block.
+* Fix - Fixed the incorrect text domains in various files to improve translation support.
+* Fix - `Quiz Reports` block now supports standalone quizzes (quizzes not linked to any course).
+* Fix - Removed the dependency of some blocks on the Total Revenue block. They can now work without it being on the page.
+* Fix - Resolved an issue where the "Daily Enrollments" block would not respect the chosen time period filters.
+* Fix - Resolved various block dependency issues, allowing for more customizable reporting dashboard pages.
+* Tweak - Switched to 200 API response codes instead of 500 where it was used incorrectly.
+* Tweak - The "Daily Enrollments" Block now returns Course Enrollment data instead of User Registration data.
+* Tweak - The "Total Learners" Block now returns a count of unique learners who have enrolled into one or more courses within the chosen time period.
+
+= [3.0.4] 2026-01-08 =
+
+* Fix - Fixed `Undefined array key "wpml_lang"` error on frontend reports page.
+* Fix - Fixed `PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated` error on frontend reports page.
+* Fix - Resolved `Translation loading for the learndash-reports-pro domain was triggered too early.` error in Wordpress 6.7+.
+* Tweak - Improved Block compatibility with WordPress 6.9.
+* Tweak - Updated PhpSpreadsheet library to v1.30.1.
+* Tweak - Updated the plugin requirements to require WordPress 6.6.
+* Tweak - Updated templates: `includes/views/result-box.php`.
+
+= [3.0.3] =
+
+* Fix - Resolved an issue where learner counts could be incorrect. Re-running the Data Upgrades under ProPanel -> Settings -> Data Upgrades will be necessary.
+* Fix - Fixed an issue where the date filter was not working in the bulk export modal.
+* Fix - Resolved an issue where the Duration Selectors Block wouldn't be applied correctly to other Blocks on the page.
+* Fix - Resolved multiple issues where LearnDash custom labels were not supported on the frontend dashboard of ProPanel.
+* Fix - Resolved an issue where the user search results in the quiz reports were not always accurate.
+* Performance - Improved the speed of the Data Upgrades.
+* Tweak - Updated PhpSpreadsheet library to v1.29.7.
+* Tweak - Updated functions: `wrld_get_custom_ld_labels`.
+
+= [3.0.2] =
+
+* Fix - Resolved an issue for non-group leader and non-administrator users where the Student Quiz Reports page wouldn't function properly.
+* Fix - Resolved a potential fatal error when generating report filter data.
+
+= [3.0.1] =
+
+* Fix - Resolved an issue where if Course Categories were disabled, it was not possible to track time within Course content.
+* Fix - Resolved an issue with licensing.
+
+= [3.0.0] =
+
+* Feature - Added a "Refresh available options" link to the "Report Tools" Block.
+* Fix - Resolved an issue where the frontend reports onboarding modal appears more than once.
+* Fix - Fixed an issue where the Course List Block wouldn't filter by Dates chosen with the Duration Selectors Block correctly.
+* Fix - Fixed an issue where the Course List Block wouldn't properly filter Quiz attempts when filtered to a specific user via the Report Tools Block.
+* Fix - Resolved an issue where the quizzes report was showing an errors when no quizzes were created.
+* Fix - Resolved an issue where some setting fields updates were not being reflected in the settings page.
+* Fix - Fixed quiz attempts report pagination when selecting a single user.
+* Fix - Fixed encoded HTML entities being outputted in frontend dashboard blocks.
+* Fix - Fixed detailed course reports block header showing up over other UI elements.
+* Fix - Fixed fatal error when downloading single or bulk export quiz report if the total for quiz points is 0.
+* Fix - Resolved an issue where Total Revenue and Revenue from Courses blocks were not counting purchases made via LearnDash transactions.
+* Security - Tightened security around REST API.
+* Tweak - Incorporated the free version functionalities.
+* Tweak - Added a filter to allow to count total registered users considering different user roles.
+* Tweak - Updated the name of the "Default report pattern" Block Pattern to be "ProPanel Dashboard" and the name of the "Default student quiz results pattern" Block Pattern to be "Student Quiz Results".
+* Tweak - ProPanel Dashboard and Student Quiz Results Block Patterns are now safeguarded to ensure optimal performance and stability.
+* Tweak - Added actions: `learndash_reports_uninstall`.
+* Tweak - Added filters: `learndash_propanel_api_user_has_access`, `learndash_propanel_pattern_blocks`, `learndash_propanel_pattern_categories`, `learndash_propanel_report_users_registered_user_roles`.
+* Tweak - Deprecated constants: `LDRP_RECOMENDED_FREE_PLUGIN_VERSION`, `WRLD_PLUGIN_VERSION`.
+* Tweak - Deprecated filters: `wrld_filter_total_revenue_access_permission`, `wrld_filter_coursewise_revenue_access_permission`.
+* Tweak - Deprecated functions: `ldrp_pro_update_student_dashboard_modal`, `ldrp_pro_onboarding_modal`, `ldrp_pro_update_student_dashboard_modal`, `ldrp_pro_update_free_modal`, `wisdm_reports_free_dependency_check`, `wisdm_reports_free_activation_notices`, `wisdm_reports_free_activated_info`, `ldrp_add_recomendation_notice`, `wrld_free_upgrade_to_pro_modal`, `wrld_add_review_notice`, `wrld_add_upgrade_notice`, `wrld_add_recomendation_notice`, `wrld_show_review_notice`, `wrld_show_review_notice`.
+* Tweak - Updated functions: `ldrp_include_files`.
+* Tweak - Added functions: `learndash_propanel_deactivate_reports_pro`, `learndash_propanel_get_the_title`, `learndash_propanel_show_reports_pro_deactivation_message`.
+
+= [1.8.3.1] =
+
+* Fix - Fixed fatal error during activation if an outdated version of LearnDash LMS was installed.
+
+= [1.8.3] =
+
+* Fix - Resolved an issue where a fatal error was thrown when the plugin was activated without the LearnDash Reports Free plugin also having been installed and activated.
+* Tweak - Updated functions: `wisdm_reports_free_dependency_check`, `ldrp_pro_onboarding_modal`, `ldrp_pro_update_free_modal`, `ldrp_pro_update_student_dashboard_modal`.
+
+= [1.8.2] =
+
+* Tweak - Updated licensing and branding.
+* Tweak - Licensing changed to point toward www.learndash.com.
+* Tweak - Deprecated functions: `ldrp_load_license`.
+* Tweak - Deprecated classes: `WdmAddLicenseData`, `WdmGetLicenseData`, `WdmLicense`, `WdmPluginUpdater`, `WdmSendDataToServer`.
+* Tweak - Deprecated filters: `learndash-reports-pro_license_page_capability`.
+
+= [1.8.1] =
+
+* Tweak - Updated the licensing code.
+* Tweak - Updated code for compatibility with WP Coding standards.
+
+= [1.8.0] =
+
+* Feature - Revamped the ‘Time Spent’ block where Admin and Group Leaders will be able to filter the data using different filters to observe the learners and courses time spent.
+* Feature - Added compatibility with WPML plugin.
+
+= [1.7.1] =
+
+* Fix - Added an additional step to onboarding to improve reports performance.
+* Fix - Fixed HTML structure breaking in some scenario for quiz reports issue.
+
+= [1.7.0] =
+
+* Fix - Design fixes related to BuddyBoss theme.
+
+= [1.6.1] =
+
+* Fix - Added All option missing for IR and GL in the Inactive Users List in Course dropdown.
+* Fix - Course filter issue after selecting group filter.
+* Fix - Added error class and Alert text in admin notice for free plugin deactivate warning.
+
+= [1.6.0] =
+
+* Feature - Added a student quiz reports Gutenberg block and a My Quiz Result Page through which a user can check their quiz attempts and results.
+* Feature - Added Feature to track visits to the course /Lesson/Topic /Quiz pages in the Learner Activity Block and Inactive Users List block.
+* Feature - Added User's Full Name column in the Quiz Bulk Export File.
+
+= [1.5.0] =
+
+* Feature - Added New Learner Activity Log Block on the dashboard.
+* Feature - Added New Inactive User List Block on the dashboard.
+
+= [1.4.1] =
+
+* Feature - A modal window with user and date filters has been introduced for admin users to filter and export statistics data to excel and csv.
+
+= [1.4.0] =
+
+* Feature - Added a time tracking module that tracks the user's idle time.
+* Feature - Added a bulk exporting feature to the quiz reports.
+
+= [1.3.0] =
+
+* Feature - Added a feature to exclude Users and User Roles from the reports.
+
+= [1.2.1] =
+
+* Fix - Total Learners data in the "Total Learners" block was currently showing total users on the site (Now only subscribers will be counted).
+* Fix - "Course Completion Rate" block count issue.
+* Fix - Detailed Attempt Report - Class Score - Incorrect Data was appearing for the Group Leader. This will be changed to Group Average and the value displayed will be the average of the Group when a Group Leader views this report.
+* Fix - For Average Quiz Attempts, if a quiz is associated with more than one course, the system was counting twice the attempts for a learner for that quiz.
+
+= [1.2.0] =
+
+* Fix - Revisting the Quiz report tab not showing the default view.
+* Fix - Click to disabled previous button under quiz table was operational & giving wrong results.
+* Tweak - Onboarding flow to quickly configure the plugin.
+
+= [1.1.0] =
+
+* Fix - Quiz Filters getting duplicated in the customized view form.
+* Fix - In bulk export feature if we download file in .xlsx format then tags are getting displayed for some field.
+* Fix - The Quiz dropdown should display the Quizzes in the Course when the Course filter is selected in Customize Reports filters.
+* Tweak - Default placeholder for the Search bar in Quiz Reports.
+* Tweak - Change the text message on the Customize View Tab of the Quiz report tab.
+* Tweak - Default Quiz table name changed to All Attempts Report.
+* Tweak - Added title to Question respond tab.
+
+= [1.0.4] =
+
+* Fix - Back-end export featue for quiz statistics.
+* Tweak - Tested with wp 6.0.
+
+= [1.0.3] =
+
+* Fix - Pro plugin not getting activated.
+
+= [1.0.2] =
+
+* Fix - Reports of the quizzes of all the users of the course were accessible to the group leader, now the group leader can only access the reports of the group users.
+
+= [1.0.1] =
+
+* Fix - Minor fix related to free plugin update.
+
+= [1.0.0] =
+
+* Feature - Plugin Released.

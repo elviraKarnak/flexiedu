@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "instructor-role/wisdm-instructor-products",
+  "version": "0.1.0",
+  "title": "Instructor Role: Products for Instructor",
+  "category": "widgets",
+  "icon": "welcome-widgets-menus",
+  "keywords": [
+    "instructor"
+  ],
+  "description": "Create a Block to display instructor products",
+  "supports": {
+    "html": false,
+    "jsx": true
+  },
+  "textdomain": "wdm_instructor_role",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./products.js"
+}

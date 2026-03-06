@@ -1,0 +1,309 @@
+.ir-btn-outline,
+.mantine-Modal-close {
+  background-color: transparent !important;
+  color: #444 !important;
+}
+.wp-block-instructor-role-wisdm-all-courses > div {
+  min-height: 800px;
+}
+.wp-block-instructor-role-wisdm-all-courses .ir-courses-tabs {
+  flex-wrap: wrap;
+}
+.wp-block-instructor-role-wisdm-all-courses .ir-courses-tabs button {
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  color: #2e353c;
+  font-weight: 400 !important;
+  padding: 10px 16px !important;
+}
+.wp-block-instructor-role-wisdm-all-courses .ir-courses-tabs button > div {
+  min-height: 18px;
+}
+.wp-block-instructor-role-wisdm-all-courses .ir-courses-tabs button.active {
+  border-bottom: 1px solid;
+  font-weight: 600 !important;
+}
+.wp-block-instructor-role-wisdm-all-courses
+  .ir-courses-tabs
+  button.active:hover {
+  border: none !important;
+  border-bottom: 1px solid !important;
+}
+.ir-btn-subtle,
+.ir-btn-subtle:hover,
+.ir-filter-trash .ir-btn-subtle.ir-dummy-btn:hover,
+.wp-block-instructor-role-wisdm-all-courses .ir-courses-tabs button:hover {
+  border: none !important;
+}
+.wp-block-instructor-role-wisdm-all-courses .ir-courses-tabs button:focus {
+  border-right: none;
+  border-left: none;
+  border-top: none;
+}
+.wp-block-instructor-role-wisdm-all-courses .textInput-icon input {
+  padding-right: 30px;
+}
+.wp-block-instructor-role-wisdm-all-courses .ir-course-listing-container,
+.wp-block-instructor-role-wisdm-all-courses .mantine-Card-cardSection > div {
+  position: relative;
+}
+.wp-block-instructor-role-wisdm-all-courses .ir-course-info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  position: relative;
+}
+.wp-block-instructor-role-wisdm-all-courses
+  .ir-course-listing-container
+  .mantine-Checkbox-root {
+  right: 8px;
+  position: absolute;
+  top: 8px;
+  z-index: 1;
+}
+.wp-block-instructor-role-wisdm-all-courses
+  .ir-course-listing-container
+  .mantine-Checkbox-root
+  input[type="checkbox"] {
+  height: 100%;
+  width: 100%;
+}
+.wp-block-instructor-role-wisdm-all-courses
+  .ir-course-listing-container
+  .ir-absolute-badges {
+  bottom: 8px;
+  right: 8px;
+  position: absolute;
+}
+.wp-block-instructor-role-wisdm-all-courses
+  .ir-course-listing-container
+  .ir-absolute-badges
+  > div {
+  background-color: rgba(37, 38, 43, 0.56) !important;
+  text-transform: capitalize;
+}
+.wp-block-instructor-role-wisdm-all-courses
+  .ir-course-listing-container
+  .ir-courses-wrap {
+  width: calc(100% + 32px);
+}
+.wp-block-instructor-role-wisdm-all-courses
+  .ir-course-listing-container
+  .ir-courses-wrap
+  > div {
+  max-width: 33.33%;
+  min-width: 33.33%;
+}
+.wp-block-instructor-role-wisdm-all-courses
+  .ir-additional-filters
+  .mantine-Select-input {
+  background-image: none;
+  border-radius: 4px;
+  padding: 1px 12px;
+}
+.wp-block-instructor-role-wisdm-all-courses .mantine-Select-input {
+  border: 1px solid #ced4da !important;
+  border-radius: 4px;
+}
+.wp-block-instructor-role-wisdm-all-courses
+  .ir-search-courses
+  .mantine-Input-input {
+  border-radius: 8px;
+  height: 42px;
+}
+.wp-block-instructor-role-wisdm-all-courses .mantine-Badge-root,
+.wp-block-instructor-role-wisdm-all-courses button {
+  font-size: 0.875rem !important;
+}
+.wp-block-instructor-role-wisdm-all-courses .ir-no-course {
+  margin-top: 30px;
+  text-align: center;
+}
+.wp-block-instructor-role-wisdm-all-courses .ir-no-course .mantine-Image-root {
+  margin: auto;
+}
+.wp-block-instructor-role-wisdm-all-courses .ml-minus {
+  margin-right: -30px;
+}
+.ir-xl .ir-additional-filters {
+  flex-wrap: nowrap;
+}
+.ir-md
+  .wp-block-instructor-role-wisdm-all-courses
+  .ir-course-listing-container
+  .ir-courses-wrap
+  > div {
+  max-width: 50%;
+  min-width: 50%;
+}
+.ir-sm
+  .wp-block-instructor-role-wisdm-all-courses
+  .ir-course-listing-container
+  .ir-courses-wrap
+  > div,
+.ir-xs
+  .wp-block-instructor-role-wisdm-all-courses
+  .ir-course-listing-container
+  .ir-courses-wrap
+  > div {
+  max-width: 100%;
+  min-width: 100%;
+}
+.ir-sm
+  .wp-block-instructor-role-wisdm-all-courses
+  .ir-search-courses
+  .mantine-Input-input,
+.ir-xs
+  .wp-block-instructor-role-wisdm-all-courses
+  .ir-search-courses
+  .mantine-Input-input {
+  width: 200px;
+}
+.ir-xs
+  .wp-block-instructor-role-wisdm-all-courses
+  .ir-search-courses
+  button
+  svg {
+  display: none;
+}
+.ir-disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+[modal="delete-course"] .mantine-Modal-header,
+[modal="delete-selected-courses"] .mantine-Modal-header,
+[modal="trash-course"] .mantine-Modal-header,
+[modal="trash-selected-courses"] .mantine-Modal-header {
+  color: #2e353c;
+  font-size: 16px;
+  font-weight: 700;
+}
+[modal="delete-course"] .mantine-Modal-body .mantine-Text-root,
+[modal="delete-selected-courses"] .mantine-Modal-body .mantine-Text-root,
+[modal="trash-course"] .mantine-Modal-body .mantine-Text-root,
+[modal="trash-selected-courses"] .mantine-Modal-body .mantine-Text-root {
+  color: #2e353c;
+  font-size: 16px;
+  font-weight: 400;
+}
+[modal="delete-course"]
+  .mantine-Modal-body
+  .mantine-Group-root
+  > button:last-child:hover,
+[modal="delete-selected-courses"]
+  .mantine-Modal-body
+  .mantine-Group-root
+  > button:last-child:hover,
+[modal="trash-course"]
+  .mantine-Modal-body
+  .mantine-Group-root
+  > button:last-child:hover,
+[modal="trash-selected-courses"]
+  .mantine-Modal-body
+  .mantine-Group-root
+  > button:last-child:hover {
+  border: 1px solid transparent;
+}
+[modal="delete-course"]
+  .mantine-Modal-body
+  .mantine-Group-root
+  > button:nth-last-child(2):hover,
+[modal="delete-selected-courses"]
+  .mantine-Modal-body
+  .mantine-Group-root
+  > button:nth-last-child(2):hover,
+[modal="trash-course"]
+  .mantine-Modal-body
+  .mantine-Group-root
+  > button:nth-last-child(2):hover,
+[modal="trash-selected-courses"]
+  .mantine-Modal-body
+  .mantine-Group-root
+  > button:nth-last-child(2):hover {
+  border: 1px solid #ced4da;
+  color: #000;
+}
+[modal="delete-course"] .mantine-Modal-close,
+[modal="delete-selected-courses"] .mantine-Modal-close,
+[modal="trash-course"] .mantine-Modal-close,
+[modal="trash-selected-courses"] .mantine-Modal-close {
+  background-color: transparent;
+  border: none !important;
+  color: #868e96;
+}
+.mantine-Modal-close:hover,
+[modal="delete-course"] .mantine-Modal-close:hover,
+[modal="delete-selected-courses"] .mantine-Modal-close:hover,
+[modal="trash-course"] .mantine-Modal-close:hover,
+[modal="trash-selected-courses"] .mantine-Modal-close:hover {
+  border: none;
+  color: #868e96;
+}
+.ir-w-100 {
+  width: 100%;
+}
+.ir-top-border {
+  border-top: 1px solid #ddd;
+}
+.ir-btn-subtle {
+  background-color: transparent !important;
+  padding: 0 !important;
+}
+.ir-btn-outline,
+.ir-btn-outline:hover {
+  border: 1px solid #ddd !important;
+}
+.mantine-Modal-close {
+  border: none !important;
+}
+.ir-btn-danger,
+.ir-filter-trash .ir-btn-subtle.ir-danger-color:hover {
+  background-color: #de554b !important;
+  color: #fff !important;
+}
+.ir-btn-danger,
+.ir-btn-danger:hover {
+  border: 1px solid #de554b !important;
+}
+.ir-filter-trash .ir-btn-subtle {
+  padding: 10px 15px !important;
+}
+.ir-filter-trash .ir-btn-subtle:hover {
+  border: 1px solid !important;
+}
+.ir-filter-trash .ir-btn-subtle.ir-dummy-btn {
+  cursor: auto;
+}
+.ir-danger-color {
+  color: #de554b !important;
+}
+.ir-right-border {
+  border-radius: 0 !important;
+}
+.mantine-Select-input {
+  border: 1px solid #ced4da !important;
+}
+
+.wp-block-instructor-role-wisdm-all-courses .textInput-icon input {
+  padding-left: 30px !important;
+}
+.mantine-1rj4mbe {
+  padding-left: 10px;
+  padding-right: 0;
+}
+.ir-right-border,
+.ir-right-border:hover {
+  border-right: none;
+  border-left: 1px solid #ddd !important;
+}
+.mantine-1g4orza {
+  margin-right: 0 !important;
+  margin-left: 10px !important;
+}
+.mantine-Modal-root {
+  direction: rtl;
+}
+.mantine-1rj4mbe {
+  border-right: none !important;
+}

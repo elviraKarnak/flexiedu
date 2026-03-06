@@ -1,0 +1,939 @@
+/* Instructor specific styles on admin dashboard */
+
+/* cspell:ignore instuctor // ignoring misspelled words that we can't change now. */
+
+a.ld-back-link {
+    display: none;
+}
+
+/* .ld-tab-buttons > a:not(:first-child){
+	display: none;
+} */
+
+.ld-tab-buttons > a:nth-child(n+3){
+	display: none;
+}
+
+.post-type-sfwd-quiz .ld-tab-buttons>a,
+.post-type-sfwd-essays .ld-tab-buttons>a {
+    display: inline-flex;
+}
+
+.woocommerce-BlankState .woocommerce-BlankState-cta:not(.button-primary) {
+    display: none !important;
+}
+
+.wl8qcn-email-desc {
+    margin-top: 0;
+    color: #595959;
+    font-style: italic;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.wl8qcn-email-heading h2 {
+    display: inline-block;
+}
+
+.ir-course-purchase-email-body {
+    width: 100%;
+}
+
+.ir-course-purchase-email-body input[name="ir-course-purchase-email-sub"] {
+    width: 100%;
+}
+
+.ir-email-settings-label {
+    text-align: left;
+    vertical-align: top;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Hide Group admin actions */
+#learndash-view-form td.group_actions a:last-child {
+    display: none;
+}
+
+body.sticky-menu div#adminmenuwrap {
+    position: relative;
+}
+
+#adminmenu {
+    margin-top: 0px;
+}
+
+html.wp-toolbar {
+    padding-top: 0px;
+}
+
+div#ir-primary-navigation {
+    position: fixed;
+    height: 47px;
+    border: 1px solid #c8c8c8;
+    background-color: #fff;
+    width: calc(100% - 210px);
+    left: 210px;
+    z-index: 99;
+    padding: 0;
+
+}
+
+.folded div#ir-primary-navigation {
+    width: calc(100% - 36px);
+    left: 36px;
+}
+
+ul#ir-primary-menu {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 47px;
+    padding: 0 10px;
+}
+
+ul#ir-primary-menu li.menu-item,
+ul#ir-primary-menu li.page_item {
+    margin-right: 30px;
+}
+
+ul#ir-primary-menu .menu-item button {
+    display: none !important;
+}
+
+ul#ir-primary-menu .switch-back.menu-item a {
+    color: black;
+    background-color: #d0d0d1;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+div.ir-admin-logo img {
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+}
+
+.folded div.ir-admin-logo img {
+    height: auto;
+    width: 100%;
+}
+
+li#ir-admin-logo-item {
+    cursor: initial;
+}
+
+div#ir-admin-logo-text {
+    padding: 20px;
+    text-align: center;
+}
+
+div.ir-admin-menu-logo-title {
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 6px;
+    margin-bottom: 0px;
+}
+
+.folded div#ir-admin-logo-text {
+    padding: 5px;
+    display: none;
+}
+
+.folded div.ir-admin-menu-logo-title {
+    font-size: 13px;
+    font-weight: 600;
+    padding-bottom: 0px;
+}
+
+.folded div.ir-admin-menu-logo-subtitle {
+    font-size: 10px;
+}
+
+ul#ir-primary-menu ul.sub-menu {
+    display: none;
+    position: absolute;
+    top: 28px;
+    right: 0;
+    width: 150px;
+}
+
+ul#ir-primary-menu ul.sub-menu:before {
+    content: "\f142";
+    font-family: dashicons;
+    position: absolute;
+    top: 6px;
+    font-size: 40px;
+    right: 1px;
+    z-index: 1;
+}
+
+ul#ir-primary-menu li.menu-item-has-children:hover>ul.sub-menu {
+    display: block;
+}
+
+ul#ir-primary-menu li.menu-item-has-children:hover>ul.sub-menu li.menu-item-has-children>ul.sub-menu {
+    right: 100%;
+    top: -20px;
+    left: auto;
+}
+
+ul#ir-primary-menu li.menu-item-has-children:hover>ul.sub-menu li.menu-item-has-children>ul.sub-menu:before {
+    /* content: none; */
+    transform: rotate(90deg);
+    top: 15px;
+}
+
+ul#ir-primary-menu ul.sub-menu .menu-item,
+ul#ir-primary-menu ul.sub-menu .page_item {
+    padding: 10px 20px;
+    border-bottom: 1px solid;
+    margin-right: 0;
+}
+
+ul#ir-primary-menu li.menu-item-has-children:hover>ul.sub-menu>li:nth-child(1) {
+    margin-top: 20px;
+}
+
+ul#ir-primary-menu li.menu-item a,
+ul#ir-primary-menu li.menu-item,
+ul#ir-primary-menu li.page_item a,
+ul#ir-primary-menu li.page_item {
+    text-decoration: none;
+    cursor: pointer;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.39px;
+    text-align: left;
+    color: #3d404e;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* Mobile Menu */
+/* Responsive CSS */
+li.wdm-mob-menu {
+    height: 32px;
+    border-bottom: 1px solid #c8c8c8;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 8px;
+}
+
+li.wdm-mob-menu span {
+    color: #fff;
+}
+
+/* Need to check this, where is this class used ? */
+.wdm-admin-pro {
+    z-index: 10000 !important;
+}
+
+/* .mobile #adminmenu {
+    top: 0;
+} */
+.admin_page_ir_instructor_overview #wpcontent {
+    padding: 0 20px;
+}
+
+/* 
+ * Default 
+ */
+.learndash-user-admin #wdm-report-graph {
+    margin: 20px 0;
+}
+
+.learndash-user-admin .wdm-button {
+    margin: 10px 0;
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1025px) {
+    li.wdm-mob-menu {
+        display: none;
+    }
+
+    .learndash-lms_page_instructor_lms_reports #wpbody,
+    .learndash-lms_page_instuctor #wpbody {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    li.wdm-mob-menu {
+        display: none;
+    }
+
+    .learndash-user-admin #adminmenuback {
+        top: -11px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /*li.wdm-mob-menu {
+        display: none;
+    }*/
+    /* Admin Bar */
+    .learndash-user-admin.mobile #wpwrap {
+        margin-top: 0;
+    }
+
+    .learndash-user-admin.mobile #adminmenuwrap {
+        margin-top: 0;
+        z-index: 10000;
+    }
+
+    .learndash-user-admin.mobile #adminmenu {
+        width: 160px !important;
+        z-index: 10000;
+        margin: 0;
+    }
+
+    .learndash-user-admin #adminmenuwrap {
+        top: 35px;
+    }
+
+    .learndash-user-admin.mobile #adminmenu .wp-has-current-submenu .wp-submenu {
+        top: 0;
+        z-index: 1;
+        /*         padding: 4px 0 8px; */
+    }
+
+    .learndash-user-admin.mobile #adminmenu .wp-submenu .wp-submenu-head {
+        padding: 10px 31px 10px;
+    }
+
+    .learndash-user-admin.mobile #adminmenu li.menu-top {
+        width: 160px !important;
+    }
+
+    .ir-instructor-overview-container {
+        margin: 0;
+    }
+
+    .learndash-user-admin #adminmenu li {
+        width: 160px;
+    }
+
+    .learndash-user-admin #adminmenuback {
+        z-index: 1;
+    }
+
+    .learndash-lms_page_instructor_lms_reports #wpbody,
+    .learndash-lms_page_instuctor #wpbody {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .learndash-lms_page_instructor_lms_reports div#mail_by_instructor {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .learndash-user-admin #wpwrap #wpcontent {
+        margin-left: 160px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .learndash-user-admin #adminmenuwrap {
+        top: 35px;
+    }
+
+    .learndash-user-admin.mobile #wpwrap {
+        margin-top: 0;
+    }
+
+    .learndash-user-admin.mobile #adminmenu {
+        /* top: 0; */
+        width: 160px !important;
+        z-index: 10000;
+    }
+
+    /*.learndash-user-admin.mobile #adminmenuback {
+        top: -11px;
+    }*/
+    .learndash-user-admin.mobile #adminmenu li.menu-top {
+        width: 160px !important;
+    }
+
+    .learndash-user-admin.mobile #adminmenuwrap {
+        top: -11px;
+        z-index: 10000;
+    }
+
+    .learndash-user-admin #wpcontent,
+    .learndash-user-admin #wpfooter {
+        margin-left: 0 !important;
+    }
+
+    .learndash-lms_page_instructor_lms_reports #wpbody,
+    .learndash-lms_page_instuctor #wpbody {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .learndash-lms_page_instructor_lms_reports div#wdm-report-graph {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+
+    /*li.wdm-mob-menu {
+        display: none;
+    }*/
+    .learndash-user-admin #adminmenuwrap {
+        top: 0;
+    }
+
+    /* Admin Bar */
+    .learndash-user-admin.mobile #wpwrap {
+        margin-top: 0;
+    }
+
+    .learndash-user-admin.mobile #adminmenuwrap {
+        margin-top: 0;
+        z-index: 10000;
+    }
+
+    .learndash-user-admin.mobile #adminmenu {
+        width: 160px !important;
+        z-index: 10000;
+        margin: 0;
+    }
+
+    .learndash-user-admin.mobile #adminmenu .wp-has-current-submenu .wp-submenu {
+        top: 0;
+        z-index: 1;
+        /*         padding: 4px 0 8px; */
+    }
+
+    .learndash-user-admin.mobile #adminmenu .wp-submenu .wp-submenu-head {
+        padding: 10px 31px 10px;
+    }
+
+    .learndash-user-admin.mobile #adminmenu li.menu-top {
+        width: 160px !important;
+    }
+
+    .ir-instructor-overview-container {
+        margin: 0;
+    }
+
+    .learndash-user-admin #adminmenu li {
+        width: 160px;
+    }
+
+    .learndash-user-admin #adminmenuback {
+        z-index: 1;
+    }
+
+    .learndash-lms_page_instructor_lms_reports #wpbody,
+    .learndash-lms_page_instuctor #wpbody {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .learndash-lms_page_instructor_lms_reports div#mail_by_instructor {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .learndash-user-admin.sticky-menu #adminmenuwrap {
+        position: absolute;
+    }
+}
+
+/*Common Styles*/
+@media (min-width: 100px) and (max-width: 767px) {
+    .learndash-user-admin #adminmenuwrap {
+        top: 35px;
+    }
+
+    .learndash-user-admin.mobile .ul#adminmenu {
+        z-index: 10000;
+    }
+
+    .learndash-lms_page_instructor_lms_reports div#mail_by_instructor {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .learndash-lms_page_instructor_lms_reports div#wdm-report-graph {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .learndash-lms_page_instuctor div#reports_table_div {
+        overflow-x: scroll;
+    }
+
+    .learndash-user-admin div.ir-instructor-info-tiles,
+    .learndash-user-admin div.ir-overview-charts,
+    .learndash-user-admin div.ir-submissions {
+        justify-content: center;
+    }
+
+    .learndash-user-admin div.ir-submissions {
+        margin: 0 10px;
+        padding: 0 10px;
+    }
+
+    .learndash-user-admin .ir-course-info-tile div span.dashicons,
+    .learndash-user-admin .ir-student-info-tile div span.dashicons {
+        display: none;
+    }
+
+    .learndash-user-admin .info-tile,
+    .learndash-user-admin .ir-overview-charts .ir-chart {
+        flex: 0 0 100%;
+        max-width: 70%;
+        padding: 40px 0;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .ir-instructor-overview-container {
+        margin: 0;
+    }
+
+    .learndash-user-admin.mobile #adminmenu {
+        /* top: 0; */
+    }
+
+    .learndash-user-admin #adminmenuback {
+        z-index: 1;
+    }
+
+    .learndash-user-admin #wpbody {
+        padding-top: 46px
+    }
+
+    .learndash-lms_page_instructor_lms_reports #wpbody,
+    .learndash-lms_page_instuctor #wpbody {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Admin Bar */
+    .learndash-user-admin.mobile #wpwrap {
+        margin-top: 0;
+    }
+
+    .learndash-user-admin.mobile #adminmenuwrap {
+        /*margin-top: 35px;*/
+        z-index: 10000;
+    }
+
+    .learndash-user-admin.mobile #adminmenu {
+        z-index: 10000;
+    }
+
+    /* Course Report */
+    .learndash-lms_page_instructor_lms_reports.mobile .inside #instructor-courses {
+        margin: 15px 0;
+    }
+
+    .learndash-lms_page_instructor_lms_reports.mobile form#instructor_message_form {
+        padding: 0 15px;
+    }
+
+    .learndash-lms_page_instructor_lms_reports.mobile #wdm_pagination_frm,
+    .learndash-lms_page_instructor_lms_reports.mobile .wdm-button {
+        margin: 15px 0;
+    }
+
+    /* Instructor Page */
+    .learndash-lms_page_instuctor.mobile #wpbody-content form table {
+        margin: 15px 0;
+    }
+
+    .learndash-lms_page_instuctor.mobile #wpbody-content form table tbody tr {
+        padding: 10px 0;
+    }
+
+    .ir-addon-info-tile.info-tile.full-tile {
+        padding: 20px 0;
+    }
+
+    .ir-addon-info-tile.info-tile.split-tile .ir-half-tile {
+        padding: 20px 0;
+        position: initial;
+    }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .dashicons-menu-alt:before {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 783px) {
+    li.wdm-mob-menu {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 782px) {
+    .auto-fold #adminmenu li a {
+        font-size: 16px;
+    }
+
+    .auto-fold #adminmenu a.menu-top {
+        /*     	height: 51px; */
+    }
+
+}
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    .learndash-user-admin #adminmenumain {
+        display: block !important;
+    }
+
+    .learndash-user-admin #adminmenuback {
+        display: block !important;
+    }
+
+    .learndash-user-admin #adminmenuwrap {
+        display: block !important;
+    }
+}
+
+.irb-overview-wrap .irb-overview .irb-charts .irb-tile .irb-tile-content {
+    flex-direction: column;
+}
+
+li#collapse-menu {
+    background: #fff;
+    width: 50px;
+    position: fixed;
+    height: 47px;
+    top: 0;
+    left: 209px;
+    box-shadow: 2px 0 9px 0 rgba(0, 0, 0, 0.08);
+    z-index: -1;
+    transition: all 0.4s ease-in-out;
+}
+
+li#collapse-menu #collapse-button {
+    height: 47px;
+}
+
+li#collapse-menu .irb-icon-side-bar-expand {
+    font-size: 32px;
+    color: #333;
+}
+
+.folded .irb-icon-side-bar-expand:before {
+    transform: rotate(180deg);
+    display: inline-block;
+}
+
+.folded li#collapse-menu {
+    left: 36px;
+}
+
+#collapse-menu:not( :nth-of-type(1)) {
+    display: none;
+}
+
+/*Replace Logo on admin bar*/
+#wpadminbar #wp-admin-bar-wp-logo>.ab-item .ab-icon:before {
+    color: transparent;
+}
+
+.edit-post-fullscreen-mode-close.has-icon svg {
+    display: none !important;
+}
+
+/*Replace Logo in Site Editor*/
+div.edit-post-header a.edit-post-fullscreen-mode-close {
+    color: transparent;
+}
+
+div.edit-post-header a.edit-post-fullscreen-mode-close:before {
+    content: "\f14a";
+    font-family: 'dashicons';
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    vertical-align: middle;
+    position: initial;
+}
+
+#wpbody {
+    padding-top: 47px;
+}
+
+#wdm_report_tbl_wrapper select {
+    width: 55px;
+}
+
+.ir-progress-bar {
+    top: 3px;
+    position: absolute;
+    height: 2px;
+    background: green;
+    width: 0%;
+}
+
+.ir-course-progress .irb-dots span.ir-active-dot {
+    background-color: green;
+}
+
+.ir-course-progress .irb-dots:before {
+    z-index: -1;
+}
+
+div.ir-admin-image {
+    padding: 20px;
+}
+
+div.ir-admin-image img {
+    width: 110px;
+    height: auto;
+    display: block;
+}
+
+.folded div.ir-admin-image img {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    div#ir-primary-navigation {
+        z-index: 99999;
+        width: 100%;
+        left: 0;
+    }
+
+    div#ir-primary-navigation li {
+        display: none;
+    }
+
+    div#ir-primary-navigation li.wdm-mob-menu {
+        display: list-item;
+    }
+
+    div#ir-primary-navigation li.wdm-mob-menu .dashicons {
+        color: #000;
+        padding-top: 5px;
+    }
+
+    .auto-fold #adminmenu div.wp-menu-image {
+        position: static;
+    }
+
+    .auto-fold #adminmenu,
+    .auto-fold #adminmenuwrap {
+        z-index: 9999999;
+    }
+
+    #wpbody-content .nav-tab-wrapper {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .ir-export {
+        flex-wrap: wrap;
+    }
+
+    .ir-export>.ir-flex {
+        margin-left: 0 !important;
+        margin-right: 20px;
+    }
+}
+
+#wpcontent #wpbody {
+    max-width: 1300px !important;
+    margin: auto;
+}
+
+/* IR Dashboard Fix */
+
+.irb-overview-wrap .irb-overview .irb-tiles-wrap {
+    justify-content: space-evenly !important;
+}
+
+.irb-overview-wrap .irb-overview .irb-tiles-wrap .irb-medium {
+    width: -webkit-fill-available !important;
+}
+
+.irb-overview-wrap .irb-overview .irb-tiles-wrap .irb-tile {
+    width: -webkit-fill-available !important;
+}
+
+.ir-assignments-table {
+    width: 100% !important;
+}
+
+
+#wpbody-content #screen-meta-links {
+    z-index: 2;
+}
+
+#wpbody-content #sfwd-header {
+    z-index: 1;
+    position: unset;
+}
+
+/* Remove crate from video playlist button on courses page */
+.post-type-sfwd-courses .ld-global-header-new-settings>a:first-of-type {
+    display: none;
+}
+
+body:not(.block-editor-page) .edit-post-header__settings {
+    margin-left: 10px;
+}
+
+body:not(.block-editor-page) .edit-post-header__settings .ld-popover.components-popover {
+    top: 179px !important;
+}
+
+@media (min-width:960px) {
+
+    #wpwrap #adminmenuwrap,
+    #wpwrap #adminmenuback,
+    #wpwrap #adminmenuwrap,
+    #wpwrap #adminmenu,
+    #wpwrap #adminmenu .wp-submenu {
+        display: block;
+    }
+}
+
+@media screen and (max-width:782px) {
+    body:not(.block-editor-page) .edit-post-header__settings .ld-popover.components-popover {
+        top: 203px !important;
+    }
+}
+
+@media (max-width:600px) {
+    #wpcontent #wpbody {
+        padding-top: 40px;
+    }
+}
+
+/* New Layout Styles */
+/* 
+#ir-submissions-content .dataTables_info,
+#ir-submissions-content .dataTables_length {
+    float: right !important;
+}
+
+#ir-submissions-content .dataTables_filter {
+    float: left !important;
+} */
+
+.ir-sub-table-foot, .ir-sub-table-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ir-extra-div {
+    visibility: hidden;
+}
+
+.ir-earnings-chart-y-label {
+    font-family: inherit;
+    fill: #149200;
+}
+
+.ir-earnings-chart-y-label:last-child {
+    fill: #BB0000;
+}
+
+.ir-instructor-course-select-wrap {
+    float: right;
+}
+
+#ir-collapse-menu-item button {
+    transform: rotate(0deg);
+    transition: ease-in-out;
+}
+
+body.dashboard-layout-1 .wdm-mob-menu, body.dashboard-layout-1 .ir-mob-dashboard-menu {
+    display: none;
+}
+
+@media screen and (max-width: 782px) {
+    body.dashboard-layout-1.auto-fold div#ir-primary-navigation {
+        width: 100%;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    body.dashboard-layout-1 .ir-mob-dashboard-menu {
+        display: none;
+    }
+    body.dashboard-layout-1.auto-fold .wdm-mob-menu {
+        display: block;
+        margin-left: 20px;
+    }
+}
+
+body.profile-php table:first-of-type, body.profile-php h2:first-of-type {
+    display: none;
+}
+
+#sfwd-header .ld-global-header .ld-tab-buttons button:after {
+	display: none;
+}
+
+.ir-fcb-create-new:hover {
+    color: #fff;
+    background: #007eb1;
+}
+
+.ir-fqb-create-new-quiz:hover {
+    color: #fff;
+    background: #007eb1;
+}

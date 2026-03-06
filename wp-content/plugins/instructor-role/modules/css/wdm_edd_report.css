@@ -1,0 +1,7 @@
+.edd-export-sales-earnings,.edd-export-payment-history,.edd-export-download-history{
+	display: none;
+}
+
+a[href*="post_type=download&page=edd-reports&tab=logs"] {
+display: none;
+}

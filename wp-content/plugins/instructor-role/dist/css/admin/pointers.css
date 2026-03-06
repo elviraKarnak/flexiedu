@@ -1,0 +1,95 @@
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/assets/scss/admin/pointers.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
+.ir-pointer {
+  padding-top: 8px;
+  /**
+   * We need to apply this style only after the pointer is initialized
+   * to ensure it is aligned vertically correctly when associated with
+   * an element within the LD header.
+   */
+  /*
+   * Since we are not including any extra buttons,
+   * we don't want a scrollbar to show due to the hidden
+   * text on the close button.
+   */
+}
+.ir-pointer--within-ld-header.ir-pointer--initialized {
+  margin-top: calc(var(--ld-spacer-1, 0.5rem) * -1);
+}
+@media (min-width: 960px) {
+  .ir-pointer--within-ld-header.ir-pointer--initialized {
+    margin-top: 0;
+  }
+}
+.ir-pointer--within-ld-header.ir-pointer--initialized .wp-pointer-content {
+  margin-left: var(--ld-spacer-fixed-3, 16px);
+}
+@media (min-width: 960px) {
+  .ir-pointer--within-ld-header.ir-pointer--initialized .wp-pointer-content {
+    margin-left: 0;
+  }
+}
+.ir-pointer .wp-pointer-arrow {
+  border-bottom-color: #007cba;
+  border-top-color: #007cba;
+  border-width: 0 6px 8px 6px;
+  left: var(--ld-spacer-fixed-4, 20px);
+  right: auto;
+}
+@media (min-width: 960px) {
+  .ir-pointer .wp-pointer-arrow {
+    left: auto;
+    right: var(--ld-spacer-fixed-4, 20px);
+  }
+}
+.ir-pointer .wp-pointer-arrow-inner {
+  display: none;
+}
+.ir-pointer .wp-pointer-content {
+  align-items: center;
+  background-color: #007cba;
+  border-radius: var(--ld-border-radius, 8px);
+  border: none;
+  color: var(--ld-color-primitives-grey-0, #fff);
+  display: flex;
+  flex-direction: row;
+  font-size: var(--ld-typography-desktop-body-small-size, 0.875rem);
+  font-weight: var(--ld-typography-font-weight-bold, 700);
+  gap: 0 var(--ld-spacer-fixed-1, 8px);
+  line-height: var(--ld-typography-desktop-body-small-height, 1.375);
+  padding: var(--ld-spacer-0, 0.25rem) var(--ld-spacer-fixed-1, 8px);
+  left: calc(var(--ld-spacer-fixed-4, 20px) * -1);
+  right: auto;
+}
+@media (min-width: 960px) {
+  .ir-pointer .wp-pointer-content {
+    left: auto;
+  }
+}
+.ir-pointer .wp-pointer-content a.close {
+  float: none;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  padding-left: 0;
+  position: relative;
+}
+.ir-pointer .wp-pointer-content a.close::before {
+  color: var(--ld-color-primitives-grey-0, #fff);
+  content: "\f335";
+  display: inline !important;
+  font-size: var(--ld-typography-desktop-h6-height, 1.5rem);
+  left: auto;
+  line-height: 1;
+  margin: 0;
+  position: relative;
+  text-align: left;
+  top: auto;
+}
+.ir-pointer .wp-pointer-buttons {
+  margin-top: calc(var(--ld-spacer-fixed-2, 12px) * -1);
+  overflow: hidden;
+  padding: 0;
+  padding-right: var(--ld-spacer-fixed-1, 8px);
+}

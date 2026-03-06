@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "instructor-role/dashboard-settings",
+  "version": "0.1.0",
+  "title": "Instructor Role: Instructor Settings for LearnDash",
+  "category": "widgets",
+  "icon": "welcome-learn-more",
+  "description": "Creates settings page for instructor role Dashboard",
+  "supports": {
+    "html": false,
+    "jsx": true
+  },
+  "attributes": {
+    "showPayPal": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "textdomain": "wdm_instructor_role",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./pages/settings.js"
+}

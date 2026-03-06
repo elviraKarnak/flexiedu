@@ -1,0 +1,1 @@
+<?php echo do_shortcode('[wdm_group_users]'); ?>

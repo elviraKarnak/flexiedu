@@ -1,0 +1,748 @@
+# Copyright (C) 2025 Hostinger
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Hostinger Reach 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/hostinger-reach\n"
+"Last-Translator: \n"
+"Language-Team: Indonesian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-07-31T11:19:40+03:00\n"
+"PO-Revision-Date: 2026-02-23 04:06+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: hostinger-reach\n"
+"Language: id_ID\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Loco-Version: 2.8.1; wp-6.9.1; php-8.2.29"
+
+#: src/Setup/Assets.php:154
+msgid "(no title)"
+msgstr "(tanpa judul)"
+
+#: src/Setup/Assets.php:177
+msgid "-"
+msgstr "-"
+
+#: src/Setup/Assets.php:140 src/Setup/Assets.php:157
+msgid "Active"
+msgstr "Aktif"
+
+#: src/Setup/Assets.php:112
+msgid ""
+"Add a new contact form with Reach or connect a plugin to start collecting "
+"contacts and sending campaigns."
+msgstr ""
+"Tambahkan formulir kontak baru dengan Reach atau hubungkan plugin untuk "
+"mulai kumpulkan kontak dan kirim kampanye."
+
+#: src/Setup/Assets.php:108
+msgid ""
+"Add an online store to your site, sell products or services, and connect "
+"subscriber tools automatically.."
+msgstr ""
+"Tambahkan toko online ke website, jual produk atau layanan, dan hubungkan "
+"tool subscriber secara otomatis."
+
+#: src/Setup/Assets.php:146 src/Setup/Assets.php:160
+msgid "Add form"
+msgstr "Tambah formulir"
+
+#: src/Setup/Assets.php:113 src/Setup/Assets.php:114 src/Setup/Assets.php:130
+msgid "Add form or plugin"
+msgstr "Tambahkan formulir atau plugin"
+
+#: src/Admin/Surveys/SatisfactionSurvey.php:26
+msgid "Any ideas or feedback to help us improve Hostinger Reach?"
+msgstr ""
+"Bagikan ide atau masukan Anda untuk bantu kami menyempurnakan Hostinger Reach"
+
+#: src/Setup/Assets.php:175
+msgid ""
+"are ready to sync with Reach. Any new contacts you’ll collect with these "
+"forms will sync automatically."
+msgstr ""
+"siap disinkronkan dengan Reach. Setiap kontak baru dari formulir ini akan "
+"otomatis disinkronkan."
+
+#: hostinger-reach.php:52
+msgid "Attention:"
+msgstr "Perhatian:"
+
+#: src/Setup/Assets.php:178
+#, fuzzy
+msgid "Auto-sync off"
+msgstr "Sinkronisasi otomatis tidak aktif"
+
+#: src/Integrations/WooCommerce/WooCommerceIntegration.php:123
+msgid "Automation -  Purchases"
+msgstr "Automasi - Pembelian"
+
+#: src/Integrations/WooCommerce/WooCommerceIntegration.php:124
+msgid "Automation - Abandoned Carts"
+msgstr "Automasi - Item di Keranjang"
+
+#: src/Setup/Assets.php:97
+msgid "Average CTOR"
+msgstr "Rata-rata CTOR"
+
+#: src/Setup/Assets.php:77
+msgid "Back"
+msgstr "Kembali"
+
+#: src/Setup/Assets.php:126
+msgid "Background image for"
+msgstr "Gambar latar untuk"
+
+#: src/Setup/Assets.php:125
+msgid "Banner background image for"
+msgstr "Gambar latar banner untuk"
+
+#: frontend/blocks/subscription-block/block.json:1
+msgctxt "block description"
+msgid "Subscription form for Hostinger Reach"
+msgstr "Formulir berlangganan untuk Hostinger Reach"
+
+#: frontend/blocks/subscription-block/block.json:1
+msgctxt "block title"
+msgid "Reach Subscription Form"
+msgstr "Formulir Berlangganan Reach"
+
+#: src/Integrations/Brave/BraveIntegration.php:29
+#, fuzzy
+msgid "Brave Popup Builder"
+msgstr "Pembuat Popup Berani"
+
+#: src/Setup/Assets.php:95
+msgid "Campaigns"
+msgstr "Campaign"
+
+#: src/Setup/Assets.php:133
+msgid "Cancel "
+msgstr "Batal"
+
+#: src/Integrations/WooCommerce/WooCommerceIntegration.php:116
+msgid "Checkout"
+msgstr "Checkout"
+
+#: src/Setup/Assets.php:128
+msgid ""
+"Click-to-open rate tells you what percent of opens resulted in a click too. "
+"A good CTOR is 6-17%, depending on your industry."
+msgstr ""
+"Jumlah click-to-open menunjukkan persentase email yang dibuka dan "
+"mendatangkan klik. CTOR yang ideal adalah 6–17%, tergantung industri Anda."
+
+#: src/Setup/Assets.php:152
+msgid "Collapse {pluginName} details"
+msgstr "Tutup detail {pluginName}"
+
+#: src/Setup/Assets.php:167 src/Admin/Notices/ConnectionNotice.php:104
+msgid "Connect"
+msgstr "Hubungkan"
+
+#: src/Admin/Notices/ConnectionNotice.php:99
+msgid "Connect Hostinger Reach to start Email Marketing"
+msgstr "Hubungkan Hostinger Reach untuk mulai Email Marketing"
+
+#: src/Setup/Assets.php:84
+msgid "Connect site"
+msgstr "Hubungkan website"
+
+#: src/Setup/Assets.php:107 src/Setup/Assets.php:109
+msgid "Connect WooCommerce"
+msgstr "Hubungkan WooCommerce"
+
+#: src/Admin/Notices/ConnectionNotice.php:100
+msgid ""
+"Connect your Hostinger Reach account to start sending newsletters and "
+"managing subscribers. With Hostinger Reach, it's easy to grow your audience "
+"in just one click."
+msgstr ""
+"Hubungkan akun Hostinger Reach Anda untuk mulai kirim newsletter, kelola "
+"subscriber, dan kembangkan audiens dengan lebih cepat dan efektif."
+
+#: src/Setup/Assets.php:148 src/Integrations/ContactForm7Integration.php:108
+#: src/Integrations/ContactForm7/ContactForm7Integration.php:91
+msgid "Contact Form 7"
+msgstr "Contact Form 7"
+
+#: src/Setup/Assets.php:136 src/Setup/Assets.php:169
+msgid "Contacts"
+msgstr "Kontak"
+
+#: src/Setup/Assets.php:174
+msgid "contacts"
+msgstr "kontak"
+
+#: src/Setup/Assets.php:173
+msgid "Contacts to Sync"
+msgstr "Kontak yang akan Disinkronkan"
+
+#: src/Admin/Notices/ConnectionNotice.php:73
+msgid "Could not generate auth URL"
+msgstr "Gagal membuat URL autentikasi"
+
+#: src/Setup/Assets.php:102
+msgid "Create campaign"
+msgstr "Buat campaign"
+
+#: src/Setup/Assets.php:80
+msgid ""
+"Create email campaigns using AI-crafted templates that match your style. "
+"Instantly sync with your WordPress site and connect with your audience "
+"easily."
+msgstr ""
+"Buat email campaign dengan template buatan AI yang sesuai brand Anda. "
+"Langsung sinkronkan dengan website WordPress dan jangkau audiens dengan "
+"mudah."
+
+#: src/Setup/Assets.php:103
+msgid "Create template"
+msgstr "Buat template"
+
+#: src/Setup/Assets.php:166
+msgid "Disconnect"
+msgstr "Nonaktifkan"
+
+#: src/Setup/Assets.php:134
+msgid "Disconnect "
+msgstr "Nonaktifkan"
+
+#: src/Setup/Assets.php:82
+msgid "Disconnect it to link this site instead."
+msgstr "Nonaktifkan untuk menghubungkan website ini. "
+
+#: src/Setup/Assets.php:145
+msgid "Disconnect plugin"
+msgstr "Nonaktifkan plugin"
+
+#: src/Setup/Assets.php:131
+msgid "Disconnect plugin?"
+msgstr "Ingin menonaktifkan plugin?"
+
+#: src/Setup/Assets.php:132
+msgid ""
+"Disconnecting will stop new contacts from being collected. You can reconnect "
+"or use a different form anytime."
+msgstr ""
+"Jika dinonaktifkan, kontak baru tidak akan dikumpulkan lagi. Hubungkan "
+"kembali atau gunakan formulir lain kapan saja."
+
+#: src/Setup/Assets.php:185
+#, fuzzy
+msgid "Don't see your plugin?"
+msgstr "Tidak melihat plugin Anda?"
+
+#: src/Setup/Assets.php:106
+msgid "E-Commerce"
+msgstr "Ecommerce"
+
+#: src/Setup/Assets.php:143
+msgid "Edit form"
+msgstr "Edit formulir"
+
+#: src/Setup/Assets.php:150
+#: src/Integrations/Elementor/ElementorIntegration.php:112
+msgid "Elementor"
+msgstr "Elementor"
+
+#: src/Blocks/SubscriptionFormBlock.php:75
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:106
+msgid "Email"
+msgstr "Email"
+
+#: src/Admin/Menus.php:20 src/Admin/Menus.php:21 src/Admin/Menus.php:34
+msgid "Email Marketing"
+msgstr "Email Marketing"
+
+#: src/Setup/Assets.php:87
+msgid "Email marketing background with gradient design"
+msgstr "Gambar latar email marketing dengan desain gradasi"
+
+#: src/Setup/Assets.php:88
+msgid ""
+"Email marketing illustration featuring envelopes and communication icons"
+msgstr "Ilustrasi email marketing dengan ikon amplop dan komunikasi"
+
+#: src/Setup/Assets.php:92
+msgid "Emails"
+msgstr "Email"
+
+#: src/Setup/Assets.php:151
+msgid "Expand {pluginName} details"
+msgstr "Lihat detail {pluginName}"
+
+#: src/Setup/Assets.php:117
+msgid "FAQ"
+msgstr "Tanya Jawab (FAQ)"
+
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:50
+msgid "Form"
+msgstr "Formulir"
+
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:58
+msgid "Form ID"
+msgstr "ID Formulir"
+
+#: src/Integrations/Forminator/ForminatorIntegration.php:34
+msgid "Forminator"
+msgstr "Forminator"
+
+#: src/Setup/Assets.php:110
+msgid "Forms"
+msgstr "Formulir"
+
+#: src/Setup/Assets.php:144
+msgid "Go to plugin"
+msgstr "Buka plugin"
+
+#: src/Setup/Assets.php:85
+msgid "Go to Reach"
+msgstr "Buka Reach"
+
+#. Author of the plugin
+msgid "Hostinger"
+msgstr "Hostinger"
+
+#. Name of the plugin
+#: src/Setup/Assets.php:86 src/Setup/Assets.php:147
+#: src/Integrations/ReachFormIntegration.php:65
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:20
+#: src/Integrations/Reach/ReachFormIntegration.php:71
+msgid "Hostinger Reach"
+msgstr "Hostinger Reach"
+
+#: src/Setup/Assets.php:119
+msgid ""
+"Hostinger Reach is an AI-powered email marketing tool for small businesses "
+"and creators. It supports your entire email marketing journey—from building "
+"contact lists to sending campaigns and tracking results."
+msgstr ""
+"Hostinger Reach adalah tool email marketing dengan AI untuk bisnis kecil dan "
+"kreator. Reach mendukung seluruh proses email marketing Anda, mulai dari "
+"membuat daftar kontak, mengirim campaign, hingga melacak performanya."
+
+#: src/Setup/Assets.php:121
+msgid ""
+"Hostinger Reach is built for simplicity, speed, and results – no design or "
+"marketing experience needed. Unlike most email tools, at the core of Reach "
+"is its AI-powered template creator. Whether it is a product launch, special "
+"offer, or newsletter update, it instantly crafts a professional, mobile-"
+"friendly email. It not only writes the content for you; it also suggests the "
+"best layout for your message and saves your style settings so you're never "
+"starting from scratch.<br><br>Every template is customizable, so your emails "
+"reflect your brand's look, feel, and voice. And because the templates are "
+"built using proven best practices, they're optimized for readability, "
+"accessibility, and reader engagement."
+msgstr ""
+"Hostinger Reach dirancang agar mudah digunakan, cepat, dan optimal meski "
+"tanpa pengalaman desain atau marketing. Berbeda dari tool email lainnya, "
+"Reach menyediakan template berteknologi AI. Baik untuk peluncuran produk, "
+"penawaran spesial, atau newsletter, AI langsung membuat email yang "
+"profesional dan mobile-friendly. Tidak hanya menulis konten untuk Anda, "
+"tetapi juga menyarankan layout terbaik dan menyimpan pengaturan style "
+"sehingga tidak perlu mulai dari nol.<br><br>Setiap template bisa "
+"dikustomisasi, jadi email Anda pasti sesuai dengan gaya dan karakter dari "
+"brand Anda. Selain itu, karena template dibuat sesuai strategi terbaik yang "
+"terbukti efektif, semuanya optimal untuk memudahkan audiens membaca, "
+"mengakses, dan berinteraksi."
+
+#: src/Admin/Notices/ConnectionNotice.php:92
+msgid "Hostinger Reach logo"
+msgstr "Logo Hostinger Reach"
+
+#. %s: PHP version
+#: hostinger-reach.php:54
+#, php-format
+msgid "Hostinger Reach requires minimum PHP version of <b>%s</b>. "
+msgstr "Hostinger Reach membutuhkan versi PHP minimum <b>%s</b>."
+
+#: src/Setup/Assets.php:120
+msgid "How is Hostinger Reach different from other email marketing apps?"
+msgstr "Apa bedanya Hostinger Reach dengan aplikasi email marketing lain?"
+
+#: src/Setup/Assets.php:122
+msgid "How much does it cost to use Hostinger Reach?"
+msgstr "Berapa biaya Hostinger Reach?"
+
+#: src/Admin/Surveys/SatisfactionSurvey.php:22
+msgid "How would you rate your experience with Hostinger Reach so far?"
+msgstr "Seberapa puas Anda dengan Hostinger Reach sejauh ini?"
+
+#. URI of the plugin
+msgid "https://hostinger.com"
+msgstr "https://hostinger.com/id"
+
+#. Author URI of the plugin
+msgid "https://www.hostinger.com/email-marketing"
+msgstr "https://www.hostinger.com/id/email-marketing"
+
+#: src/Api/Handlers/IntegrationsApiHandler.php:117
+msgid "Importing is not available for this integration"
+msgstr "Integrasi ini tidak mendukung impor"
+
+#: src/Setup/Assets.php:141
+msgid "Inactive"
+msgstr "Tidak aktif"
+
+#: src/Setup/Assets.php:164
+#, fuzzy
+msgid "Install"
+msgstr "Menginstal"
+
+#: src/Setup/Assets.php:165
+msgid "Install and connect"
+msgstr "Install dan hubungkan"
+
+#: src/Setup/Assets.php:163
+msgid "Installed plugins"
+msgstr "Plugin terinstal"
+
+#. Description of the plugin
+msgid "Integrate your WordPress site with Hostinger Reach."
+msgstr "Integrasikan website WordPress Anda dengan Hostinger Reach."
+
+#: src/Setup/Assets.php:105
+msgid "Integrations"
+msgstr "Integrasi"
+
+#: src/Setup/Assets.php:186
+#, fuzzy
+msgid ""
+"It may not be supported yet. You can upload contacts as a CSV or use another "
+"plugin"
+msgstr ""
+"Ini mungkin belum didukung. Anda dapat mengunggah kontak sebagai CSV atau "
+"menggunakan plugin lain"
+
+#: src/Setup/Assets.php:184
+msgid "It was an error syncing your contacts to Reach."
+msgstr "Terjadi error saat menyinkronkan kontak Anda ke Reach."
+
+#: src/Admin/Notices/ConnectionNotice.php:107
+msgid "Learn more"
+msgstr "Selengkapnya"
+
+#: src/Setup/Assets.php:158
+msgid ""
+"Make sure the people you contact expect your emails and are okay with "
+"receiving them."
+msgstr "Pastikan penerima email setuju menerima email dari Anda."
+
+#: src/Setup/Assets.php:83
+msgid "Manage"
+msgstr "Kelola"
+
+#: src/Blocks/SubscriptionFormBlock.php:83
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:114
+msgid "Name"
+msgstr "Nama"
+
+#: src/Setup/Assets.php:159
+msgid "New contact form"
+msgstr "Formulir kontak baru"
+
+#: src/Setup/Assets.php:115
+msgid "New page"
+msgstr "Halaman baru"
+
+#: src/Setup/Assets.php:99
+msgid "New subscribers"
+msgstr "Subscriber baru"
+
+#: src/Integrations/NinjaForms/NinjaFormsIntegration.php:45
+msgid "Ninja Forms"
+msgstr "Ninja Forms"
+
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:71
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:83
+msgid "No"
+msgstr "Tidak"
+
+#: src/Setup/Assets.php:153
+msgid "No forms found for this integration."
+msgstr "Tidak ditemukan formulir untuk integrasi ini."
+
+#: src/Setup/Assets.php:116
+msgid "No pages available. Create a new page to get started."
+msgstr "Belum ada halaman. Buat halaman baru untuk memulai."
+
+#: src/Setup/Assets.php:181
+msgid "Not synced"
+msgstr "Tidak tersinkron"
+
+#: src/Setup/Assets.php:138
+msgid "of"
+msgstr "dari"
+
+#: src/Setup/Assets.php:124
+msgid "opens in new tab"
+msgstr "buka di tab baru"
+
+#: src/Integrations/OptInMonster/OptInMonsterIntegration.php:48
+#, fuzzy
+msgid "OptinMonster"
+msgstr "OptinMonster"
+
+#: src/Setup/Assets.php:179
+msgid "Partially synced"
+msgstr "Tersinkron sebagian"
+
+#: src/Setup/Assets.php:135
+msgid "Plugin"
+msgstr "Plugin"
+
+#: src/Setup/Assets.php:155
+msgid "Plugin connected successfully"
+msgstr "Plugin berhasil dihubungkan"
+
+#: src/Setup/Assets.php:156
+msgid "Plugin disconnected successfully"
+msgstr "Plugin berhasil dinonaktifkan"
+
+#: src/Setup/Assets.php:81
+msgid "Reach is already connected to another site."
+msgstr "Reach sudah terhubung ke website lain."
+
+#: src/Setup/Assets.php:123
+#| msgid ""
+#| "Reach offers a free plan for one year– perfect for getting started. Paid "
+#| "plans are based on how many unique contacts you aim to reach and how many "
+#| "emails you send monthly. As your audience grows, you can upgrade to a "
+#| "plan that fits your needs. Reach does not limit your contact list, so you "
+#| "don't need to worry about lost data and can consistently grow your "
+#| "audience."
+msgid ""
+"Reach offers a <b>free plan</b> for one year– perfect for getting started. "
+"Paid plans are based on how many unique contacts you aim to reach and how "
+"many emails you send monthly. As your audience grows, you can upgrade to a "
+"plan that fits your needs. Reach does not limit your contact list, so you "
+"don't need to worry about lost data and can consistently grow your audience."
+msgstr ""
+"Reach menawarkan <b>paket gratis</b> selama satu tahun yang cocok untuk "
+"pemula. Harga paket berbayar menyesuaikan jumlah kontak yang ingin dijangkau "
+"dan email yang dikirim per bulan. Seiring audiens bertambah, Anda bisa "
+"upgrade ke paket yang sesuai kebutuhan. Reach tidak membatasi daftar kontak, "
+"jadi tidak perlu khawatir kehilangan data dan Anda bisa terus mengembangkan "
+"audiens."
+
+#: src/Setup/Assets.php:94
+msgid "Remaining"
+msgstr "Sisa"
+
+#: src/Setup/Assets.php:129
+msgid "Select page"
+msgstr "Pilih halaman"
+
+#: src/Setup/Assets.php:93 src/Setup/Assets.php:96
+msgid "Sent"
+msgstr "Terkirim"
+
+#: src/Setup/Assets.php:104
+msgid "Settings"
+msgstr "Pengaturan"
+
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:68
+msgid "Show Name"
+msgstr "Tampilkan Nama"
+
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:80
+msgid "Show Surname"
+msgstr "Tampilkan Nama Belakang"
+
+#: src/Setup/Assets.php:171
+msgid ""
+"Some contacts you’ve collected before installing Reach aren’t yet synced. "
+"Sync them now to use them for your email campaigns."
+msgstr ""
+"Ada kontak lama yang belum tersinkron dengan Reach. Sinkronkan sekarang "
+"untuk digunakan dalam email campaign."
+
+#: src/Setup/Assets.php:78
+msgid "Something went wrong"
+msgstr "Terjadi kesalahan"
+
+#: src/Blocks/SubscriptionFormBlock.php:21 src/Api/Handlers/ApiHandler.php:36
+msgid "Something went wrong. Please try again."
+msgstr "Terjadi kesalahan. Silakan coba lagi."
+
+#: src/Setup/Assets.php:111
+msgid "Start by adding a form or connect a plugin"
+msgstr "Tambahkan formulir atau hubungkan plugin untuk mulai"
+
+#: src/Setup/Assets.php:139
+msgid "Status"
+msgstr "Status"
+
+#: src/Blocks/SubscriptionFormBlock.php:99
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:130
+msgid "Subscribe"
+msgstr "Berlangganan"
+
+#: templates/optin-checkbox.php:28
+msgid "Subscribe to our Newsletter"
+msgstr "Berlangganan newsletter kami"
+
+#: src/Integrations/WooCommerce/WooCommerceIntegration.php:73
+msgid "Subscribe to our newsletter"
+msgstr "Berlangganan newsletter kami"
+
+#: src/Setup/Assets.php:98
+msgid "Subscribers"
+msgstr "Subscriber"
+
+#: src/Setup/Assets.php:161
+#| msgid "View supported plugins"
+msgid "Supported plugins"
+msgstr "Lihat plugin yang didukung"
+
+#: src/Integrations/SureForms/SureFormsIntegration.php:35
+msgid "Sure Forms"
+msgstr "SureForms"
+
+#: src/Blocks/SubscriptionFormBlock.php:91
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:122
+msgid "Surname"
+msgstr "Nama belakang"
+
+#: src/Setup/Assets.php:172
+msgid "Sync"
+msgstr "Sinkronkan"
+
+#: src/Setup/Assets.php:168
+msgid "Sync Contacts"
+msgstr "Sinkronkan Kontak"
+
+#: src/Setup/Assets.php:170
+msgid "Sync your contacts with Reach"
+msgstr "Sinkronkan kontak dengan Reach"
+
+#: src/Setup/Assets.php:180
+msgid "Synced"
+msgstr "Tersinkron"
+
+#: src/Setup/Assets.php:137
+msgid "Syncing with Reach"
+msgstr "Menyinkronkan dengan Reach"
+
+#: src/Setup/Assets.php:182
+msgid "Syncing..."
+msgstr "Menyinkronkan..."
+
+#: src/Blocks/SubscriptionFormBlock.php:20
+msgid "Thanks for subscribing."
+msgstr "Terima kasih sudah berlangganan."
+
+#: src/Setup/Assets.php:183
+msgid "The selected contacts are being synced to Reach."
+msgstr "Kontak yang dipilih sedang disinkronkan ke Reach."
+
+#: src/Integrations/Integration.php:178
+msgid ""
+"This form has not an email field. Create an email field in the form to allow "
+"it to be synced with Reach"
+msgstr ""
+"Belum ada kolom email di formulir ini. Tambahkan untuk mulai sinkronisasi "
+"dengan Reach"
+
+#: src/Setup/Assets.php:89
+msgid "This month"
+msgstr "Bulan ini"
+
+#: src/Integrations/ThriveLeads/ThriveLeadsIntegration.php:72
+#: src/Integrations/ThriveLeads/ThriveLeadsIntegration.php:88
+#, fuzzy
+msgid "Thrive Leads"
+msgstr "Prospek yang Berkembang"
+
+#: src/Setup/Assets.php:101
+msgid "Total subscribers"
+msgstr "Total subscriber"
+
+#: src/Setup/Assets.php:100
+msgid "Unsubscribes"
+msgstr "Jumlah berhenti berlangganan"
+
+#: src/Setup/Assets.php:91
+msgid "Upgrade"
+msgstr "Upgrade"
+
+#: src/Setup/Assets.php:187
+#, fuzzy
+msgid "Upload as CSV"
+msgstr "Unggah sebagai CSV"
+
+#: src/Setup/Assets.php:127
+msgid "usage statistics"
+msgstr "statistik penggunaan"
+
+#: src/Setup/Assets.php:142
+msgid "View form"
+msgstr "Lihat formulir"
+
+#: src/Setup/Assets.php:162
+msgid "View more supported plugins"
+msgstr "Lihat plugin lainnya yang didukung"
+
+#: src/Setup/Assets.php:79
+msgid "Welcome to Reach"
+msgstr "Selamat datang di Reach"
+
+#: src/Setup/Assets.php:118
+msgid "What is Hostinger Reach email marketing service?"
+msgstr "Apa itu layanan email marketing Hostinger Reach?"
+
+#: src/Integrations/WooCommerce/WooCommerceIntegration.php:192
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: src/Integrations/WooCommerce/WooCommerceIntegration.php:211
+msgid "WooCommerce Customers"
+msgstr "Pelanggan WooCommerce"
+
+#: src/Setup/Assets.php:149 src/Integrations/WpFormsLiteIntegration.php:94
+#: src/Integrations/WPFormsLite/WpFormsLiteIntegration.php:29
+msgid "WP Forms Lite"
+msgstr "WP Forms Lite"
+
+#. %s - form id.
+#: src/Integrations/WpFormsLiteIntegration.php:43
+#: src/Integrations/WPFormsLite/WpFormsLiteIntegration.php:63
+#, php-format
+msgid "WP Forms Lite %s"
+msgstr "WP Forms Lite %s"
+
+#: src/Integrations/WSForms/WSFormsIntegration.php:22
+msgid "WS Form"
+msgstr "WS Form"
+
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:70
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:82
+msgid "Yes"
+msgstr "Ya"
+
+#. %s: PHP version
+#: hostinger-reach.php:58
+#, php-format
+msgid "You are running <b>%s</b> PHP version."
+msgstr "Anda menggunakan versi PHP <b>%s</b>."
+
+#: src/Setup/Assets.php:176
+msgid ""
+"You have not selected any forms to sync. Select which forms you want to sync "
+"and then click on the Sync button below."
+msgstr ""
+"Belum ada formulir yang dipilih. Pilih formulir yang ingin disinkronkan, "
+"lalu klik tombol Sinkronkan di bawah."
+
+#: src/Setup/Assets.php:90
+msgid "Your plan"
+msgstr "Paket Anda"
+
+#: src/Api/Handlers/ReachApiHandler.php:33
+#, fuzzy
+msgid "Your site is not connected to Reach. Connect to Reach and try again."
+msgstr ""
+"Situs Anda tidak terhubung ke Reach. Sambungkan ke Reach dan coba lagi."

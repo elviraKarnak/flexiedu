@@ -30,7 +30,7 @@ public static function upload_backup_to_clouddrive($file_path, $file_name) {
     }
     WP_Filesystem();
 
-    $api_url ="https://app.backupforwp.com/public";
+    $api_url ="https://app.backupforwp.com";
 
     $token = get_option('wpdb_clouddrive_token') ? get_option('wpdb_clouddrive_token') : '';
 
@@ -57,9 +57,10 @@ public static function upload_backup_to_clouddrive($file_path, $file_name) {
     if ($file_contents === false) {
         return array('success' => false, 'message' => esc_html__('Failed to read file: ', 'wpdbbkp') . $file_path);
     }
+    // Normalize path by stripping absolute WP root (both backslash and slash styles)
     $root_path_1 = ABSPATH;
     $root_path_2 = str_replace('\\', '/', ABSPATH);
-    $file_path = str_replace(array($root_path,$root_path_1), array('',''), $file_path);
+    $file_path = str_replace(array($root_path_1, $root_path_2), array('', ''), $file_path);
     $file_path = ltrim($file_path, '/'); // Ensure there is no leading slash
 
     $file_data = $file_contents;
@@ -68,6 +69,7 @@ public static function upload_backup_to_clouddrive($file_path, $file_name) {
 
     $headers = array(
         'Authorization' => $upload_auth_token,
+        'X-Backup-Token' => $upload_auth_token,
         'domain'=> parse_url(get_site_url(), PHP_URL_HOST),
         'Content-Type' => 'multipart/form-data; boundary=' . $boundary,
     );

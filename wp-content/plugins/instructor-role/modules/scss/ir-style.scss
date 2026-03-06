@@ -1,0 +1,481 @@
+@import 'icons.scss';
+
+.irp-flex{
+	display: flex;
+}
+
+.irp-hidden-lg{
+	display: none;
+}
+
+.irp-readmore, .irp-readless{
+	font-size: 16px;
+	color: #1166DD;
+	text-decoration: underline;
+	font-weight: 400;
+	cursor: pointer;
+	margin-bottom: 25px;
+	display: inline-block;
+}
+.ir-profile *{
+	box-sizing: border-box;
+}
+.ir-profile{
+	box-sizing: border-box;
+	background-color: #ffffff;
+	.irp-container{
+		width: 980px;
+		max-width: 100%;
+		margin: auto;
+	}
+	.irp-top{
+		height: 220px;
+		background-color: #1166DD;
+		.irp-image{
+			img{
+				margin-top: 35px;
+    			border-radius: 50%;
+				box-shadow: 0px 12px 16px rgba(0,0,0,0.40);
+				width: 220px;
+				height: 220px;
+			}
+		}
+	}
+	.irp-content{
+		margin-top: 70px;
+		.irp-left{
+			width: 35%;
+			padding-right: 50px;
+			.irp-info{
+				h1{
+					font-size: 32px;
+					color: #444444;
+					font-weight: 700;
+					margin-bottom: 10px;
+					line-height: 1;
+				}
+				.irp-designation{
+					font-size: 16px;
+					color: #666666;
+					font-weight: 500;
+					line-height: 1;
+				}
+				.irp-avg-rating{
+					min-width: 48px;
+					height: 20px;
+					background-color: #159600;
+					font-size: 16px;
+					display: inline-flex;
+					padding: 2px;
+					justify-content: center;
+					align-items: center;
+					color: #fff;
+					border-radius: 4px;
+					font-weight: 700;
+					margin-top: 8px;
+					i{
+						margin-right: 5px;
+						font-size: 13px;
+					}
+				}
+				.irp-total-rating{
+					font-size: 16px;
+					color: #777777;
+					font-weight: 400;
+					margin-left: 3px;
+				}
+			}
+			.irp-courses-info{
+				margin-top: 47px;
+				.irp-courses-offered, .irp-enrolled-courses, .irp-completed-courses{
+					display: flex;
+    				align-items: center;
+    				margin-bottom: 20px;
+    				line-height: 1;
+					i{
+						font-size: 21px;
+						color: #999999;
+						margin-right: 12px;
+						min-width: 30px;
+    					text-align: center;
+					    align-self: flex-start;
+					}
+					label{
+						margin: 0;
+						font-size: 20px;
+						color: #666666;
+						font-weight: 400;
+						span{
+							font-weight: 700;
+						}
+					}
+				}
+			}
+			.irp-social{
+				margin-top: 63px;
+				h2{
+					font-size: 24px;
+					color: #444444;
+					font-weight: 700;
+					margin-bottom: 20px;
+				}
+				.irp-social-type{
+					margin-bottom: 15px;
+					display: flex;
+    				align-items: center;
+					i{
+					    width: 30px;
+					    height: 30px;
+					    display: inline-flex;
+					    align-items: center;
+					    justify-content: center;
+					    border-radius: 50%;
+					    margin-right: 11px;
+					    color: #fff;
+					}
+					a{
+						font-size: 14px;
+					    color: #1166DD;
+					    text-decoration: underline;
+					}
+				}
+				.irp-mail{
+					i{
+						background-color: #222222;
+						font-size: 13px;
+					}
+				}
+				.irp-fb{
+					i{
+						background-color: #1877f2;
+						font-size: 23px;
+					}
+				}
+				.irp-twitter{
+					i{
+						background-color: #1DA1F2;
+						font-size: 13px;
+					}
+				}
+				.irp-youtube{
+					i{
+						background-color: #FF0000;
+						font-size: 13px;
+					}
+				}
+				
+			}
+		}
+		.irp-right{
+			width: 65%;
+			padding-left: 60px;
+			.irp-tabs{
+				display: flex;
+    			line-height: 1;
+    			border-bottom: 1px solid #EDEDED;
+				span{
+					padding: 11px 16px;
+					color: #444444;
+					font-size: 20px;
+					margin-right: 16px;
+					font-weight: 400;
+					cursor: pointer;
+					white-space: nowrap;
+				}
+				.irp-active{
+					background-color: #EDEDED;
+					font-weight: 700;
+					border-top-left-radius: 4px;
+    				border-top-right-radius: 4px;
+				}
+			}
+			.irp-tabs-content{
+				padding-top: 30px;
+				.irp-tab-content{
+					display: none;
+					p{
+						font-size: 18px;
+						color: #444444;
+						font-weight: 400;
+						line-height: 26px;
+						max-height: 130px;
+						overflow: hidden;	
+						margin-bottom: 12px;
+						transition: max-height 0.3s ease-in-out;
+					}
+					.irp-education-list, .irp-achievements-list, .irp-block-item{
+						padding-left: 165px;
+						background-repeat: no-repeat;
+						min-height: 172px;
+						li{
+							list-style-type: none;
+							padding-left: 40px;
+							position: relative;
+							color: #666666;
+							margin-bottom: 16px;
+							i{
+								position: absolute;
+							    left: 0;
+							    top: 2px;
+							    font-size: 17px;
+							    z-index: 9;
+							}
+							span{
+								font-size: 18px;
+								line-height: 26px;
+								font-weight: 400;
+							}
+						}
+						
+					}
+					.irp-education, .irp-achievements, .irp-block-item-wrap{
+						h2{
+							font-size: 22px;
+							color: #444444;
+							font-weight: 700;
+							padding-left: 165px;
+							margin: 20px 0;
+						}
+					}
+					.irp-education{
+						h2{
+							margin-top: 0;
+						}
+					}
+					
+					.irp-education-list{
+						background-image: url('../images/education.png');
+						min-height: 172px; 
+					}
+					.irp-achievements-list{
+						background-image: url('../images/achievements.png');
+						min-height: 220px; 
+						padding-left: 173px;
+						li{
+							padding-left: 33px;
+							i{
+								font-size: 18px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1084px){
+	.ir-profile .irp-container{
+		width: 100%;
+		padding: 0 40px;
+	}
+	.ir-profile .irp-content .irp-left, .ir-profile .irp-content .irp-right{
+		width: 100%;
+		padding: 0;
+	}
+	.irp-flex{
+		flex-direction: column;
+	}
+	.ir-profile .irp-content .irp-left .irp-courses-info{
+		margin-top: 25px;
+	}
+	.irp-courses-info{
+		display: flex;
+	}
+	.irp-courses-info > div{
+		margin-right: 40px;
+	}
+	.ir-profile .irp-content .irp-left .irp-social{
+		margin-top: 30px;
+	}
+	.irp-social{
+		flex-wrap: wrap;
+    	display: flex;
+    	h2{
+    		flex: 0 0 100%;
+    	}
+    	> div{
+    		flex: 0 0 50%;
+    	}
+	}
+	.ir-profile .irp-content .irp-left .irp-social .irp-social-type i{
+		width: 40px;
+		height: 40px;
+	}
+	.ir-profile .irp-content .irp-left .irp-social .irp-mail i {
+    	font-size: 19px;
+	}
+	.ir-profile .irp-content .irp-left .irp-social .irp-fb i {
+    	font-size: 31px;
+	}
+	.ir-profile .irp-content .irp-left .irp-social .irp-twitter i {
+    	font-size: 18px;
+	}
+	.ir-profile .irp-content .irp-left .irp-social .irp-youtube i {
+    	font-size: 15px;
+	}
+	.ir-profile .irp-content .irp-left .irp-social .irp-social-type a{
+		font-size: 18px;
+		font-weight: 700;
+	}
+	.ir-profile .irp-content .irp-right{
+		margin-top: 43px;
+	}
+	.irp-readmore, .irp-readless{
+		font-weight: 700;
+	}
+	.ir-profile .irp-content .irp-left .irp-social .irp-social-type{
+		margin-bottom: 27px;
+	}
+}
+
+@media screen and (max-width: 587px){
+	.ir-profile .irp-container {
+    	width: 100%;
+    	padding: 0 20px;
+	}
+	.ir-profile .irp-content .irp-left .irp-info h1{
+		font-size: 36px;
+		margin-bottom: 20px;
+	}
+	.irp-image{
+		text-align: center;
+	}
+	.ir-profile .irp-content .irp-left .irp-info .irp-designation{
+		font-size: 22px;
+		font-weight: 600;
+	}
+	.ir-profile .irp-content .irp-left .irp-info .irp-avg-rating{
+		margin-top: 16px;
+		font-size: 18px;
+		height: 24px;
+		padding: 4px;
+	}
+	.ir-profile .irp-content .irp-left .irp-info .irp-total-rating{
+		font-size: 18px;
+		font-weight: 600;
+	}
+	.irp-courses-info {
+	    flex-direction: column;
+	}
+	.ir-profile .irp-content .irp-left .irp-courses-info {
+	    margin-top: 32px;
+	}
+	.ir-profile .irp-content .irp-left .irp-courses-info .irp-courses-offered, .ir-profile .irp-content .irp-left .irp-courses-info .irp-enrolled-courses, .ir-profile .irp-content .irp-left .irp-courses-info .irp-completed-courses{
+		margin-bottom: 30px;
+	}
+	.ir-profile .irp-content .irp-left .irp-courses-info .irp-courses-offered i, .ir-profile .irp-content .irp-left .irp-courses-info .irp-enrolled-courses i, .ir-profile .irp-content .irp-left .irp-courses-info .irp-completed-courses i{
+		font-size: 25px;
+	}
+	.ir-profile .irp-content .irp-left .irp-social {
+    	margin-top: 76px;
+	}
+	.ir-profile .irp-content .irp-left .irp-social h2{
+		font-size: 26px;
+		margin-bottom: 30px;
+	}
+	.ir-profile .irp-content .irp-left .irp-social .irp-social-type {
+    	margin-bottom: 40px;
+	}
+	.ir-profile .irp-content .irp-right {
+    	margin-top: 50px;
+	}
+	.ir-profile .irp-content .irp-right .irp-tabs{
+		display: none;
+	}
+	.irp-hidden-lg{
+		display: block;
+	}
+	.ir-profile .irp-content .irp-right .irp-tabs-content{
+		padding-top: 0;
+	}
+	.irp-tab-content .irp-title{
+		font-size: 26px;
+		color: #444444;
+		font-weight: 700;
+		margin-bottom: 30px;
+	}
+	.ir-profile .irp-content .irp-right .irp-tabs-content .irp-tab-content .irp-education-list,
+	.ir-profile .irp-content .irp-right .irp-tabs-content .irp-tab-content .irp-achievements-list,
+	.ir-profile .irp-content .irp-right .irp-tabs-content .irp-tab-content .irp-custom{
+		background-image: none !important;
+		padding-left: 0 !important;
+		min-height: auto;
+	}
+	.ir-profile .irp-content .irp-right .irp-tabs-content .irp-tab-content .irp-education h2, .ir-profile .irp-content .irp-right .irp-tabs-content .irp-tab-content .irp-achievements h2{
+		padding-left: 0;
+	}
+	.irp-readmore, .irp-readless{
+		font-size: 18px;
+	}
+	.ir-profile .irp-content .irp-right .irp-tabs-content .irp-tab-content p{
+		font-size: 22px;
+		line-height: 36px;
+	}
+	.ir-profile .irp-content .irp-right .irp-tabs-content .irp-tab-content p{
+		max-height: 396px;
+	}
+	.irp-readmore, .irp-readless{
+		margin-bottom: 35px;
+	}
+	.ir-profile .irp-content .irp-right .irp-tabs-content .irp-tab-content .irp-education-list li i, .ir-profile .irp-content .irp-right .irp-tabs-content .irp-tab-content .irp-achievements-list li i{
+		font-size: 26px;
+	}
+	.ir-profile .irp-content .irp-right .irp-tabs-content .irp-tab-content .irp-education-list li, .ir-profile .irp-content .irp-right .irp-tabs-content .irp-tab-content .irp-achievements-list li{
+		padding-left: 50px;
+	}
+	.ir-profile .irp-content .irp-right .irp-tabs-content .irp-tab-content .irp-education-list li span, .ir-profile .irp-content .irp-right .irp-tabs-content .irp-tab-content .irp-achievements-list li span{
+		font-size: 20px;
+	}
+	.ir-profile .irp-content .irp-right .irp-tabs-content .irp-tab-content .irp-education-list li, .ir-profile .irp-content .irp-right .irp-tabs-content .irp-tab-content .irp-achievements-list li{
+		margin-bottom: 25px;
+	}
+	.ir-profile .irp-content .irp-right .irp-tabs-content .irp-tab-content .irp-education-list li:nth-last-child(1){
+		margin-bottom: 35px;
+	}
+	.ir-profile .irp-content .irp-right .irp-tabs-content .irp-tab-content{
+		display: block;
+	}
+	
+	div[data-id="irp-courses"]{
+		margin-top: 75px;
+	}
+
+}
+
+
+//Astra Compatibility
+
+.instructor-profile{
+	.ast-container{
+		max-width: 100%;
+		padding: 0;
+	}	
+}
+
+//Buddyboss Compatibility
+
+.instructor-profile #content{
+	> .container{
+		max-width: 100%;
+		padding: 0;
+	}	
+}
+
+.buddyboss-theme{
+	.ir-profile{
+		padding: 0 !important;
+	}
+}
+
+//eLumine compatibility
+
+.instructor-profile .site-content-contain{
+	padding-top: 0;
+}
+
+//GeneratePress
+
+.instructor-profile #page{
+	max-width: 100%;
+}

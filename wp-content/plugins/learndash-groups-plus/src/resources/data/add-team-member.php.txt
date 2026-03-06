@@ -1,0 +1,107 @@
+<?php $form_id = 'save_groups_plus_team_member'; ?>
+<!-- The Modal for adding a new team member groups-plus -->
+<div id="<?php echo $form_id; ?>_modal" class="groups-plus-modal">
+	<!-- Modal content -->
+	<div class="groups-plus-modal-content">
+		<div class="groups-plus-modal-nav">
+			<ul class="tabs">
+				<li class="link-tab current">
+					<?php printf(
+						esc_html__( 'Add New %s - Single Entry', 'learndash-groups-plus' ),
+						learndash_get_custom_label( 'team_member' )
+					); ?>
+				</li>
+			</ul>
+			<button class="groups-plus-close">&times;</button>
+		</div>
+		<div class="groups-plus-modal-container">
+			<form action="" method="POST" id="<?php echo $form_id; ?>"
+				data-nonce="<?php echo wp_create_nonce( 'learndash-groups-plus-add-team-member' ); ?>">
+				<div class="form_message"></div>
+				<div class="form-group section">
+					<div class="col grid_2_of_4">
+						<input type="checkbox" id="has_team_member_exists" name="has_team_member_exists" value="1">
+						<label for="has_team_member_exists">
+							<?php printf(
+								esc_html__( '%s already exists?', 'learndash-groups-plus' ),
+								learndash_get_custom_label( 'team_member' )
+							); ?>
+						</label>
+					</div>
+				</div>
+				<div class="form-group section div-has-team-member">
+					<div class="col grid_1_of_4">
+						<select name="groups_plus_team_member_id[]" class="groups_plus_team_member_ids form-control"
+							multiple="multiple">
+							<option value="">
+								<?php printf(
+									esc_html__( '-- Choose %s --', 'learndash-groups-plus' ),
+									learndash_get_custom_label_lower( 'team_member' )
+								); ?>
+							</option>
+							<?php
+							$allow_leader_to_see_all_users = get_site_option( 'allow_leader_to_see_all_users' );
+							if ( $allow_leader_to_see_all_users ) {
+								$child_groups_users = learndash_groups_plus_get_users();
+							} else {
+								$child_groups_users = get_child_groups_users( $group_info->post_parent, $group_info->ID );
+							}
+							foreach ( $child_groups_users as $usr_id => $child_groups_user ) {
+								?>
+							<option value="<?php _e( $usr_id, 'learndash-groups-plus' ); ?>">
+								<?php // _e( $child_groups_user->display_name . ' (' . $child_groups_user->username . ')', 'learndash-groups-plus' ); ?>
+								<?php _e( $child_groups_user['display_name'] . ' (' . $child_groups_user['username'] . ')', 'learndash-groups-plus' ); ?>
+							</option>
+								<?php
+							}
+							?>
+						</select>
+					</div>
+				</div>
+				<div class="div-new-team-member">
+					<div class="form-group section">
+						<div class="col grid_1_of_4">
+							<input type="hidden" name="groups_plus_team_member[group]"
+								value="<?php echo get_query_var( 'group_id', false ) != '' ? get_query_var( 'group_id', false ) : $_GET['group']; ?>" />
+							<input type="text" name="groups_plus_team_member[firstname]" value=""
+								placeholder="<?php esc_html_e( 'First Name *', 'learndash-groups-plus' ); ?>"
+								autocomplete="off" />
+						</div>
+						<div class="col grid_1_of_4">
+							<input type="text" name="groups_plus_team_member[lastname]" value=""
+								placeholder="<?php esc_html_e( 'Last Name', 'learndash-groups-plus' ); ?>"
+								autocomplete="off" />
+						</div>
+						<div class="col grid_1_of_4">
+							<input type="text" name="groups_plus_team_member[username]" value=""
+								placeholder="<?php esc_html_e( 'Username *', 'learndash-groups-plus' ); ?>"
+								autocomplete="off" />
+						</div>
+						<div class="col grid_1_of_4">
+							<input type="text" name="groups_plus_team_member[email]" value=""
+								placeholder="<?php esc_html_e( 'Email', 'learndash-groups-plus' ); ?>"
+								autocomplete="off" />
+						</div>
+					</div>
+					<div class="form-group section">
+						<div class="col grid_1_of_4">
+							<label
+								class="classrrom-form-label text-center"><?php esc_html_e( 'Password', 'learndash-groups-plus' ); ?></label>
+							<input type="text" name="groups_plus_team_member[password]" class="form_password"
+								value="<?php echo esc_attr( generate_team_member_password() ); ?>"
+								placeholder="<?php esc_html_e( 'Password', 'learndash-groups-plus' ); ?>" />
+						</div>
+					</div>
+				</div>
+				<div class="form-action section text-right pull-left action-buttons">
+					<div class="col grid_1_of_4">
+						<button type="submit" class="btn_groups_plus"
+							id="<?php echo $form_id; ?>_btn"><?php esc_html_e( 'Save', 'learndash-groups-plus' ); ?> <i
+								class="fa fa-angle-right"></i></button>
+					</div>
+				</div>
+				<div class="form-action section text-right"></div>
+			</form>
+		</div>
+	</div>
+</div>

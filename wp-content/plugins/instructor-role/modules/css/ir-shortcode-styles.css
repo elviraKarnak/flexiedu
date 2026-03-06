@@ -1,0 +1,18 @@
+.ir-instructor-div {
+    margin-right: 30px;
+    align-items: center;
+}
+
+.ir-visible-instructor-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img.ir-instructor-img {
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+.ir-hidden-instructors-list {
+    display: none;
+}

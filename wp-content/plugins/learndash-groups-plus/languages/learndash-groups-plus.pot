@@ -1,0 +1,2847 @@
+# Copyright (C) 2026 LearnDash
+# This file is distributed under the same license as the LearnDash LMS - Groups Plus plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: LearnDash LMS - Groups Plus 2.1.5\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/learndash-groups-plus\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-02-09T17:57:51+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: learndash-groups-plus\n"
+
+#. Plugin Name of the plugin
+#: learndash-groups-plus.php
+#: src/Admin/Translation.php:51
+msgid "LearnDash LMS - Groups Plus"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: learndash-groups-plus.php
+msgid "https://www.learndash.com/extensions/groups-plus/"
+msgstr ""
+
+#. Description of the plugin
+#: learndash-groups-plus.php
+msgid "Create Groups Plus without the need to sell them. This plugin manages LearnDash native Groups in the web site. Let your client organizations do all the organizational management work and view their details reports."
+msgstr ""
+
+#. Author of the plugin
+#: learndash-groups-plus.php
+msgid "LearnDash"
+msgstr ""
+
+#. Author URI of the plugin
+#: learndash-groups-plus.php
+msgid "https://www.learndash.com/"
+msgstr ""
+
+#: src/Emails/Welcome.php:307
+msgid "use your current password"
+msgstr ""
+
+#: src/Model/WooCommerce/Product/Organizations.php:69
+#: src/Model/WooCommerce/Product/Organizations_Groups.php:69
+#: src/Model/WooCommerce/Product/Seats.php:72
+#: src/Model/WooCommerce/Product/Teams.php:100
+msgid "Select options"
+msgstr ""
+
+#: src/Module/Custom_Label.php:64
+#: src/Module/Custom_Label.php:162
+msgid "Organization"
+msgstr ""
+
+#: src/Module/Custom_Label.php:65
+msgid "Label to replace \"organization\" (singular)."
+msgstr ""
+
+#: src/Module/Custom_Label.php:72
+#: src/Module/Custom_Label.php:166
+msgid "Organizations"
+msgstr ""
+
+#: src/Module/Custom_Label.php:73
+msgid "Label to replace \"organizations\" (plural)."
+msgstr ""
+
+#: src/Module/Custom_Label.php:80
+#: src/Module/Custom_Label.php:170
+msgid "Team"
+msgstr ""
+
+#: src/Module/Custom_Label.php:81
+msgid "Label to replace \"team\" (singular)."
+msgstr ""
+
+#: src/Module/Custom_Label.php:88
+#: src/Module/Custom_Label.php:174
+msgid "Teams"
+msgstr ""
+
+#: src/Module/Custom_Label.php:89
+msgid "Label to replace \"teams\" (plural)."
+msgstr ""
+
+#: src/Module/Custom_Label.php:96
+#: src/Module/Custom_Label.php:178
+msgid "Lead Organizer"
+msgstr ""
+
+#: src/Module/Custom_Label.php:97
+msgid "Label to replace \"lead organizer\" (singular)."
+msgstr ""
+
+#: src/Module/Custom_Label.php:104
+#: src/Module/Custom_Label.php:182
+#: src/Plugin.php:3826
+msgid "Lead Organizers"
+msgstr ""
+
+#: src/Module/Custom_Label.php:105
+msgid "Label to replace \"lead organizers\" (plural)."
+msgstr ""
+
+#: src/Module/Custom_Label.php:112
+#: src/Module/Custom_Label.php:186
+msgid "Team Leader"
+msgstr ""
+
+#: src/Module/Custom_Label.php:113
+msgid "Label to replace \"team leader\" (singular)."
+msgstr ""
+
+#: src/Module/Custom_Label.php:120
+#: src/Module/Custom_Label.php:190
+msgid "Team Leaders"
+msgstr ""
+
+#: src/Module/Custom_Label.php:121
+msgid "Label to replace \"team leaders\" (plural)."
+msgstr ""
+
+#: src/Module/Custom_Label.php:128
+#: src/Module/Custom_Label.php:194
+msgid "Team Member"
+msgstr ""
+
+#: src/Module/Custom_Label.php:129
+msgid "Label to replace \"team member\" (singular)."
+msgstr ""
+
+#: src/Module/Custom_Label.php:136
+#: src/Module/Custom_Label.php:198
+msgid "Team Members"
+msgstr ""
+
+#: src/Module/Custom_Label.php:137
+msgid "Label to replace \"team members\" (plural)."
+msgstr ""
+
+#: src/Module/Migration.php:206
+#: src/Module/Migration.php:319
+msgid "LearnDash Groups Plus Migration"
+msgstr ""
+
+#. translators: HTML markup for link.
+#: src/Module/Migration.php:286
+#, php-format
+msgid "We've detected the site used LearnDash Classroom addon. %1$sClick here%2$s to start the migration process. Make sure to back up the site first because the process is irreversible."
+msgstr ""
+
+#: src/Module/Migration.php:320
+msgid "Starting migration."
+msgstr ""
+
+#: src/Module/Migration.php:322
+msgid "Please don't close this page until the process is finished."
+msgstr ""
+
+#. translators: current step of the total step.
+#: src/Module/Migration.php:405
+msgid "The migration has been completed. You can close this page."
+msgstr ""
+
+#. translators: current step of the total step.
+#: src/Module/Migration.php:405
+#, php-format
+msgid "Processed step #%1$d of %2$d steps."
+msgstr ""
+
+#: src/Module/Notices/Notices.php:50
+msgid "Please set your password. Autologin link is valid for one-time use only."
+msgstr ""
+
+#. translators: Teams.
+#: src/Module/WooCommerce/Organizations.php:173
+#: src/Module/WooCommerce/Teams/Product_Edit.php:172
+#, php-format
+msgid "LearnDash %s"
+msgstr ""
+
+#. translators: team.
+#: src/Module/WooCommerce/Organizations.php:236
+#: src/Module/WooCommerce/Teams/Product_Edit.php:284
+#, php-format
+msgid "Enable %s purchase"
+msgstr ""
+
+#. translators: team.
+#: src/Module/WooCommerce/Organizations.php:240
+#: src/Module/WooCommerce/Teams/Product_Edit.php:289
+#, php-format
+msgid "check to enable %s purchase"
+msgstr ""
+
+#. translators: placeholder: Organization label.
+#. translators: placeholder: Organization label..
+#. translators: Course.
+#: src/Module/WooCommerce/Organizations.php:254
+#: src/Module/WooCommerce/Organizations.php:423
+#: src/Module/WooCommerce/Organizations_Groups.php:267
+#: src/Module/WooCommerce/Organizations_Groups.php:404
+#: src/Module/WooCommerce/Teams/Product_Edit.php:307
+#, php-format
+msgid "Select LearnDash %s."
+msgstr ""
+
+#: src/Module/WooCommerce/Organizations.php:407
+#: src/Module/WooCommerce/Organizations_Groups.php:382
+#: src/Module/WooCommerce/Teams/Product_Edit.php:405
+msgid "Allow seats"
+msgstr ""
+
+#: src/Module/WooCommerce/Organizations.php:408
+#: src/Module/WooCommerce/Organizations_Groups.php:383
+#: src/Module/WooCommerce/Teams/Product_Edit.php:406
+msgid "How many seats you wanted to allow."
+msgstr ""
+
+#. translators: placeholder: Organization label.
+#. translators: placeholder: Team label.
+#. translators: Team.
+#: src/Module/WooCommerce/Organizations.php:542
+#: src/Module/WooCommerce/Organizations.php:545
+#: src/Module/WooCommerce/Organizations.php:1006
+#: src/Module/WooCommerce/Organizations_Groups.php:529
+#: src/Module/WooCommerce/Organizations_Groups.php:532
+#: src/Module/WooCommerce/Organizations_Groups.php:1002
+#: src/Module/WooCommerce/Seats.php:403
+#: src/Module/WooCommerce/Seats.php:409
+#: src/Module/WooCommerce/Seats.php:498
+#: src/Module/WooCommerce/Seats.php:534
+#: src/Module/WooCommerce/Teams/Add_To_Cart.php:267
+#: src/Module/WooCommerce/Teams/Checkout.php:107
+#: src/Module/WooCommerce/Teams/Checkout.php:113
+#, php-format
+msgid "%s name"
+msgstr ""
+
+#: src/Module/WooCommerce/Organizations.php:548
+#: src/Module/WooCommerce/Organizations_Groups.php:535
+msgid "Exclude from publicly sold seats"
+msgstr ""
+
+#: src/Module/WooCommerce/Organizations.php:551
+msgid "Course Names"
+msgstr ""
+
+#: src/Module/WooCommerce/Organizations.php:578
+#: src/Module/WooCommerce/Organizations.php:990
+#: src/Module/WooCommerce/Organizations_Groups.php:566
+#: src/Module/WooCommerce/Organizations_Groups.php:986
+#: src/Module/WooCommerce/Organizations_Groups.php:1144
+msgid "Qty:"
+msgstr ""
+
+#. translators: team.
+#: src/Module/WooCommerce/Organizations.php:693
+#: src/Module/WooCommerce/Teams/Product_Single.php:280
+#, php-format
+msgid "Enter %s name"
+msgstr ""
+
+#: src/Module/WooCommerce/Organizations.php:713
+#: src/Module/WooCommerce/Organizations_Groups.php:698
+#: src/Module/WooCommerce/Teams/Checkout.php:127
+#: src/Module/WooCommerce/Teams/Product_Single.php:318
+#: src/Settings.php:2496
+msgid "Exclude from publicly sold seats:"
+msgstr ""
+
+#. translators: team.
+#: src/Module/WooCommerce/Organizations.php:725
+#: src/Module/WooCommerce/Organizations_Groups.php:711
+#: src/Module/WooCommerce/Teams/Product_Single.php:370
+#, php-format
+msgid "Choose %s name:"
+msgstr ""
+
+#. translators: Team courses package.
+#: src/Module/WooCommerce/Organizations.php:738
+#: src/Module/WooCommerce/Organizations_Groups.php:726
+#: src/Module/WooCommerce/Teams/Product_Single.php:411
+#, php-format
+msgid "%1$s %2$s package:"
+msgstr ""
+
+#. translators: Select team courses.
+#: src/Module/WooCommerce/Organizations.php:751
+#: src/Module/WooCommerce/Organizations_Groups.php:739
+#: src/Module/WooCommerce/Teams/Product_Single.php:448
+#, php-format
+msgid "Select %1$s %2$s:"
+msgstr ""
+
+#: src/Module/WooCommerce/Organizations.php:756
+#: src/Module/WooCommerce/Organizations_Groups.php:744
+#: src/Module/WooCommerce/Teams/Product_Single.php:460
+#: src/resources/templates/team/modal.php:184
+#: src/resources/templates/team/modal.php:212
+#: src/resources/templates/team/modal.php:440
+#: src/resources/templates/team/modal.php:468
+msgid "Search for names..."
+msgstr ""
+
+#: src/Module/WooCommerce/Organizations.php:763
+#: src/Module/WooCommerce/Organizations_Groups.php:763
+msgid "Quantity"
+msgstr ""
+
+#: src/Module/WooCommerce/Organizations.php:774
+#: src/Module/WooCommerce/Organizations.php:781
+#: src/Module/WooCommerce/Organizations_Groups.php:774
+#: src/Module/WooCommerce/Organizations_Groups.php:781
+#: src/Module/WooCommerce/Teams/Product_Single.php:511
+msgid "Total price so far:"
+msgstr ""
+
+#. translators: Team label.
+#: src/Module/WooCommerce/Organizations.php:825
+#: src/Module/WooCommerce/Organizations_Groups.php:824
+#: src/Module/WooCommerce/Teams/Add_To_Cart.php:115
+#, php-format
+msgid "\"%s name\" is a required field"
+msgstr ""
+
+#. translators: organization course qty.
+#: src/Module/WooCommerce/Organizations.php:834
+#: src/Module/WooCommerce/Organizations_Groups.php:830
+#, php-format
+msgid "Choose at least one %1$s %2$s qty"
+msgstr ""
+
+#. translators: placeholder: Course label.
+#. translators: placeholder: Group label.
+#: src/Module/WooCommerce/Organizations.php:975
+#: src/Module/WooCommerce/Organizations_Groups.php:971
+#: src/Module/WooCommerce/Teams/Add_To_Cart.php:255
+#, php-format
+msgid "%s names"
+msgstr ""
+
+#: src/Module/WooCommerce/Organizations.php:1939
+#: src/Module/WooCommerce/Organizations_Groups.php:2163
+#: src/Module/WooCommerce/Seats.php:1332
+msgid "LearnDash Groups Plus WooCommerce"
+msgstr ""
+
+#: src/Module/WooCommerce/Organizations.php:1958
+msgid "Course Price"
+msgstr ""
+
+#: src/Module/WooCommerce/Organizations_Groups.php:174
+#, php-format
+msgid "LearnDash Pre-Built %s"
+msgstr ""
+
+#. translators: placeholder: Organizations label.
+#: src/Module/WooCommerce/Organizations_Groups.php:213
+#, php-format
+msgid "LearnDash Pre-Built %1$s"
+msgstr ""
+
+#. translators: placeholder: Organization label.
+#: src/Module/WooCommerce/Organizations_Groups.php:245
+#, php-format
+msgid "Enable Pre-Built %s purchase"
+msgstr ""
+
+#. translators: placeholder: Organization label.
+#: src/Module/WooCommerce/Organizations_Groups.php:250
+#, php-format
+msgid "check to enable Pre-Built %s purchase"
+msgstr ""
+
+#: src/Module/WooCommerce/Organizations_Groups.php:538
+#, php-format
+msgid "%s Names"
+msgstr ""
+
+#: src/Module/WooCommerce/Organizations_Groups.php:683
+#, php-format
+msgid "Enter %s name:"
+msgstr ""
+
+#: src/Module/WooCommerce/Organizations_Groups.php:758
+#, php-format
+msgid "This is a group that will pre-build %1$s and %2$s"
+msgstr ""
+
+#: src/Module/WooCommerce/Organizations_Groups.php:1130
+#: src/Module/WooCommerce/Organizations_Groups.php:1134
+#: src/Module/WooCommerce/Seats.php:493
+#: src/Module/WooCommerce/Seats.php:528
+#, php-format
+msgid "%s name:"
+msgstr ""
+
+#: src/Module/WooCommerce/Organizations_Groups.php:1139
+msgid "Group names:"
+msgstr ""
+
+#: src/Module/WooCommerce/Organizations_Groups.php:2186
+msgid "WooCommerce Enabled?"
+msgstr ""
+
+#: src/Module/WooCommerce/Organizations_Groups.php:2192
+#, php-format
+msgid "Pre-built %s?"
+msgstr ""
+
+#: src/Module/WooCommerce/Organizations_Groups.php:2198
+#: src/Module/WooCommerce/Seats.php:1364
+#, php-format
+msgid "%s seat price"
+msgstr ""
+
+#: src/Module/WooCommerce/Seats.php:170
+#: src/Module/WooCommerce/Seats.php:181
+msgid "LearnDash Seats"
+msgstr ""
+
+#: src/Module/WooCommerce/Seats.php:212
+#, php-format
+msgid "Choose %s"
+msgstr ""
+
+#: src/Module/WooCommerce/Seats.php:218
+#: src/Plugin.php:1157
+#: src/Plugin.php:1161
+#: src/resources/templates/team/admin-header.php:52
+#, php-format
+msgid "Select %s"
+msgstr ""
+
+#: src/Module/WooCommerce/Seats.php:709
+msgid "Enable seat purchase"
+msgstr ""
+
+#: src/Module/WooCommerce/Seats.php:710
+msgid "check to sell individual seat purchase"
+msgstr ""
+
+#: src/Module/WooCommerce/Seats.php:882
+#: src/Module/WooCommerce/Seats.php:1745
+msgid "Seat"
+msgstr ""
+
+#: src/Module/WooCommerce/Seats.php:1312
+#, php-format
+msgid "%1$s is required. Please choose a %2$s first."
+msgstr ""
+
+#: src/Module/WooCommerce/Seats.php:1375
+msgid "Public subscription seat price"
+msgstr ""
+
+#. translators: Sign up fees for added seats in "Team Name".
+#: src/Module/WooCommerce/Seats.php:1566
+#, php-format
+msgid "Sign up fees for added seats in \"%1$s\""
+msgstr ""
+
+#: src/Module/WooCommerce/Seats.php:1690
+#: src/Module/WooCommerce/Seats.php:1710
+msgid "Invalid nonce."
+msgstr ""
+
+#: src/Module/WooCommerce/Seats.php:1722
+msgid "A valid product_id must be provided."
+msgstr ""
+
+#. translators: Team label.
+#: src/Module/WooCommerce/Teams/Add_To_Cart.php:126
+#, php-format
+msgid "A %s must be chosen"
+msgstr ""
+
+#. translators: team course.
+#: src/Module/WooCommerce/Teams/Add_To_Cart.php:147
+#, php-format
+msgid "Choose at least one %1$s %2$s"
+msgstr ""
+
+#. translators: Sign up fees for team "Team Name".
+#: src/Module/WooCommerce/Teams/Add_To_Cart.php:589
+#, php-format
+msgid "Sign up fees for %1$s \"%2$s\""
+msgstr ""
+
+#. translators: Course Title (Course Price/seat).
+#: src/Module/WooCommerce/Teams/Checkout.php:214
+#, php-format
+msgid "%1$s (%2$s/seat)"
+msgstr ""
+
+#. translators: LearnDash Team label courses label.
+#: src/Module/WooCommerce/Teams/Product_Edit.php:227
+#, php-format
+msgid "LearnDash %1$s %2$s"
+msgstr ""
+
+#. translators: The Course per-Seat Price.
+#. translators: Course Price per-Seat.
+#: src/Module/WooCommerce/Teams/Product_Edit.php:356
+#: src/Module/WooCommerce/Teams/Product_Single.php:483
+#, php-format
+msgid "(%s/seat)"
+msgstr ""
+
+#: src/Module/WooCommerce/Teams/Product_Single.php:680
+msgid "Malformed request data."
+msgstr ""
+
+#: src/Module/WooCommerce/Teams/Product_Single.php:696
+msgid "Error retrieving variation product."
+msgstr ""
+
+#: src/Plugin.php:174
+msgid "LearnDash LMS - Groups Plus Add-on requires the following plugin(s) to be active:"
+msgstr ""
+
+#: src/Plugin.php:368
+msgid "Link may be expired."
+msgstr ""
+
+#. translators: HTML tags.
+#: src/Plugin.php:482
+#, php-format
+msgid "Warning: LearnDash LMS - Groups Plus requires LearnDash Group Hierarchy setting enabled to make it working as expected. %sClick here to enable%s"
+msgstr ""
+
+#: src/Plugin.php:545
+msgid "You must be logged in to use this tool."
+msgstr ""
+
+#: src/Plugin.php:571
+#: src/Plugin.php:649
+#: src/Plugin.php:763
+msgid "You must be logged in to see this report."
+msgstr ""
+
+#. translators: placeholder: Teams label.
+#: src/Plugin.php:624
+#: src/resources/templates/team/header.php:120
+#: src/resources/templates/team/listing.php:35
+#: src/resources/templates/team/modal.php:51
+#: src/resources/templates/team/modal.php:500
+#, php-format
+msgid "Manage %s"
+msgstr ""
+
+#: src/Plugin.php:716
+msgid "You must be logged in to see the this report."
+msgstr ""
+
+#: src/Plugin.php:723
+msgid "Only group leaders have access to this report."
+msgstr ""
+
+#: src/Plugin.php:771
+msgid "Only group leaders have access to this tool."
+msgstr ""
+
+#: src/Plugin.php:792
+#, php-format
+msgid "Learndash Groups Plus %s"
+msgstr ""
+
+#. translators: Team Members.
+#: src/Plugin.php:865
+#, php-format
+msgid "Number of %s"
+msgstr ""
+
+#. translators: Team Leaders.
+#: src/Plugin.php:900
+#, php-format
+msgid "Number of %s not using seats"
+msgstr ""
+
+#. translators: Teams.
+#: src/Plugin.php:945
+#, php-format
+msgid "Disable %s creation?"
+msgstr ""
+
+#: src/Plugin.php:980
+msgid "Exclude from WooCommerce product pages"
+msgstr ""
+
+#: src/Plugin.php:1164
+#: src/resources/templates/team-member/edit-team-member.php:29
+#: src/resources/templates/team-member/elc-ldquiz-modal.php:23
+msgid "Please wait to load..."
+msgstr ""
+
+#: src/Plugin.php:1264
+msgid "General"
+msgstr ""
+
+#: src/Plugin.php:1265
+#: src/Settings.php:815
+msgid "Settings"
+msgstr ""
+
+#: src/Plugin.php:1266
+msgid "Global Email"
+msgstr ""
+
+#: src/Plugin.php:1267
+msgid "Design"
+msgstr ""
+
+#: src/Plugin.php:1268
+#: src/Settings.php:1814
+msgid "Developer Resources"
+msgstr ""
+
+#: src/Plugin.php:1334
+msgid "Invalid group"
+msgstr ""
+
+#. Translators: %s: team label.
+#: src/Plugin.php:1338
+#, php-format
+msgid "%s name is required"
+msgstr ""
+
+#. Translators: %s: username.
+#: src/Plugin.php:1345
+#, php-format
+msgid "Username %s exists"
+msgstr ""
+
+#. Translators: %1$s: team leader label, %2$s: team leader label.
+#: src/Plugin.php:1353
+#: src/Plugin.php:1629
+#, php-format
+msgid "You must check %1$s already exists option if you want to set existing user as %2$s."
+msgstr ""
+
+#. Translators: %1$s: team leader label, %2$s: team label.
+#: src/Plugin.php:1364
+#: src/Plugin.php:1640
+#, php-format
+msgid "You must set existing %1$s for the %2$s."
+msgstr ""
+
+#: src/Plugin.php:1373
+#: src/Plugin.php:1656
+msgid "Username field is required."
+msgstr ""
+
+#: src/Plugin.php:1377
+#: src/Plugin.php:1660
+msgid "Password field is required."
+msgstr ""
+
+#: src/Plugin.php:1381
+#: src/Plugin.php:1664
+msgid "Email field is required and to be in correct format."
+msgstr ""
+
+#: src/Plugin.php:1385
+#: src/Plugin.php:1668
+msgid "First name field is required."
+msgstr ""
+
+#: src/Plugin.php:1885
+#: src/Plugin.php:2511
+#: src/Plugin.php:2675
+#: src/Plugin.php:2750
+#: src/Plugin.php:2769
+msgid "You don't have permission for this"
+msgstr ""
+
+#: src/Plugin.php:2172
+#: src/Plugin.php:4104
+#: src/resources/templates/team-member/lesson-listing.php:904
+#: src/resources/templates/team-member/listing.php:45
+#: src/resources/templates/team-member/login-history.php:51
+#: src/resources/templates/team/listing.php:47
+msgid "No record found."
+msgstr ""
+
+#: src/Plugin.php:2189
+#: src/resources/templates/team-member/filter.php:95
+#: src/resources/templates/team-member/filter.php:117
+#: src/resources/templates/team-member/listing.php:21
+#: src/resources/templates/team/listing.php:20
+#: src/resources/templates/team/modal.php:79
+#: src/resources/templates/team/modal.php:648
+#, php-format
+msgid "%s Name"
+msgstr ""
+
+#: src/Plugin.php:2190
+msgid "Completion"
+msgstr ""
+
+#. translators: team average percentage.
+#: src/Plugin.php:2211
+#, php-format
+msgid "%1$s Avg: %2$s%%"
+msgstr ""
+
+#: src/Plugin.php:2298
+#: src/Plugin.php:2730
+msgid "This feature has been disabled"
+msgstr ""
+
+#: src/Plugin.php:2306
+#: src/Plugin.php:2742
+msgid "Security issue"
+msgstr ""
+
+#: src/Plugin.php:2516
+msgid "Firstname is required and at least 3 letters."
+msgstr ""
+
+#: src/Plugin.php:2520
+msgid "Username is required and at least 3 letters."
+msgstr ""
+
+#: src/Plugin.php:2526
+msgid "Username already used"
+msgstr ""
+
+#: src/Plugin.php:2531
+#: src/Plugin.php:2879
+#: src/Plugin.php:3090
+#: src/Plugin.php:3092
+msgid "Email address already used"
+msgstr ""
+
+#: src/Plugin.php:2761
+msgid "Invalid user"
+msgstr ""
+
+#: src/Plugin.php:2781
+#: src/Plugin.php:2876
+#: src/Plugin.php:3074
+msgid "Password is required"
+msgstr ""
+
+#: src/Plugin.php:2789
+msgid "Minimum length for password is 5"
+msgstr ""
+
+#: src/Plugin.php:2797
+#: src/resources/templates/team-member/change-password.php:36
+msgid "Confirm password"
+msgstr ""
+
+#: src/Plugin.php:2805
+msgid "Passwords don't match"
+msgstr ""
+
+#: src/Plugin.php:2869
+#: src/Plugin.php:3063
+msgid "Username is required"
+msgstr ""
+
+#: src/Plugin.php:2873
+#: src/Plugin.php:3067
+msgid "Firstname is required"
+msgstr ""
+
+#: src/Plugin.php:3254
+msgid "User Roles"
+msgstr ""
+
+#: src/Plugin.php:3258
+msgid "Roles"
+msgstr ""
+
+#: src/Plugin.php:3774
+#, php-format
+msgid "Please wait for your %s to unlock this information"
+msgstr ""
+
+#: src/Plugin.php:3821
+msgid "Type"
+msgstr ""
+
+#: src/Plugin.php:3839
+msgid "Members"
+msgstr ""
+
+#. translators: organization label.
+#: src/Plugin.php:3868
+#: src/Plugin.php:3881
+#, php-format
+msgid "WooCommerce %s template"
+msgstr ""
+
+#. translators: team of org name.
+#: src/Plugin.php:3888
+#, php-format
+msgid "%1$s of %2$s %3$s %4$s"
+msgstr ""
+
+#: src/Plugin.php:3949
+#: src/Plugin.php:4004
+#: src/Plugin.php:4062
+msgid "See more"
+msgstr ""
+
+#: src/Plugin.php:4170
+msgid "You must be logged in to see this messages."
+msgstr ""
+
+#: src/Plugin.php:4181
+msgid "No messages found."
+msgstr ""
+
+#: src/Plugin.php:4188
+msgid "Sent On: "
+msgstr ""
+
+#: src/Plugin.php:4228
+msgid "Gravity Form Page URL (Assignment Upload)"
+msgstr ""
+
+#: src/Plugin.php:4247
+msgid "Gravity Form ID"
+msgstr ""
+
+#: src/Plugin.php:4266
+msgid "Gravity Form Field ID (Field must have value of Competent or Satisfactory to Approve assignment)"
+msgstr ""
+
+#: src/Plugin.php:4286
+#, php-format
+msgid "Optional: Gravity Form %1$s Field ID (Field must be %2$s Dropdown)"
+msgstr ""
+
+#: src/resources/templates/team-member/add-seats.php:24
+#: src/resources/templates/team-member/header.php:72
+#: src/resources/templates/team-member/header.php:92
+#: src/Settings.php:647
+msgid "Add Seats"
+msgstr ""
+
+#: src/resources/templates/team-member/add-seats.php:56
+msgid "Add non-recurring cost seat"
+msgstr ""
+
+#: src/resources/templates/team-member/add-seats.php:63
+msgid "Add recurring cost seat"
+msgstr ""
+
+#: src/resources/templates/team-member/add-seats.php:72
+msgid "Add"
+msgstr ""
+
+#: src/resources/templates/team-member/add-team-member.php:22
+#, php-format
+msgid "Add New %s - Single Entry"
+msgstr ""
+
+#: src/resources/templates/team-member/add-team-member.php:38
+#: src/resources/templates/team/modal.php:111
+#: src/resources/templates/team/modal.php:564
+#, php-format
+msgid "%s already exists?"
+msgstr ""
+
+#: src/resources/templates/team-member/add-team-member.php:50
+#: src/resources/templates/team/modal.php:122
+#, php-format
+msgid "-- Choose %s --"
+msgstr ""
+
+#: src/resources/templates/team-member/add-team-member.php:79
+#: src/resources/templates/team-member/ajax/edit-team-member.php:21
+msgid "First Name *"
+msgstr ""
+
+#: src/resources/templates/team-member/add-team-member.php:84
+#: src/resources/templates/team-member/ajax/edit-team-member.php:26
+msgid "Last Name"
+msgstr ""
+
+#: src/resources/templates/team-member/add-team-member.php:89
+#: src/resources/templates/team-member/ajax/edit-team-member.php:31
+msgid "Username *"
+msgstr ""
+
+#: src/resources/templates/team-member/add-team-member.php:94
+#: src/resources/templates/team-member/ajax/edit-team-member.php:35
+#: src/resources/templates/team/header.php:131
+#: src/resources/templates/team/modal.php:540
+#: src/resources/templates/team/modal.php:680
+msgid "Email"
+msgstr ""
+
+#: src/resources/templates/team-member/add-team-member.php:101
+#: src/resources/templates/team-member/add-team-member.php:104
+#: src/resources/templates/team/modal.php:172
+#: src/resources/templates/team/modal.php:622
+msgid "Password"
+msgstr ""
+
+#: src/resources/templates/team-member/add-team-member.php:111
+#: src/resources/templates/team-member/ajax/edit-team-member.php:41
+#: src/resources/templates/team-member/change-password.php:42
+#: src/resources/templates/team-member/email-team-member.php:134
+#: src/resources/templates/team/modal.php:219
+#: src/resources/templates/team/modal.php:343
+#: src/resources/templates/team/modal.php:475
+#: src/resources/templates/team/modal.php:631
+#: src/resources/templates/team/modal.php:691
+#: src/Settings.php:1329
+#: src/Settings.php:1771
+#: src/Settings.php:3436
+msgid "Save"
+msgstr ""
+
+#: src/resources/templates/team-member/ajax/edit-team-member.php:53
+msgid "Remove"
+msgstr ""
+
+#: src/resources/templates/team-member/ajax/edit-team-member.php:64
+msgid "Delete"
+msgstr ""
+
+#: src/resources/templates/team-member/change-password.php:19
+#: src/resources/templates/team-member/listing.php:85
+msgid "Change Password"
+msgstr ""
+
+#: src/resources/templates/team-member/change-password.php:32
+msgid "New password"
+msgstr ""
+
+#: src/resources/templates/team-member/edit-team-member.php:21
+#, php-format
+msgid "Update %s"
+msgstr ""
+
+#: src/resources/templates/team-member/elc-ldquiz-modal.php:19
+msgid "Quiz Notification"
+msgstr ""
+
+#: src/resources/templates/team-member/email-team-member.php:32
+#: src/resources/templates/team/modal.php:249
+msgid "Broadcast Email"
+msgstr ""
+
+#: src/resources/templates/team-member/email-team-member.php:41
+#: src/resources/templates/team/modal.php:259
+#, php-format
+msgid "%s Welcome Email"
+msgstr ""
+
+#: src/resources/templates/team-member/email-team-member.php:50
+msgid "Broadcast Messages"
+msgstr ""
+
+#: src/resources/templates/team-member/email-team-member.php:61
+#: src/resources/templates/team/modal.php:272
+#, php-format
+msgid "Configure %s welcome email"
+msgstr ""
+
+#: src/resources/templates/team-member/email-team-member.php:67
+#: src/resources/templates/team/modal.php:278
+#, php-format
+msgid "This email template will be sent when you add new %s"
+msgstr ""
+
+#: src/resources/templates/team-member/email-team-member.php:72
+#: src/resources/templates/team-member/email-team-member.php:157
+#: src/resources/templates/team/modal.php:283
+#: src/resources/templates/team/modal.php:363
+#: src/Settings.php:1703
+#: src/Settings.php:1747
+msgid "Available merge codes"
+msgstr ""
+
+#: src/resources/templates/team-member/email-team-member.php:76
+#: src/resources/templates/team-member/email-team-member.php:161
+#: src/resources/templates/team/modal.php:287
+#: src/resources/templates/team/modal.php:367
+msgid "Insert name of Parent Group"
+msgstr ""
+
+#: src/resources/templates/team-member/email-team-member.php:79
+#: src/resources/templates/team-member/email-team-member.php:164
+#: src/resources/templates/team/modal.php:290
+#: src/resources/templates/team/modal.php:370
+msgid "Insert name of child-group"
+msgstr ""
+
+#: src/resources/templates/team-member/email-team-member.php:83
+#: src/resources/templates/team-member/email-team-member.php:168
+#: src/resources/templates/team/modal.php:294
+#: src/resources/templates/team/modal.php:374
+#, php-format
+msgid "Insert name of %s"
+msgstr ""
+
+#: src/resources/templates/team-member/email-team-member.php:89
+#: src/resources/templates/team-member/email-team-member.php:174
+#: src/resources/templates/team/modal.php:300
+#: src/resources/templates/team/modal.php:380
+#, php-format
+msgid "Insert username of %s"
+msgstr ""
+
+#: src/resources/templates/team-member/email-team-member.php:95
+#: src/resources/templates/team/modal.php:306
+#, php-format
+msgid "Insert password of %s"
+msgstr ""
+
+#: src/resources/templates/team-member/email-team-member.php:101
+#: src/resources/templates/team/modal.php:312
+#, php-format
+msgid "Autologin link of %s"
+msgstr ""
+
+#: src/resources/templates/team-member/email-team-member.php:110
+#: src/resources/templates/team/modal.php:321
+#: src/Settings.php:1684
+#: src/Settings.php:1728
+#, php-format
+msgid "%s Invitation Email"
+msgstr ""
+
+#: src/resources/templates/team-member/email-team-member.php:118
+#: src/resources/templates/team-member/email-team-member.php:120
+#: src/resources/templates/team-member/email-team-member.php:190
+#: src/resources/templates/team-member/email-team-member.php:191
+#: src/resources/templates/team/modal.php:328
+#: src/resources/templates/team/modal.php:329
+#: src/resources/templates/team/modal.php:396
+#: src/resources/templates/team/modal.php:397
+#: src/Settings.php:1692
+#: src/Settings.php:1736
+msgid "Subject"
+msgstr ""
+
+#: src/resources/templates/team-member/email-team-member.php:122
+#: src/resources/templates/team-member/email-team-member.php:193
+#: src/resources/templates/team/modal.php:331
+#: src/resources/templates/team/modal.php:399
+#: src/Settings.php:1701
+#: src/Settings.php:1745
+msgid "Body"
+msgstr ""
+
+#: src/resources/templates/team-member/email-team-member.php:137
+msgid "Save & Send"
+msgstr ""
+
+#: src/resources/templates/team-member/email-team-member.php:146
+#: src/resources/templates/team/modal.php:352
+#, php-format
+msgid "Configure %s broadcast email"
+msgstr ""
+
+#: src/resources/templates/team-member/email-team-member.php:152
+#: src/resources/templates/team/modal.php:358
+#, php-format
+msgid "This email will be sent immediately to all %s"
+msgstr ""
+
+#: src/resources/templates/team-member/email-team-member.php:183
+#: src/resources/templates/team/modal.php:389
+#, php-format
+msgid "%s Broadcast Email"
+msgstr ""
+
+#: src/resources/templates/team-member/email-team-member.php:205
+#: src/resources/templates/team-member/email-team-member.php:234
+#: src/resources/templates/team/modal.php:411
+msgid "Send"
+msgstr ""
+
+#: src/resources/templates/team-member/email-team-member.php:215
+#, php-format
+msgid "%s Broadcast Message"
+msgstr ""
+
+#: src/resources/templates/team-member/email-team-member.php:222
+#: src/resources/templates/team-member/email-team-member.php:243
+msgid "Message"
+msgstr ""
+
+#: src/resources/templates/team-member/email-team-member.php:239
+msgid "Message List:"
+msgstr ""
+
+#: src/resources/templates/team-member/email-team-member.php:244
+msgid "Date"
+msgstr ""
+
+#: src/resources/templates/team-member/email-team-member.php:245
+#: src/resources/templates/team-member/lesson-listing.php:1089
+#: src/resources/templates/team-member/lesson-listing.php:1287
+#: src/resources/templates/team/modal.php:89
+#: src/resources/templates/team/modal.php:541
+#: src/resources/templates/team/modal.php:681
+msgid "Action"
+msgstr ""
+
+#: src/resources/templates/team-member/filter.php:133
+msgid "Course Name"
+msgstr ""
+
+#: src/resources/templates/team-member/filter.php:144
+msgid "Filter"
+msgstr ""
+
+#: src/resources/templates/team-member/filter.php:161
+msgid "Last Login Date"
+msgstr ""
+
+#: src/resources/templates/team-member/header.php:107
+#: src/resources/templates/team/modal.php:63
+#: src/resources/templates/team/modal.php:511
+#, php-format
+msgid "Add %s"
+msgstr ""
+
+#: src/resources/templates/team-member/header.php:118
+msgid "Import List"
+msgstr ""
+
+#: src/resources/templates/team-member/header.php:134
+#, php-format
+msgid "Email %s"
+msgstr ""
+
+#: src/resources/templates/team-member/import-team-member.php:22
+#, php-format
+msgid "Import New %s - Multiple Entries"
+msgstr ""
+
+#: src/resources/templates/team-member/import-team-member.php:36
+msgid "Set up your CSV by following instructions in links below:"
+msgstr ""
+
+#: src/resources/templates/team-member/import-team-member.php:41
+msgid "Download CSV template"
+msgstr ""
+
+#: src/resources/templates/team-member/import-team-member.php:46
+msgid "Upload File:"
+msgstr ""
+
+#: src/resources/templates/team-member/import-team-member.php:49
+msgid "BROWSE"
+msgstr ""
+
+#: src/resources/templates/team-member/import-team-member.php:55
+msgid "File name will appear here"
+msgstr ""
+
+#: src/resources/templates/team-member/import-team-member.php:59
+msgid "SAVE"
+msgstr ""
+
+#: src/resources/templates/team-member/lesson-listing.php:876
+msgid "Time spent: "
+msgstr ""
+
+#: src/resources/templates/team-member/lesson-listing.php:881
+#: src/resources/templates/team-member/lesson-listing.php:970
+#: src/resources/templates/team-member/lesson-listing.php:1167
+#: src/resources/templates/team-member/lesson-listing.php:1367
+msgid "Certificate"
+msgstr ""
+
+#: src/resources/templates/team-member/lesson-listing.php:881
+#: src/resources/templates/team-member/lesson-listing.php:1002
+#: src/resources/templates/team-member/lesson-listing.php:1200
+#: src/resources/templates/team-member/lesson-listing.php:1400
+msgid "Print PDF"
+msgstr ""
+
+#: src/resources/templates/team-member/lesson-listing.php:890
+msgid "Lock"
+msgstr ""
+
+#: src/resources/templates/team-member/lesson-listing.php:895
+#: src/resources/templates/team-member/lesson-listing.php:934
+msgid "Completed On"
+msgstr ""
+
+#: src/resources/templates/team-member/lesson-listing.php:896
+#: src/resources/templates/team-member/lesson-listing.php:935
+#: src/resources/templates/team-member/lesson-listing.php:967
+#: src/resources/templates/team-member/lesson-listing.php:1165
+#: src/resources/templates/team-member/lesson-listing.php:1365
+msgid "Time Spent"
+msgstr ""
+
+#: src/resources/templates/team-member/lesson-listing.php:953
+msgid "Topic Quizzes"
+msgstr ""
+
+#: src/resources/templates/team-member/lesson-listing.php:961
+#: src/resources/templates/team-member/lesson-listing.php:1160
+#: src/resources/templates/team-member/lesson-listing.php:1360
+msgid "Score"
+msgstr ""
+
+#: src/resources/templates/team-member/lesson-listing.php:964
+#: src/resources/templates/team-member/lesson-listing.php:1162
+#: src/resources/templates/team-member/lesson-listing.php:1362
+msgid "Statistics"
+msgstr ""
+
+#: src/resources/templates/team-member/lesson-listing.php:1019
+#: src/resources/templates/team-member/lesson-listing.php:1217
+#: src/resources/templates/team-member/lesson-listing.php:1416
+msgid "Essays"
+msgstr ""
+
+#: src/resources/templates/team-member/lesson-listing.php:1022
+#: src/resources/templates/team-member/lesson-listing.php:1086
+#: src/resources/templates/team-member/lesson-listing.php:1220
+#: src/resources/templates/team-member/lesson-listing.php:1284
+#: src/resources/templates/team-member/lesson-listing.php:1419
+msgid "Comments"
+msgstr ""
+
+#: src/resources/templates/team-member/lesson-listing.php:1025
+#: src/resources/templates/team-member/lesson-listing.php:1223
+#: src/resources/templates/team-member/lesson-listing.php:1422
+msgid "Status"
+msgstr ""
+
+#: src/resources/templates/team-member/lesson-listing.php:1028
+#: src/resources/templates/team-member/lesson-listing.php:1226
+#: src/resources/templates/team-member/lesson-listing.php:1425
+msgid "Points"
+msgstr ""
+
+#: src/resources/templates/team-member/lesson-listing.php:1054
+#: src/resources/templates/team-member/lesson-listing.php:1136
+#: src/resources/templates/team-member/lesson-listing.php:1252
+#: src/resources/templates/team-member/lesson-listing.php:1335
+#: src/resources/templates/team-member/lesson-listing.php:1451
+msgid "Approve"
+msgstr ""
+
+#: src/resources/templates/team-member/lesson-listing.php:1079
+msgid "Topic Assignments:"
+msgstr ""
+
+#: src/resources/templates/team-member/lesson-listing.php:1083
+#: src/resources/templates/team-member/lesson-listing.php:1281
+msgid "File Name"
+msgstr ""
+
+#: src/resources/templates/team-member/lesson-listing.php:1108
+#: src/resources/templates/team-member/lesson-listing.php:1126
+#: src/resources/templates/team-member/lesson-listing.php:1308
+#: src/resources/templates/team-member/lesson-listing.php:1326
+msgid "Approved"
+msgstr ""
+
+#: src/resources/templates/team-member/lesson-listing.php:1114
+#: src/resources/templates/team-member/lesson-listing.php:1314
+msgid "Resubmit"
+msgstr ""
+
+#: src/resources/templates/team-member/lesson-listing.php:1120
+#: src/resources/templates/team-member/lesson-listing.php:1320
+msgid "Grade"
+msgstr ""
+
+#: src/resources/templates/team-member/lesson-listing.php:1154
+msgid "Quizzes"
+msgstr ""
+
+#: src/resources/templates/team-member/lesson-listing.php:1277
+msgid "Assignments:"
+msgstr ""
+
+#: src/resources/templates/team-member/lesson-listing.php:1353
+msgid "Course Quizzes"
+msgstr ""
+
+#: src/resources/templates/team-member/lesson-listing.php:1485
+msgid "Loading"
+msgstr ""
+
+#: src/resources/templates/team-member/listing.php:26
+#: src/resources/templates/team/modal.php:539
+#: src/resources/templates/team/modal.php:679
+msgid "Username"
+msgstr ""
+
+#: src/resources/templates/team-member/listing.php:33
+#, php-format
+msgid "Edit %s Information"
+msgstr ""
+
+#: src/resources/templates/team-member/listing.php:77
+msgid "Edit"
+msgstr ""
+
+#: src/resources/templates/team-member/listing.php:106
+#: src/resources/templates/team/groups-plus-report.php:38
+msgid "Export CSV"
+msgstr ""
+
+#: src/resources/templates/team-member/login-history.php:21
+msgid "Date / Time"
+msgstr ""
+
+#: src/resources/templates/team-member/login-history.php:22
+msgid "Event"
+msgstr ""
+
+#: src/resources/templates/team-member/login-history.php:31
+msgid "Logged In"
+msgstr ""
+
+#: src/resources/templates/team/admin-header.php:50
+#, php-format
+msgid "Change %s"
+msgstr ""
+
+#: src/resources/templates/team/groups-plus-report.php:16
+#, php-format
+msgid "%s Report"
+msgstr ""
+
+#: src/resources/templates/team/groups-plus-report.php:23
+msgid "Table is loading..."
+msgstr ""
+
+#: src/resources/templates/team/header.php:51
+msgid "Total Seats Used:"
+msgstr ""
+
+#: src/resources/templates/team/header.php:77
+msgid "Seats Remaining:"
+msgstr ""
+
+#. translators: Organization.
+#: src/resources/templates/team/header.php:173
+#, php-format
+msgid "Back to %s"
+msgstr ""
+
+#. translators: Organization.
+#: src/resources/templates/team/header.php:190
+#, php-format
+msgid "Change %s:"
+msgstr ""
+
+#. translators: organization.
+#: src/resources/templates/team/header.php:202
+#, php-format
+msgid "-- Select %s --"
+msgstr ""
+
+#: src/resources/templates/team/listing.php:26
+#: src/resources/templates/team/modal.php:85
+#, php-format
+msgid "%s Total"
+msgstr ""
+
+#: src/resources/templates/team/modal.php:103
+#: src/resources/templates/team/modal.php:556
+#, php-format
+msgid "Enter %s Name *"
+msgstr ""
+
+#: src/resources/templates/team/modal.php:147
+#: src/resources/templates/team/modal.php:596
+#, php-format
+msgid "%s Firstname *"
+msgstr ""
+
+#: src/resources/templates/team/modal.php:153
+#: src/resources/templates/team/modal.php:602
+#, php-format
+msgid "%s Lastname *"
+msgstr ""
+
+#: src/resources/templates/team/modal.php:159
+#: src/resources/templates/team/modal.php:610
+#, php-format
+msgid "%s Username *"
+msgstr ""
+
+#: src/resources/templates/team/modal.php:167
+#: src/resources/templates/team/modal.php:616
+#, php-format
+msgid "%s Email *"
+msgstr ""
+
+#: src/resources/templates/team/modal.php:176
+#: src/resources/templates/team/modal.php:625
+msgid "Password *"
+msgstr ""
+
+#: src/resources/templates/team/modal.php:183
+#: src/resources/templates/team/modal.php:439
+msgid "Available Courses"
+msgstr ""
+
+#: src/resources/templates/team/modal.php:211
+#: src/resources/templates/team/modal.php:467
+msgid "Active Courses"
+msgstr ""
+
+#: src/resources/templates/team/modal.php:428
+msgid "Manage Courses"
+msgstr ""
+
+#: src/resources/templates/team/modal.php:522
+#, php-format
+msgid "Add %1$s as %2$s"
+msgstr ""
+
+#: src/resources/templates/team/modal.php:537
+#: src/resources/templates/team/modal.php:677
+msgid "Firstname"
+msgstr ""
+
+#: src/resources/templates/team/modal.php:538
+#: src/resources/templates/team/modal.php:678
+msgid "Lastname"
+msgstr ""
+
+#: src/resources/templates/template-learndash-groups-plus-group.php:66
+msgid "You don't have access of this group."
+msgstr ""
+
+#: src/resources/templates/template-learndash-groups-plus.php:67
+msgid "You are not a part of any Groups yet."
+msgstr ""
+
+#: src/resources/templates/template-learndash-groups-plus.php:69
+msgid "Please add your first LearnDash Group to get started."
+msgstr ""
+
+#: src/Settings.php:65
+msgid "Setting Up Groups Plus"
+msgstr ""
+
+#: src/Settings.php:70
+msgid "Before you begin"
+msgstr ""
+
+#: src/Settings.php:73
+#, php-format
+msgid "LearnDash LMS - Groups Plus addon uses the native LearnDash Groups or UnCanny Groups to apply %1$s and %2$s in your website for %3$s to manage and create %4$s, %5$s, and %6$s."
+msgstr ""
+
+#: src/Settings.php:82
+#, php-format
+msgid "LearnDash LMS - Groups Plus addon also includes a detailed reporting facility for %s and %s to report on only their %s."
+msgstr ""
+
+#: src/Settings.php:91
+msgid "Important settings to consider before performing the steps below!"
+msgstr ""
+
+#: src/Settings.php:101
+#: src/Settings.php:251
+#, php-format
+msgid "Convert to %s"
+msgstr ""
+
+#: src/Settings.php:106
+#, php-format
+msgid "Convert your LearnDash %1$s to %2$s."
+msgstr ""
+
+#: src/Settings.php:120
+#: src/Settings.php:298
+#: src/Settings.php:1060
+#, php-format
+msgid "%s use seats"
+msgstr ""
+
+#: src/Settings.php:126
+#, php-format
+msgid "Limit the number of %1$s that will not use %2$s seats per %3$s."
+msgstr ""
+
+#: src/Settings.php:141
+#: src/Settings.php:344
+msgid "Use UnCanny Group seats at will"
+msgstr ""
+
+#. translators: organizations label.
+#: src/Settings.php:144
+#, php-format
+msgid "Sell %s and Seats using the UnCanny Groups plugin."
+msgstr ""
+
+#: src/Settings.php:157
+#, php-format
+msgid "%1$s issue %2$s certificates"
+msgstr ""
+
+#: src/Settings.php:165
+#, php-format
+msgid "Block %1$s from viewing and downloading their own %2$s certificates."
+msgstr ""
+
+#: src/Settings.php:179
+#: src/Settings.php:429
+msgid "Create global default email templates"
+msgstr ""
+
+#: src/Settings.php:183
+#, php-format
+msgid "Create welcome email templates for %s invitation emails."
+msgstr ""
+
+#: src/Settings.php:196
+msgid "Show full quiz history"
+msgstr ""
+
+#: src/Settings.php:200
+#, php-format
+msgid "Optionally show %1$s full quiz history in the detailed %2$s report."
+msgstr ""
+
+#: src/Settings.php:214
+#: src/Settings.php:490
+msgid "Show all users"
+msgstr ""
+
+#: src/Settings.php:218
+#, php-format
+msgid "%1$s and %2$s can see all %3$s and %4$s."
+msgstr ""
+
+#. translators: organizations label.
+#: src/Settings.php:234
+#, php-format
+msgid "Sell %s and Seats using WooCommerce"
+msgstr ""
+
+#. translators: organization label.
+#: src/Settings.php:237
+#, php-format
+msgid "Create %s and Seat products in WooCommerce."
+msgstr ""
+
+#. translators: 1$: opening HTML strong tag, 2$: closing HTML strong tag, 3$: opening HTML strong tag, 4$: closing HTML strong tag.
+#: src/Settings.php:261
+#, php-format
+msgid "%1$sExecuted at the bottom of the Settings tab above%2$s, this process will switch on your %3$sLearnDash LMS > Groups > Settings > Group Hierarchy%4$s for you if it is not already turned on."
+msgstr ""
+
+#. translators: organization label.
+#: src/Settings.php:271
+#, php-format
+msgid "Next, this process will automatically convert your LearnDash primary groups (and UnCanny Groups if you use them) to a type of %s structure."
+msgstr ""
+
+#. translators: 1$: team member label, 2$: group leader label, 3$: course label, 4$: team label.
+#: src/Settings.php:278
+#, php-format
+msgid "Finally, it will copy your %1$s(s), %2$s(s) and %2$s(s) in the primary group to a %4$s of the same name."
+msgstr ""
+
+#. translators: 1$: opening HTML strong tag, 2$: closing HTML strong tag, 3$: team leaders label, 4$: team label, 5$: team members label.
+#: src/Settings.php:308
+#, php-format
+msgid "%1$sSet in the Settings tab above%2$s, this setting will give you the option to have %3$s in any %4$s consume %5$s seats."
+msgstr ""
+
+#. translators: 1$: team leader label, 2$: organization label, 3$: team member label.
+#: src/Settings.php:319
+#, php-format
+msgid "Any %1$s beyond the set number you enter in each Primary Group (%2$s) will take a seat from the total number of %3$s seats."
+msgstr ""
+
+#. translators: 1$: opening HTML tag, 2$: closing HTML tag.
+#: src/Settings.php:328
+#, php-format
+msgid "%1$sThis is set to 0 free seats by default%2$s"
+msgstr ""
+
+#: src/Settings.php:350
+#, php-format
+msgid "%1$sSet in the Settings tab above%2$s, this setting enables you to not have to create %3$s %4$s manually, rather Groups Plus addon will be able to use UnCanny Groups selectively."
+msgstr ""
+
+#: src/Settings.php:359
+#, php-format
+msgid "You will be able to use a mix of %1$s %2$s and UnCanny groups."
+msgstr ""
+
+#: src/Settings.php:366
+#, php-format
+msgid "After selecting this checkbox, if any of your %1$s are configured in UnCanny groups, you will not be asked to set any %2$s seats in the %3$s, nor will you need to create a %4$s."
+msgstr ""
+
+#: src/Settings.php:386
+#, php-format
+msgid "Disallow %s certificate access"
+msgstr ""
+
+#: src/Settings.php:395
+#, php-format
+msgid "%1$sSet in the Settings tab above%2$s, this setting enables you to globally block all %3$s' %4$s access to their course certificate."
+msgstr ""
+
+#: src/Settings.php:404
+#, php-format
+msgid "After selecting this checkbox, all %1$s' %2$s will lose access to their %3$s certificates.%4$sAdministrators and %5$s (%6$s and %7$s) will then be the only users who can view and print certificates for the %8$s."
+msgstr ""
+
+#: src/Settings.php:416
+msgid "You can use the LearnDash Certificate shortcode to override this setting in case you prefer to have some exclusions with this setting enabled."
+msgstr ""
+
+#: src/Settings.php:435
+#, php-format
+msgid "%1$sSet in the Global Email tab above%2$s, this setting lets you create default %3$s and %4$s welcome email templates so your %5$s and %6$s do not need to."
+msgstr ""
+
+#: src/Settings.php:446
+#, php-format
+msgid "If you create these default email templates and later your %1$s and %2$s create their own personal ones, those personal ones will override your default ones."
+msgstr ""
+
+#: src/Settings.php:462
+msgid "Show full quiz history and all users"
+msgstr ""
+
+#: src/Settings.php:469
+#, php-format
+msgid "%1$sSet in the Settings tab above%2$s, these settings let you 1) Show the complete quiz history of %3$s in the detailed %4$s report, and 2) Allow %5$s and %6$s find all users that have the subscriber and group leader roles in the system."
+msgstr ""
+
+#: src/Settings.php:496
+#, php-format
+msgid "%1$sSet in the Settings tab above%2$s, this setting lets %3$s and %4$s see all user that are group leaders (i.e. %5$s) and subscribers (i.e. %6$s) throughout the platform. These users will be shown in the Add %7$s and Add %8$s modals when you select the %9$s/%10$s already exists checkboxes."
+msgstr ""
+
+#: src/Settings.php:522
+#, php-format
+msgid "Sell %s and seats using WooCommerce"
+msgstr ""
+
+#: src/Settings.php:531
+#, php-format
+msgid "%1$sSet in the Settings tab above%2$s, this setting enables you to sell %3$s and Seats in %4$s. This setting can work along side any other group sales plugins and does not require using any other plugins beyond LearnDash LMS, WooCommerce and LearnDash LMS - Groups Plus addon."
+msgstr ""
+
+#: src/Settings.php:540
+#, php-format
+msgid "If you also sell %1$s and %2$s seats as subscriptions, this feature lets you do this too."
+msgstr ""
+
+#: src/Settings.php:554
+msgid "Step 1"
+msgstr ""
+
+#: src/Settings.php:555
+msgid "Create a Group Leader for clients"
+msgstr ""
+
+#: src/Settings.php:558
+#, php-format
+msgid "For best results, %1$screate at least one Group Leader user for each Primary Group (%2$s)%3$s to act as the %4$s%5$s%6$s type user of that single %7$sPrimary Group (%8$s)%9$s and its %10$sChild Groups (%11$s)%12$s. If your %13$sChild Groups (%14$s)%15$s have group leaders, they will become %16$s%17$s%18$s."
+msgstr ""
+
+#: src/Settings.php:581
+#, php-format
+msgid "%1$s%2$s%3$s can be assigned to any number of %4$s%5$s%6$s. If they are %7$s%8$s%9$s of multiple %10$s%11$s%12$s, a drop-down menu will be shown for them to select any of their %13$s%14$s%15$s, else the menu will not be present."
+msgstr ""
+
+#: src/Settings.php:601
+#, php-format
+msgid "%1$sYour administrative users will be able to access all %2$s.%3$s"
+msgstr ""
+
+#: src/Settings.php:610
+msgid "Step 2"
+msgstr ""
+
+#: src/Settings.php:613
+#, php-format
+msgid "Create/Edit a %s"
+msgstr ""
+
+#: src/Settings.php:619
+#, php-format
+msgid "Create or edit an existing %1$s in your dashboard under %2$sLearnDash LMS > %3$s%4$s page"
+msgstr ""
+
+#: src/Settings.php:628
+#, php-format
+msgid "After activating this plugin, you have a new page created in your web site. You can visit this page at: %1$s%2$s%3$s"
+msgstr ""
+
+#: src/Settings.php:639
+#, php-format
+msgid "Refer to Step 4 for your %s admin and reporting shortcode options."
+msgstr ""
+
+#: src/Settings.php:646
+msgid "Step 3"
+msgstr ""
+
+#: src/Settings.php:650
+#, php-format
+msgid "In the same tab you edit the group title, locate the %1$sNumber of %2$s%3$s metabox."
+msgstr ""
+
+#: src/Settings.php:658
+#, php-format
+msgid "Enter the number of %1$s you want to provide for all %2$s in this %3$s. Save the %4$s."
+msgstr ""
+
+#: src/Settings.php:667
+#, php-format
+msgid "%1$sIf the option \"%2$s Use Seats\" from Step 1 is selected%3$s, you will see the \"Number of %4$s not using seats\" field appear only in Primary %5$s. Enter the number of %6$s that will not consume a seat in the %7$s. Save the %8$s."
+msgstr ""
+
+#: src/Settings.php:681
+msgid "Step 4"
+msgstr ""
+
+#: src/Settings.php:682
+msgid "Use Shortcodes"
+msgstr ""
+
+#: src/Settings.php:685
+#, php-format
+msgid "You can add the %1$s shortcode into any page or post in your site to have the full administration area for %2$s%3$s%4$s or %5$s%6$s%7$s."
+msgstr ""
+
+#: src/Settings.php:697
+#, php-format
+msgid "If you would like to use the %1$s reports in isolation of the %2$s/%3$s Administration area, simply add the %4$s and %5$s shortcode to any page or post."
+msgstr ""
+
+#: src/Settings.php:707
+#, php-format
+msgid "Optionally, add a message board for each %1$s to any page or post using the %2$s shortcode."
+msgstr ""
+
+#: src/Settings.php:715
+msgid "Step 5"
+msgstr ""
+
+#: src/Settings.php:716
+msgid "Add Courses and Leader"
+msgstr ""
+
+#: src/Settings.php:719
+#, php-format
+msgid "Click on the %1$s tab and add the %2$s you want available for all of its Child %3$s (%4$s)."
+msgstr ""
+
+#: src/Settings.php:728
+#, php-format
+msgid "Click on the Users tab and add %1$s (%2$s) to this one %3$s. Save the %4$s."
+msgstr ""
+
+#: src/Settings.php:738
+msgid "Finally"
+msgstr ""
+
+#: src/Settings.php:741
+#, php-format
+msgid "%s Maintain Themselves"
+msgstr ""
+
+#: src/Settings.php:747
+#, php-format
+msgid "Now the Leader of the %1$s (%2$s) can add %3$s, create their own email templates, send ad-hoc emails, create %4$s, create %5$s, assign %6$s to %7$s and run reports."
+msgstr ""
+
+#: src/Settings.php:759
+#, php-format
+msgid "Now %1$s can create their own email templates, send ad-hoc emails, create %2$s and run reports."
+msgstr ""
+
+#: src/Settings.php:778
+msgid "FERPA (U.S.) Compliance"
+msgstr ""
+
+#: src/Settings.php:784
+#, php-format
+msgid "%1$s Last Name and Emails are optional.%2$sRead More...%3$s"
+msgstr ""
+
+#: src/Settings.php:819
+msgid "Communication"
+msgstr ""
+
+#: src/Settings.php:826
+#, php-format
+msgid "Enable %s message board:"
+msgstr ""
+
+#: src/Settings.php:837
+#, php-format
+msgid "Select this to enable a %1$s message board for each %2$s. The %3$s can show a message to their %4$s %5$s by creating a message from the [Email %6$s] button, then selecting the Message Board tab in the modal.%7$sThe message will then be displayed using the %8$s shortcode. The %9$s can later, delete any message they post to their %10$s by selecting the Trashcan icon in the [Email %11$s] modal. The %12$s can leave multiple messages.%13$sIf a %14$s is in multiple %15$s, they will see messages from each of their %16$s.%17$sThe message board is not a two way communication tool. It is an on-screen message broadcast tool."
+msgstr ""
+
+#: src/Settings.php:867
+#, php-format
+msgid "Enable BuddyBoss groups for %s:"
+msgstr ""
+
+#: src/Settings.php:874
+#: src/Settings.php:882
+#: src/Settings.php:893
+#, php-format
+msgid "Enable BuddyBoss groups for %s"
+msgstr ""
+
+#: src/Settings.php:904
+msgid "Assignments Approval using Gravity Forms"
+msgstr ""
+
+#: src/Settings.php:909
+msgid "Process Assignment Uploads using Gravity Forms:"
+msgstr ""
+
+#: src/Settings.php:917
+#, php-format
+msgid "Using this integration, you can enhance the LearnDash Assignment approval process by using Gravity Forms in the workflow.%1$sYou do not need to use any other Gravity Forms related plugin for this process. Any other Gravity Forms related plugin can be used to enhance this process further but those plugins will be applicable to whatever you do in Gravity Forms alone."
+msgstr ""
+
+#: src/Settings.php:923
+msgid "This provides the following 6 benefits"
+msgstr ""
+
+#: src/Settings.php:929
+#, php-format
+msgid "%s have an approval / feedback process where their form inputs contribute to the information related to the assignment submission approval evidence."
+msgstr ""
+
+#: src/Settings.php:936
+#, php-format
+msgid "Adds new assignment statuses in the Detailed %s Report indicating the assignment needs to be graded, resubmitted, or is approved so no further action is required."
+msgstr ""
+
+#: src/Settings.php:942
+msgid "Adds color codes to the assignment status buttons for visual action queues."
+msgstr ""
+
+#: src/Settings.php:948
+msgid "Let's use use the Gravity Forms notifications system to email the team member when an assignment needs to be resubmitted or is approved. This can also be used in conjunction with the LearnDash Notifications system, but is specific to the Gravity Form."
+msgstr ""
+
+#: src/Settings.php:955
+#, php-format
+msgid ""
+"Let's you create one form for all assignments or use a different form specific to each assignment in \n"
+"\t\t\t\t\t\t\t\t\t\t\tdifferent %1$s or %2$s."
+msgstr ""
+
+#: src/Settings.php:964
+#, php-format
+msgid "Provides LearnDash specific Gravity Form fields that pick up the %1$s and assignment IDs. The %2$s field can be used in other Gravity Forms not related to assignments."
+msgstr ""
+
+#: src/Settings.php:973
+msgid "To use this feature, perform the following"
+msgstr ""
+
+#: src/Settings.php:979
+#, php-format
+msgid "Download, then import the Gravity Forms %s template file."
+msgstr ""
+
+#: src/Settings.php:988
+#, php-format
+msgid "Import the form and you will have a new form named %1$sLearnDash LMS - Groups Plus Assignment Fields - Template%2$s. This form contains the fields Groups Plus will use."
+msgstr ""
+
+#: src/Settings.php:997
+msgid "You can now duplicate the form and add in your own fields or recreate the form fields provided in an existing form."
+msgstr ""
+
+#: src/Settings.php:1004
+#, php-format
+msgid "After completing your form development, note the field ID numbers and the Gravity Form ID number. These field IDs and the form ID will be used to configure your %1$s or %2$s."
+msgstr ""
+
+#: src/Settings.php:1014
+#, php-format
+msgid "Add the Gravity Form to a page and capture the URL of that page. This URL will be used to configure your %1$s or %2$s."
+msgstr ""
+
+#: src/Settings.php:1024
+#, php-format
+msgid "Edit the settings of any %1$s or %2$s that has an assignment upload requirements and enter the Gravity Form page URL, the Gravity Form ID number, the field ID used to indicate the uploaded assignment is satisfactory or competent.%3$sOptionally, if you already have a drop down menu created to select %4$s names (for bulk scoring purposes), enter that field ID, else leave it empty.%5$sWith these completed, you will now be able to process uploaded assignments using the Gravity Form(s) you have created."
+msgstr ""
+
+#: src/Settings.php:1037
+#, php-format
+msgid "With this feature, you also now have new Design controls in the \"%1$s Detailed Report settings\" section of your Design tab above."
+msgstr ""
+
+#: src/Settings.php:1053
+msgid "Users"
+msgstr ""
+
+#: src/Settings.php:1071
+#, php-format
+msgid "Selecting this will enable a LearnDash Group Field for you to enter a number of %1$s that you want to include who will not occupy any %2$s seats.%3$sThis setting is done at the Primary Group level and applies to all %4$s.%5$sYou can then visit each Primary Group and set a number of %6$s that will not take %7$s seats.%8$sThis leaves you with a very flexible and powerful feature that you tailor for each %9$s.%10$sThe result is that when the %11$s of that %12$s populates any %13$s with %14$s as %15$s, they are limited to the number of free %16$s.%17$sThe default value of free %18$s is 0 when this setting is turned on.%18$s"
+msgstr ""
+
+#: src/Settings.php:1099
+#, php-format
+msgid "Lock %1$s and %2$s Names"
+msgstr ""
+
+#: src/Settings.php:1111
+#, php-format
+msgid "Check this box so %1$s and %2$s cannot change their names in the %3$s page. Administrators will need to edit WordPress profiles to change names in %4$s"
+msgstr ""
+
+#: src/Settings.php:1123
+msgid "Allow existing users to be updated:"
+msgstr ""
+
+#: src/Settings.php:1130
+msgid "Allow existing users to be updated during upload process."
+msgstr ""
+
+#: src/Settings.php:1138
+#, php-format
+msgid "Allow %1$s to have %2$s certificate access"
+msgstr ""
+
+#: src/Settings.php:1150
+#, php-format
+msgid "Select this to let %1$s open / download / print their own certificates.%2$sIf not selected, %3$s will not have certificate icons anywhere. %4$s will need to provide the %5$s with their certificates."
+msgstr ""
+
+#: src/Settings.php:1164
+#, php-format
+msgid "Show all quiz attempts in Detailed %s Report"
+msgstr ""
+
+#: src/Settings.php:1175
+#, php-format
+msgid "Select this to Show all quiz attempts in Detailed %s Report."
+msgstr ""
+
+#: src/Settings.php:1184
+msgid "Allow lead organizers to see all users:"
+msgstr ""
+
+#: src/Settings.php:1191
+msgid "Allow lead organizers to see all users that are \"subscribers\" in the platform when selecting \"User already exists\"."
+msgstr ""
+
+#: src/Settings.php:1201
+msgid "WooCommerce"
+msgstr ""
+
+#: src/Settings.php:1207
+msgid "Enable WooCommerce Integration:"
+msgstr ""
+
+#: src/Settings.php:1215
+#, php-format
+msgid "%1$sTEST THIS ON YOUR STAGING SITE USING YOUR PAYMENT GATEWAY IN TEST MODE BEFORE GOING LIVE%2$sThis setting lets you create %3$s product and seat product. You can also set custom pricing per %4$s for %5$s. %6$s can also opt-in to selling seat access to their %7$s when they purchase their %8$s. If %9$s opts-out of selling seat access in their %10$s, their %11$s will not be listed in the public %12$s product listing.%13$sThese products are able to be sold as WooCommerce Subscriptions and can also be used within Variable Products.%14$sYou do not need to create multiple products as the %15$s product will do everything you need and the Seat product will only see any %16$s that the %17$s allow them to see."
+msgstr ""
+
+#: src/Settings.php:1246
+#: src/Settings.php:1257
+#, php-format
+msgid "Enable Add Seats to %s"
+msgstr ""
+
+#: src/Settings.php:1267
+#, php-format
+msgid "Enable %1$s to add subscription-based seats to %2$s"
+msgstr ""
+
+#: src/Settings.php:1279
+#, php-format
+msgid "Enable %1$s to add subscription-based seats to %2$s is checked AND a subscription product is created to add seats to a %3$s."
+msgstr ""
+
+#: src/Settings.php:1297
+msgid "Use uncanny group seats at will:"
+msgstr ""
+
+#: src/Settings.php:1305
+#, php-format
+msgid "%1$sYou are seeing this setting because you have UnCanny Groups installed in your site.%2$sPlease refer to your UnCanny Groups > Settings page to learn about Upgrading Groups before proceeding%3$sAfter selecting this checkbox, if any of your %4$s are configured in UnCanny Groups, you will not be asked to set any %5$s Seats in the %6$s.%7$sYou will also not need to manually create %8$s and assign %9$s users to them.%10$sYou will still be able to have up to X number of %11$s as %12$s."
+msgstr ""
+
+#: src/Settings.php:1337
+#, php-format
+msgid "Upgrade LearnDash %1$s to %2$s"
+msgstr ""
+
+#: src/Settings.php:1348
+#, php-format
+msgid "Convert LearnDash %1$s to %2$s"
+msgstr ""
+
+#: src/Settings.php:1360
+#, php-format
+msgid "Checking this box and clicking the %1$s[Convert]%2$s button below will run a site-wide process that will look for any LearnDash Primary %3$s that have no Child %4$s and convert them into %5$s.%6$sThe result of this process will have those %7$s that get converted with a child %8$s of the same name.%9$sThe %10$s(s), %11$s, and %12$s of the primary %13$s will also be copied, but %14$s will not use the %15$s in that primary %16$s.%17$sAt the end of this process your %18$s structure will be globally applied.%19$sIf you need to revert any LearnDash Primary %20$s%21$s back to its original state,%22$s simply delete the new child group%23$s and it will be restored while all other %24$s will remain in the new %25$s structure."
+msgstr ""
+
+#: src/Settings.php:1393
+msgid "Convert"
+msgstr ""
+
+#: src/Settings.php:1401
+#: src/Settings.php:1412
+#, php-format
+msgid "Downgrade %1$s to Normal %2$s"
+msgstr ""
+
+#: src/Settings.php:1423
+#, php-format
+msgid "Checking this box and clicking the %1$s[Downgrade]%2$s button below will run a site-wide process that will remove %3$s %4$s and return their parent %5$s to normal LearnDash %6$s."
+msgstr ""
+
+#: src/Settings.php:1437
+msgid "Downgrade"
+msgstr ""
+
+#: src/Settings.php:1658
+#, php-format
+msgid "Configure Global %1$s and %2$s Welcome emails"
+msgstr ""
+
+#: src/Settings.php:1665
+msgid "Beyond the custom email merge-codes we provide below, you can also use the LearnDash shortcodes found using the toolbar icon."
+msgstr ""
+
+#: src/Settings.php:1670
+#, php-format
+msgid "%1$sConfiguring these global emails will make them the default email for all %2$s and %3$s and %4$s invitations.%5$sThese emails will be superseded by %6$s and %7$s welcome emails if each %8$s or %9$s creates their own personal emails."
+msgstr ""
+
+#: src/Settings.php:1818
+msgid "This tab is dedicated to those developers needing to change the features, capabilities, and presentation of the Groups Plus plugin."
+msgstr ""
+
+#: src/Settings.php:1826
+#, php-format
+msgid "Templating the %s page"
+msgstr ""
+
+#: src/Settings.php:1831
+msgid "Creating custom actions through hooks"
+msgstr ""
+
+#: src/Settings.php:1838
+msgid "Team can be added to your website using the various shortcodes provided."
+msgstr ""
+
+#: src/Settings.php:1841
+#, php-format
+msgid "The shortcodes can be used to show the whole organization administration area or you can use the report related shortcodes to show only pieces of %s in any page or post you want."
+msgstr ""
+
+#: src/Settings.php:1848
+#, php-format
+msgid "You can also turn off sections, areas, and even specific buttons and tabs in %s using the Design tab settings provided above."
+msgstr ""
+
+#: src/Settings.php:1855
+#, php-format
+msgid "%1$sIf you want to customize the /learndash-groups-plus/ template itself%2$s, here are the steps to getting that set up"
+msgstr ""
+
+#: src/Settings.php:1861
+msgid "You will first need to have a child-theme setup, activated, and properly functioning in your site. Once you have done this, you will want to use an FTP client software to upload your edited code to that child-theme sub-folder."
+msgstr ""
+
+#: src/Settings.php:1869
+#: src/Settings.php:1956
+#: src/Settings.php:2056
+#, php-format
+msgid "Create a folder named \"learndash/groups-plus\" at the root of the child-theme ( example: child-theme/%1$slearndash/groups-plus%2$s/ )"
+msgstr ""
+
+#: src/Settings.php:1879
+#: src/Settings.php:2075
+#: src/Settings.php:2093
+#: src/Settings.php:2111
+#, php-format
+msgid "Download: %s"
+msgstr ""
+
+#: src/Settings.php:1888
+msgid "Edit this copy of the file on your local computer."
+msgstr ""
+
+#: src/Settings.php:1896
+#, php-format
+msgid "Edit the \"%1$stemplate-learndash-groups-plus.php%2$s\" file to your liking."
+msgstr ""
+
+#: src/Settings.php:1906
+#, php-format
+msgid "Upload the \"%1$stemplate-learndash-groups-plus.php%2$s\" file to your %3$schild-theme/learndash/groups-plus/%4$s folder when you have completed your code level changes."
+msgstr ""
+
+#: src/Settings.php:1919
+msgid "Visit the /learndash-groups-plus/ page in your website to view your changes."
+msgstr ""
+
+#: src/Settings.php:1927
+msgid "NOTE: Groups Plus contains CSS classes for most every aspect of the plugin and using your own custom CSS will allow you to target every aspect of the product."
+msgstr ""
+
+#: src/Settings.php:1935
+#, php-format
+msgid "%1$sIf you want to customize the %2$s Detailed Report (located at the bottom of each %3$s List) template itself%4$s, here are the steps to getting that set up"
+msgstr ""
+
+#: src/Settings.php:1947
+msgid "As with the main page template file, you will need to place the shortcodes/team-member-report.php, and/or lesson-listing.php files into a new folder structure inside the /learndash/groups-plus/ folder in your child-theme."
+msgstr ""
+
+#: src/Settings.php:1966
+#, php-format
+msgid "Create a sub-folder named \"templates\" in the learndash/groups-plus folder of the child-theme ( example: child-theme/learndash/groups-plus/%1$stemplates%2$s/ )"
+msgstr ""
+
+#: src/Settings.php:1976
+#, php-format
+msgid "Create a sub-folder named \"shortcodes\" in the templates folder of the child-theme ( example: child-theme/learndash/groups-plus/templates/%1$sshortcodes%2$s/ )"
+msgstr ""
+
+#: src/Settings.php:1986
+#, php-format
+msgid "Create a sub-folder named \"team-member\" in the templates folder of the child-theme ( example: child-theme/learndash/groups-plus/templates/%1$steam-member%2$s/ )"
+msgstr ""
+
+#: src/Settings.php:1996
+msgid "In the plugin folder ( named: learndash-groups-plus ), locate the same folders and copy/download the files you want to template."
+msgstr ""
+
+#: src/Settings.php:2004
+#, php-format
+msgid "You can download these files (%1$sand create copies of them for backup purposes%2$s) to edit them on your local computer, then upload them into your child-theme/learndash/groups-plus/ sub-folder structure when you have completed your changes."
+msgstr ""
+
+#: src/Settings.php:2015
+msgid "Visit the /learndash-groups-plus/ page or any page with the Groups Plus shortcodes, in your website to view your changes."
+msgstr ""
+
+#: src/Settings.php:2025
+msgid "Groups Plus contains CSS classes for most every aspect of the plugin and using your own custom CSS will allow you to target every aspect of the product."
+msgstr ""
+
+#: src/Settings.php:2032
+msgid "Groups Plus addon is also 100% translatable."
+msgstr ""
+
+#: src/Settings.php:2039
+#, php-format
+msgid "%1$sIf you want to customize the Team Modals%2$s, here are the steps to getting that set up."
+msgstr ""
+
+#: src/Settings.php:2048
+msgid "As with the main page template file, you will need to place the add-team-leader.php and/or the add-team-member.php files into a new folder structure inside the /learndash/groups-plus/ folder in your child-theme."
+msgstr ""
+
+#: src/Settings.php:2066
+#, php-format
+msgid "Download the \"template-learndash-groups-plus-group.php\" file below and, using your FTP client, upload it to your child-theme/%1$slearndash/groups-plus%2$s/ folder ensuring you save it as the same filename in that folder. This file contains code that will direct team to use the files in your child-theme folders."
+msgstr ""
+
+#: src/Settings.php:2084
+#, php-format
+msgid "To customize the Add Team Leader modal, create a folder named \"team\" inside the \"learndash/groups-plus\" folder in the child-theme ( example: child-theme/%1$slearndash/groups-plus/team%2$s/ ). This folder will contain modal files used at the team level."
+msgstr ""
+
+#: src/Settings.php:2102
+#, php-format
+msgid "To customize the Add Team Member modal, create a folder named \"team-member\" inside the \"learndash/groups-plus\" folder in the child-theme ( example: child-theme/%1$slearndash/groups-plus/team-member%2$s/ ). This folder will contain modal files used at the team level."
+msgstr ""
+
+#: src/Settings.php:2123
+msgid "What are hooks?"
+msgstr ""
+
+#: src/Settings.php:2127
+msgid "Hooks are PHP or other specially developed code added into a product as a defined part in the code that can pass control to other custom code."
+msgstr ""
+
+#: src/Settings.php:2130
+msgid "Groups Plus contain hooks that can be used to share information with other products. As new versions of Groups Plus are released, we will publish new hooks below."
+msgstr ""
+
+#: src/Settings.php:2133
+msgid "Here is the list of current hooks available in Groups Plus along with working examples you can copy / paste to capture data or view results:"
+msgstr ""
+
+#: src/Settings.php:2138
+#: src/Settings.php:2179
+#, php-format
+msgid "%s Actions"
+msgstr ""
+
+#: src/Settings.php:2144
+#: src/Settings.php:2185
+#: src/Settings.php:2223
+#, php-format
+msgid "Hook fired when a %s is created"
+msgstr ""
+
+#: src/Settings.php:2149
+#: src/Settings.php:2166
+#: src/Settings.php:2190
+#: src/Settings.php:2207
+#: src/Settings.php:2228
+#: src/Settings.php:2245
+#: src/Settings.php:2272
+#: src/Settings.php:2298
+#: src/Settings.php:2327
+#: src/Settings.php:2356
+msgid "Example usage"
+msgstr ""
+
+#: src/Settings.php:2161
+#: src/Settings.php:2202
+#: src/Settings.php:2240
+#, php-format
+msgid "Hook fired when a %s is deleted"
+msgstr ""
+
+#: src/Settings.php:2219
+msgid "Groups Plus Actions"
+msgstr ""
+
+#: src/Settings.php:2257
+#, php-format
+msgid "Creating your own buttons on the Edit %s modal before the default buttons"
+msgstr ""
+
+#: src/Settings.php:2263
+#, php-format
+msgid "A hook to create your own button before default buttons:%1$sNote: %2$s would be %3$s %4$s ID (child %5$s of LearnDash)"
+msgstr ""
+
+#: src/Settings.php:2283
+#, php-format
+msgid "Creating your own buttons on the Edit %s modal after the default buttons"
+msgstr ""
+
+#: src/Settings.php:2289
+#, php-format
+msgid "A hook to create your own button after default buttons:%1$sNote: %2$s would be %3$s %4$s ID (child %5$s of LearnDash)"
+msgstr ""
+
+#: src/Settings.php:2309
+#, php-format
+msgid "Hard-code a %1$s to be automatically locked for all %2$s throughout your site"
+msgstr ""
+
+#: src/Settings.php:2316
+#, php-format
+msgid "Function to automatically lock a %1$s in a %2$s for all users in your site:%3$sWARNING:%4$s This function must be disabled in order to release the locked %5$s%6$sTo disable this function, you can comment out the  \"add_filter\" line by adding%7$s\" // \" to the left of it (\" // add_filter \")"
+msgstr ""
+
+#: src/Settings.php:2349
+msgid "Change wording of WooCommerce product page message"
+msgstr ""
+
+#: src/Settings.php:2353
+msgid "A hook to change the \"Exclude from publicly sold seats\" WooCommerce text in the product page."
+msgstr ""
+
+#: src/Settings.php:2470
+msgid "Design Settings"
+msgstr ""
+
+#: src/Settings.php:2475
+msgid "Handy Links"
+msgstr ""
+
+#: src/Settings.php:2480
+msgid "If you cannot find the colors you want to use throughout this page, you can find your colors codes using <a href=\"https://www.w3.org/wiki/CSS/Properties/color/keywords\" target=\"_blank\">Hexadecimal, RGB, RGBA, or Color Keywords</a>.<br/>Examples: HEX: #123456, Keyword: red, RGB: rgb(100,10,200), RGBA: rgba(100,10,200,0.5)."
+msgstr ""
+
+#: src/Settings.php:2490
+msgid "WooCommerce Product Page"
+msgstr ""
+
+#: src/Settings.php:2502
+msgid "Remove the \"Exclude from publicly sold seats\" table row from the Woo Product pages it is used in."
+msgstr ""
+
+#: src/Settings.php:2513
+msgid "Groups Plus Header"
+msgstr ""
+
+#: src/Settings.php:2525
+msgid "Disable Groups Plus Header"
+msgstr ""
+
+#: src/Settings.php:2535
+msgid "Completely remove the groups plus header."
+msgstr ""
+
+#: src/Settings.php:2541
+msgid "Change the Used Seats icon or icon color:"
+msgstr ""
+
+#: src/Settings.php:2542
+msgid "Replace the Seats Used icon with your own icon."
+msgstr ""
+
+#: src/Settings.php:2544
+#: src/Settings.php:2581
+msgid "Upload image"
+msgstr ""
+
+#: src/Settings.php:2554
+#: src/Settings.php:2591
+msgid "Leave the icon and change the icon color."
+msgstr ""
+
+#: src/Settings.php:2562
+msgid "Remove Seats Used text:"
+msgstr ""
+
+#: src/Settings.php:2570
+msgid "Remove Seats Used text from groups plus header."
+msgstr ""
+
+#: src/Settings.php:2578
+msgid "Change the Seats Remaining icon:"
+msgstr ""
+
+#: src/Settings.php:2579
+msgid "Replace the Seats Remaining icon with your own icon."
+msgstr ""
+
+#: src/Settings.php:2599
+msgid "Remove Seats Remaining text:"
+msgstr ""
+
+#: src/Settings.php:2607
+msgid "Remove Seats Remaining text from groups plus header."
+msgstr ""
+
+#: src/Settings.php:2614
+msgid "Header Background color:"
+msgstr ""
+
+#: src/Settings.php:2622
+msgid "Header Border color:"
+msgstr ""
+
+#: src/Settings.php:2630
+msgid "Change groups plus header background and border colors. Delete to reset."
+msgstr ""
+
+#: src/Settings.php:2638
+#, php-format
+msgid "Disable %s level Email button:"
+msgstr ""
+
+#: src/Settings.php:2646
+#, php-format
+msgid "Turn %s level Email button On or Off"
+msgstr ""
+
+#: src/Settings.php:2652
+#, php-format
+msgid "Disable Manage %s button:"
+msgstr ""
+
+#: src/Settings.php:2662
+#: src/Settings.php:2834
+#, php-format
+msgid "Turn Manage %s button On or Off"
+msgstr ""
+
+#: src/Settings.php:2673
+#, php-format
+msgid "%s Email Modal"
+msgstr ""
+
+#: src/Settings.php:2683
+#, php-format
+msgid "Disable %s level Broadcast Email tab:"
+msgstr ""
+
+#: src/Settings.php:2692
+#, php-format
+msgid "Turn %s level Broadcast Email tab On or Off"
+msgstr ""
+
+#: src/Settings.php:2701
+#, php-format
+msgid "Disable %s level Welcome Email tab:"
+msgstr ""
+
+#: src/Settings.php:2712
+#, php-format
+msgid "Turn %s level Welcome Email tab On or Off"
+msgstr ""
+
+#: src/Settings.php:2724
+#, php-format
+msgid "%1$s Manage %2$s Modal"
+msgstr ""
+
+#: src/Settings.php:2739
+#, php-format
+msgid "Disable Manage %s tab:"
+msgstr ""
+
+#: src/Settings.php:2751
+#, php-format
+msgid "Turn Manage %s tab On or Off"
+msgstr ""
+
+#: src/Settings.php:2760
+#: src/Settings.php:2872
+#, php-format
+msgid "Disable Add %s tab"
+msgstr ""
+
+#: src/Settings.php:2772
+#: src/Settings.php:2884
+#, php-format
+msgid "Turn Add %s tab On or Off"
+msgstr ""
+
+#: src/Settings.php:2781
+#, php-format
+msgid "Disable Delete %s icon"
+msgstr ""
+
+#: src/Settings.php:2793
+#: src/Settings.php:3218
+#, php-format
+msgid "Turn Delete %s icon On or Off"
+msgstr ""
+
+#: src/Settings.php:2807
+#, php-format
+msgid "%1$s %2$s List"
+msgstr ""
+
+#: src/Settings.php:2822
+#, php-format
+msgid "Disable Manage %s button"
+msgstr ""
+
+#: src/Settings.php:2841
+msgid "Disable Manage Courses button:"
+msgstr ""
+
+#: src/Settings.php:2847
+msgid "Turn Manage Courses button On or Off"
+msgstr ""
+
+#: src/Settings.php:2858
+#, php-format
+msgid "Manage %s Modal"
+msgstr ""
+
+#: src/Settings.php:2893
+#, php-format
+msgid "Disable Add %1$s as %2$s tab"
+msgstr ""
+
+#: src/Settings.php:2906
+#, php-format
+msgid "Turn Add %1$s as %2$s tab On or Off"
+msgstr ""
+
+#: src/Settings.php:2918
+#, php-format
+msgid "Disable Delete %s trashcan icon"
+msgstr ""
+
+#: src/Settings.php:2930
+#, php-format
+msgid "Turn Delete %s trashcan icon On or Off"
+msgstr ""
+
+#: src/Settings.php:2939
+#, php-format
+msgid "Disable Permanently Delete %s person-X icon:"
+msgstr ""
+
+#: src/Settings.php:2951
+#, php-format
+msgid "Turn Permanently Delete %s person-X icon On or Off"
+msgstr ""
+
+#: src/Settings.php:2965
+#, php-format
+msgid "Manage %s Report"
+msgstr ""
+
+#: src/Settings.php:2976
+#: src/Settings.php:3161
+msgid "Disable Export CSV button:"
+msgstr ""
+
+#: src/Settings.php:2984
+#: src/Settings.php:3169
+#, php-format
+msgid "Turn Export %s level CSV button On or Off"
+msgstr ""
+
+#: src/Settings.php:2998
+#, php-format
+msgid "Manage %s Header"
+msgstr ""
+
+#: src/Settings.php:3012
+#, php-format
+msgid "Disable Add %s button"
+msgstr ""
+
+#: src/Settings.php:3024
+#, php-format
+msgid "Turn Add %s button On or Off"
+msgstr ""
+
+#: src/Settings.php:3031
+msgid "Disable Import List button:"
+msgstr ""
+
+#: src/Settings.php:3037
+msgid "Turn Import List button On or Off"
+msgstr ""
+
+#: src/Settings.php:3043
+#, php-format
+msgid "Disable Email %s button"
+msgstr ""
+
+#: src/Settings.php:3055
+#, php-format
+msgid "Turn Email %s button On or Off"
+msgstr ""
+
+#: src/Settings.php:3069
+#, php-format
+msgid "Manage Email %s Modal"
+msgstr ""
+
+#: src/Settings.php:3080
+msgid "Disable Broadcast Email tab:"
+msgstr ""
+
+#: src/Settings.php:3086
+msgid "Turn Broadcast Email tab On or Off"
+msgstr ""
+
+#: src/Settings.php:3092
+#, php-format
+msgid "Disable %s Welcome Email tab"
+msgstr ""
+
+#: src/Settings.php:3104
+#, php-format
+msgid "Turn %s Welcome Email tab On or Off"
+msgstr ""
+
+#: src/Settings.php:3118
+#, php-format
+msgid "%s Roster"
+msgstr ""
+
+#: src/Settings.php:3132
+#, php-format
+msgid "Disable Edit %s button"
+msgstr ""
+
+#: src/Settings.php:3144
+#, php-format
+msgid "Turn Edit %s button On or Off"
+msgstr ""
+
+#: src/Settings.php:3151
+msgid "Disable Change Password button:"
+msgstr ""
+
+#: src/Settings.php:3157
+msgid "Turn change Password button On or Off"
+msgstr ""
+
+#: src/Settings.php:3183
+#, php-format
+msgid "Edit %s Modal"
+msgstr ""
+
+#: src/Settings.php:3195
+msgid "Disable Remove icon:"
+msgstr ""
+
+#: src/Settings.php:3203
+#, php-format
+msgid "Turn Remove %s icon On or Off"
+msgstr ""
+
+#: src/Settings.php:3210
+msgid "Disable Delete icon:"
+msgstr ""
+
+#: src/Settings.php:3232
+#, php-format
+msgid "%s Detailed Report"
+msgstr ""
+
+#: src/Settings.php:3246
+#, php-format
+msgid "Disable Lock column in Detailed %s Report"
+msgstr ""
+
+#: src/Settings.php:3258
+#, php-format
+msgid "Turn Lock column in Detailed %s Report On or Off"
+msgstr ""
+
+#: src/Settings.php:3265
+msgid "Reporting Color - Not started:"
+msgstr ""
+
+#: src/Settings.php:3270
+msgid "Change Not started label color"
+msgstr ""
+
+#: src/Settings.php:3276
+msgid "Reporting Color - In Progress:"
+msgstr ""
+
+#: src/Settings.php:3281
+msgid "Change In Progress label color"
+msgstr ""
+
+#: src/Settings.php:3285
+msgid "Reporting Color - Completed:"
+msgstr ""
+
+#: src/Settings.php:3290
+msgid "Change Completed label color"
+msgstr ""
+
+#: src/Settings.php:3299
+msgid "Assignment Grade Button Background Color:"
+msgstr ""
+
+#: src/Settings.php:3304
+msgid "Change assignment grade button background color"
+msgstr ""
+
+#: src/Settings.php:3308
+msgid "Assignment Grade Button Text Color:"
+msgstr ""
+
+#: src/Settings.php:3313
+msgid "Change assignment grade button text color"
+msgstr ""
+
+#: src/Settings.php:3319
+msgid "Assignment Resubmit Button Background Color:"
+msgstr ""
+
+#: src/Settings.php:3324
+msgid "Change assignment resubmit button background color"
+msgstr ""
+
+#: src/Settings.php:3328
+msgid "Assignment Resubmit Button Text Color:"
+msgstr ""
+
+#: src/Settings.php:3333
+msgid "Change assignment resubmit button text color"
+msgstr ""
+
+#: src/Settings.php:3339
+msgid "Assignment Approved Button Background Color:"
+msgstr ""
+
+#: src/Settings.php:3344
+msgid "Change assignment approved button background color"
+msgstr ""
+
+#: src/Settings.php:3348
+msgid "Assignment Approved Button Text Color:"
+msgstr ""
+
+#: src/Settings.php:3353
+msgid "Change assignment approved button text color"
+msgstr ""
+
+#: src/Settings.php:3359
+msgid "Assignment Buttons Border Radius:"
+msgstr ""
+
+#: src/Settings.php:3364
+msgid "Change assignment buttons border radius"
+msgstr ""
+
+#: src/Settings.php:3376
+msgid "Global Menu Order"
+msgstr ""
+
+#: src/Settings.php:3382
+msgid "Default order of Groups:"
+msgstr ""
+
+#: src/Settings.php:3385
+#: src/Settings.php:3402
+msgid "Title"
+msgstr ""
+
+#: src/Settings.php:3387
+#: src/Settings.php:3404
+msgid "Menu Order"
+msgstr ""
+
+#: src/Settings.php:3395
+msgid "Change for All the group menus"
+msgstr ""
+
+#: src/Settings.php:3399
+msgid "Default order of Courses:"
+msgstr ""
+
+#: src/Settings.php:3412
+msgid "Change for All the course menus"
+msgstr ""
+
+#: src/Settings.php:3416
+msgid "Default Order of Users:"
+msgstr ""
+
+#: src/Settings.php:3419
+msgid "Display Name"
+msgstr ""
+
+#: src/Settings.php:3428
+msgid "Change for All the user menus"
+msgstr ""
+
+#: build/frontend.js:1
+#: src/resources/js/groups-plus.js:141
+#: src/resources/js/groups-plus.js:353
+#: src/resources/js/groups-plus.js:389
+#: src/resources/js/groups-plus.js:428
+#: src/resources/js/groups-plus.js:681
+#: src/resources/js/groups-plus.js:707
+#: src/resources/js/groups-plus.js:1535
+msgid "Are you sure?"
+msgstr ""
+
+#: build/frontend.js:1
+#: src/resources/js/groups-plus.js:142
+#: src/resources/js/groups-plus.js:354
+#: src/resources/js/groups-plus.js:390
+#: src/resources/js/groups-plus.js:429
+#: src/resources/js/groups-plus.js:682
+#: src/resources/js/groups-plus.js:708
+#: src/resources/js/groups-plus.js:1536
+msgid "Once deleted, you will not be able to recover this record!"
+msgstr ""
+
+#: build/resources/blocks/ld-groups-plus-message-board/index.js:1
+#: build/resources/blocks/ld-groups-plus-primary-report/index.js:1
+#: build/resources/blocks/ld-groups-plus-report/index.js:1
+#: build/resources/blocks/ld-groups-plus/index.js:1
+#: src/resources/blocks/ld-groups-plus-message-board/index.js:33
+#: src/resources/blocks/ld-groups-plus-primary-report/index.js:33
+#: src/resources/blocks/ld-groups-plus-report/index.js:33
+#: src/resources/blocks/ld-groups-plus/index.js:36
+msgid "Preview"
+msgstr ""
+
+#: build/resources/blocks/ld-groups-plus-message-board/index.js:1
+#: build/resources/blocks/ld-groups-plus-primary-report/index.js:1
+#: build/resources/blocks/ld-groups-plus-report/index.js:1
+#: build/resources/blocks/ld-groups-plus/index.js:1
+#: src/resources/blocks/ld-groups-plus-message-board/index.js:37
+#: src/resources/blocks/ld-groups-plus-primary-report/index.js:37
+#: src/resources/blocks/ld-groups-plus-report/index.js:37
+#: src/resources/blocks/ld-groups-plus/index.js:40
+msgid "Show Preview"
+msgstr ""
+
+#: build/resources/blocks/ld-groups-plus-message-board/index.js:1
+#: src/resources/blocks/ld-groups-plus-message-board/index.js:60
+msgid "[learndash_groups_plus_message_board] shortcode output shown here"
+msgstr ""
+
+#: build/resources/blocks/ld-groups-plus-primary-report/index.js:1
+#: src/resources/blocks/ld-groups-plus-primary-report/index.js:60
+msgid "[learndash_groups_plus_primary_report] shortcode output shown here"
+msgstr ""
+
+#: build/resources/blocks/ld-groups-plus-report/index.js:1
+#: src/resources/blocks/ld-groups-plus-report/index.js:60
+msgid "[learndash_groups_plus_report] shortcode output shown here"
+msgstr ""
+
+#: build/resources/blocks/ld-groups-plus/index.js:1
+#: src/resources/blocks/ld-groups-plus/index.js:66
+msgid "[learndash_groups_plus] shortcode output shown here"
+msgstr ""
+
+#: build/resources/blocks/ld-groups-plus-message-board/block.json
+#: src/resources/blocks/ld-groups-plus-message-board/block.json
+msgctxt "block title"
+msgid "LearnDash Groups Plus Message Board"
+msgstr ""
+
+#: build/resources/blocks/ld-groups-plus-primary-report/block.json
+#: src/resources/blocks/ld-groups-plus-primary-report/block.json
+msgctxt "block title"
+msgid "LearnDash Groups Plus Primary Report"
+msgstr ""
+
+#: build/resources/blocks/ld-groups-plus-report/block.json
+#: src/resources/blocks/ld-groups-plus-report/block.json
+msgctxt "block title"
+msgid "LearnDash Groups Plus Report"
+msgstr ""
+
+#: build/resources/blocks/ld-groups-plus/block.json
+#: src/resources/blocks/ld-groups-plus/block.json
+msgctxt "block title"
+msgid "LearnDash Groups Plus"
+msgstr ""

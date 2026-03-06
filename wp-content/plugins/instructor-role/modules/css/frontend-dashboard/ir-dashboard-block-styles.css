@@ -1,0 +1,73 @@
+/* Dashboard Block Styles */
+.ir-notice h2 {
+    color: #1662E2;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+p.ir-notice-info {
+    color: #1E1E1E;
+    font-size: 14px;
+}
+
+.ir-notice ul {list-style-type: disclosure-closed;list-style-position: outside;padding-left: 30px;}
+
+/* onboarding */
+.ir-onboarding-container{
+	position: absolute;
+    top: 32px;
+    left: 0;
+    background-color: #414E5B;
+    z-index: 99999999999;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+}
+.ir-onboarding-container h3{
+	font-size: 24px;
+	font-weight: 700;
+	color: #2E353C;
+}
+
+.ir-onboarding-container span{
+	font-size: 14px;
+	font-weight: 400;
+	color: #ffffff;
+}
+
+.onboarding-screen .nav-tab-wrapper{
+	padding-top: 75px;
+}
+
+.onboarding-screen .ir-instructor-settings-tab-content{
+	padding-top: 75px;
+}
+
+.step_existing_user, .step_new_user, .step_last{
+	display: none;
+}
+
+.setup-button{
+	border: 1px solid #2067FA;
+	font-weight: 600;
+	font-size: 14px;
+	border-radius: 8px;
+	color: #2067FA;
+	text-decoration: none;
+	padding: 8px 16px;
+}
+
+.modal-button-resume-setup{
+	margin-left: auto;
+	margin-right: 15px;
+}
+
+#edit_frontend_dashboard_page{
+	height: 40px;
+    background-color: transparent;
+    color: #fff;
+}
+
+/* onboarding */

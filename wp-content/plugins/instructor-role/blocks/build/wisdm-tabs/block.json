@@ -1,0 +1,120 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "instructor-role/wisdm-tabs",
+  "version": "0.1.0",
+  "title": "Instructor Dashboard Tabs",
+  "category": "widgets",
+  "icon": "welcome-widgets-menus",
+  "keywords": [
+    "Tabs"
+  ],
+  "description": "Create Block to showcase content in Tabs",
+  "supports": {
+    "html": false,
+    "jsx": true
+  },
+  "attributes": {
+    "tabLabelsArray": {
+      "type": "array",
+      "default": []
+    },
+    "classNameArray": {
+      "type": "array",
+      "default": []
+    },
+    "updateChild": {
+      "type": "boolean",
+      "default": false
+    },
+    "tabIconArray": {
+      "type": "array",
+      "default": []
+    },
+    "tabIndexArray": {
+      "type": "array",
+      "default": []
+    },
+    "tooltipTextArray": {
+      "type": "array",
+      "default": []
+    },
+    "fontFamily": {
+      "type": "string",
+      "default": ""
+    },
+    "fontSize": {
+      "type": "string",
+      "default": "16px"
+    },
+    "colorScheme": {
+      "type": "string",
+      "default": "calm_ocean"
+    },
+    "topButton": {
+      "type": "string",
+      "default": ""
+    },
+    "topButtonUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "isCourseUrl": {
+      "type": "boolean",
+      "default": false
+    },
+    "loadType": {
+      "type": "string",
+      "default": "refresh"
+    },
+    "primary": {
+      "type": "string",
+      "default": ""
+    },
+    "sidebar_active_bg": {
+      "type": "string",
+      "default": ""
+    },
+    "page_bg": {
+      "type": "string",
+      "default": ""
+    },
+    "headings": {
+      "type": "string",
+      "default": ""
+    },
+    "text": {
+      "type": "string",
+      "default": ""
+    },
+    "border": {
+      "type": "string",
+      "default": ""
+    },
+    "sidebar_bg": {
+      "type": "string",
+      "default": ""
+    },
+    "sidebar_menu": {
+      "type": "string",
+      "default": ""
+    },
+    "text_light": {
+      "type": "string",
+      "default": ""
+    },
+    "text_extra_light": {
+      "type": "string",
+      "default": ""
+    },
+    "primary_btn_text": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "wdm_instructor_role",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./frontend.js"
+}

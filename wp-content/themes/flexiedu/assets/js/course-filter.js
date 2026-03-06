@@ -15,7 +15,7 @@ jQuery(document).ready(function($){
       connect: true,
       range: {
         min: 0,
-        max: 500,
+        max: 5000,
       },
       step: 1,
     });

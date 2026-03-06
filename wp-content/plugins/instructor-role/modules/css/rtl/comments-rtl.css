@@ -1,0 +1,354 @@
+/*!************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/comments/style.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************/
+.wp-block-instructor-role-wisdm-instructor-comments .mce-ico {
+  font-family: dashicons !important;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .ir-search-comments
+  .mantine-Input-input {
+  border-radius: 8px;
+  height: 42px;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .ir-search-comments
+  .textInput-icon
+  input {
+  padding-right: 35px;
+}
+.wp-block-instructor-role-wisdm-instructor-comments .below-1023 .ir-70-width,
+.wp-block-instructor-role-wisdm-instructor-comments .ir-w-100 {
+  width: 100%;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .ir-additional-filters
+  .ir-date-attempts-presets {
+  width: 48px;
+  border-radius: 4px;
+  background-color: #fff !important;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .ir-additional-filters
+  .ir-date-attempts-presets
+  .mantine-Select-dropdown {
+  width: 150px !important;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .ir-additional-filters
+  .ir-date-attempts-presets
+  .mantine-Select-rightSection {
+  display: none;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .ir-additional-filters
+  .ir-date-attempts-presets
+  .mantine-Input-input {
+  background-color: transparent !important;
+  text-align: center;
+  height: 35px;
+  font-size: 0;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .ir-additional-filters
+  .ir-date-attempts-presets
+  .mantine-Select-icon {
+  right: 5px;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .ir-additional-filters
+  .mantine-DateRangePicker-root
+  .mantine-DateRangePicker-input {
+  height: auto;
+  padding-left: 30px;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .ir-additional-filters
+  .mantine-DateRangePicker-root
+  button,
+.wp-block-instructor-role-wisdm-instructor-comments
+  .ir-additional-filters
+  .mantine-DateRangePicker-root
+  button:hover {
+  color: #444;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .ir-additional-filters
+  .mantine-DateRangePicker-root
+  button[data-autofocus="true"],
+.wp-block-instructor-role-wisdm-instructor-comments
+  .ir-additional-filters
+  .mantine-DateRangePicker-root
+  button[data-autofocus="true"]:hover,
+.wp-block-instructor-role-wisdm-instructor-comments
+  .ir-additional-filters
+  .mantine-DateRangePicker-root
+  button[data-selected="true"],
+.wp-block-instructor-role-wisdm-instructor-comments
+  .ir-additional-filters
+  .mantine-DateRangePicker-root
+  button[data-selected="true"]:hover {
+  color: #fff;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .ir-additional-filters
+  .mantine-DateRangePicker-root
+  button[data-autofocus="true"]:hover {
+  background-color: #444;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .ir-additional-filters
+  .mantine-DateRangePicker-root
+  table,
+.wp-block-instructor-role-wisdm-instructor-comments
+  .ir-additional-filters
+  .mantine-DateRangePicker-root
+  td,
+.wp-block-instructor-role-wisdm-instructor-comments
+  .ir-additional-filters
+  .mantine-DateRangePicker-root
+  th {
+  border: none;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .ir-additional-filters
+  .mantine-DateRangePicker-root
+  .mantine-DatePicker-rightSection
+  > .mantine-ActionIcon-root:hover {
+  color: #444;
+  background-color: transparent;
+}
+.wp-block-instructor-role-wisdm-instructor-comments .ir-additional-filters,
+.wp-block-instructor-role-wisdm-instructor-comments .ir-comments-tabs {
+  flex-wrap: wrap;
+}
+.wp-block-instructor-role-wisdm-instructor-comments .ir-comments-tabs button {
+  background-color: transparent !important;
+  padding: 10px 16px !important;
+  color: #2e353c;
+  border-radius: 0 !important;
+  font-weight: 400 !important;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .ir-comments-tabs
+  button
+  > div {
+  min-height: 18px;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .ir-comments-tabs
+  button.active {
+  border-bottom: 1px solid;
+  font-weight: 600 !important;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .ir-comments-tabs
+  button.active:hover {
+  border: none !important;
+  border-bottom: 1px solid !important;
+}
+.wp-block-instructor-role-wisdm-instructor-comments .ir-back-btn,
+.wp-block-instructor-role-wisdm-instructor-comments
+  .ir-comments-tabs
+  button:hover {
+  border: none !important;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .ir-comments-tabs
+  button:focus {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.wp-block-instructor-role-wisdm-instructor-comments .mantine-Select-input {
+  padding: 1px 12px 1px 20px !important;
+  border-radius: 4px !important;
+  background-image: none;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .textInput-icon
+  .mantine-Input-wrapper.mantine-Select-wrapper
+  input {
+  padding-right: 35px !important;
+}
+.wp-block-instructor-role-wisdm-instructor-comments .ir-comment-container {
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #d6d8e7;
+}
+.wp-block-instructor-role-wisdm-instructor-comments .ir-pending-approval {
+  background: rgba(222, 85, 75, 0.1019607843);
+  padding: 4px 12px;
+  border-radius: 32px;
+  margin-right: 16px;
+}
+.wp-block-instructor-role-wisdm-instructor-comments .ir-width-100 {
+  flex: 1;
+}
+.wp-block-instructor-role-wisdm-instructor-comments .ir-no-comment {
+  text-align: center;
+  margin-top: 30px;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .ir-no-comment
+  .mantine-Image-root {
+  margin: auto;
+}
+.wp-block-instructor-role-wisdm-instructor-comments .newBackgroundColorClass {
+  background: #fff !important;
+}
+.wp-block-instructor-role-wisdm-instructor-comments .ir-btn-view-conversation {
+  padding: 8px 14px 8px 8px !important;
+  border: 1px solid #d6d8e7 !important;
+  border-radius: 6px;
+  text-transform: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .ir-btn-view-conversation:focus {
+  background-color: inherit;
+}
+.wp-block-instructor-role-wisdm-instructor-comments .ir-cancel-button,
+.wp-block-instructor-role-wisdm-instructor-comments .ir-reply-button {
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.wp-block-instructor-role-wisdm-instructor-comments .ir-cancel-button {
+  background-color: transparent;
+  border: 1px solid #d6d8e7;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .mantine-Input-wrapper.mantine-Textarea-wrapper,
+.wp-block-instructor-role-wisdm-instructor-comments .mce-container {
+  border: 1px solid #d6d8e7;
+  border-radius: 6px;
+}
+.wp-block-instructor-role-wisdm-instructor-comments .ir-inline .ir-inline-text {
+  display: inline;
+}
+.wp-block-instructor-role-wisdm-instructor-comments .ir-overflow-wrap {
+  overflow-wrap: anywhere;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .mantine-Group-root.mantine-jl3r5k {
+  padding-top: 0 !important;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .below-1023
+  .ir-top-bar-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .below-1023
+  .ir-top-bar-actions
+  .ir-flex-end {
+  align-self: flex-end;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .below-1023
+  .ir-comment-container {
+  overflow-x: auto;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .below-1023
+  .ir-comment-container
+  .ir-no-wrap {
+  white-space: nowrap;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .below-1023
+  .ir-comment-content-container,
+.wp-block-instructor-role-wisdm-instructor-comments .below-1023 .ir-row-column {
+  flex-direction: column;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .below-1023
+  .ir-comment-content-container
+  .ir-btn-view-conversation {
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: flex-end;
+  margin-top: 18px;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .below-1023
+  .ir-row-column
+  .ir-row-one {
+  margin-bottom: 16px;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .below-1023
+  .ir-row-column
+  .ir-row-two {
+  margin-right: 36px;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .below-1023
+  .ir-svg-width
+  svg {
+  min-width: 45px;
+}
+.wp-block-instructor-role-wisdm-instructor-comments .below-767 .ir-title-bar {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .below-767
+  .ir-title-bar
+  .ir-search-comments {
+  margin-top: 10px;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .below-767
+  .ir-comment-content-container
+  .ir-btn-view-conversation {
+  margin-top: 18px;
+}
+.wp-block-instructor-role-wisdm-instructor-comments
+  .mantine-Input-rightSection.mantine-Select-rightSection {
+  right: 0;
+  left: auto;
+}
+.ir-reply-button,
+.wp-block-instructor-role-wisdm-instructor-comments .mantine-Checkbox-root {
+  margin-right: 0;
+  margin-left: 16px;
+}
+.wp-block-instructor-role-wisdm-instructor-comments .ir-name-content {
+  margin-left: 0;
+  margin-right: 12px;
+}
+.ir-comment-content-container {
+  margin-left: 0;
+}
+.ir-btn-view-conversation .mantine-Button-rightIcon {
+  margin-right: 10px;
+  margin-left: 0;
+  transform: rotate(180deg);
+}
+.ir-pending-approval {
+  margin-left: 0 !important;
+}
+.ir-overflow-wrap {
+  margin-right: 6px;
+}
+.ir-second-screen-comment-container .mantine-1fr50if {
+  border-right: 2px solid #d6d8e7;
+  padding-right: 30px;
+  border-left: none !important;
+}
+.ir-second-screen-comment-container > .ir-second-screen-comment-container {
+  margin-right: 45px;
+}
+.ir-view {
+  margin-left: 0;
+  margin-right: 14px;
+}
+.ir-post-title {
+  margin-right: 8px;
+  margin-left: 0;
+}

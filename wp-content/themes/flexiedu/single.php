@@ -6,7 +6,7 @@ get_header();
 ?>
 
 
-<section class="section_wrap p-t p-b">
+<section class="section_wrap container p-t p-b">
     <h2 class="page-title"><?php the_title(); ?></h2>
     <div class="container">
           <div class="row">

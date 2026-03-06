@@ -1,0 +1,344 @@
+.info-tile{
+	cursor: pointer;
+	padding: 50px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	/* border-right: 1px solid #b4b4b4; */
+	background: #b4b4b41f;
+	margin-right: 4.8%;
+	box-shadow: 0 4px 4px rgba(0,0,0,.16);
+	flex: 0 0 30%;
+	max-width: 30%;
+	transition: all 0.4s ease-in-out;
+	position: relative;
+}
+
+.info-tile img {
+	margin: 15px auto;
+	display: block;
+}
+
+.info-tile .dashicons,.info-tile .wcicon-cart, .info-tile .wcicon-woo{
+	font-size: 70px;
+	width: initial;
+	height: initial;
+}
+
+.ir-half-tile .dashicons {
+	font-size: 50px;
+	width: initial;
+	height: initial;
+}
+
+.ir-half-tile .wcicon-woo {
+	font-size: 42px;
+	width: initial;
+	height: initial;
+}
+
+.info-tile .info-tile-title {
+	font-size: 25px;
+	margin-bottom: 20px;
+}
+
+.info-tile .info-tile-stats {
+	font-size: 35px;
+	font-weight: 600;
+	margin-top: 21px;
+}
+
+.info-tile .heading {
+	font-size: 25px;
+}
+
+div.ir-instructor-info-tiles, div.ir-overview-charts, div.ir-submissions {
+	display: flex;
+	max-width: 768px;
+	margin: 30px auto;
+	flex-wrap: wrap;
+}
+
+div.ir-instructor-info-tiles {
+	/* flex-direction: column; */
+}
+
+/* Submissions Table Styling */
+table.ir-assignments-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.ir-assignment-table-header th{
+	border-bottom: 1px solid #e0dcdc;
+	text-align: left;
+	padding: 15px 20px;
+	position: relative;
+	cursor: pointer;
+}
+
+.ir-assignment-row td {
+	padding: 15px 20px;
+	vertical-align: middle;
+	text-align: left;
+}
+
+tr.ir-assignment-row:nth-child(odd) {
+	background-color: #b4b4b41f;
+}
+
+/* tr.ir-assignment-row:hover {
+	background-color: #e0dcdc;
+} */
+
+div.ir-submissions {
+	/* background: #b4b4b41f; */
+	transition: all 0.4s ease-in-out;
+	box-shadow: 0 4px 4px rgba(0,0,0,.16);
+	border: 1px solid #e0dcdc;
+}
+
+div.ir-submissions:hover {
+	box-shadow: none;
+}
+
+div.ir-submission-heading {
+	padding: 20px;
+	padding-top: 25px;
+	font-size: 25px;
+}
+
+div.ir-essays-table {
+	padding: 15px 20px;
+}
+
+.ir-half-tile img{
+	width: 30%;
+}
+
+.ir-half-tile {
+	width: 100%;
+	position: absolute;
+	height: 50%;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #b4b4b41f;
+}
+
+.ir-half-tile:nth-child(2) {
+	top: 50%;
+	background-color: #f7f5f9;
+}
+
+.ir-stats-count {
+	font-size: 30px;
+	vertical-align: middle;
+	margin-left: 15px;
+	/* padding: 25px 20px; */
+}
+
+div.ir-addon-info-tile.info-tile.full-tile div.ir-stats-count{
+	font-size: 35px;
+	font-weight: 600;
+	margin-top: 30px;
+	margin-left: 0;
+}
+
+.ir-tile-split {
+	width: 100%;
+	height: 1px;
+	margin: 5px;
+}
+
+.ir-instructor-info-tiles .ir-theme-color {
+	color: #444;
+}
+
+.ir-instructor-overview-container h1 {
+	text-align: center;
+}
+
+.ir-addon-info-tile.info-tile {
+	border: 1px solid #e0dcdc;
+	padding: 0;
+	position: relative;
+	margin-right: 0;
+}
+
+.info-tile:hover{
+	box-shadow: none;
+}
+
+.ir-overview-charts .ir-chart {
+	text-align: center;
+	flex: 0 0 47.5%;
+	max-width: 47.3%;
+	padding: 50px 0;
+	margin-right: 2.5%;
+	background: #b4b4b41f;
+	transition: all 0.4s ease-in-out;
+	box-shadow: 0 4px 4px rgba(0,0,0,.16);
+	position: relative;
+	padding-top: 40px;
+}
+
+.ir-overview-charts .ir-chart:nth-child(2) {
+	margin-right: 0;
+	margin-left: 2.5%;
+}
+
+.ir-overview-charts .ir-chart:hover {
+	box-shadow: none;
+}
+
+.ir-overview-charts .ir-earnings {
+	background: transparent;
+	border: 1px solid #e0dcdc;
+}
+
+.ir-ajax-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.425);
+	z-index: 9;
+	display: flex;
+	justify-content: center;
+}
+
+div#ir-submissions-content {
+	width: 100%;
+	overflow-x: auto;
+}
+
+select#instructor-courses-select {
+	padding: 8px 50px;
+    height: initial;
+    vertical-align: middle;
+    font-size: 16px;
+    background: white;
+    -webkit-appearance: none;
+    box-shadow: none;
+    position: relative;
+    z-index: 9;
+    cursor: pointer;
+    padding-left: 20px;
+    width: 100%;
+    line-height: 1;
+}
+
+.ir-instructor-course-select-wrap {
+	display: inline-block;
+	position: relative;
+	border-bottom: 1px solid #d0c6c6;
+}
+
+.ir-instructor-course-select-wrap:after {
+	content: "\f347";
+    font-family: dashicons;
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 9px);
+    font-size: 20px;
+    z-index: 10;
+	cursor: pointer;
+	pointer-events: none;
+}
+
+a.ir-page-link {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+a.ir-page-link:focus {
+	box-shadow: none;
+}
+
+.ir-student-info-tile.info-tile {
+	cursor: initial;
+}
+
+.ir-no-data-found {
+	padding: 20px;
+	font-weight: 600;
+	text-align: center;
+}
+
+div#ir-submissions-content .dataTables_length, div#ir-submissions-content .dataTables_info {
+	padding: 0px 20px;
+	margin: 15px 0;
+	float: left;
+}
+
+div#ir-submissions-content .dataTables_filter, div#ir-submissions-content .dataTables_paginate {
+	padding: 0px 20px;
+	margin: 15px 0;
+	float: right;
+}
+
+.ir-assignment-table-header th::after {
+	content: "\f156";
+	font-family: dashicons;
+	position: absolute;
+	right: 10px;
+	opacity: 0.5;
+}
+
+div#ir-submissions-content a.paginate_button.previous, div#ir-submissions-content a.paginate_button.next {
+	padding: 0 10px;
+}
+
+div#ir-submissions-content a.paginate_button.previous::before {
+	content: "\f141";
+	font-family: 'dashicons';
+	font-size: 25px;
+	cursor: pointer;
+}
+
+div#ir-submissions-content a.paginate_button.next::before {
+	content: "\f139";
+	font-family: 'dashicons';
+	font-size: 25px;
+	cursor: pointer;
+}
+
+div#ir-submissions-content .dataTables_paginate {
+	display: flex;
+}
+
+div#ir-submissions-content .paginate_button {
+	padding: 0 10px;
+	cursor: pointer;
+}
+
+div#ir-submissions-content .paginate_button.current {
+	font-weight: bold;
+}
+
+div#ir-submissions-content .paginate_button.disabled {
+	opacity: 0.2;
+}
+
+td.dataTables_empty {
+	padding: 20px;
+}
+div.ir-chart-title {
+	font-size: 24px;
+    margin-bottom: 30px;
+}
+
+div#screen-meta-links {
+	display: none;
+}
+
+.irbn-overview-wrap .irbn-overview .irbn-tiles-wrap .irbn-tile.irbn-large{
+	margin-right: 0;
+	width: 100%;
+}

@@ -1,0 +1,317 @@
+.wdm-ldgr-setting-div {
+    margin-top: 50px;
+    position: relative;
+}
+
+.wdm-ldgr-setting-div th {
+    text-align: left;
+}
+
+.wdm-ldgr-setting-div th,
+.wdm-ldgr-setting-div td {
+    /*padding-top: .8em;*/
+    padding-bottom: 1.8em;
+}
+
+.wdm-switch {
+    position: relative;
+    display: inline-block;
+    /*width: 60px;
+  height: 34px;*/
+    width: 55px;
+    height: 27px;
+}
+
+.wdm-switch input {
+    display: none;
+}
+
+.wdm-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.wdm-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    /*height: 26px;
+  width: 26px;*/
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.wdm-slider {
+    background-color: #2196F3;
+}
+
+input:focus+.wdm-slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.wdm-slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded wdm-sliders */
+.wdm-slider.round {
+    border-radius: 34px;
+}
+
+.wdm-slider.round:before {
+    border-radius: 50%;
+}
+
+.wdm_help_text {
+    color: #808080;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.ldgr-user-redirects-settings div {
+    padding-left: 5%;
+}
+
+.ldgr-user-redirects-settings label {
+    font-weight: bold;
+}
+
+.accordion .wdm-switch {
+    margin-right: 20px;
+}
+
+div.ldgr-settings div {
+    padding: 20px;
+    font-weight: bold;
+}
+
+div.ldgr-settings.ldgr-settings-fields div {
+    padding: 10px;
+    font-weight: bold;
+}
+
+#ldgr-appearance-settings-form div {
+    padding: 0;
+}
+
+
+#ldgr-appearance-settings-form .ldgr-dashboard-banner-color,
+#ldgr-appearance-settings-form .ldgr-dashboard-accent-color,
+#ldgr-appearance-settings-form .ldgr-dashboard-footer-color,
+#ldgr-appearance-settings-form .ldgr-default-group-image {
+    margin-bottom: 20px;
+}
+
+.ldgr-dashboard-banner-color label,
+.ldgr-dashboard-accent-color label,
+.ldgr-dashboard-footer-color label,
+.ldgr-default-group-image label,
+.ldgr-default-course-image label {
+    margin-right: 10px;
+}
+
+#ldgr-appearance-settings-form .iris-picker {
+    position: absolute;
+}
+
+div.ldgr-settings input {
+    font-weight: normal;
+}
+
+div.ldgr-settings em {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+div.ldgr-recaptcha-settings p {
+    padding: 20px 0;
+    margin: 0;
+}
+
+div.ldgr-settings {
+    width: 75%;
+    position: relative;
+}
+
+div.ldgr-settings .wdm-switch {
+    position: absolute;
+    right: 0;
+}
+
+div.ldgr-leader-logo {
+    margin-bottom: 20px;
+}
+
+div.ldgr-leader-logo img {
+    max-width: 250px;
+}
+
+#ldgr_recaptcha_site_key {
+    margin-left: 15px;
+}
+
+div.ldgr-settings div.ldgr-enrollment-message div,
+div.ldgr-settings div.ldgr-gdpr-checkbox-message div {
+    padding: 2px 0;
+}
+
+div.ldgr-enrollment-message-label p {
+    padding-top: 10px;
+}
+
+div.ldgr-settings select#ldgr_group_code_enrollment_page,
+div.ldgr-settings select#ldgr_group_code_redirect_page {
+    position: absolute;
+    right: 0;
+}
+
+.ldgr-hide {
+    display: none !important;
+}
+
+.ldgr_bulk_discount_table,
+.ldgr_bulk_discount_table th,
+.ldgr_bulk_discount_table td,
+.ldgr_bulk_discount_table tr {
+    text-align: center;
+    padding: 5px;
+    border-collapse: collapse;
+    padding-bottom: 15px;
+}
+
+.ldgr_bulk_discount_setting_input {
+    width: 80px;
+}
+
+.addel-delete {
+    /* background-color: red; */
+    padding: 2px;
+    /* color: white; */
+    /* border-radius: 15px; */
+    /* width: 18px; */
+    cursor: pointer;
+}
+
+.addel-add {
+    /* width: 40px; */
+    padding: 5px 20px;
+    background-color: #4caf50;
+    text-align: center;
+    margin: 10px 0px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.ldgr_bulk_discount_setting_data .addel-container {
+    padding: 20px;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.ldgr-setup-wizard-help-tip a img {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    width: 30px;
+}
+
+.ldgr-setup-wizard-help-tip a img:hover {
+    animation: spin 4s linear infinite;
+}
+
+.ldgr_upload_image img {
+    width: 150px;
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+.divTable {
+    /* display: table; */
+    width: 100%;
+}
+
+.divTableRow {
+    display: flex;
+}
+
+.divTableHeading {
+    background-color: #EEE;
+    display: table-header-group;
+}
+
+.divTableCell,
+.divTableHead {
+    /* border: 1px solid #999999; */
+    /* display: table-cell; */
+    flex: 1;
+    padding: 3px 10px;
+}
+
+.divTableHeading {
+    background-color: #EEE;
+    display: table-header-group;
+    font-weight: bold;
+}
+
+.divTableFoot {
+    background-color: #EEE;
+    display: table-footer-group;
+    font-weight: bold;
+}
+
+.divTableBody {
+    display: table-row-group;
+}
+
+.addel-container-dynamic-field .divTable {
+    font-size: 15px;
+    width: 115% !important;
+    transition: 0.8s;
+}
+
+.addel-container-dynamic-field .divTable .addel-target .divTableCell input[type=text],
+.addel-container-dynamic-field .divTable .addel-target .divTableCell .ldgr_field_type_select {
+    width: 90%;
+}
+
+.addel-container-dynamic-field .divTable .addel-target {
+    background: #e5e5e5;
+    border-radius: 5px;
+    transition: 0.8s;
+}
+
+.addel-delete {
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+#beacon-container .BeaconContainer {
+    z-index: 999999;
+}
+
+.wdm-ldgr-setting-div form table {
+    font-size: 13px;
+}

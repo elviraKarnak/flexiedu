@@ -1,0 +1,144 @@
+/**************
+new
+*****************/
+.ir-main-container {
+    display: flex;
+    flex: 20% 60% 20%;
+    flex-wrap: nowrap;
+    border-left: 8px solid #235AF3;
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: center;
+}
+
+.ir-main-container .ir-logo {
+    display: flex;
+    background-color: #f1f1f1;
+    background: white;
+    border-right: 1px solid #B0B0B0;
+    width: 137px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ir-main-container .ir-logo-img {
+    position: relative;
+    background-color: #f1f1f1;
+    width: 92px;
+    height: 71px;
+    margin-left: 23px;
+    margin-right: 22px;
+}
+
+.ir-center .ir-head-text {
+    padding-top: 16px;
+    margin-left: 40px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+    color: #333333;
+}
+
+.ir-center .ir-sub-text {
+    width: 60%;
+    margin-top: 6px;
+    margin-left: 40px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #555555;
+}
+
+.ir-center .ir-additional-text {
+    margin-top: 9px;
+    margin-left: 40px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #235AF3;
+}
+
+.ir-center .ir-btn-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.ir-center .ir-btn-container .wrld_btn {
+    margin-top: 17px;
+    margin-left: 40px;
+    color: white;
+    background: linear-gradient(0deg, #235AF3, #235AF3), #FFFFFF;
+    padding: 7px 20px 8px 16px;
+    border: 1px solid #C4C4C4;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.ir-center .ir-btn-container .wrld_btn:hover {
+    box-shadow: none;
+}
+
+.ir-center .ir-btn-container .wrld_dismiss_btn {
+    margin-top: 27px;
+    margin-left: 10px;
+}
+
+.ir-main-container .ir-right-image {
+    min-width: 150px;
+}
+
+/**********************
+responsive
+***********************/
+@media only screen and (max-width: 600px) {
+    .ir-main-container {
+        flex-direction: column;
+        border-left: unset;
+        border-top: 8px solid #235AF3;
+    }
+
+    .ir-main-container .ir-logo {
+        border-right: none;
+        border-bottom: 1px solid #B0B0B0;
+        width: 100%;
+    }
+
+    .ir-main-container .ir-logo-img {
+        width: 92px;
+        height: 71px;
+        margin-left: 38%;
+        margin-right: 38%;
+        margin-top: 18px;
+        margin-bottom: 5px;
+    }
+
+    .ir-center .ir-head-text {
+        padding-top: 22px;
+        margin-left: 19px;
+        margin-right: 19PX;
+    }
+
+    .ir-center .ir-sub-text {
+        width: unset;
+        margin-top: 10px;
+        margin-left: 19px;
+        margin-right: 44PX;
+        font-style: normal;
+    }
+
+    .ir-center .ir-additional-text {
+        margin-top: 13px;
+        margin-left: 19px;
+    }
+
+    .ir-main-container {
+        background-image: unset !important;
+    }
+
+    .ir-center .ir-btn-container .wrld_btn {
+        margin-left: 15px;
+    }
+}

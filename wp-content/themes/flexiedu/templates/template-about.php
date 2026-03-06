@@ -343,10 +343,16 @@ $video_banner_cover_ht = get_field('video_cover');
 
     </div>
   </section>
-<?php } ?>
+<?php } 
 
 
-<?php get_template_part('template-parts/testimonials') ?>
+  $testimonials_enabled = get_field('testimonials_contols');
+
+  if($testimonials_enabled){
+    get_template_part('template-parts/testimonials');
+  }
+
+ ?>
 
 
 

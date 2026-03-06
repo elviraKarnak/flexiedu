@@ -1,0 +1,1772 @@
+// cspell:ignore hndle // ignoring misspelled words that we can't change now.
+
+
+.irb-overview-wrap {
+	width: 100%;
+	max-width: 1055px;
+	margin: auto;
+	.irb-overview {
+		h1 {
+			font-size: 28px;
+			font-weight: 600;
+			color: #3d404e;
+			margin-bottom: 35px;
+			margin-top: 40px;
+		}
+		.irb-tiles-wrap {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 60px;
+			@media screen and(max-width: 767px) {
+				flex-wrap: wrap;
+			}
+			.irb-tile {
+				width: 332px;
+				border-radius: 4px;
+				box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.2);
+				overflow: hidden;
+				margin-right: 10px;
+				@media screen and(max-width: 767px) {
+					width: 100%;
+					margin-bottom: 25px;
+					margin-right: 0;
+				}
+				.irb-tile-header {
+					height: 63px;
+					background-color: #d0d0d1;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					.irb-header-icon {
+						color: #3d404e;
+						font-size: 30px;
+					}
+					.irb-header-text {
+						font-size: 20px;
+						color: #3d404e;
+						margin-left: 13px;
+					}
+					.irb-header-text.irb-bold {
+						font-weight: 600;
+					}
+				}
+				.irb-tile-content {
+					height: 85px;
+					background-color: #ffffff;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					.irb-tile-value {
+						font-size: 42px;
+						font-weight: 500;
+						color: #3d404e;
+					}
+				}
+			}
+			.irb-medium {
+				width: 513px;
+				@media screen and(max-width: 767px) {
+					width: 100%;
+					margin-bottom: 25px;
+					margin-right: 0;
+				}
+			}
+			.irb-large {
+				width: 100%;
+			}
+		}
+		.irb-charts {
+			.irb-tile {
+				.irb-tile-content {
+					height: 300px;
+				}
+			}
+		}
+		.irb-sub {
+			.irb-tile {
+				.irb-tile-content {
+					height: auto;
+				}
+			}
+		}
+	}
+}
+
+//left Sidebar starts
+
+#wpwrap {
+	#adminmenuwrap,
+	#adminmenuback,
+	#adminmenuwrap,
+	#adminmenu,
+	#adminmenu .wp-submenu {
+		width: 210px;
+		font-family: "Poppins", sans-serif;
+		// transition: all 0.4s ease-in-out;
+	}
+	#adminmenuback {
+		box-shadow: 2px 0 9px 0 rgba(0, 0, 0, 0.08);
+	}
+}
+.folded {
+	#wpwrap {
+		#adminmenuwrap,
+		#adminmenuback,
+		#adminmenuwrap,
+		#adminmenu,
+		#adminmenu .wp-submenu {
+			width: 36px;
+		}
+	}
+}
+#wpcontent,
+#wpfooter {
+	margin-left: 210px;
+	font-family: "Poppins", sans-serif;
+}
+
+#adminmenuback,
+#adminmenuwrap,
+#adminmenu,
+#adminmenu .wp-submenu {
+	background-color: #ffffff;
+}
+
+#adminmenu a,
+#adminmenu a.menu-top {
+	font-size: 16px;
+	font-weight: 500;
+	color: #3d404e;
+}
+
+#adminmenu .wp-submenu a {
+	color: #3d404e;
+	font-size: 14px;
+	line-height: 43px;
+	font-weight: 400;
+	padding-left: 70px;
+}
+
+#adminmenu .wp-has-current-submenu ul > li > a {
+	padding: 0;
+	padding-left: 25px;
+}
+
+#adminmenu .wp-submenu {
+	background-color: #ebebec;
+	padding: 0;
+}
+
+#adminmenu div.wp-menu-name {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 8px;
+}
+
+#adminmenu li.current a.menu-top,
+#adminmenu li.menu-top:hover,
+#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu {
+	background-color: transparent;
+	color: #3d404e;
+}
+
+#adminmenu li a.menu-top {
+	display: flex;
+	align-items: center;
+	padding-left: 20px;
+	padding-right: 10px;
+}
+
+.folded {
+	#adminmenu li a.menu-top {
+		padding-left: 0;
+	}
+}
+
+.folded #adminmenu li.menu-top .wp-submenu > li.wp-submenu-head {
+	line-height: 30px;
+	background-color: #4553e6;
+}
+
+#adminmenu div.wp-menu-image {
+	height: auto;
+	width: auto;
+}
+#adminmenu li.menu-top:hover,
+#adminmenu li.opensub > a.menu-top,
+#adminmenu li > a.menu-top:focus {
+	background-color: transparent;
+}
+#adminmenu .wp-submenu {
+	left: 245px;
+}
+#adminmenu .wp-submenu li.current a,
+#adminmenu .wp-submenu li.current a:hover {
+	background-color: #d0d1d1;
+	color: #3d404e;
+	font-weight: 400;
+}
+
+body.learndash-user-group-leader
+	#adminmenumain
+	.toplevel_page_learndash-lms
+	.wp-submenu
+	> li.submenu-ldlms-topics:after,
+body.learndash-user-group-leader
+	#adminmenumain
+	.toplevel_page_learndash-lms
+	.wp-submenu
+	> li.submenu-ldlms-groups:after {
+	content: none;
+}
+
+#adminmenu li.wp-has-submenu.wp-not-current-submenu:hover:after,
+#adminmenu li.wp-has-submenu.wp-not-current-submenu:focus-within:after {
+	content: none;
+}
+
+#toplevel_page_learndash-lms {
+	> a {
+		.wp-menu-image {
+			background-image: none !important;
+			&:before {
+				content: "\e90d";
+				font-family: "ir-admin" !important;
+				color: #3d404e !important;
+				font-size: 30px;
+				width: auto;
+				height: auto;
+			}
+		}
+	}
+}
+
+#menu-comments , #toplevel_page_edit-comments {
+	.wp-menu-image {
+		&:before {
+			content: "\e904";
+			font-family: "ir-admin" !important;
+			color: #3d404e !important;
+			font-size: 30px;
+			width: auto;
+			height: auto;
+		}
+	}
+}
+
+li.menu-top a.menu-top .wp-menu-image {
+	&:before {
+		color: #3d404e !important;
+		font-size: 30px;
+		width: auto;
+		height: auto;
+	}
+}
+
+#menu-posts-product , #toplevel_page_edit-post_type-product {
+	.wp-menu-image {
+		&:before {
+			content: "\e915";
+			font-family: "ir-admin" !important;
+			color: #3d404e !important;
+			font-size: 30px;
+			width: auto;
+			height: auto;
+		}
+	}
+}
+
+.menu-top {
+	.wp-menu-image.dashicons-admin-users {
+		&:before {
+			content: "\e917";
+			font-family: "ir-admin" !important;
+			color: #3d404e !important;
+			font-size: 30px;
+			width: auto;
+			height: auto;
+		}
+	}
+	.wp-menu-image.dashicons-migrate {
+		&:before {
+			content: "\e911";
+			font-family: "ir-admin" !important;
+			color: #3d404e !important;
+			font-size: 30px;
+			width: auto;
+			height: auto;
+		}
+	}
+}
+
+body.learndash-user-group-leader
+	#adminmenumain
+	.toplevel_page_learndash-lms
+	.wp-submenu
+	> li.submenu-ldlms-topics:after,
+body.learndash-user-group-leader
+	#adminmenumain
+	.toplevel_page_learndash-lms
+	.wp-submenu
+	> li.submenu-ldlms-groups:after {
+	content: none !important;
+}
+
+//left Sidebar ends
+
+//right sidebar starts
+.interface-interface-skeleton__body {
+	background-color: #f3f3f3;
+}
+
+.edit-post-post-visibility,
+.edit-post-post-schedule {
+	padding-bottom: 0 !important;
+	span {
+		font-size: 12px;
+		font-weight: 700;
+		color: #3d404e;
+		width: auto;
+		margin-right: 25px;
+	}
+	button.components-button {
+		height: auto;
+		padding: 0;
+	}
+}
+.interface-interface-skeleton__content {
+	max-width: 966px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	.edit-post-meta-boxes-area,
+	.edit-post-layout__metaboxes:not(:empty) .edit-post-meta-boxes-area {
+		margin: 0;
+		margin-top: 8px;
+	}
+	.edit-post-layout__metaboxes:not(:empty) {
+		border-top: none;
+	}
+	.postbox-header {
+		background-color: #d0d0d1;
+	}
+	.postbox .handle-order-higher:focus,
+	.postbox .handle-order-lower:focus,
+	.postbox .handlediv:focus {
+		box-shadow: none;
+	}
+	.editor-styles-wrapper {
+		padding: 0 60px;
+	}
+	.edit-post-visual-editor__post-title-wrapper .editor-post-title textarea {
+		text-align: center;
+		font-size: 26px;
+		font-weight: 700;
+		color: #3d404e;
+		padding: 0;
+		border: none !important;
+	}
+	.edit-post-meta-boxes-area .postbox .handle-order-higher,
+	.edit-post-meta-boxes-area .postbox .handle-order-lower,
+	.edit-post-meta-boxes-area .postbox .handlediv {
+		width: 40px;
+		height: 40px;
+	}
+	.edit-post-meta-boxes-area #poststuff h2.hndle {
+		padding: 10px 15px;
+	}
+}
+.interface-interface-skeleton__secondary-sidebar,
+.interface-interface-skeleton__sidebar {
+	background: #f2f4f7;
+	background-color: #f2f4f7;
+	padding: 0 20px;
+	border: 1px solid #b2b2b2;
+	.interface-complementary-area,
+	.interface-complementary-area-header,
+	.components-panel {
+		background: transparent;
+		background-color: transparent;
+	}
+	.components-panel__body > .components-panel__body-title:hover {
+		background: transparent;
+	}
+	.components-panel {
+		background-color: #fff;
+		border-radius: 4px;
+		border: solid 1px #dfdfdf;
+		margin-top: 20px;
+		.components-checkbox-control__input[type="checkbox"],
+		.components-text-control__input[type="text"] {
+			border: 1px solid #e5e5e5;
+		}
+		.components-checkbox-control__label {
+			margin-bottom: 0;
+		}
+		.is-opened {
+			padding: 0 16px;
+			> * {
+				padding: 10px 15px;
+				background-color: #f3f3f3;
+				margin-top: 0;
+			}
+			> .components-panel__body-title {
+				background-color: #ffffff;
+				padding: 0;
+				margin: 0;
+				button {
+					padding: 16px 0;
+					font-size: 12px;
+					font-weight: bold;
+
+					.components-panel__arrow {
+						right: 0;
+					}
+				}
+			}
+		}
+		.components-panel__body-toggle.components-button:focus {
+			box-shadow: none;
+		}
+	}
+	.components-panel__body {
+		border-top: none;
+		border-bottom: none;
+		> .components-panel__body-title {
+			button {
+				font-size: 12px;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+@media (min-width: 782px) {
+	.interface-complementary-area
+		.components-panel__header.edit-post-sidebar__panel-tabs {
+		padding: 0;
+		height: 37px;
+		border: none;
+		margin-left: -20px;
+		margin-right: -20px;
+		.components-button.has-icon {
+			display: none;
+		}
+		ul {
+			margin: 0;
+			width: 100%;
+			li {
+				width: 50%;
+				text-align: center;
+				button {
+					width: 100%;
+					background-color: #f3f3f3;
+					height: 37px;
+					border: solid 1px #b2b2b2;
+					font-size: 16px;
+					font-weight: 500;
+					color: #3d404e;
+				}
+				.is-active {
+					box-shadow: none;
+					background-color: #f2f4f7;
+					border: none;
+					&:before {
+						content: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+//right sidebar ends
+
+//IR commissions
+
+.nav-tab-wrapper {
+	height: 50px;
+	background-color: #ffffff;
+	display: flex;
+	align-items: center;
+	padding: 0;
+	border-bottom: none;
+	flex-direction: column;
+	height: auto;
+
+	.nav-tab,
+	.nav-tab:focus {
+		background-color: transparent;
+		border: none;
+		font-size: 16px;
+		font-weight: 500;
+		color: #3d404e;
+		box-shadow: none;
+	}
+	.nav-tab.nav-tab-active {
+		color: #4553e6;
+		font-weight: 700;
+	}
+}
+
+.ir-flex {
+	display: flex;
+	align-items: center;
+}
+
+.ir-export {
+	margin-top: 20px;
+	.ir-label {
+		font-size: 15px;
+		font-weight: 600;
+		color: #3d404e;
+	}
+	input[type="text"] {
+		width: 150px;
+		height: 36px;
+		background-color: #ffffff;
+		border: 1px solid #e5e5e5;
+		border-radius: 0;
+		margin-left: 10px;
+	}
+	.ir-end-date {
+		margin-left: 12px;
+	}
+	.irb-btn {
+		margin-left: 12px;
+	}
+}
+
+.ir-commission-wrapper {
+	padding: 20px;
+}
+
+#reports_table_div {
+	#filter,
+	#change-page-size {
+		height: 36px;
+		background-color: #ffffff;
+		border: 1px solid #e5e5e5;
+		border-radius: 0;
+	}
+}
+
+#wdm_report_tbl {
+	border-radius: 0;
+	th {
+		padding: 11px 10px;
+		background-color: #d0d0d1;
+		background-image: none;
+		box-shadow: none;
+		border: none;
+		font-size: 16px;
+		font-weight: normal;
+		color: #3d404e;
+	}
+}
+.footable {
+	border: none;
+	border-radius: 0;
+}
+.footable > thead > tr:first-child > th.footable-first-column,
+.footable > thead > tr:first-child > td.footable-first-column,
+.footable
+	> tbody
+	> tr:last-child
+	> td.footable-first-column.footable-last-column {
+	border-radius: 0;
+}
+.footable > tfoot > tr > th,
+.footable > tfoot > tr > td,
+.footable > thead > tr > th,
+.footable > thead > tr > td {
+	background-color: #d0d0d1;
+	background-image: none;
+	border-top: none;
+	border-radius: 0 !important;
+}
+
+.footable > tbody > tr > td {
+	border-top: none;
+}
+.footable > tbody > tr > td {
+	border-left: none;
+	border-bottom: 1px solid rgba(61, 64, 78, 0.18);
+	font-size: 13px;
+	color: #000000;
+}
+
+#wdm_report_tbl,
+#reports_table_div,
+.ir-payout-transactions-container,
+.ir-assignments-table {
+	margin-bottom: 50px;
+	font-family: "Poppins", sans-serif !important;
+	.ir-payout-transaction-table {
+		font-family: "Poppins", sans-serif !important;
+		th {
+			font-size: 16px;
+			font-weight: normal;
+			color: #3d404e !important;
+			padding: 10px 20px !important;
+		}
+	}
+	th {
+		font-size: 16px;
+		font-weight: normal;
+		color: #3d404e !important;
+		padding: 10px 20px !important;
+	}
+	td {
+		font-size: 13px;
+		font-weight: 400;
+		color: #000;
+		padding: 16px 20px !important;
+	}
+	a {
+		font-size: 16px;
+		font-weight: 600;
+		color: #074ee8;
+		text-decoration: none;
+	}
+	.ir-payout-status {
+		font-size: 16px;
+		font-weight: 600;
+		color: #e54e4e;
+	}
+	.ir-payout-transaction-details-container {
+		font-family: "Poppins", sans-serif;
+		table {
+			font-family: "Poppins", sans-serif !important;
+			th {
+				font-size: 13px;
+				font-weight: 500;
+				color: #3d404e !important;
+				padding: 6px !important;
+				min-width: 180px;
+			}
+			td {
+				font-size: 13px;
+				font-weight: 400;
+				color: #000 !important;
+				padding: 6px !important;
+			}
+		}
+	}
+}
+
+.ir-assignment-table-header th {
+	padding: 20px !important;
+}
+.ir-no-data-found {
+	font-size: 18px !important;
+	font-weight: 600 !important;
+	color: #3d404e !important;
+	text-align: center !important;
+	border-bottom: none !important;
+}
+.footable.breakpoint > tbody > tr.footable-row-detail {
+	background-color: rgba(61, 64, 78, 0.17);
+}
+.irb-btn {
+	height: 36px !important;
+	background-color: #4553e6 !important;
+	font-size: 16px !important;
+	font-weight: 500 !important;
+	color: #ffffff !important;
+	border: none !important;
+	padding-left: 15px !important;
+	padding-right: 15px !important;
+}
+
+//IR commission ends
+
+//IR email starts
+.wl8qcn-email-form {
+	.wl8qcn-email-heading {
+		// > h2 {
+		// 	display: none;
+		// }
+		.irb-cpe-desc-wrap {
+			display: flex;
+			align-items: center;
+			margin-top: 20px;
+		}
+		.wl8qcn-email-desc {
+			font-size: 14px;
+			font-weight: 400;
+			color: #3d404e;
+			font-style: initial;
+			display: inline-block;
+		}
+	}
+	.wl8qcn-email-sub,
+	.wl8qcn-email-content,
+	#instructor_email_template_variable {
+		label,
+		h4 {
+			font-size: 15px;
+			font-weight: 600;
+			margin-top: 30px;
+			color: #3d404e;
+			margin-bottom: 12px;
+		}
+		#instructor_email_sub {
+			min-height: 53px;
+			border: 1px solid #e5e5e5;
+			padding: 10px;
+		}
+		#instructor_email_message_ifr {
+			height: 110px !important;
+		}
+	}
+	#instructor_email_template_variable {
+		margin-left: 0;
+		tbody {
+			display: flex;
+			flex-wrap: wrap;
+			.irb-av {
+				margin-right: 50px;
+				display: flex;
+				align-items: center;
+				margin-bottom: 10px;
+			}
+			code {
+				padding: 10px 15px;
+				background-color: #d8d8d8;
+				font-size: 13px;
+				font-weight: 600;
+				color: #000;
+				margin-right: 12px;
+				display: block;
+				line-height: 1;
+			}
+		}
+	}
+}
+
+.irb-calender {
+	position: relative;
+	background-color: #ffffff;
+	margin-left: 10px;
+	border: 1px solid #e5e5e5;
+	&:before {
+		content: "\e903";
+		font-family: "ir-admin" !important;
+		position: absolute;
+		right: 0;
+		font-size: 43px;
+		top: 8px;
+		z-index: 0;
+	}
+	input[type="text"] {
+		position: relative;
+		z-index: 1;
+		background-color: transparent;
+		margin-left: 0;
+		border: none;
+	}
+}
+
+.irb-cpe-desc-wrap {
+	display: flex;
+	align-items: center;
+	i {
+		font-size: 30px;
+		margin-right: 10px;
+	}
+	.irb-cpe-desc {
+		font-size: 14px;
+		font-weight: 400;
+		color: #3d404e;
+	}
+}
+
+.irb-as-wrap {
+	margin-top: 20px;
+	.irb-as-label {
+		font-size: 13px;
+		font-weight: 600;
+		color: #3d404e;
+	}
+	.irb-as-values {
+		margin-top: 10px;
+		font-size: 14px;
+		font-weight: 400;
+		color: #3d404e;
+	}
+}
+
+.ir-course-purchase-email-body {
+	margin-top: 20px;
+	display: block;
+	tbody,
+	tr,
+	td,
+	th {
+		display: block;
+		padding: 0;
+	}
+	.ir-email-settings-label {
+		font-size: 15px;
+		font-weight: 600;
+		color: #3d404e;
+		margin-bottom: 10px;
+		margin-top: 20px;
+	}
+	input[type="text"] {
+		min-height: 53px;
+		border: 1px solid #e5e5e5;
+		padding: 10px;
+	}
+	+ .irb-btn {
+		margin-top: 30px;
+	}
+	#ir-course-purchase-email-body_ifr {
+		height: 110px !important;
+	}
+}
+//IR email ends
+
+//Course builder starts
+
+#sfwd-header {
+	.ld-global-header > div {
+		width: 100%;
+		h1 {
+			text-align: center;
+			font-size: 21px;
+			font-weight: bold;
+			color: #3d404e;
+			padding: 15px 10px;
+		}
+	}
+	.ld-tab-buttons {
+		display: flex;
+		align-items: center;
+		border: 1px solid #c8c8c8;
+	}
+}
+body > #wrap {
+	padding-bottom: 50px;
+}
+.ir-course-progress {
+	display: flex;
+	align-items: center;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	background-color: #fff;
+	height: 38px;
+	width: 100%;
+	box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.2);
+	justify-content: center;
+	z-index: 99999;
+	> div {
+		margin-left: auto;
+	}
+	.irb-dots {
+		position: relative;
+		display: flex;
+		&:before {
+			content: "";
+			width: 100%;
+			position: absolute;
+			height: 2px;
+			top: 3px;
+			background-color: #c3c3c3;
+		}
+		span {
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background-color: #c3c3c3;
+			display: inline-block;
+			margin-right: 22px;
+			&:nth-last-child(2) {
+				margin-right: 0;
+			}
+		}
+	}
+	.irb-progress-text {
+		font-size: 12px;
+		font-weight: normal;
+		color: #3d404e;
+		margin-left: 10px;
+	}
+}
+
+.irb-actions-wrap {
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+	button {
+		background-color: transparent;
+		border: none;
+		font-size: 16px;
+		font-weight: 500;
+		color: #3d404e;
+		padding-right: 19px;
+		margin-right: 19px;
+		border-right: 1px solid #979797;
+		line-height: 18px;
+	}
+	.ir-preview-btn {
+		button {
+			border-right: 0;
+		}
+	}
+	.ir-help-btn {
+		button {
+			display: flex;
+			align-items: center;
+			font-size: 14px;
+			font-weight: 400;
+			color: #3d404e;
+			border-radius: 11px;
+			border: solid 1px #d8d8d8;
+			i {
+				font-size: 20px;
+				margin-right: 3px;
+			}
+		}
+	}
+}
+
+#learndash_course_builder,
+#learndash_quiz_builder {
+	> .postbox-header {
+		display: none;
+	}
+	.inside {
+		margin: 0;
+		padding: 0;
+		background-color: #f3f3f3;
+		.ld__builder--app {
+			border-radius: 4px;
+			.ld-entity-builder-header {
+				min-height: 43px;
+				background-color: #d0d0d1;
+				padding: 0 20px;
+				margin: 0;
+				border: 1px solid #ceced7;
+				border-bottom: none;
+				h2 {
+					font-size: 16px;
+					font-weight: 500;
+					color: #3d404e;
+				}
+				.ld-expand-collapse-all {
+					a {
+						font-size: 12px;
+						color: #3d404e;
+						span {
+							margin-left: 18px;
+						}
+					}
+				}
+			}
+			.ld__builder--parent.-active {
+				border: none;
+			}
+			.ld__builder--content {
+				background-color: #ffffff;
+				border: 1px solid #ceced7;
+				border-top: none;
+				width: 100%;
+				float: left;
+				.ld-node-header__drag-handle {
+					height: auto;
+					svg {
+						fill: #868686;
+					}
+				}
+				.ld-node-header {
+					.ld-node-header__order {
+						button {
+							display: none;
+						}
+					}
+					h3 {
+						font-size: 22px;
+						font-weight: 700;
+						color: #3d404e;
+					}
+					.ld__builder-row-type {
+						margin-right: 16px;
+					}
+				}
+				.ld__builder--child.-expanded {
+					margin: 0 59px;
+					border-left: none;
+					border-radius: 4px;
+					background-color: #ebebeb;
+					margin-top: 13px;
+					margin-right: 0;
+					padding: 25px;
+					.ld__builder--new-entities {
+						margin-left: 0;
+						margin-bottom: 0;
+					}
+					.ld__builder--placeholder {
+						margin-left: 0;
+						margin-right: 0;
+						width: auto;
+					}
+					.ld-node-header {
+						h3 {
+							font-size: 14px;
+							font-weight: 400;
+						}
+					}
+					.ld__builder--grandchild {
+						border-left: none;
+						padding-left: 47px;
+						.ld__builder--placeholder {
+							margin-top: 10px;
+						}
+					}
+				}
+				.ld__builder-row-type {
+					width: 16px;
+					min-width: 16px;
+					height: 16px;
+					font-size: 10px;
+					background-color: #d8d8d8;
+					color: #000000;
+					border-radius: 4px;
+				}
+				.ld__builder--parent.-active {
+					background-color: #ffffff;
+				}
+				.ld__builder--parent {
+					padding: 15px 20px;
+					padding-right: 32px;
+					border-top: none;
+				}
+				.ld__builder--placeholder {
+					border: 2px dashed #989fe8;
+					border-radius: 4px;
+				}
+				.ld__builder--placeholder.-lesson {
+					margin: 10px 24px;
+					width: auto;
+					margin-right: 32px;
+				}
+				.ld__builder--placeholder.-is-empty {
+					margin-top: 0;
+					top: 20px;
+					margin-bottom: 30px;
+				}
+				.ld__builder--section-heading {
+					border: 1px solid #c8c8c8;
+					background-color: #eee;
+					margin: 20px 10px;
+					padding: 16px 12px;
+					.ld-node-header {
+						h3 {
+							font-size: 22px;
+							font-weight: 700;
+							color: #3d404e;
+						}
+					}
+				}
+				.ld__builder--new-entities {
+					margin-bottom: 30px;
+					margin-left: 24px;
+					a {
+						border: 1px solid;
+						color: #074ee8;
+						height: 29px;
+						display: inline-flex;
+						align-items: center;
+						padding: 0 10px;
+						font-size: 12px;
+						font-weight: 400;
+						border-radius: 4px;
+						svg {
+							width: 15px;
+							height: 15px;
+							fill: #4553e6;
+						}
+					}
+				}
+			}
+			.ld__builder--footer {
+				margin-top: 50px;
+				width: 100%;
+				float: left;
+				.ld__builder--final-quizzes {
+					> h3 {
+						font-size: 21px;
+						font-weight: 700;
+						color: #3d404e;
+						margin-bottom: 20px;
+					}
+					> div {
+						border: 1px solid #ceced7;
+						background-color: #fff;
+						padding: 25px;
+						margin-bottom: 30px;
+						border-radius: 4px;
+						.ld__builder--placeholder.-quiz {
+							border: 2px dashed #989fe8;
+							border-radius: 4px;
+						}
+					}
+					.ld__builder--new-entities {
+						margin-bottom: 30px;
+						margin-left: 0;
+						a {
+							border: 1px solid;
+							color: #074ee8;
+							height: 29px;
+							display: inline-flex;
+							align-items: center;
+							padding: 0 10px;
+							font-size: 12px;
+							font-weight: 400;
+							border-radius: 4px;
+							svg {
+								width: 15px;
+								height: 15px;
+								fill: #4553e6;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#side-sortables {
+	#sfwd-course-lessons,
+	#sfwd-course-topics,
+	#sfwd-course-quizzes,
+	#sfwd-quiz-questions {
+		position: relative;
+		margin: -1px;
+		margin-bottom: 1px;
+		padding-bottom: 20px;
+		background-color: #f2f4f7;
+		.postbox-header {
+			background-color: #f2f4f7;
+			border-bottom: none;
+			h2 {
+				padding: 0;
+				font-size: 15px;
+				font-weight: 700;
+				color: #3d404e;
+				&:before {
+					width: 16px;
+					min-width: 16px;
+					height: 16px;
+					font-size: 10px;
+					background-color: #d8d8d8;
+					color: #000000;
+					border-radius: 4px;
+				}
+			}
+		}
+		.inside {
+			padding: 15px 10px;
+			border-radius: 4px;
+			border: 1px solid #dfdfdf;
+			margin-top: 0;
+			background-color: #ffffff;
+			input[type="text"] {
+				border-radius: 4px;
+				background-color: #f3f3f3;
+				border: none;
+				padding: 7px;
+				line-height: 1;
+			}
+			.ld__builder-sidebar-header {
+				a {
+					font-size: 12px;
+					font-weight: 400;
+					color: #4553e6;
+				}
+			}
+			.ld__builder-sidebar-refresh {
+				font-size: 12px;
+				font-weight: 400;
+				color: #4553e6;
+			}
+			.-recently-edited {
+				margin-bottom: 0;
+			}
+			.ld__builder-sidebar-item:hover {
+				background-color: transparent;
+				box-shadow: none;
+			}
+		}
+	}
+	#sfwd-course-quizzes {
+		margin-bottom: -1px;
+	}
+}
+
+#sfwd-header {
+	.ld-global-header {
+		.ld-tab-buttons {
+			min-height: 50px;
+			button {
+				margin-top: 0;
+				font-size: 16px;
+				font-weight: 500;
+				color: #3d404e;
+				position: relative;
+				&:after {
+					content: "\e913";
+					font-family: "ir-admin" !important;
+					position: absolute;
+					right: -18px;
+					font-size: 25px;
+					top: -6px;
+					color: #3d404e;
+					font-weight: 400;
+				}
+			}
+			#tab-learndash_course_groups,
+			#tab-sfwd-quiz-settings,
+			#tab-sfwd-lessons-settings,
+			tab-sfwd-topics-settings,
+			#tab-sfwd-topic-settings {
+				&:after {
+					content: none;
+				}
+			}
+			.is-primary {
+				box-shadow: none !important;
+				color: #4553e6 !important;
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+//Course builder ends
+
+//Course Settings starts
+#poststuff {
+	#learndash-course-display-content-settings,
+	#learndash-course-access-settings,
+	#learndash-course-navigation-settings,
+	#sfwd-courses,
+	#learndash-course-grid-meta-box,
+	#learndash-quiz-access-settings,
+	#learndash-quiz-progress-settings,
+	#learndash-quiz-display-content-settings,
+	#learndash-quiz-results-options,
+	#learndash-quiz-admin-data-handling-settings,
+	#learndash-lesson-display-content-settings,
+	#learndash-lesson-access-settings,
+	#learndash-topic-display-content-settings,
+	#learndash-course-users-settings {
+		margin-bottom: 40px;
+		.postbox-header {
+			padding: 10px 15px;
+			h2.hndle {
+				font-size: 16px;
+				font-weight: 500;
+				color: #3d404e;
+				padding: 0;
+			}
+			.ld-metabox-description {
+				margin-top: -6px;
+				padding-left: 0;
+				padding-bottom: 0;
+				p {
+					font-size: 11px;
+				}
+			}
+		}
+		.inside {
+			.sfwd_label {
+				font-size: 13px;
+				font-weight: 600;
+				color: #3d404e;
+			}
+			input[type="text"],
+			input[type="number"],
+			.ld-select,
+			textarea,
+			.select2-dropdown,
+			.select2-search__field {
+				border: 1px solid #e5e5e5;
+				border-radius: 0;
+			}
+			input[type="checkbox"]:focus,
+			input[type="checkbox"] {
+				box-shadow: none !important;
+				outline: none !important;
+				border-color: #979797 !important;
+				border-radius: 10px;
+			}
+			.ld-switch {
+				.ld-switch__input:focus ~ .ld-switch__track {
+					box-shadow: none;
+					outline-offset: 2px;
+					outline: none;
+				}
+				.ld-switch__track {
+					border: 1px solid #979797;
+				}
+				.ld-switch__on-off {
+					display: none;
+				}
+				.ld-switch__input:checked ~ .ld-switch__track {
+					border: 1px solid #129063;
+					background-color: #129063;
+				}
+				.ld-switch__input:checked ~ .ld-switch__thumb {
+					border-radius: 2px;
+					width: 3px;
+				}
+				label {
+					margin-bottom: 0;
+				}
+			}
+			.ld-radio-input__label > span {
+				font-size: 13px;
+				font-weight: 400;
+				color: #3d404e;
+			}
+			.ld-radio-input-wrapper {
+				.ld-radio-input__label:before {
+					border: solid 2px #979797;
+				}
+				.ld-radio-input:checked + .ld-radio-input__label:before {
+					background-color: #fff;
+					box-shadow: none;
+					border: 5px solid #4553e6;
+				}
+				label {
+					margin-bottom: 0;
+				}
+			}
+			.ld-radio-description {
+				font-size: 10px;
+				font-weight: 400;
+				color: #8d8d8d;
+				font-style: italic;
+			}
+			.ld-settings-sub-level-1 {
+				.sfwd_label {
+					font-size: 12px;
+					font-weight: 500;
+				}
+				input[type="number"] {
+					margin-right: 5px;
+				}
+			}
+
+			#learndash-course-access-settings_course_prerequisite_field {
+				.select2-search__field {
+					border: none;
+				}
+			}
+		}
+	}
+}
+#learndash-quiz-access-settings_prerequisiteList_field input[type="search"] {
+	border: none !important;
+}
+//Course Settings ends
+
+#wpbody {
+	max-width: 1100px;
+	margin: auto;
+}
+.learndash-post-type #wpbody {
+	max-width: 100%;
+}
+.cpb-wrap,
+.notice {
+	display: none !important;
+}
+@media (min-width: 782px) {
+	.interface-complementary-area {
+		width: 350px;
+	}
+}
+
+.ld__builder--app input[type="submit"].is-primary,
+.components-button.is-primary,
+#elementor-switch-mode-button {
+	background-color: #4553e6 !important;
+	color: #ffffff !important;
+	border-radius: 4px !important;
+}
+
+.components-button.is-tertiary {
+	color: #4553e6 !important;
+}
+
+.components-button.is-secondary:hover:not(:disabled),
+.components-button.is-tertiary:hover:not(:disabled) {
+	color: #4553e6;
+	box-shadow: inset 0 0 0 1px #4553e6;
+}
+
+.ld-node-header .toggle svg path,
+.ld-expand-collapse-all svg path {
+	stroke: #4553e6 !important;
+}
+
+.ld-node-header h2 button svg,
+.ld-node-header h3 button svg {
+	fill: #4553e6 !important;
+}
+
+.ld__builder--app,
+.ld__builder-sidebar-widget,
+.ld-global-header h1,
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: "Poppins", sans-serif !important;
+}
+
+.ld__builder--app {
+	font-family: "Roboto Slab", serif !important;
+	button,
+	input,
+	optgroup,
+	select,
+	textarea {
+		font-family: "Roboto Slab", serif !important;
+	}
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="color"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus,
+input[type="checkbox"]:focus,
+input[type="radio"]:focus,
+select:focus,
+textarea:focus {
+	border-color: #4553e6;
+	box-shadow: none;
+	outline: none;
+}
+
+#adminmenu a:hover,
+#adminmenu a:focus,
+.folded #adminmenu .wp-submenu-head:hover {
+	box-shadow: none;
+}
+#adminmenu a:hover,
+#adminmenu li.menu-top > a:focus,
+#adminmenu .wp-submenu a:hover,
+#adminmenu .wp-submenu a:focus {
+	color: #4553e6;
+}
+
+input[type="search"],
+input[type="text"],
+textarea,
+select,
+body.edit-php
+	.tablenav.top
+	.select2-container--learndash
+	.select2-selection--single,
+body.users-php
+	.tablenav.top
+	.select2-container--learndash
+	.select2-selection--single {
+	border: solid 1px #e5e5e5 !important;
+	background-color: #fff !important;
+}
+
+.editor-post-title__input {
+	border: none !important;
+}
+
+a {
+	color: #074ee8;
+}
+
+body .global-new-entity-button {
+	background: #074ee8;
+}
+
+.wp-core-ui .button,
+.wp-core-ui .button-secondary {
+	// color: #074ee8;
+	border-color: #074ee8;
+}
+
+[data-active-tab="sfwd-courses-settings"],
+[data-active-tab="learndash_course_groups"],
+[data-active-tab="sfwd-quiz-settings"],
+[data-active-tab="sfwd-lessons-settings"],
+[data-active-tab="sfwd-topic-settings"] {
+	.interface-interface-skeleton__sidebar {
+		.components-panel {
+			border: 0;
+		}
+	}
+}
+
+@media (min-width: 783px) and (max-width: 960px) {
+	.auto-fold .irb-icon-side-bar-expand::before {
+		transform: rotate(180deg);
+		display: inline-block;
+	}
+}
+
+@media (max-width: 960px) {
+	.sticky-menu #wpwrap #adminmenuwrap,
+	.sticky-menu #wpwrap #adminmenuback,
+	.sticky-menu #wpwrap #adminmenuwrap,
+	.sticky-menu #wpwrap #adminmenu,
+	.sticky-menu #wpwrap #adminmenu .wp-submenu,
+	.sticky-menu #wpwrap #adminmenumain {
+		display: block !important;
+	}
+
+	.auto-fold #wpwrap #adminmenuwrap,
+	.auto-fold #wpwrap #adminmenuback,
+	.auto-fold #wpwrap #adminmenuwrap,
+	.auto-fold #wpwrap #adminmenu,
+	.auto-fold #wpwrap #adminmenu .wp-submenu {
+		width: 36px;
+	}
+
+	.auto-fold #adminmenu div.wp-menu-image {
+		left: 0;
+	}
+
+	.auto-fold #collapse-menu {
+		left: 36px;
+	}
+
+	.auto-fold div#ir-primary-navigation {
+		left: 36px;
+		width: calc(100% - 36px);
+	}
+}
+
+@media screen and (max-width: 782px) {
+	.auto-fold #adminmenu,
+	.auto-fold #adminmenuback,
+	.auto-fold #adminmenuwrap {
+		z-index: 10;
+	}
+
+	#adminmenu div.wp-menu-name {
+		padding: 20px 0px 20px 8px;
+	}
+
+	.auto-fold #adminmenu {
+		top: 0;
+	}
+
+	div.wp-menu-image:before {
+		padding: 0;
+	}
+
+	.auto-fold #wpwrap #adminmenuwrap,
+	.auto-fold #wpwrap #adminmenuback,
+	.auto-fold #wpwrap #adminmenuwrap,
+	.auto-fold #wpwrap #adminmenu,
+	.auto-fold #wpwrap #adminmenu .wp-submenu {
+		width: 210px;
+	}
+
+	.auto-fold #wpwrap #adminmenuwrap,
+	.auto-fold #wpwrap #adminmenuback,
+	.auto-fold #wpwrap #adminmenuwrap {
+		position: absolute;
+		top: 50px;
+	}
+
+	li.wdm-mob-menu span {
+		color: #000;
+		padding-top: 5px;
+	}
+
+	.dashicons-menu-alt:before {
+		display: block;
+	}
+
+	.auto-fold #adminmenu div.wp-menu-image {
+		position: static;
+	}
+}
+
+#sfwd-header .ld-tab-buttons a.button {
+	margin-top: 0;
+}
+@media (min-width: 961px) {
+	#wpwrap #adminmenumain,
+	#wpwrap #adminmenuback,
+	#wpwrap #adminmenuwrap,
+	#wpwrap #adminmenu,
+	#wpwrap #adminmenu .wp-submenu {
+		display: block !important;
+	}
+
+	#wpwrap #adminmenu .wp-not-current-submenu.opensub .wp-submenu {
+		left: 210px;
+	}
+
+	.folded #wpwrap #adminmenu .wp-has-submenu.opensub .wp-submenu {
+		left: 36px;
+	}
+}
+
+@media (min-width: 783px) and (max-width: 960px) {
+	#wpwrap #adminmenu .wp-not-current-submenu.opensub .wp-submenu {
+		left: 210px;
+	}
+
+	.auto-fold #wpwrap #adminmenu .wp-has-submenu.opensub .wp-submenu {
+		left: 36px;
+	}
+	.auto-fold #wpwrap #adminmenu .ir-admin-logo {
+		display: none;
+	}
+}
+
+.sfwd-question {
+	.wp-editor-expand {
+		#wp-content-editor-tools,
+		div.mce-toolbar-grp {
+			width: 100% !important;
+			z-index: 1;
+		}
+	}
+}
+
+// publish and update button color fixed to white in different color scheme
+.postbox-container
+	#submitdiv
+	.submitbox
+	#major-publishing-actions
+	#publishing-action
+	input {
+	color: #fff;
+}
+
+@media (min-width: 783px) {
+	.interface-interface-skeleton {
+		left: 210px;
+	}
+}
+
+@media (min-width: 600px) {
+	.edit-post-header__settings {
+		padding-right: 0px;
+	}
+}
+
+table.form-table + input + input + p.submit input,
+table.form-table + input + p.submit input,
+table.form-table + p.submit input {
+	color: #fff;
+}
+
+.metabox-prefs p.submit input { // cspell:disable-line
+	color: #fff;
+}
+
+// CSS to fix menu on products page
+// start
+.woocommerce-page.woocommerce-embed-page
+	#wpwrap
+	#wpcontent
+	.woocommerce-layout__header {
+	top: 49px;
+	width: calc(100% - 210px);
+}
+
+.woocommerce-embed-page.folded #wpwrap #wpcontent .woocommerce-layout__header {
+	top: 49px;
+	width: calc(100% - 36px);
+}
+
+.woocommerce-embed-page #wpcontent #wpbody-content {
+	padding-top: 50px;
+}
+
+@media (max-width: 960px) {
+	.woocommerce-page.woocommerce-embed-page
+		#wpwrap
+		#wpcontent
+		.woocommerce-layout__header {
+		width: calc(100% - 210px);
+		left: 210px;
+	}
+
+	.woocommerce-embed-page.auto-fold
+		#wpwrap
+		#wpcontent
+		.woocommerce-layout__header {
+		width: calc(100% - 36px);
+		left: 36px;
+	}
+}
+
+@media (max-width: 782px) {
+	.woocommerce-page.woocommerce-embed-page
+		#wpwrap
+		#wpcontent
+		.woocommerce-layout__header {
+		width: 100%;
+		z-index: 3;
+		left: 0;
+	}
+
+	.woocommerce-page.woocommerce-embed-page #wpwrap #adminmenuwrap,
+	.woocommerce-page.woocommerce-embed-page #wpwrap #adminmenuback,
+	.woocommerce-page.woocommerce-embed-page #wpwrap #adminmenuwrap {
+		top: 0;
+	}
+}
+
+@media (max-width: 600px) {
+	.woocommerce-page.woocommerce-embed-page #ir-primary-navigation {
+		top: 0;
+	}
+
+	.woocommerce-embed-page #wpcontent #wpbody-content,
+	.woocommerce-embed-page #wpcontent #wpbody {
+		padding-top: 0;
+	}
+}
+
+//remove one arrow from side menu
+.woocommerce-page .wp-has-current-submenu:after {
+	display: none;
+}
+
+.woocommerce-page ul#adminmenu a.wp-has-current-submenu:after,
+.woocommerce-page ul#adminmenu > li.current > a.current:after {
+	display: block;
+}
+
+// end
+
+.woocommerce-page .wp-editor-expand div.mce-toolbar-grp,
+.woocommerce-page .wp-editor-expand #wp-content-editor-tools {
+	z-index: 1;
+	width: 100%;
+}

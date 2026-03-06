@@ -1,0 +1,38 @@
+.select2-dropdown {
+	z-index: 105111;
+}
+
+.select2-selection__choice, .select2-search__field {
+	width: 98%;
+	margin-bottom: 0px;
+}
+
+.select2-search > input[type=search]:focus{
+	box-shadow: none;
+}
+
+.select2-remove-right, span.select2-selection__choice__remove {
+	float: right;
+}
+
+img.sel-instructor-img, img.ir-instructor-img {
+	width: 32px;
+	vertical-align: middle;
+}
+
+#ir-shared-instructors {
+	width: 100%;
+}
+
+.sel-instructor-img-div, .ir-instructor-img-div {
+	display: flex;
+	align-items: center;
+}
+
+.sel-instructor-img-div > span, .ir-instructor-img-div > span {
+	margin-left: 5px;
+}
+
+.select2-container--default .select2-selection--multiple {
+	border: 1px solid #fff;;
+}

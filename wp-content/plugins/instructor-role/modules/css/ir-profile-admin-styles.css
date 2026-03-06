@@ -1,0 +1,153 @@
+#ir-profile-update-custom-image, #ir-profile-update-custom-dashicon, #ir-profile-view-img-url {
+	display: none;
+}
+
+#ir-profile-update-custom-image, #ir-profile-view-img-url, .ir-docs-help-link a{
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* #ir-profile-update-custom-image span{
+	vertical-align: middle;
+} */
+
+/* div.ir-profile-image-div, .ir-docs-help-link{
+	text-align: left;
+} */
+
+div.ir-profile-image-div span {
+	margin-left: 5px;
+}
+
+.ir-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.ir-overlay:target {
+	visibility: visible;
+	opacity: 1;
+}
+
+.ir-profile-add-setting {
+	margin: 70px auto;
+	padding: 20px;
+	background: #fff;
+	border-radius: 5px;
+	width: 35%;
+	position: relative;
+	transition: all 5s ease-in-out;
+}
+
+.ir-profile-add-setting .close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+
+.ir-profile-add-setting .close:hover {
+	color: #06D85F;
+}
+
+div.ir-profile-add-setting-contents .dashicons-update {
+	animation: dashicons-spin 1s infinite;
+	animation-timing-function: linear;
+	display: none;
+}
+
+tr.ir-profile-settings-row > td > a {
+	text-decoration: none;
+}
+
+.ir-section-placeholder {
+	border: 2px solid yellow;
+	height: 1.5em;
+	line-height: 1.2em;
+}
+
+.ir-profile-settings-row .dashicons-sort {
+	cursor: grab;
+}
+
+.ir-profile-settings-row .dashicons-sort:active {
+	cursor: grabbing;
+}
+
+.ir-profile-settings-row .dashicons-trash{
+	color: #e21b1b;
+	cursor: pointer;
+}
+
+.ir-profile-settings-row .dashicons-trash:hover{
+	color: #f73535 !important;
+}
+
+.ir-profile-settings-row .dashicons-warning {
+	color: #ffb900;
+    background: #fff;
+    border-radius: 50%;
+    border: 1px solid;
+}
+
+.ir-profile-settings-row .dashicons-warning:hover {
+	color: #ffee00 !important;
+}
+/* New Styles */
+
+table.ir-profile-settings-table {
+    margin: 1em 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    color: #484a4b;
+    border: 1px solid #838788;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table.ir-profile-settings-table tr {
+    border: 1px solid #D9E4E9;
+}
+
+table.ir-profile-settings-table tr:nth-child(odd){
+    background-color: #EAF3F3;
+}
+
+table.ir-profile-settings-table th {
+	border: 1px solid #FFF;
+    background-color: #0073aa;
+    color: #FFF;
+    padding: 1em
+}
+
+table.ir-profile-settings-table th, table.ir-profile-settings-table td{
+	padding: 10px 15px;
+	text-align: left;
+}
+
+.ir-profile-setting-edit, #ir-profile-add-setting-container .close {
+	cursor: pointer;
+}
+
+div.ir-profile-add-setting-contents table, div.ir-profile-add-setting-contents table td input, div.ir-profile-add-setting-contents table td select {
+	width: 100%;
+	margin-left: 5px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+div.ir-profile-add-setting-contents table th {
+	text-align: right;
+}

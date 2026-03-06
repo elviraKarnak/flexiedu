@@ -1,0 +1,567 @@
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters {
+    background-color: #fff;
+    border: 1px solid;
+    border-radius: 16px;
+    padding: 24px 32px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters .ir-date-attempt-section,.wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters .ir-filter-actions,.wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters .mantine-DatePicker-root,.wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters .mantine-Select-root {
+    width: calc(33.33% - 22px)
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters .ir-date-attempts-presets {
+    border-radius: 4px;
+    margin-top: 22px;
+    width: 48px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters .ir-date-attempts-presets .mantine-Select-dropdown {
+    width: 150px!important
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters .ir-date-attempts-presets .mantine-Select-rightSection {
+    display: none
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters .ir-date-attempts-presets .mantine-Input-input {
+    background-color: transparent!important;
+    font-size: 0;
+    height: 42px;
+    text-align: center
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters .ir-date-attempts-presets .mantine-Select-icon {
+    right: 5px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters .ir-filter-actions {
+    margin-top: 24px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters .ir-date-attempt-section .mantine-DateRangePicker-root {
+    flex: 1
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters .ir-date-attempt-section .mantine-DateRangePicker-root .mantine-DateRangePicker-input {
+    height: auto;
+    padding-left: 30px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters .mantine-Input-input {
+    padding-left: 28px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .wrongOnly>.correct {
+    display: none!important
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-show-wrong label {
+    cursor: pointer
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-fill-answer {
+    display: inline;
+    font-size: .875rem;
+    line-height: 38px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-fill-answer p {
+    display: inline;
+    margin-bottom: 0
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-fill-answer>div {
+    display: inline;
+    margin: 0 14px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-fill-answer>div .ir-answer-text {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    display: block;
+    display: inline;
+    font-weight: 600;
+    line-height: 1;
+    margin-top: -6px;
+    padding: 8px 14px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-fill-answer>div .ir-answer-text.incorrect {
+    border-color: #de554b!important
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-fill-answer>div .ir-answer-points {
+    display: block;
+    display: inline;
+    font-size: .875em;
+    margin-right: 8px;
+    margin-top: 8px;
+    text-align: center
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-detail-icon {
+    cursor: pointer;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 3px;
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    width: 24px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-attempt-section {
+    background-color: #fff;
+    border: 1px solid;
+    border-radius: 16px;
+    margin-top: 80px;
+    padding: 24px 32px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-learner-section {
+    margin-top: 50px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-attempt-sub-section {
+    background-color: #fff;
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 16px 28px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-icon-wrap {
+    align-items: center;
+    background-color: #f1efef;
+    border-radius: 50%;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    width: 40px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-green-bg {
+    background-color: rgba(0,182,29,.102)
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-red-bg {
+    background-color: rgba(222,85,75,.1)
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-questions-accordions .mantine-Accordion-control {
+    background-color: transparent!important;
+    margin-left: 20px;
+    width: 52px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-questions-accordions .mantine-Accordion-control:hover {
+    background-color: transparent!important
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-questions-accordions .mantine-Accordion-item {
+    background-color: #fff;
+    border: 1px solid;
+    border-radius: 8px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-questions-accordions .mantine-Accordion-item>.mantine-Group-root {
+    min-width: 0
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-questions-accordions .mantine-Accordion-item.incorrect {
+    border-color: #de554b
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-matrix-field {
+    max-width: 100%
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-matrix-field>.mantine-Group-root {
+    align-items: stretch;
+    display: inline-flex;
+    max-width: 100%;
+    overflow: hidden
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-matrix-field>.mantine-Group-root>div {
+    max-width: 50%
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-matrix-field>.incorrect.mantine-Group-root .ir-matrix-answer,.wp-block-instructor-role-wisdm-quiz-attempts .ir-matrix-field>.incorrect.mantine-Group-root .ir-matrix-question {
+    border-color: #de554b!important
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-matrix-field .ir-matrix-question {
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid;
+    border-radius: 6px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    height: 100%;
+    min-width: 70px;
+    padding: 10px 18px 10px 10px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-matrix-field .ir-matrix-answer {
+    align-items: center;
+    background-color: hsla(0,0%,40%,.102);
+    border: 1px solid;
+    border-radius: 6px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    height: 100%;
+    min-width: 350px;
+    padding: 10px 18px 10px 10px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-matrix-field.ir-sorting>.mantine-Group-root .ir-matrix-answer {
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-matrix-field.ir-sorting>.mantine-Group-root>div {
+    max-width: 100%
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-essay-answer {
+    border: 1px solid;
+    border-radius: 4px;
+    min-height: 200px;
+    padding: 16px 24px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-flex-1 {
+    flex: 1
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-question-name-wrap {
+    max-width: calc(100% - 100px);
+    min-width: 0
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-question-name {
+    min-width: 0;
+    padding: 16px 28px;
+    width: calc(100% - 310px)
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .mantine-Input-input {
+    border-radius: 6px!important;
+    line-height: 20px;
+    padding: 10px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .mantine-DatePicker-input {
+    height: auto;
+    min-height: auto
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-learner-info {
+    border-left: 1px solid;
+    padding-left: 24px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-learner-attempt-info {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 24px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-no-attempt-data {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 16px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-no-attempt-data>.mantine-Text-root {
+    max-width: 310px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-free-answer .ir-answer-text {
+    border: 1px solid;
+    border-radius: 6px;
+    padding: 7px 20px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-free-answer .ir-answer-options {
+    display: flex;
+    gap: 10px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .incorrect[data-checked=true] .mantine-Checkbox-label,.wp-block-instructor-role-wisdm-quiz-attempts .incorrect[data-checked=true] .mantine-Radio-label {
+    color: #de554b
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .mantine-DateRangePicker-root button,.wp-block-instructor-role-wisdm-quiz-attempts .mantine-DateRangePicker-root button:hover {
+    color: #444
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .mantine-DateRangePicker-root button[data-autofocus=true],.wp-block-instructor-role-wisdm-quiz-attempts .mantine-DateRangePicker-root button[data-autofocus=true]:hover {
+    background-color: transparent;
+    color: #444
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .mantine-DateRangePicker-root button[data-in-range=true],.wp-block-instructor-role-wisdm-quiz-attempts .mantine-DateRangePicker-root button[data-in-range=true]:hover {
+    background-color: #e7f5ff;
+    color: #444
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .mantine-DateRangePicker-root button[data-selected=true],.wp-block-instructor-role-wisdm-quiz-attempts .mantine-DateRangePicker-root button[data-selected=true]:hover {
+    background-color: #228be6;
+    color: #fff
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .mantine-DateRangePicker-root .mantine-DatePicker-rightSection>.mantine-ActionIcon-root:hover,.wp-block-instructor-role-wisdm-quiz-attempts .mantine-DateRangePicker-root .mantine-DateRangePicker-calendarHeaderControl,.wp-block-instructor-role-wisdm-quiz-attempts .mantine-DateRangePicker-root .mantine-DateRangePicker-calendarHeaderControl:hover {
+    background-color: transparent;
+    color: #444
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .mantine-DateRangePicker-root button[disabled] {
+    color: #ced4da!important
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .mantine-DateRangePicker-root .mantine-DateRangePicker-monthPickerControlActive,.wp-block-instructor-role-wisdm-quiz-attempts .mantine-DateRangePicker-root .mantine-DateRangePicker-yearPickerControlActive {
+    color: #fff!important
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .mantine-DateRangePicker-rightSection>.mantine-ActionIcon-root:hover,.wp-block-instructor-role-wisdm-quiz-attempts .mantine-Select-rightSection>.mantine-ActionIcon-root:hover {
+    background-color: transparent;
+    border: none!important;
+    color: #444
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-overview-values>.mantine-Group-root {
+    border-left: 1px solid
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-overview-values>.mantine-Group-root>div {
+    line-height: 1
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-no-border {
+    border: none!important
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts table {
+    border-collapse: inherit;
+    border-radius: 10px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts table thead tr>th {
+    background-color: #f3f9fb;
+    overflow: hidden
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts table thead tr>th:first-child {
+    border-top-right-radius: 10px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts table thead tr>th:last-child {
+    border-top-left-radius: 10px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-attempt-overview .mantine-Select-withIcon {
+    padding-right: 36px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-icon-wrap+div>div {
+    line-height: 20px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-more-courses .mantine-Popover-dropdown {
+    background-color: #131822;
+    border-radius: 4px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-more-courses .mantine-Popover-dropdown .icon-tabler {
+    min-width: 20px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-more-courses .mantine-Popover-dropdown>.mantine-Group-root {
+    flex-wrap: nowrap
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-p-0 {
+    padding: 0!important
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts button:hover {
+    box-shadow: none!important
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-overview-section {
+    margin-bottom: 40px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-per-page {
+    width: 140px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-sort-filters .mantine-Select-root {
+    max-width: 240px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-table-wrap {
+    max-width: 100%;
+    overflow: auto
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-attempt-no {
+    width: 190px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-more-courses-btn {
+    font-size: .8rem
+}
+
+.tab-content {
+    max-width: 100%
+}
+
+.ir-md .wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters .ir-date-attempt-section,.ir-md .wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters .ir-filter-learner {
+    width: calc(50% - 16px)
+}
+
+.ir-md .wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters .ir-filter-actions {
+    margin-right: auto;
+    margin-top: 0;
+    width: 100%
+}
+
+.ir-md .wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-attempt-section {
+    padding: 24px
+}
+
+.ir-md .wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-attempt-section .ir-learner-attempt-info {
+    padding-right: 8px
+}
+
+.ir-sm .wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters .ir-date-attempt-section,.ir-sm .wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters .ir-filter-learner,.ir-sm .wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters>.mantine-Group-root>.mantine-Select-root {
+    width: calc(50% - 16px)
+}
+
+.ir-sm .wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters .ir-filter-actions {
+    margin-right: auto;
+    margin-top: 0;
+    width: 100%
+}
+
+.ir-sm .wp-block-instructor-role-wisdm-quiz-attempts .ir-learner-info {
+    border-left: none
+}
+
+.ir-sm .wp-block-instructor-role-wisdm-quiz-attempts .ir-learner-section {
+    align-items: flex-start;
+    flex-direction: column
+}
+
+.ir-sm .wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-attempt-section {
+    padding: 24px
+}
+
+.ir-sm .wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-attempt-section .ir-learner-attempt-info {
+    padding-right: 0
+}
+
+.ir-sm .wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-attempt-section .ir-learner-attempt-info>.mantine-Group-root {
+    margin-bottom: 10px
+}
+
+.ir-sm .wp-block-instructor-role-wisdm-quiz-attempts .ir-question-name {
+    padding-bottom: 0;
+    width: 100%
+}
+
+.ir-sm .wp-block-instructor-role-wisdm-quiz-attempts .ir-question-name+.mantine-Group-root {
+    margin-bottom: 24px;
+    margin-right: 28px
+}
+
+.ir-sm .wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-overview-section>.mantine-Group-root .mantine-Group-root {
+    gap: 15px
+}
+
+.ir-xs .wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters .ir-date-attempt-section,.ir-xs .wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters .ir-filter-learner,.ir-xs .wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters>.mantine-Group-root>.mantine-Select-root {
+    width: 100%
+}
+
+.ir-xs .wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters .ir-filter-actions {
+    margin-right: auto;
+    margin-top: 10px;
+    width: 100%
+}
+
+.ir-xs .wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters>.mantine-Group-root {
+    gap: 15px
+}
+
+.ir-xs .wp-block-instructor-role-wisdm-quiz-attempts .ir-learner-info {
+    border-left: none
+}
+
+.ir-xs .wp-block-instructor-role-wisdm-quiz-attempts .ir-learner-section {
+    align-items: flex-start;
+    flex-direction: column
+}
+
+.ir-xs .wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-attempt-section {
+    padding: 15px
+}
+
+.ir-xs .wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-attempt-section .ir-learner-attempt-info {
+    padding-right: 0
+}
+
+.ir-xs .wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-attempt-section .ir-learner-attempt-info>.mantine-Group-root {
+    margin-bottom: 10px
+}
+
+.ir-xs .wp-block-instructor-role-wisdm-quiz-attempts .ir-question-name {
+    padding: 15px 15px 0;
+    width: 100%
+}
+
+.ir-xs .wp-block-instructor-role-wisdm-quiz-attempts .ir-question-name+.mantine-Group-root {
+    margin-bottom: 24px;
+    margin-right: 15px
+}
+
+.ir-xs .wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-overview-section>.mantine-Group-root .mantine-Group-root {
+    gap: 15px
+}
+
+.ir-xs .wp-block-instructor-role-wisdm-quiz-attempts .ir-sort-filters>.mantine-Select-root {
+    max-width: 100%
+}
+
+.ir-xs .wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters,.ir-xs .wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-overview-section {
+    padding: 15px
+}
+
+.ir-xs .wp-block-instructor-role-wisdm-quiz-attempts .ir-question-name-wrap {
+    max-width: calc(100% - 70px)
+}
+
+.ir-xs .wp-block-instructor-role-wisdm-quiz-attempts .mantine-Accordion-content {
+    padding-right: 5px
+}
+
+.ir-xs .wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-attempt-sub-section {
+    padding: 15px
+}
+
+.ir-xs .wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-overview-subfields {
+    gap: 20px
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .mantine-Input-icon.mantine-Select-icon {
+    left: auto;
+}
+
+.wp-block-instructor-role-wisdm-quiz-attempts .ir-quiz-filters .mantine-Select-withIcon {
+    padding-left: 0!important;
+}

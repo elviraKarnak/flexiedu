@@ -1,0 +1,1 @@
+<?php return array('dependencies' => array('jquery', 'learndash-groups-plus-font-awesome', 'learndash-groups-plus-jquery-validate', 'learndash-groups-plus-pair-select', 'learndash-groups-plus-select2', 'learndash-groups-plus-sweet-alert', 'wp-polyfill'), 'version' => '9bec2384b0ba32d5215a');

@@ -1,0 +1,41 @@
+.wrld-dashboard-header {
+	margin: 30px 0px 30px 10px;
+}
+
+.wrld-header-title-container {
+	margin-top: 40px;
+}
+
+.wrld-header-title-main {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 33px;
+	color: #444444;
+}
+
+
+.wrld-header-subtitle-text-name {
+	font-family: 'Open Sans', sans-serif;
+	font-weight:500;
+	font-size: 14px;
+	line-height: 19px;
+	color: #403F41;
+}
+
+span.wrld-header-subtitle-text-name:before {
+	content: 'Learn';
+	color: #565656;
+}
+
+span.wrld-header-subtitle-text-name:after {
+	content: 'Dash';
+	color: #235AF3;
+}
+
+.wrld-blink {
+  }
+  @keyframes blinker {
+	from { opacity: 1; }
+	to { opacity: 0; }
+  }

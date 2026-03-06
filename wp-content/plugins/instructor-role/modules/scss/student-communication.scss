@@ -1,0 +1,740 @@
+@import 'icons_communication.scss';
+
+.ir-message-menu{
+	margin: 0 15px;
+	position: relative;
+	cursor: pointer;
+	line-height: 1;
+	margin-right: 50px;
+	@media screen and (max-width: 576px){
+		display: none;
+	}
+	.ir-close-note{
+		display: none !important;
+	}
+	.ir-pointer-wrap{
+		position: absolute;
+		top: 100%;
+		right: 0;
+		width: 100%;
+		height: 20px;
+		.ir-pointer{
+		    position: absolute;
+	        width: 15px;
+	        height: 15px;
+	        border: 1px solid #ddd;
+	        transform: rotateZ(135deg);
+	        z-index: 999999;
+	        top: 12px;
+	        background-color: #fff;
+	        border-top: none;
+	        border-right: none;
+	        box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.25);
+	        right: 8px;
+	        display: none;
+		}
+	}
+	.ir-message-notification{
+		display: block;
+		position: absolute;
+		top: calc(100% + 19px);
+		background-color: #ffffff;
+		z-index: 999;
+		bottom: auto;
+		right: -35px;
+		display: none;
+	}
+	&:hover{
+		.ir-pointer, .ir-message-notification{
+			display: block;
+		}
+	}
+	.ir-msg-count{
+		position: absolute;
+		width: 21px;
+		height: 21px;
+		border-radius: 50%;
+		background-color: #E90101;
+		color: #ffffff;
+		font-size: 14px;
+		font-weight: 700;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		right: -12px;
+		top: -8px;
+	}
+}
+
+.ir-color{
+	color: #00ACD3 !important;
+}
+.ir-bg-color{
+	background-color: #00ACD3 !important;
+}
+.ir-button{
+	border-radius: 3px !important;
+	border: none !important;
+}
+.ir-button-alt{
+	background-color: #ffffff !important;
+	color: #00ACD3 !important;
+	border: 1px solid !important;
+	border-radius: 3px !important;
+}
+#wp-ir_communication-wrap{
+	position: relative;
+	.mce-top-part{
+		position: absolute;
+		width: 100%;
+		left: 0;
+		bottom: 0;
+		border: 1px solid #D0D0D0;
+		div.mce-toolbar-grp{
+			background-color: transparent;
+		}
+		.mce-toolbar .mce-ico{
+			height: 25px;
+			width: 25px;
+			font-size: 24px;
+			@media screen and (max-width: 576px){
+				height: 15px;
+				width: 15px;
+				font-size: 18px;
+			}
+		}
+		button{
+			box-shadow: none;
+		}
+		div.mce-toolbar-grp > div{
+			padding: 6px;
+		}
+	}
+	#wp-ir_communication-editor-container > .mce-tinymce{
+		padding-bottom: 55px;
+	}
+	#wp-ir_communication-editor-container{
+		border: none;
+		.ir-doubt-send-btn button{
+			line-height: 1;
+			text-transform: uppercase;
+			width: 100%;
+			box-shadow: none;
+		}
+		.ir-doubt-send-btn{
+			pointer-events: none;
+		}
+		.ir-doubt-send-btn.ir-valid{
+			pointer-events: initial;
+			button{
+				background-color: #00ACD3;
+			}
+		}
+	}
+}
+
+.ir-ask-doubts{
+	position: fixed;
+    width: 240px;
+    bottom: 70px;
+    right: 30px;
+    background-color: #ffffff;
+    z-index: 99;
+    border: 1px solid #00ACD3;
+    border-radius: 5px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+    padding: 15px;
+    display: none;
+    .ir-msg-inner{
+    	display: flex;
+    	p{
+    		font-size: 14px;
+    		color: #666666;
+    		line-height: 20px;
+    		margin-bottom: 10px;
+    	}
+    	.ir-send-doubts{
+    		button{
+    			line-height: 1;
+			    padding: 7px 10px;
+			    font-size: 14px;
+			    text-transform: uppercase;
+			    width: 100%;
+			    box-shadow: none;
+    		}
+    	}
+    }
+    .ir-close-note{
+    	position: absolute;
+	    right: -6px;
+	    top: -8px;
+	    width: 27px;
+	    height: 27px;
+	    border-radius: 50%;
+	    border: 1px solid #00ACD3;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    background-color: #ffffff;
+	    z-index: 999;
+	    cursor: pointer;
+	    font-size: 10px;
+    }
+    .ir-inst-dp{
+    	margin-right: 10px;
+    	img{
+    		width: 25px;
+    		height: 25px;
+    		border-radius: 50%;
+    		min-width: 25px;
+    	}
+    }
+}
+
+.ir-message-notification{
+	position: fixed;
+	width: 320px;
+	bottom: 70px;
+	right: 30px;
+	z-index: 99;
+	background-color: #ffffff;
+	border: 1px solid #D0D0D0;
+	border-radius: 5px;
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+	display: none;
+    .ir-close-note{
+    	position: absolute;
+	    right: -6px;
+	    top: -8px;
+	    width: 27px;
+	    height: 27px;
+	    border-radius: 50%;
+	    border: 1px solid #00ACD3;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    background-color: #ffffff;
+	    z-index: 999;
+	    cursor: pointer;
+	    font-size: 10px;
+    }
+	.ir-msg-items{
+		padding: 5px;
+		.ir-msg-item {
+		    display: flex;
+		    margin-bottom: 10px;
+			cursor: pointer;
+			padding: 10px;
+		    .ir-inst-dp{
+		    	margin-right: 10px;
+		    	img{
+		    		width: 25px;
+		    		height: 25px;
+		    		border-radius: 50%;
+		    		min-width: 25px;
+		    	}
+		    }
+		    .ir-msg-content{
+		    	color: #666666;
+		    	font-size: 14px;
+		    	line-height: 20px;
+		    	font-weight: 400;
+		    	p{
+		    		margin-bottom: 4px;
+		    	}
+		    	.ir-msg-time{
+		    		color: #999999;
+		    		font-weight: 700;
+		    	}
+		    }
+			a{
+				display: flex;
+			}
+		}
+		.ir-unread-thread{
+			background-color: #F0F0F0;
+			.ir-msg-content{
+				font-weight: 700;
+				color: #444444;
+			}
+		}
+	}
+	.ir-message-doubts{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 43px;
+		padding: 0 10px;
+		border-top: 1px solid #D0D0D0;
+		button{
+			line-height: 1;
+		    font-size: 14px;
+		    padding: 7px 14px;
+		    text-transform: uppercase;
+		    box-shadow: none;
+		}
+		a{
+			font-size: 14px;
+		    font-weight: 700;
+		}
+	}
+}
+
+.ir-thread-loader{
+	display: none;
+}
+.ir-thread-loader{
+	position: absolute;
+    width: 536px;
+    height: 380px;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: none;
+    z-index: 99;
+    @media screen and (max-width: 576px){
+    	width: 100%;
+    }
+    img{
+    	width: 100px;
+    }
+}
+.ir-thread.type-thread{
+	max-height: 380px;
+    overflow: auto;
+	padding: 12px;
+	position: relative;
+	
+	#wp-ir_communication-wrap{
+		margin-top: 30px;
+		#ir_communication_ifr {
+		    min-height: 150px;
+		    background: #F7F7F7;
+	        border: 1px solid #D0D0D0;
+	        border-bottom: none;
+	        margin-bottom: -1px;
+		    #tinymce{
+		    	background-color: #f7f7f7;
+		    }
+		}
+	}
+}
+.ir-msg-new-doubts{
+	margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 576px){
+    	flex-wrap: wrap;
+    }
+    button{
+    	margin-left: 10px;
+    	line-height: 1;
+	    text-transform: uppercase;
+	    font-size: 14px;
+	    padding: 10px 15px;
+	    box-shadow: none;
+    }
+    span{
+    	color: #444444;
+    	font-size: 20px;
+    }
+}
+.ir-received-msg-time{
+	text-align: center;
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #666666;
+	margin-bottom: 15px;
+	margin-top: 20px;
+}
+.ir-received-msg-wrap{
+	.ir-received-msg{
+		padding: 17px;
+		background-color: #FEFFDA;
+		font-size: 14px;
+		color: #666666;
+		.ir-msg-from{
+			display: flex;
+		    margin-bottom: 15px;
+		    .ir-inst-dp{
+		    	margin-right: 10px;
+		    	img{
+		    		width: 25px;
+	    		    height: 25px;
+	    		    border-radius: 50%;
+	    		    min-width: 25px;
+		    	}
+		    }
+		    .ir-msg-name{
+		    	color: #222222;
+	    	    font-size: 14px;
+	    	    line-height: 16px;
+	    	    font-weight: 500;
+	    	    .ir-msg-time{
+	    	    	color: #999999;
+	    	    	font-size: 12px;
+	    	    }
+	    	    span{
+	    	    	display: block;
+	    	    }
+		    }
+		}
+	}
+}
+.irc-self{
+	.ir-received-msg{
+		background-color: #ffffff;
+		padding: 0;
+	}
+}
+.ir-question-mark{
+	position: fixed;
+    bottom: 75px;
+    right: 30px;
+    z-index: 9;
+    cursor: pointer;
+    .ir-question-bg{
+    	width: 48px;
+	    height: 48px;
+	    display: inline-flex;
+	    justify-content: center;
+	    align-items: center;
+	    border-radius: 50%;
+	    color: #fff;
+	    font-size: 30px;
+	    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+	    position: relative;
+	    .ir-msg-count{
+	    	position: absolute;
+	    	width: 21px;
+	    	height: 21px;
+	    	border-radius: 50%;
+	    	background-color: #E90101;
+	    	color: #ffffff;
+	    	font-size: 14px;
+	    	font-weight: 700;
+	    	display: inline-flex;
+	    	justify-content: center;
+	    	align-items: center;
+	    	right: -3px;
+    	    top: -4px;
+	    }
+    }
+}
+.ld-focus-content{
+	position: relative; //this CSS is for msg-toast
+}
+.ir-msg-toast{
+	width: 100%;
+    position: absolute;
+    top: 30px;
+    height: 40px;
+    left: 0;
+    background-color: #CEFEE2;
+    border: 1px solid rgba(40, 134, 0, 0.3);
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    display: none;
+    z-index: 99;
+    @media screen and (max-width: 587px){
+    	height: auto;
+    }
+    .ir-msg-sent{
+    	height: 40px;
+    	display: flex;
+    	align-items: center;
+    	padding: 0 48px;
+    	position: relative;
+    	@media screen and (max-width: 587px){
+    		height: auto;
+    		padding-top: 10px;
+    		padding-bottom: 10px;
+    	}
+    	.irc-icon-Correct-fill{
+    		position: absolute;
+		    left: 12px;
+		    font-size: 26px;
+		    color: #28A745;
+    	}
+    	.irc-icon-Close{
+    		position: absolute;
+		    right: 12px;
+		    font-size: 12px;
+		    cursor: pointer;
+    	}
+    	span{
+    		font-size: 16px;
+    		color: #444444;
+    		@media screen and (max-width: 587px){
+    			line-height: 18px;
+    		}
+    	}
+    }
+}
+.irc-error{
+	background-color: rgb(255, 212, 212);
+    border: 1px solid #ff8989;
+    .ir-msg-sent{
+    	padding-left: 15px;
+    }
+}
+.ir-msg-box{
+	position: fixed;
+    z-index: 9999;
+    bottom: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+    display: none;
+    margin-bottom: 0;
+    @media screen and (max-width: 576px){
+    	width: 100%;
+    }
+}
+
+.ir-msg-box.ir-full-screen{
+	width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.ir-full-screen.ir-minimized-box{
+	transform: translateY(0);
+}
+
+.ir-msg-box.ir-full-screen .ir-msg-box-inner{
+	width: 80%;
+	margin: auto;
+	max-width: 1140px;
+}
+
+.ir-msg-box-inner{
+	width: 536px;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+	background-color: #ffffff;
+	border-radius: 3px;
+	position: relative;
+}
+
+.ir-ch-wrap{
+	display: flex;
+    height: 40px;
+    align-items: center;
+    justify-content: space-between;
+    background: #666666;
+    border-radius: 3px 3px 0px 0px;
+    color: #fff;
+}
+
+.ir-ch-wrap h3{
+	font-size: 14px;
+	font-weight: 400;
+	margin-bottom: 0;
+	color: #ffffff;
+	margin-left: 10px;
+	max-width: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    @media screen and (max-width: 576px){
+    	max-width: 280px;
+    }
+}
+
+.ir-ch-actions{
+	display: flex;
+	span {
+	    width: 30px;
+	    height: 30px;
+	    display: inline-flex;
+	    align-items: center;
+	    margin-right: 10px;
+	    cursor: pointer;
+	    justify-content: center;
+	    border-radius: 3px;
+	    &:hover{
+	    	background-color: rgba(255, 255, 255, 0.1);
+	    }
+	}	
+	.ir-close{
+		font-size: 13px;
+	}
+	.ir-maximize{
+		@media screen and (max-width: 576px){
+			display: none;
+		}
+	}
+} 
+
+
+.ir-lh-wrap, .ir-th-wrap{
+	position: relative;
+	.ir-dropdown {
+	    position: absolute;
+	    right: 20px;
+	    top: 10px;
+	    line-height: 1;
+	    font-size: 13px;
+	    color: #444444;
+	    z-index: 1;
+	    i{
+	    	font-weight: 700;
+	    }
+	}
+	select{
+		width: 100%;
+		height: 40px;
+		padding-left: 10px;
+		background: none;
+		background: none !important;
+	    font-size: 14px;
+	    line-height: 16px;
+	    color: #666666;
+	    position: relative;
+	    z-index: 2;
+	    border: none;
+	    border-bottom: 1px solid #D0D0D0;
+	    -webkit-appearance: none;
+	}
+}
+
+.ir-no-dropdown .ir-dropdown{
+	display: none;
+}
+
+.ir-no-dropdown{
+	select{
+		cursor: default;
+	}
+}
+
+#ir_communication_ifr{
+	min-height: 320px;
+}
+
+.ir-msg-box-footer{
+	position: absolute;
+	bottom: 9px;
+	right: 0;
+}
+
+.ir-msg-box-footer button{
+	line-height: 1;
+    padding: 11px 31px;
+    text-transform: uppercase;
+    min-width: auto;
+    box-shadow: none;
+    margin-right: 10px;
+}
+
+.ir-msg-box .mce-statusbar{
+	display: none;
+}
+
+.ir-sh-wrap input[type=text]{
+	padding-left: 12px;
+	padding-right: 10px;
+	height: 40px;
+	font-size: 14px;
+	line-height: 16px;
+	color: #666666;
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #D0D0D0;
+	width: 100%;
+	background-color: #ffffff;
+	&::placeholder{
+		font-size: 14px;
+		line-height: 16px;
+		color: #666666;
+	}
+}
+
+.ir-maximize{
+	.irc-icon-Collapse{
+		display: none;
+	}
+	.irc-icon-Expand{
+		display: block;
+	}
+}
+
+.ir-full-screen{
+	.ir-maximize{
+		.irc-icon-Expand{
+			display: none;
+		}
+		.irc-icon-Collapse{
+			display: block;
+		}
+	}
+}
+
+.ir-minimized-box{
+	transform: translateY(497px);
+}
+
+#wp-ir_communication-editor-tools{
+	display: none;
+}
+
+#wp-ir_communication-wrap .mce-flow-layout-item{
+	display: block;
+	.ir-doubt-send-btn{
+		float: right;
+		border: none;
+		button{
+			background-color: #e5e5e5;
+			color: #fff;
+			font-size: 14px;
+			border-radius: 3px;
+			margin-right: 4px;
+			padding: 9px 20px;
+			border: none;
+			&:hover{
+				border: none;
+			}
+		}
+		&:hover{
+			border: none;
+		}
+	}
+}
+
+.no-messages{
+	padding: 20px;
+    display: inline-block;
+    color: #999999;
+    font-style: italic;
+}
+
+.mce-tooltip-n{
+	display: none;
+}
+
+.theme-buddyboss-theme, .buddyboss-theme{
+	.learndash_content_wrap{
+		> div.ir-question-mark, > div.ir-ask-doubts, > div.ir-message-notification, > div.ir-msg-toast, > div.ir-msg-box{
+			margin-bottom: 0;
+		}
+	}
+}
+
+.elumine-theme{
+	.ir-message-menu{
+		margin-right: 15px;
+	}	
+	.ir-msg-toast{
+	    top: 14px;
+	}
+} 
+

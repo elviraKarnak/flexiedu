@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 1,
+  "name": "learndash/ld-groups-plus-message-board",
+  "title": "LearnDash Groups Plus Message Board",
+  "category": "learndash-blocks",
+  "icon": "buddicons-forums",
+  "editorScript": "file:./index.js",
+  "attributes": {
+    "preview_show": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

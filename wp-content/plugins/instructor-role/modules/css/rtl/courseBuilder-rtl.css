@@ -1,0 +1,71 @@
+.wp-block-create-block-mui-poc {
+  background-color: #fff;
+  color: #fff;
+  padding: 2px;
+}
+.wp-block-instructor-role-course-builder .ir-course-title {
+  display: inline-block;
+  max-width: calc(100% - 280px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ir-noborder input[type="text"],
+.ir-noborder input[type="text"]:focus {
+  background: 0 0 !important;
+  border: none !important;
+  padding: 0 !important;
+}
+[modal="approve-course-updates"]
+  .mantine-Modal-body
+  .mantine-Group-root
+  > .mantine-Button-root:last-child {
+  background: #2067fa !important;
+  color: #fff !important;
+}
+[modal="approve-course-updates"] .mantine-Modal-header {
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+}
+.ir-review-content {
+  margin-left: -15px;
+  margin-top: 20px;
+  max-height: 200px;
+  overflow: auto;
+  padding-left: 15px;
+  width: calc(100% + 15px) !important;
+}
+.ir-review-truncate {
+  max-width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ir-status-and-visibility .mantine-Accordion-chevron {
+  display: none;
+}
+.ir-status-and-visibility .mantine-Accordion-item {
+  border-bottom: none;
+}
+.mantine-7ve13 {
+  text-align: right;
+}
+.ir-textinfo {
+  margin-right: 10px;
+  margin-left: 0;
+}
+.mantine-1jc5t4g {
+  padding-right: 10px !important;
+  padding-left: 0 !important;
+}
+.mantine-1g4orza {
+  margin-left: 10px;
+  margin-right: 0;
+}
+.mantine-Radio-description {
+  margin-right: 14px;
+}
+.mantine-Modal-root {
+  direction: rtl;
+}

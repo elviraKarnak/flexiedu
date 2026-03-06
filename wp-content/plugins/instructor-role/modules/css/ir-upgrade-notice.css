@@ -1,0 +1,7 @@
+#instructor_role-update .dummy {
+    display: none;
+}
+
+div.ir_plugin_upgrade_notice {
+    padding: 15px;
+}

@@ -1,0 +1,96 @@
+= [2.1.5] 2026-02-11 =
+
+* Fix - Resolved an issue where any text after an ampersand (&) was skipped/removed from emails.
+* Fix - Resolved an issue where disabling the delete team icon did not remove it from the Groups Plus frontend dashboard.
+* Fix - Resolved an issue where the course time spent functionality could not count the time spent in the course child steps.
+* Fix - Resolved an issue where the team members' view showed incorrect course steps when a course uses shared steps.
+* Tweak - Updated templates: `src/resources/templates/team-member/email-team-member.php`, `src/resources/templates/team-member/lesson-listing.php`.
+
+= [2.1.4] 2026-01-08 =
+
+* Fix - Fixed 404 error when loading admin-notices.js script by correcting the asset path in AdminNotices initialization.
+* Fix - Fixed potential PHP warning in team member lesson listing template when accessing color codes settings.
+* Tweak - Improved Block compatibility with WordPress 6.9.
+* Tweak - Updated templates: `src/resources/templates/team-member/lesson-listing.php`.
+
+= [2.1.3] =
+
+* Fix - Resolved an issue where a WooCommerce purchase with multiple LearnDash pre-built organization, organization, and team products were not processed properly.
+* Fix - Resolved a CSS conflict with LearnDash Core on disabled text input element.
+* Fix - Resolved inconsistent custom template folder issue in the active theme folder.
+* Fix - Resolved an issue where an incorrect list of essays would be displayed in dashboard reports.
+* Fix - Fixed an issue where page exit confirmation always appears on user profile edit page even though there is no change made on the user profile.
+* Fix - Resolved issue on Change User Password on the Teams page. When password validation failed the error message would display `undefined` instead of the error.
+* Fix - Resolved a conflict with the "Required" toggle field on the "Custom Fields" setting inside the LearnDash Quiz Settings page.
+* Fix - Fixed incorrect time display timezone on the groups plus page.
+* Fix - Fixed the `Notice: Function _load_textdomain_just_in_time was called incorrectly` error in Wordpress 6.7+.
+* Fix - Fixed fatal error in the Welcome email when adding a team member inside a team that has no parent group.
+
+= [2.1.2] =
+
+* Fix - Fixed an issue where the purchased organization was not created after the order had been completed when using the WooCommerce checkout Gutenberg block.
+* Fix - Fixed an issue where the subscription renewal price was modified to 0 on the cart and checkout pages.
+* Fix - Resolved an issue where the "Disable Delete Team Leader trashcan icon" and "Disable Permanently Delete Team Leader person-X icon" design settings were not respected.
+* Fix - Fixed an issue where the alert text on the frontend groups plus page were not translatable.
+* Fix - Fixed an issue where adding a lead organizer as team leader to a team led to a replacement of existing team leaders who are also lead organizers.
+* Tweak - Added actions: `learndash_groups_plus_uninstall`.
+* Tweak - Set the minimum required LearnDash LMS version to 4.7.
+* Tweak - Set the minimum required WP version to 6.1.
+* Tweak - Set the minimum required PHP version to 7.4.
+
+= [2.1.1] =
+
+* Fix - Teams without any Courses assigned to them no longer show all Courses in the Course Filter dropdown in the Groups Plus frontend dashboard.
+* Fix - Subscription Sign Up Fees are no longer added multiple times to a Subscription created to sell Groups Plus content.
+* Fix - Seat Prices set for a specific Team are now applied correctly when purchasing a Seats Product.
+* Fix - Variable Pre-Built Organization Products didn't grant the purchased Organization the Courses from the "Source Organizations" chosen for the purchased Variation.
+* Fix - Subscriptions that had Expired or had been Cancelled would previously create a new Organization/Team or add the originally purchased number of Seats once again after the Subscription was resumed.
+* Fix - Added additional validation for shortcodes.
+* Fix - Fixed fatal error in the `total_time` shortcode.
+
+= [2.1.0] =
+
+* Fix - Teams created via the Groups Plus Dashboard now inherit the set Access Mode from the Organization.
+* Fix - Incompatibility with other plugins using psr/container.
+* Fix - Fixes PHP 8.1+ warning for usage of deprecated `FILTER_SANITIZE_STRING`.
+* Fix - Fixes an issue where a Variable Teams Product could not be created correctly.
+* Fix - Fixes Organization and Team names showing with backslashes on the WooCommerce Cart screen in some scenarios.
+* Fix - Variable Pre-Built Organization Products did not grant the correct number of Seats to the Organization itself after purchase.
+* Fix - Incompatibility with the WooCommerce Cart Block.
+* Fix - Incompatibility with the WooCommerce Checkout Block.
+* Tweak - Adjusted layout of the Organization view of the frontend dashboard.
+* Tweak - Changed Terminology for Pre-Built Organizations in the WooCommerce Product Tabs.
+* Tweak - Added filters: `learndash_groups_plus_cart_item_data_name`, `learndash_groups_plus_cart_item_data_value`, `learndash_groups_plus_cart_item_data`, `learndash_groups_plus_organizations_valid_cart_item_data_keys`, `learndash_groups_plus_pre_built_organizations_valid_cart_item_data_keys`, `learndash_groups_plus_seats_valid_cart_item_data_keys`, `learndash_groups_plus_teams_valid_cart_item_data_keys`.
+
+= [2.0.0] =
+
+* Feature - "LearnDash Team" Product Type added so that a Team can be sold outside of an Organization structure. If not using the WooCommerce purchase workflow, a top-level Group can be recognized as a Team by checking the "Disable Team creation?" checkbox on the Group Edit screen in the Admin Dashboard.
+* Fix - The "Disable Change Password button" and "Disable Export CSV button" settings now work as expected.
+* Fix - A bug where a Team Leader could be unable to edit a Team Member when they should have been able to.
+* Fix - A bug where if a Team under an Organization had 0 Seats remaining, it was impossible to purchase more Seats for that Team.
+* Tweak - The following Product Types have been renamed to make their function clearer. LearnDash Organization Product -> LearnDash Organization. LearnDash Organization Group Product -> LearnDash Pre-Built Organization. LearnDash Team Seat -> LearnDash Seats.
+
+= [1.1.2] =
+
+* Fix - Subscription renewal no longer creates copies of purchased Organizations.
+
+= [1.1.1] =
+
+* Fix - Untranslatable strings in admin and frontend pages.
+* Fix - Conflict with Pods plugin. User can't activate both plugin simultaneously.
+* Security - Improve security in user import feature.
+
+= [1.1.0] =
+
+* Feature - Migration for settings from legacy LearnDash Classrooms addon to new LearnDash Groups Plus addon.
+* Feature - Custom labels for LearnDash Groups Plus terms.
+* Fix - Fix some setting labels for clearer intent.
+* Fix - Fix non group leader cannot change product quantity during purchase.
+* Fix - User can purchase seat without setting the team first.
+* Fix - "create a team" form displays incorrect list of courses when there's no set courses in the parent organization group.
+* Tweak - Set email from header from lead organizer or team leader.
+* Tweak - Improve database table names to prevent conflicts.
+
+= [1.0.0] =
+
+* Feature - Initial release.

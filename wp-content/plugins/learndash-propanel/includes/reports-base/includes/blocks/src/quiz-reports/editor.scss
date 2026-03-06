@@ -1,0 +1,237 @@
+// Override the global display: none from style.css to ensure the block is visible in the editor
+.wp-block-wisdm-learndash-reports-quiz-reports {
+    display: block !important;
+}
+
+.wisdm-learndash-reports-quiz-reports-no-data {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+// Editor-specific styles for quiz reports content
+.wisdm-learndash-reports-quiz-reports-editor {
+    // Chart summary error styling to match Average Quiz Attempts block
+    .chart-summary.error {
+        padding: 20px !important;
+        margin-bottom: 20px;
+    }
+
+    .qre-reports-content {
+        padding: 0;
+        margin: 0;
+
+        .qre-reports-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+
+            h2 {
+                margin: 0;
+                font-size: 24px;
+                font-weight: 400;
+            }
+
+            .wrld-bulk-export {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                padding: 10px 20px;
+                background-color: #4d6eff;
+                color: #fff;
+                border: none;
+                border-radius: 25px;
+                font-size: 14px;
+                font-weight: 500;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #3a5bec;
+                }
+
+                .dashicons {
+                    font-size: 18px;
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+    }
+
+    .results-section {
+        .results-section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .total_count {
+            font-size: 14px;
+
+            strong {
+                font-weight: 600;
+            }
+        }
+
+        .entries-shown {
+            select.limit {
+                padding: 8px 30px 8px 12px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                background: #fff;
+                font-size: 14px;
+                cursor: pointer;
+            }
+        }
+
+        // Pagination styles - match frontend
+        .pagination-section {
+            margin-top: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            span, button {
+                margin: 0 15px;
+                text-align: center;
+            }
+
+            input.page {
+                background: #FFFFFF;
+                border: 1px solid #C4C4C4;
+                box-sizing: border-box;
+                border-radius: 4px;
+                width: 80px;
+                padding: 5px 10px;
+                text-align: center;
+            }
+
+            button.previous-page,
+            button.next-page {
+                background: #FFFFFF;
+                border: 1px solid #008AD8;
+                box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+                border-radius: 4px;
+                color: #008AD8;
+                padding: 8px 16px;
+                cursor: pointer;
+
+                &:hover:not(:disabled) {
+                    background: #008AD8;
+                    border: 1px solid #008AD8;
+                    color: #ffffff;
+                }
+
+                &:disabled {
+                    opacity: 0.2;
+                    cursor: not-allowed;
+
+                    &:hover {
+                        background: #FFFFFF;
+                        border: 1px solid #008AD8;
+                        color: #008AD8;
+                    }
+                }
+            }
+        }
+    }
+
+    // Download links - ensure icons are side by side
+    td.download-links {
+        white-space: nowrap;
+
+        a {
+            display: inline-block;
+            margin-right: 5px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            img {
+                width: 24px;
+                height: 24px;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    // Table alignment classes to match DataTables
+    .dt-center {
+        text-align: center;
+    }
+
+    .dt-left {
+        text-align: left;
+    }
+
+    // Table styling to match frontend
+    table.qre_summarized_data {
+        border-collapse: collapse;
+        width: 100%;
+
+        thead {
+            background-color: #444444;
+            color: #ffffff;
+
+            th {
+                padding: 12px 15px;
+                text-align: left;
+                font-weight: 600;
+                font-size: 14px;
+            }
+        }
+
+        tbody {
+            tr {
+                &:hover {
+                    background-color: #f9f9f9;
+                }
+
+                td {
+                    padding: 12px 15px;
+                    border-bottom: 1px solid #E5E5E5;
+                    vertical-align: middle;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+// Preview mode styles
+.wisdm-learndash-reports-quiz-reports-preview {
+    position: relative;
+
+    table {
+        opacity: 0.5;
+    }
+
+    .wisdm-learndash-reports-quiz-reports-preview-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 255, 255, 0.95);
+        padding: 20px 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        text-align: center;
+
+        p {
+            margin: 0 0 8px 0;
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e1e1e;
+        }
+
+        small {
+            display: block;
+            font-size: 12px;
+            color: #757575;
+        }
+    }
+}

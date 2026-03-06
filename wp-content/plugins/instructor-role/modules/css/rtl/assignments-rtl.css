@@ -1,0 +1,431 @@
+/*!***************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/assignments/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************/
+.wp-block-instructor-role-ir-assignments .ir-div-row-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.wp-block-instructor-role-ir-assignments .textInput-icon input {
+  padding-right: 35px;
+}
+.wp-block-instructor-role-ir-assignments
+  .ir-search-assignments
+  .mantine-Input-input {
+  border-radius: 8px;
+  height: 42px;
+}
+.wp-block-instructor-role-ir-assignments
+  .ir-search-by-student
+  .mantine-Input-input {
+  border-radius: 8px;
+  line-height: 20px;
+  padding: 5px 10px;
+  width: 352px;
+}
+.wp-block-instructor-role-ir-assignments .mantine-Select-input {
+  padding: 1px 12px 1px 20px !important;
+  border-radius: 4px;
+  background-image: none;
+}
+.wp-block-instructor-role-ir-assignments .ir-not-clickable.mantine-1kv7zu {
+  min-width: 2.5rem;
+  margin-left: 10px;
+}
+.wp-block-instructor-role-ir-assignments .ir-lesson-item-container {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #d6d8e7;
+  margin-bottom: 16px;
+  background: #fff;
+}
+.wp-block-instructor-role-ir-assignments .ir-submission-item-container {
+  padding: 16px 16px 16px 20px;
+  border-radius: 10px;
+  border: 1px solid #d6d8e7;
+  margin-bottom: 16px;
+  background: #fff;
+}
+.wp-block-instructor-role-ir-assignments .ir-comments-count {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  background: red;
+  color: #fff;
+  border-radius: 7px;
+  width: 13px;
+  height: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  padding-top: 1px;
+  font-style: 700;
+}
+.wp-block-instructor-role-ir-assignments .ir-not-graded-danger {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  background: rgba(222, 85, 75, 0.1019607843);
+  padding: 4px 12px;
+  border-radius: 32px;
+  margin-left: 32px;
+}
+.wp-block-instructor-role-ir-assignments .ir-green-pass {
+  background: rgba(0, 182, 29, 0.1019607843);
+  padding: 6px 16px;
+  border-radius: 32px;
+  margin-left: 0px;
+  color: #00b61d;
+}
+.wp-block-instructor-role-ir-assignments .ir-not-graded {
+  background: rgba(102, 102, 102, 0.1019607843);
+  padding: 6px 16px;
+  border-radius: 32px;
+  margin-right: 0px!important;
+  margin-left: 0px!important;
+  color: #666;
+}
+.wp-block-instructor-role-ir-assignments .ir-approve {
+  background: 0 0;
+  border-radius: 32px;
+  padding: 6px 16px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-left: 28px;
+}
+.wp-block-instructor-role-ir-assignments
+  .ir-points-input
+  .mantine-TextInput-input {
+  width: 55px;
+  padding: 10px 12px;
+  height: 32px;
+  border-radius: 4px;
+  border: 1px solid #d6d8e7;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+.wp-block-instructor-role-ir-assignments .ir-assignments-container {
+  padding: 23px 32px 12px;
+  border-radius: 8px;
+  border: 1px solid #d6d8e7;
+  background: #fff;
+}
+.wp-block-instructor-role-ir-assignments textarea {
+  border-radius: 6px;
+  height: 159px !important;
+  border: 1px solid #d6d8e7;
+}
+.wp-block-instructor-role-ir-assignments .ir-add-comment-button,
+.wp-block-instructor-role-ir-assignments .ir-cancel-button {
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.wp-block-instructor-role-ir-assignments .ir-cancel-button {
+  border: 1px solid #d6d8e7;
+  background-color: transparent;
+}
+.wp-block-instructor-role-ir-assignments .mantine-Menu-dropdown {
+  padding: 18px 25px 18px 50px;
+  border-radius: 4px;
+}
+.wp-block-instructor-role-ir-assignments .ir-clickable-action-icon:active,
+.wp-block-instructor-role-ir-assignments .ir-clickable-action-icon:focus,
+.wp-block-instructor-role-ir-assignments .ir-clickable-action-icon:hover {
+  border: none;
+  background: 0 0;
+}
+.wp-block-instructor-role-ir-assignments .ir-not-clickable:active,
+.wp-block-instructor-role-ir-assignments .ir-not-clickable:focus,
+.wp-block-instructor-role-ir-assignments .ir-not-clickable:hover {
+  border: none;
+  background: 0 0;
+  cursor: auto;
+  transform: scale(1);
+}
+.wp-block-instructor-role-ir-assignments .ir-btn-subtle-submission {
+  padding: 8px 14px 8px 8px !important;
+  border: 1px solid #d6d8e7 !important;
+  border-radius: 6px;
+  text-transform: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-right: 32px;
+}
+.wp-block-instructor-role-ir-assignments .ir-btn-subtle {
+  padding: 10px 15px !important;
+}
+.wp-block-instructor-role-ir-assignments .ir-btn-subtle-submission:hover,
+.wp-block-instructor-role-ir-assignments .ir-btn-subtle:hover {
+  border: 1px solid !important;
+  background: 0 0;
+}
+.wp-block-instructor-role-ir-assignments .ir-slug-input input {
+  padding: 6px !important;
+  line-height: 1 !important;
+}
+.wp-block-instructor-role-ir-assignments .ir-comment-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.wp-block-instructor-role-ir-assignments .ir-dummy-btn {
+  cursor: initial;
+}
+.wp-block-instructor-role-ir-assignments .ir-dummy-btn:hover {
+  border: none !important;
+}
+.wp-block-instructor-role-ir-assignments .mantine-MultiSelect-searchInput {
+  height: 20px;
+  border: none;
+}
+.wp-block-instructor-role-ir-assignments input[type="search"]:focus {
+  border: none;
+}
+.wp-block-instructor-role-ir-assignments .below-1023 .ir-edit-assignment,
+.wp-block-instructor-role-ir-assignments
+  .below-1023
+  .ir-lesson-item-container
+  .mantine-1kd18mu,
+.wp-block-instructor-role-ir-assignments
+  .below-1023
+  .ir-submission-item-container
+  .mantine-1kd18mu,
+.wp-block-instructor-role-ir-assignments
+  .below-767
+  .ir-assignments-container
+  .mantine-1vwt931,
+.wp-block-instructor-role-ir-assignments .below-767 .ir-submissions-details {
+  flex-direction: column;
+}
+.wp-block-instructor-role-ir-assignments
+  .below-1023
+  .ir-lesson-item-container
+  .mantine-1kd18mu
+  div:first-child,
+.wp-block-instructor-role-ir-assignments
+  .below-1023
+  .ir-submission-item-container
+  .mantine-1kd18mu
+  div:first-child,
+.wp-block-instructor-role-ir-assignments
+  .below-767
+  .ir-assignments-container
+  .mantine-1vwt931
+  div:first-child {
+  align-self: flex-start;
+}
+.wp-block-instructor-role-ir-assignments
+  .below-1023
+  .ir-lesson-item-container
+  .mantine-1kd18mu
+  div:last-child,
+.wp-block-instructor-role-ir-assignments
+  .below-1023
+  .ir-submission-item-container
+  .mantine-1kd18mu
+  div:last-child,
+.wp-block-instructor-role-ir-assignments
+  .below-767
+  .ir-assignments-container
+  .mantine-1vwt931
+  div:last-child {
+  align-self: flex-end;
+}
+.wp-block-instructor-role-ir-assignments
+  .below-1023
+  .ir-lesson-item-container
+  .mantine-1kd18mu
+  .mantine-pd2kap,
+.wp-block-instructor-role-ir-assignments
+  .below-1023
+  .ir-submission-item-container
+  .mantine-1kd18mu
+  .ir-submissions-details {
+  margin-top: 32px;
+}
+.wp-block-instructor-role-ir-assignments
+  .below-1023
+  .ir-div-row-center.ir-submission-score-status
+  div:first-child,
+.wp-block-instructor-role-ir-assignments
+  .below-1023
+  .ir-lesson-item-container
+  .mantine-1kd18mu
+  .mantine-Text-root.ir-danger-color.mantine-1goh3hv,
+.wp-block-instructor-role-ir-assignments
+  .below-1023
+  .ir-lesson-item-container
+  .mantine-1kd18mu
+  .mantine-Text-root.mantine-te9jp9,
+.wp-block-instructor-role-ir-assignments
+  .below-1023
+  .ir-lesson-item-container
+  .mantine-1kd18mu
+  .mantine-pd2kap
+  div:first-child,
+.wp-block-instructor-role-ir-assignments .below-1023 .mantine-Checkbox-root,
+.wp-block-instructor-role-ir-assignments
+  .below-1023
+  .mantine-Text-root.mantine-1goh3hv,
+.wp-block-instructor-role-ir-assignments
+  .below-1023
+  .mantine-Text-root.mantine-u9xdrp,
+.wp-block-instructor-role-ir-assignments
+  .below-767
+  .ir-assignments-container
+  .mantine-1vwt931
+  .mantine-Text-root.mantine-te9jp9 {
+  align-self: center !important;
+}
+.wp-block-instructor-role-ir-assignments
+  .below-1023
+  .ir-submissions-list-title-bar,
+.wp-block-instructor-role-ir-assignments .below-767 .ir-filter-bar,
+.wp-block-instructor-role-ir-assignments .below-767 .ir-title-bar {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.wp-block-instructor-role-ir-assignments
+  .below-1023
+  .ir-submissions-list-title-bar
+  .ir-search-assignments,
+.wp-block-instructor-role-ir-assignments
+  .below-1023
+  .ir-submissions-list-title-bar
+  .ir-search-by-student,
+.wp-block-instructor-role-ir-assignments
+  .below-767
+  .ir-filter-bar
+  .mantine-Button-root,
+.wp-block-instructor-role-ir-assignments
+  .below-767
+  .ir-title-bar
+  .ir-search-assignments,
+.wp-block-instructor-role-ir-assignments
+  .below-767
+  .ir-title-bar
+  .ir-search-by-student {
+  margin-top: 16px;
+}
+.wp-block-instructor-role-ir-assignments
+  .below-1023
+  .ir-edit-assignment
+  .ir-edit-assignment-main,
+.wp-block-instructor-role-ir-assignments .below-1023 .ir-edit-assignment textarea {
+  width: 100% !important;
+}
+.wp-block-instructor-role-ir-assignments
+  .below-1023
+  .ir-edit-assignment
+  .ir-edit-assignment-comment {
+  margin-top: 32px;
+  width: 100%;
+}
+.wp-block-instructor-role-ir-assignments
+  .below-1023
+  .ir-edit-assignment
+  .ir-comments {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.wp-block-instructor-role-ir-assignments .below-1023 .ir-additional-filters {
+  flex-wrap: wrap;
+}
+.wp-block-instructor-role-ir-assignments
+  .below-767
+  .ir-submissions-details
+  .ir-green-pass,
+.wp-block-instructor-role-ir-assignments
+  .below-767
+  .ir-submissions-details
+  .ir-not-graded {
+  margin-left: 0;
+}
+.wp-block-instructor-role-ir-assignments
+  .below-767
+  .ir-submissions-details
+  .ir-submission-score-status {
+  margin-bottom: 28px;
+}
+.wp-block-instructor-role-ir-assignments .mantine-pd2kap div:nth-last-child(2) {
+  margin-right: 0 !important;
+}
+.mantine-Switch-root,
+.wp-block-instructor-role-ir-assignments .icon-tabler-chevron-right {
+  transform: rotate(180deg);
+}
+.wp-block-instructor-role-ir-assignments
+  .mantine-Button-icon.mantine-Button-rightIcon {
+  margin-left: 0;
+  margin-right: 10px;
+}
+.wp-block-instructor-role-ir-assignments .ir-not-clickable {
+  margin-right: 0 !important;
+  margin-left: 6px;
+}
+.wp-block-instructor-role-ir-assignments
+  .ir-action-container
+  .ir-clickable-action-icon {
+  margin-right: 25px !important;
+  margin-left: 0px!important;
+}
+.ir-not-graded,
+.ir-submission-score-status .ir-green-pass,
+.wp-block-instructor-role-ir-assignments .ir-assignments-container .ir-green-pass {
+  margin-left: 0 !important;
+  margin-right: 28px !important;
+}
+.wp-block-instructor-role-ir-assignments
+  .ir-submission-score-status
+  .ir-primary-border-button {
+  margin-left: 0;
+  margin-right: 28px;
+}
+.wp-block-instructor-role-ir-assignments
+  .mantine-Text-root.ir-text-colour.ir-light-primary-colour.mantine-u9xdrp {
+  margin-right: 6px !important;
+}
+.wp-block-instructor-role-ir-assignments .ir-comments-count {
+  padding-left: 2px;
+  padding-right: 0 !important;
+}
+.wp-block-instructor-role-ir-assignments .ir-edit-assignment-main {
+  margin-right: 0;
+  margin-left: 32px;
+}
+.wp-block-instructor-role-ir-assignments .mantine-Anchor-root {
+  margin-left: 10px !important;
+  margin-right: 6px !important;
+}
+.mantine-Image-root.mantine-12vtgbk,
+.wp-block-instructor-role-ir-assignments .ir-comments .mantine-Image-root {
+  margin-right: 0;
+  margin-left: 16px;
+}
+.wp-block-instructor-role-ir-assignments .mantine-1waxu27 {
+  margin-left: 0;
+  margin-right: 32px;
+}
+.wp-block-instructor-role-ir-assignments .ir-tel {
+  margin-right: 0;
+}
+.wp-block-instructor-role-ir-assignments .ir-add-comment-button {
+  margin-left: 8px;
+}
+.wp-block-instructor-role-ir-assignments
+  .mantine-Text-root.ir-text-colour.ir-light-primary-colour.mantine-s67qxb {
+  margin-right: 0;
+  margin-left: 6px;
+}
+.wp-block-instructor-role-ir-assignments .ir-btn-subtle-submission{
+  margin-left: 0px!important; 
+}
+.wp-block-instructor-role-ir-assignments .ir-action-container{
+  margin-left: 0px!important;
+  margin-right: 28px;
+}

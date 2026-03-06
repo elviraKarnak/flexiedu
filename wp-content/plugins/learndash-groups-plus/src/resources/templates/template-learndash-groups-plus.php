@@ -1,0 +1,78 @@
+<?php
+/**
+ * Organization view for [learndash_groups_plus].
+ *
+ * @since 1.0.0
+ * @version 2.1.2
+ *
+ * @package LearnDash\Groups_Plus
+ */
+
+namespace LearnDash\Groups_Plus;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
+use LearnDash\Groups_Plus\Module\Group;
+use LearnDash\Groups_Plus\Utility\SharedFunctions;
+
+global $wp;
+
+if ( ! isset( $shortcode_name ) ) {
+	get_header();
+}
+$all_primary_groups = Group::get_all_primary_groups();
+$groups_id          = learndash_get_administrators_group_ids( get_current_user_id() );
+
+$groups = array();
+
+$groups      = Group::get_child_groups();
+$page_layout = 'class_admin';
+
+if ( ! empty( $_GET['group'] ) ) {
+	$page_layout = 'view_class';
+}
+$license_info = get_licenses_info_user();
+
+$change_the_used_seats_icon_color  = get_site_option( 'change_the_used_seats_icon_color', '#000' );
+$change_seats_remaining_icon_color = get_site_option( 'change_seats_remaining_icon_color', '#000' );
+$header_background_color           = get_site_option( 'header_background_color', '#EAEAEA' );
+$header_border_color               = get_site_option( 'header_border_color', '#231F20' );
+?>
+<style>
+	.learndash-groups-plus-user-licenses::before { color: <?php echo $change_the_used_seats_icon_color; ?>; }
+	.learndash-groups-plus-user-licenses-remaining::before { color: <?php echo $change_seats_remaining_icon_color; ?>; }
+	.groups_plus_header { background: <?php echo $header_background_color; ?>; border-color:<?php echo $header_border_color; ?>;}
+</style>
+<div class="groups_plus_container">
+	<div class="row-group">
+		<?php
+		if ( ! empty( $all_primary_groups ) || ! empty( $groups ) ) :
+			include_once SharedFunctions::get_template( '/templates/team/admin-header.php' );
+
+			$hide_groups_plus_header = get_site_option( 'hide_groups_plus_header', 'no' );
+			if ( $hide_groups_plus_header === 'no' ) {
+				include_once SharedFunctions::get_template( '/templates/team/header.php' );
+				// include LEARNDASH_GROUPS_PLUS_DIR . '/templates/team/header.php';
+			}
+
+			include_once SharedFunctions::get_template( '/templates/team/listing.php' );
+			// include LEARNDASH_GROUPS_PLUS_DIR . '/templates/team/listing.php';
+
+			// <!-- Team report -->
+			include_once SharedFunctions::get_template( '/templates/team/groups-plus-report.php' );
+
+		elseif ( current_user_can( 'group_leader' ) && empty( $groups ) ) :
+			_e( 'You are not a part of any Groups yet.', 'learndash-groups-plus' );
+		else :
+			_e( 'Please add your first LearnDash Group to get started.', 'learndash-groups-plus' );
+		endif;
+		?>
+	</div>
+	<?php require_once SharedFunctions::get_template( '/templates/team/modal.php' ); ?>
+</div>
+<?php
+if ( ! isset( $shortcode_name ) ) {
+	get_footer();
+} ?>

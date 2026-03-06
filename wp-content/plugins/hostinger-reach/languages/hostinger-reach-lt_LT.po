@@ -1,0 +1,758 @@
+# Copyright (C) 2025 Hostinger
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Hostinger Reach 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/hostinger-reach\n"
+"Last-Translator: \n"
+"Language-Team: Lithuanian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-07-31T11:19:40+03:00\n"
+"PO-Revision-Date: 2026-02-23 04:06+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: hostinger-reach\n"
+"Language: lt_LT\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 "
+"&&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"X-Loco-Version: 2.8.1; wp-6.9; php-8.2.29"
+
+#: src/Setup/Assets.php:154
+msgid "(no title)"
+msgstr "(be pavadinimo)"
+
+#: src/Setup/Assets.php:177
+msgid "-"
+msgstr "-"
+
+#: src/Setup/Assets.php:140 src/Setup/Assets.php:157
+msgid "Active"
+msgstr "Aktyvus"
+
+#: src/Setup/Assets.php:112
+msgid ""
+"Add a new contact form with Reach or connect a plugin to start collecting "
+"contacts and sending campaigns."
+msgstr ""
+"Pridėk naują kontaktų formą su Reach arba prijunk įskiepį ir pradėk rinkti "
+"kontaktus bei siųsti kampanijas."
+
+#: src/Setup/Assets.php:108
+msgid ""
+"Add an online store to your site, sell products or services, and connect "
+"subscriber tools automatically.."
+msgstr ""
+"Į svetainę įtrauk internetinę parduotuvę, parduok produktus ar paslaugas ir "
+"automatiškai prijunk prenumeratorių įrankius."
+
+#: src/Setup/Assets.php:146 src/Setup/Assets.php:160
+msgid "Add form"
+msgstr "Pridėti formą"
+
+#: src/Setup/Assets.php:113 src/Setup/Assets.php:114 src/Setup/Assets.php:130
+msgid "Add form or plugin"
+msgstr "Pridėti formą arba įskiepį"
+
+#: src/Admin/Surveys/SatisfactionSurvey.php:26
+msgid "Any ideas or feedback to help us improve Hostinger Reach?"
+msgstr ""
+"Turi idėjų ar atsiliepimų, kurie padėtų mums pagerinti Hostinger Reach?"
+
+#: src/Setup/Assets.php:175
+msgid ""
+"are ready to sync with Reach. Any new contacts you’ll collect with these "
+"forms will sync automatically."
+msgstr ""
+"yra paruoštos sinchronizuoti su Reach. Visi nauji kontaktai, kuriuos "
+"surinksi naudodamas šias formas, bus sinchronizuojami automatiškai."
+
+#: hostinger-reach.php:52
+msgid "Attention:"
+msgstr "Dėmesio:"
+
+#: src/Setup/Assets.php:178
+#, fuzzy
+msgid "Auto-sync off"
+msgstr "Automatinė sinchronizacija išjungta"
+
+#: src/Integrations/WooCommerce/WooCommerceIntegration.php:123
+msgid "Automation -  Purchases"
+msgstr "Automatizavimas – pirkimai"
+
+#: src/Integrations/WooCommerce/WooCommerceIntegration.php:124
+msgid "Automation - Abandoned Carts"
+msgstr "Automatizavimas – pamiršti krepšeliai"
+
+#: src/Setup/Assets.php:97
+msgid "Average CTOR"
+msgstr "Vidutinis CTOR"
+
+#: src/Setup/Assets.php:77
+msgid "Back"
+msgstr "Atgal"
+
+#: src/Setup/Assets.php:126
+msgid "Background image for"
+msgstr "Fono paveikslėlis skirtas"
+
+#: src/Setup/Assets.php:125
+msgid "Banner background image for"
+msgstr "Skelbimo fono vaizdas skirtas"
+
+#: frontend/blocks/subscription-block/block.json:1
+msgctxt "block description"
+msgid "Subscription form for Hostinger Reach"
+msgstr "Hostinger Reach prenumeratos forma"
+
+#: frontend/blocks/subscription-block/block.json:1
+msgctxt "block title"
+msgid "Reach Subscription Form"
+msgstr "Reach prenumeratos forma"
+
+#: src/Integrations/Brave/BraveIntegration.php:29
+#, fuzzy
+msgid "Brave Popup Builder"
+msgstr "\"Brave Popup Builder"
+
+#: src/Setup/Assets.php:95
+msgid "Campaigns"
+msgstr "Kampanijos"
+
+#: src/Setup/Assets.php:133
+msgid "Cancel "
+msgstr "Atšaukti"
+
+#: src/Integrations/WooCommerce/WooCommerceIntegration.php:116
+msgid "Checkout"
+msgstr "Atsiskaitymas"
+
+#: src/Setup/Assets.php:128
+msgid ""
+"Click-to-open rate tells you what percent of opens resulted in a click too. "
+"A good CTOR is 6-17%, depending on your industry."
+msgstr ""
+"„Click-to-open“ rodiklis parodo, kiek procentų atidarymo atvejų taip pat "
+"buvo ir spustelėta. Geras CTOR yra 6–17 %, priklausomai nuo tavo pramonės "
+"šakos."
+
+#: src/Setup/Assets.php:152
+msgid "Collapse {pluginName} details"
+msgstr "Sutraukti {pluginName} informaciją"
+
+#: src/Setup/Assets.php:167 src/Admin/Notices/ConnectionNotice.php:104
+msgid "Connect"
+msgstr "Prisijungti"
+
+#: src/Admin/Notices/ConnectionNotice.php:99
+msgid "Connect Hostinger Reach to start Email Marketing"
+msgstr "Prijunk Hostinger Reach ir pradėk naudoti el. pašto rinkodarą"
+
+#: src/Setup/Assets.php:84
+msgid "Connect site"
+msgstr "Prijungti svetainę"
+
+#: src/Setup/Assets.php:107 src/Setup/Assets.php:109
+msgid "Connect WooCommerce"
+msgstr "Prijunk WooCommerce"
+
+#: src/Admin/Notices/ConnectionNotice.php:100
+msgid ""
+"Connect your Hostinger Reach account to start sending newsletters and "
+"managing subscribers. With Hostinger Reach, it's easy to grow your audience "
+"in just one click."
+msgstr ""
+"Prijunk Hostinger Reach paskyrą ir pradėk siųsti naujienlaiškius bei "
+"tvarkyti prenumeratorius. Naudodamasis Hostinger Reach, lengvai padidinsi "
+"savo auditoriją vos vienu spustelėjimu."
+
+#: src/Setup/Assets.php:148 src/Integrations/ContactForm7Integration.php:108
+#: src/Integrations/ContactForm7/ContactForm7Integration.php:91
+msgid "Contact Form 7"
+msgstr "Kontaktinė forma 7"
+
+#: src/Setup/Assets.php:136 src/Setup/Assets.php:169
+msgid "Contacts"
+msgstr "Kontaktai"
+
+#: src/Setup/Assets.php:174
+msgid "contacts"
+msgstr "kontaktai"
+
+#: src/Setup/Assets.php:173
+msgid "Contacts to Sync"
+msgstr "Sinchronizuojami kontaktai"
+
+#: src/Admin/Notices/ConnectionNotice.php:73
+msgid "Could not generate auth URL"
+msgstr "Nepavyko sukurti autentifikavimo URL adreso"
+
+#: src/Setup/Assets.php:102
+msgid "Create campaign"
+msgstr "Sukurti kampaniją"
+
+#: src/Setup/Assets.php:80
+msgid ""
+"Create email campaigns using AI-crafted templates that match your style. "
+"Instantly sync with your WordPress site and connect with your audience "
+"easily."
+msgstr ""
+"Kurk el. pašto kampanijas naudodamas tavo stilių atitinkančius dirbtinio "
+"intelekto sukurtus šablonus. Akimirksniu susinchronizuok su savo WordPress "
+"svetaine ir lengvai užmegzk ryšį su savo auditorija."
+
+#: src/Setup/Assets.php:103
+msgid "Create template"
+msgstr "Sukurti šabloną"
+
+#: src/Setup/Assets.php:166
+msgid "Disconnect"
+msgstr "Atsijungti"
+
+#: src/Setup/Assets.php:134
+msgid "Disconnect "
+msgstr "Atsijungti"
+
+#: src/Setup/Assets.php:82
+msgid "Disconnect it to link this site instead."
+msgstr "Atjunk ir vietoj to susiek šią svetainę."
+
+#: src/Setup/Assets.php:145
+msgid "Disconnect plugin"
+msgstr "Atjungti įskiepį"
+
+#: src/Setup/Assets.php:131
+msgid "Disconnect plugin?"
+msgstr "Atjungti įskiepį?"
+
+#: src/Setup/Assets.php:132
+msgid ""
+"Disconnecting will stop new contacts from being collected. You can reconnect "
+"or use a different form anytime."
+msgstr ""
+"Atjungimas sustabdys naujų kontaktų rinkimą. Bet kuriuo metu galėsi vėl "
+"prisijungti arba panaudoti kitą formą."
+
+#: src/Setup/Assets.php:185
+#, fuzzy
+msgid "Don't see your plugin?"
+msgstr "Nematote savo įskiepio?"
+
+#: src/Setup/Assets.php:106
+msgid "E-Commerce"
+msgstr "E. prekyba"
+
+#: src/Setup/Assets.php:143
+msgid "Edit form"
+msgstr "Redaguoti formą"
+
+#: src/Setup/Assets.php:150
+#: src/Integrations/Elementor/ElementorIntegration.php:112
+msgid "Elementor"
+msgstr "Elementor"
+
+#: src/Blocks/SubscriptionFormBlock.php:75
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:106
+msgid "Email"
+msgstr "El. paštas"
+
+#: src/Admin/Menus.php:20 src/Admin/Menus.php:21 src/Admin/Menus.php:34
+msgid "Email Marketing"
+msgstr "El. pašto rinkodara"
+
+#: src/Setup/Assets.php:87
+msgid "Email marketing background with gradient design"
+msgstr "El. pašto rinkodaros fonas su gradientiniu dizainu"
+
+#: src/Setup/Assets.php:88
+msgid ""
+"Email marketing illustration featuring envelopes and communication icons"
+msgstr ""
+"El. pašto rinkodaros iliustracija su vokais ir komunikacijos piktogramomis"
+
+#: src/Setup/Assets.php:92
+msgid "Emails"
+msgstr "El. laiškai"
+
+#: src/Setup/Assets.php:151
+msgid "Expand {pluginName} details"
+msgstr "Išskleisti {pluginName} informaciją"
+
+#: src/Setup/Assets.php:117
+msgid "FAQ"
+msgstr "DUK"
+
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:50
+msgid "Form"
+msgstr "Forma"
+
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:58
+msgid "Form ID"
+msgstr "Formos ID"
+
+#: src/Integrations/Forminator/ForminatorIntegration.php:34
+msgid "Forminator"
+msgstr "Forminatorius"
+
+#: src/Setup/Assets.php:110
+msgid "Forms"
+msgstr "Formos"
+
+#: src/Setup/Assets.php:144
+msgid "Go to plugin"
+msgstr "Eiti į įskiepį"
+
+#: src/Setup/Assets.php:85
+msgid "Go to Reach"
+msgstr "Eiti į Reach"
+
+#. Author of the plugin
+msgid "Hostinger"
+msgstr "Hostinger"
+
+#. Name of the plugin
+#: src/Setup/Assets.php:86 src/Setup/Assets.php:147
+#: src/Integrations/ReachFormIntegration.php:65
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:20
+#: src/Integrations/Reach/ReachFormIntegration.php:71
+msgid "Hostinger Reach"
+msgstr "Hostinger Reach"
+
+#: src/Setup/Assets.php:119
+msgid ""
+"Hostinger Reach is an AI-powered email marketing tool for small businesses "
+"and creators. It supports your entire email marketing journey—from building "
+"contact lists to sending campaigns and tracking results."
+msgstr ""
+"Hostinger Reach yra dirbtinio intelekto valdomas el. pašto rinkodaros "
+"įrankis smulkiems verslams ir kūrėjams. Jis palaiko visą tavo el. pašto "
+"rinkodaros kelią – nuo kontaktų sąrašų sudarymo iki kampanijų siuntimo ir "
+"rezultatų stebėjimo."
+
+#: src/Setup/Assets.php:121
+msgid ""
+"Hostinger Reach is built for simplicity, speed, and results – no design or "
+"marketing experience needed. Unlike most email tools, at the core of Reach "
+"is its AI-powered template creator. Whether it is a product launch, special "
+"offer, or newsletter update, it instantly crafts a professional, mobile-"
+"friendly email. It not only writes the content for you; it also suggests the "
+"best layout for your message and saves your style settings so you're never "
+"starting from scratch.<br><br>Every template is customizable, so your emails "
+"reflect your brand's look, feel, and voice. And because the templates are "
+"built using proven best practices, they're optimized for readability, "
+"accessibility, and reader engagement."
+msgstr ""
+"Hostinger Reach sukurtas paprastumui, greičiui ir rezultatams – nereikia nei "
+"dizaino, nei rinkodaros patirties. Skirtingai nei dauguma el. pašto įrankių, "
+"Reach esmė yra dirbtinio intelekto pagrindu veikiantis šablonų kūrėjas. "
+"Nesvarbu, ar tai produkto pristatymas, specialus pasiūlymas ar "
+"naujienlaiškio atnaujinimas – jis akimirksniu paruošia profesionalų, "
+"mobiliems įrenginiams pritaikytą el. laišką. Jis ne tik parašo turinį už "
+"tave, bet ir pasiūlo geriausią tavo žinutei tinkantį išdėstymą bei išsaugo "
+"stiliaus nustatymus, kad niekada nereikėtų pradėti nuo nulio.<br><br>"
+"Kiekvieną šabloną galima pritaikyti, kad tavo el. laiškai atspindėtų prekės "
+"ženklo išvaizdą, nuotaiką ir toną. Kadangi šablonai kuriami remiantis "
+"patikrinta gerąja praktika, jie optimizuoti skaitomumui, prieinamumui ir "
+"skaitytojų įsitraukimui."
+
+#: src/Admin/Notices/ConnectionNotice.php:92
+msgid "Hostinger Reach logo"
+msgstr "Hostinger Reach logotipas"
+
+#. %s: PHP version
+#: hostinger-reach.php:54
+#, php-format
+msgid "Hostinger Reach requires minimum PHP version of <b>%s</b>. "
+msgstr "Hostinger Reach reikalauja minimalios PHP <b>%s</b> versijos."
+
+#: src/Setup/Assets.php:120
+msgid "How is Hostinger Reach different from other email marketing apps?"
+msgstr "Kuo Hostinger Reach skiriasi nuo kitų el. pašto rinkodaros programų?"
+
+#: src/Setup/Assets.php:122
+msgid "How much does it cost to use Hostinger Reach?"
+msgstr "Kiek kainuoja naudotis Hostinger Reach?"
+
+#: src/Admin/Surveys/SatisfactionSurvey.php:22
+msgid "How would you rate your experience with Hostinger Reach so far?"
+msgstr "Kaip vertini savo patirtį su Hostinger Reach?"
+
+#. URI of the plugin
+msgid "https://hostinger.com"
+msgstr "https://hostinger.com"
+
+#. Author URI of the plugin
+msgid "https://www.hostinger.com/email-marketing"
+msgstr "https://www.hostinger.com/email-marketing"
+
+#: src/Api/Handlers/IntegrationsApiHandler.php:117
+msgid "Importing is not available for this integration"
+msgstr "Šioje integracijoje importavimas negalimas"
+
+#: src/Setup/Assets.php:141
+msgid "Inactive"
+msgstr "Neaktyvus"
+
+#: src/Setup/Assets.php:164
+#, fuzzy
+msgid "Install"
+msgstr "Įdiekite"
+
+#: src/Setup/Assets.php:165
+msgid "Install and connect"
+msgstr "Įdiek ir prijunk"
+
+#: src/Setup/Assets.php:163
+msgid "Installed plugins"
+msgstr "Įdiegti įskiepiai"
+
+#. Description of the plugin
+msgid "Integrate your WordPress site with Hostinger Reach."
+msgstr "Integruok savo WordPress svetainę su Hostinger Reach."
+
+#: src/Setup/Assets.php:105
+msgid "Integrations"
+msgstr "Integracijos"
+
+#: src/Setup/Assets.php:186
+#, fuzzy
+msgid ""
+"It may not be supported yet. You can upload contacts as a CSV or use another "
+"plugin"
+msgstr ""
+"Gali būti, kad jis dar nepalaikomas. Galite įkelti kontaktus kaip CSV arba "
+"naudoti kitą įskiepį"
+
+#: src/Setup/Assets.php:184
+msgid "It was an error syncing your contacts to Reach."
+msgstr "Tai buvo kontaktų sinchronizavimo su Reach klaida."
+
+#: src/Admin/Notices/ConnectionNotice.php:107
+msgid "Learn more"
+msgstr "Sužinoti daugiau"
+
+#: src/Setup/Assets.php:158
+msgid ""
+"Make sure the people you contact expect your emails and are okay with "
+"receiving them."
+msgstr ""
+"Įsitikink, kad žmonės, kuriems rašai, tikisi tavo el. laiškų ir sutinka juos "
+"gauti."
+
+#: src/Setup/Assets.php:83
+msgid "Manage"
+msgstr "Tvarkyti"
+
+#: src/Blocks/SubscriptionFormBlock.php:83
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:114
+msgid "Name"
+msgstr "Pavadinimas"
+
+#: src/Setup/Assets.php:159
+msgid "New contact form"
+msgstr "Nauja kontaktinė forma"
+
+#: src/Setup/Assets.php:115
+msgid "New page"
+msgstr "Naujas puslapis"
+
+#: src/Setup/Assets.php:99
+msgid "New subscribers"
+msgstr "Nauji prenumeratoriai"
+
+#: src/Integrations/NinjaForms/NinjaFormsIntegration.php:45
+msgid "Ninja Forms"
+msgstr "Ninja formos"
+
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:71
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:83
+msgid "No"
+msgstr "Ne"
+
+#: src/Setup/Assets.php:153
+msgid "No forms found for this integration."
+msgstr "Šiai integracijai formų nerasta."
+
+#: src/Setup/Assets.php:116
+msgid "No pages available. Create a new page to get started."
+msgstr "Puslapių nėra. Norint pradėti, reikia sukurti naują puslapį."
+
+#: src/Setup/Assets.php:181
+msgid "Not synced"
+msgstr "Nesinchronizuota"
+
+#: src/Setup/Assets.php:138
+msgid "of"
+msgstr "iš"
+
+#: src/Setup/Assets.php:124
+msgid "opens in new tab"
+msgstr "atsidaro naujame skirtuke"
+
+#: src/Integrations/OptInMonster/OptInMonsterIntegration.php:48
+#, fuzzy
+msgid "OptinMonster"
+msgstr "OptinMonster"
+
+#: src/Setup/Assets.php:179
+msgid "Partially synced"
+msgstr "Iš dalies sinchronizuota"
+
+#: src/Setup/Assets.php:135
+msgid "Plugin"
+msgstr "Įskiepis"
+
+#: src/Setup/Assets.php:155
+msgid "Plugin connected successfully"
+msgstr "Įskiepis prijungtas"
+
+#: src/Setup/Assets.php:156
+msgid "Plugin disconnected successfully"
+msgstr "Įskiepis atjungtas"
+
+#: src/Setup/Assets.php:81
+msgid "Reach is already connected to another site."
+msgstr "Reach jau yra prijungtas prie kitos svetainės."
+
+#: src/Setup/Assets.php:123
+#| msgid ""
+#| "Reach offers a free plan for one year– perfect for getting started. Paid "
+#| "plans are based on how many unique contacts you aim to reach and how many "
+#| "emails you send monthly. As your audience grows, you can upgrade to a "
+#| "plan that fits your needs. Reach does not limit your contact list, so you "
+#| "don't need to worry about lost data and can consistently grow your "
+#| "audience."
+msgid ""
+"Reach offers a <b>free plan</b> for one year– perfect for getting started. "
+"Paid plans are based on how many unique contacts you aim to reach and how "
+"many emails you send monthly. As your audience grows, you can upgrade to a "
+"plan that fits your needs. Reach does not limit your contact list, so you "
+"don't need to worry about lost data and can consistently grow your audience."
+msgstr ""
+"Reach siūlo <b>nemokamą planą</b> vieneriems metams – puikiai tinkantį "
+"pradžiai. Mokami planai priklauso nuo to, kiek unikalių kontaktų nori "
+"pasiekti ir kiek el. laiškų kas mėnesį siunti. Augant auditorijai, galėsi "
+"pereiti prie tavo poreikius atitinkančio plano. Reach neriboja tavo kontaktų "
+"sąrašo, todėl nereikės nerimauti dėl prarastų duomenų ir galėsi nuosekliai "
+"auginti auditoriją."
+
+#: src/Setup/Assets.php:94
+msgid "Remaining"
+msgstr "Likę"
+
+#: src/Setup/Assets.php:129
+msgid "Select page"
+msgstr "Pasirink puslapį"
+
+#: src/Setup/Assets.php:93 src/Setup/Assets.php:96
+msgid "Sent"
+msgstr "Išsiųsta"
+
+#: src/Setup/Assets.php:104
+msgid "Settings"
+msgstr "Nustatymai"
+
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:68
+msgid "Show Name"
+msgstr "Rodyti vardą"
+
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:80
+msgid "Show Surname"
+msgstr "Rodyti pavardę"
+
+#: src/Setup/Assets.php:171
+msgid ""
+"Some contacts you’ve collected before installing Reach aren’t yet synced. "
+"Sync them now to use them for your email campaigns."
+msgstr ""
+"Kai kurie kontaktai, kuriuos surinkai prieš įdiegdamas Reach, dar nėra "
+"sinchronizuoti. Sinchronizuok dabar, kad galėtum juos naudoti el. pašto "
+"kampanijoms."
+
+#: src/Setup/Assets.php:78
+msgid "Something went wrong"
+msgstr "Kažkas ne taip"
+
+#: src/Blocks/SubscriptionFormBlock.php:21 src/Api/Handlers/ApiHandler.php:36
+msgid "Something went wrong. Please try again."
+msgstr "Kažkas ne taip. Pabandyk dar kartą."
+
+#: src/Setup/Assets.php:111
+msgid "Start by adding a form or connect a plugin"
+msgstr "Pradėk nuo formos pridėjimo arba įskiepio prijungimo"
+
+#: src/Setup/Assets.php:139
+msgid "Status"
+msgstr "Būsena"
+
+#: src/Blocks/SubscriptionFormBlock.php:99
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:130
+msgid "Subscribe"
+msgstr "Prenumeruoti"
+
+#: templates/optin-checkbox.php:28
+msgid "Subscribe to our Newsletter"
+msgstr "Prenumeruok mūsų naujienlaiškį"
+
+#: src/Integrations/WooCommerce/WooCommerceIntegration.php:73
+msgid "Subscribe to our newsletter"
+msgstr "Prenumeruok mūsų naujienlaiškį"
+
+#: src/Setup/Assets.php:98
+msgid "Subscribers"
+msgstr "Prenumeratoriai"
+
+#: src/Setup/Assets.php:161
+#| msgid "View supported plugins"
+msgid "Supported plugins"
+msgstr "Peržiūrėti palaikomus įskiepius"
+
+#: src/Integrations/SureForms/SureFormsIntegration.php:35
+msgid "Sure Forms"
+msgstr "Sure Forms"
+
+#: src/Blocks/SubscriptionFormBlock.php:91
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:122
+msgid "Surname"
+msgstr "Pavardė"
+
+#: src/Setup/Assets.php:172
+msgid "Sync"
+msgstr "Sinchronizavimas"
+
+#: src/Setup/Assets.php:168
+msgid "Sync Contacts"
+msgstr "Sinchronizuoti kontaktus"
+
+#: src/Setup/Assets.php:170
+msgid "Sync your contacts with Reach"
+msgstr "Sinchronizuok savo adresatus su Reach"
+
+#: src/Setup/Assets.php:180
+msgid "Synced"
+msgstr "Sinchronizuota"
+
+#: src/Setup/Assets.php:137
+msgid "Syncing with Reach"
+msgstr "Sinchronizavimas su Reach"
+
+#: src/Setup/Assets.php:182
+msgid "Syncing..."
+msgstr "Sinchronizuojama..."
+
+#: src/Blocks/SubscriptionFormBlock.php:20
+msgid "Thanks for subscribing."
+msgstr "Ačiū už prenumeratą."
+
+#: src/Setup/Assets.php:183
+msgid "The selected contacts are being synced to Reach."
+msgstr "Pasirinkti kontaktai sinchronizuojami su Reach."
+
+#: src/Integrations/Integration.php:178
+msgid ""
+"This form has not an email field. Create an email field in the form to allow "
+"it to be synced with Reach"
+msgstr ""
+"Šioje formoje nėra el. pašto lauko. Sukurk el. pašto lauką formoje, kad ją "
+"būtų galima sinchronizuoti su Reach"
+
+#: src/Setup/Assets.php:89
+msgid "This month"
+msgstr "Šį mėnesį"
+
+#: src/Integrations/ThriveLeads/ThriveLeadsIntegration.php:72
+#: src/Integrations/ThriveLeads/ThriveLeadsIntegration.php:88
+#, fuzzy
+msgid "Thrive Leads"
+msgstr "\"Thrive Leads"
+
+#: src/Setup/Assets.php:101
+msgid "Total subscribers"
+msgstr "Viso prenumeratorių"
+
+#: src/Setup/Assets.php:100
+msgid "Unsubscribes"
+msgstr "Prenumeratos atsisakymai"
+
+#: src/Setup/Assets.php:91
+msgid "Upgrade"
+msgstr "Pakeisti"
+
+#: src/Setup/Assets.php:187
+#, fuzzy
+msgid "Upload as CSV"
+msgstr "Įkelti kaip CSV"
+
+#: src/Setup/Assets.php:127
+msgid "usage statistics"
+msgstr "naudojimo statistika"
+
+#: src/Setup/Assets.php:142
+msgid "View form"
+msgstr "Peržiūrėti formą"
+
+#: src/Setup/Assets.php:162
+msgid "View more supported plugins"
+msgstr "Peržiūrėti daugiau palaikomų įskiepių"
+
+#: src/Setup/Assets.php:79
+msgid "Welcome to Reach"
+msgstr "Prisijungei prie Reach"
+
+#: src/Setup/Assets.php:118
+msgid "What is Hostinger Reach email marketing service?"
+msgstr "Kas yra Hostinger Reach el. pašto rinkodaros paslauga?"
+
+#: src/Integrations/WooCommerce/WooCommerceIntegration.php:192
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: src/Integrations/WooCommerce/WooCommerceIntegration.php:211
+msgid "WooCommerce Customers"
+msgstr "WooCommerce klientai"
+
+#: src/Setup/Assets.php:149 src/Integrations/WpFormsLiteIntegration.php:94
+#: src/Integrations/WPFormsLite/WpFormsLiteIntegration.php:29
+msgid "WP Forms Lite"
+msgstr "WP Forms Lite"
+
+#. %s - form id.
+#: src/Integrations/WpFormsLiteIntegration.php:43
+#: src/Integrations/WPFormsLite/WpFormsLiteIntegration.php:63
+#, php-format
+msgid "WP Forms Lite %s"
+msgstr "WP Forms Lite %s"
+
+#: src/Integrations/WSForms/WSFormsIntegration.php:22
+msgid "WS Form"
+msgstr "WS forma"
+
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:70
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:82
+msgid "Yes"
+msgstr "Taip"
+
+#. %s: PHP version
+#: hostinger-reach.php:58
+#, php-format
+msgid "You are running <b>%s</b> PHP version."
+msgstr "Naudoji PHP <b>%s</b> versiją."
+
+#: src/Setup/Assets.php:176
+msgid ""
+"You have not selected any forms to sync. Select which forms you want to sync "
+"and then click on the Sync button below."
+msgstr ""
+"Nepasirinkai jokių sinchronizuojamų formų. Pasirink, kurias formas nori "
+"sinchronizuoti, ir spustelėk toliau esantį mygtuką Sinchronizuoti."
+
+#: src/Setup/Assets.php:90
+msgid "Your plan"
+msgstr "Tavo planas"
+
+#: src/Api/Handlers/ReachApiHandler.php:33
+#, fuzzy
+msgid "Your site is not connected to Reach. Connect to Reach and try again."
+msgstr ""
+"Jūsų svetainė nėra prijungta prie \"Reach\". Prisijunkite prie \"Reach\" ir "
+"bandykite dar kartą."

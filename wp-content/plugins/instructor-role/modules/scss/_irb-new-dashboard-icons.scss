@@ -1,0 +1,59 @@
+/* cspell:ignore iefix */
+
+@font-face {
+  font-family: 'ir-dashboard';
+  src:  url('new_dashboard_fonts/icomoon.eot?8p2v3o');
+  src:  url('new_dashboard_fonts/icomoon.eot?8p2v3o#iefix') format('embedded-opentype'),
+    url('new_dashboard_fonts/icomoon.ttf?8p2v3o') format('truetype'),
+    url('new_dashboard_fonts/icomoon.woff?8p2v3o') format('woff'),
+    url('new_dashboard_fonts/icomoon.svg?8p2v3o#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="ird-icon-"], [class*=" ird-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'ir-dashboard' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ird-icon-Arrow:before {
+  content: "\e900";
+}
+.ird-icon-Comments:before {
+  content: "\e901";
+}
+.ird-icon-Courses:before {
+  content: "\e902";
+}
+.ird-icon-LMS:before {
+  content: "\e903";
+}
+.ird-icon-Logout:before {
+  content: "\e904";
+}
+.ird-icon-Products:before {
+  content: "\e905";
+}
+.ird-icon-Profile:before {
+  content: "\e906";
+}
+.ird-icon-Search:before {
+  content: "\e907";
+}
+.ird-icon-Student:before {
+  content: "\e908";
+}
+.ird-icon-Table-arrow:before {
+  content: "\e909";
+}

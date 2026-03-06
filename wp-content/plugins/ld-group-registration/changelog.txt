@@ -1,0 +1,400 @@
+= [4.3.17] =
+
+* Fix - Resolved an issue where WooCommerce sale prices were not applied in the cart when Group Registration was enabled for a product.
+* Fix - Fixed a potential PHP warning that would show on the Groups Dashboard Reports tab under certain circumstances.
+* Fix - Fixed `Notice: Function _load_textdomain_just_in_time was called incorrectly` error in Wordpress 6.7+.
+* Fix - Resolved 404 errors for data table sort icons on the Groups Dashboard > Enrolled Users page.
+* Fix - Fixed PHP Deprecated warning on `FILTER_SANITIZE_STRING` constant usage in the Setup Wizard. 
+* Fix - Fixed several deprecation errors on the Setup Wizard page.
+* Fix - Resolved an issue where the "Group Code" setting would overwrite the "Remove Users" setting during the setup wizard.
+* Security - Hardened request that loads variable product options.
+
+= [4.3.16] =
+
+* Fix - Fixed PHP warning when editing WooCommerce order processing email.
+
+= [4.3.15] =
+
+* Fix - Fixed double calculated discount when WC memberships discount is active.
+* Fix - Updated the way the "Add more seats" button on the Groups Dashboard associates to a product. New Groups will correctly associate to a product.
+* Fix - Fixed issue with group enrollment emails not being sent when a user is added to Groups on the User Edit screen.
+* Fix - Fixed seats and price calculations on the Group Registration Footer on the purchase page.
+* Fix - Fixed issue with Enroll New User button occasionally not working on the group dashboard page.
+* Fix - Fixed issue with the Groups Dashboard layout on the "Add more seats" view.
+* Fix - Fixed issue with Bulk Discount Setting not changing validation rules based on the type of discount being applied.
+* Fix - Fixed empty group leader column on the group admin listing page if LearnDash group post type is set to be hierarchical.
+* Security - Hardened a query related to course retrieval.
+* Security - Added some javascript escaping to a woocommerce admin component.
+* Security - Fixed a potential security vulnerability related to plugin settings.
+* Tweak - Added the Related Product ID field to the Groups edit screen.
+* Tweak - Added actions: `learndash_seats_plus_uninstall`.
+* Tweak - Added functions: `learndash_seats_get_group_product_id`.
+
+= [4.3.14.1] =
+
+* Fix - Fixes fatal error during activation if an outdated version of LearnDash LMS was installed.
+
+= [4.3.14] =
+
+* Tweak - Updated licensing and branding.
+* Tweak - Licensing changed to point toward www.learndash.com.
+* Tweak - Deprecated classes: `Ld_Group_Registration_License`, `WdmAddLicenseData`, `WdmGetLicenseData`, `WdmLicense`, `WdmPluginUpdater`, `WdmSendDataToServer`.
+* Tweak - Deprecated filters: `wdm_ld_group_license_page_capability`.
+
+= [4.3.13] =
+
+* Fix - Fixed fatal error on updating group with empty seats.
+* Tweak - Updated the licensing code.
+
+= [4.3.12] =
+
+* Feature - Added functionality to provide support for LDGR items in the WooCommerce URL flow, and ldgr parameters are introduced to allow for adding new seats and creating groups through the same flow.
+
+= [4.3.11] =
+
+* Feature - We've included a new setting that allows the group name to be auto-filled.
+* Fix - Inconsistencies in the group name field have now been addressed.
+* Fix - Now, when we add a user from the main group to a sub group he is transferred from main group to the subgroup.
+* Fix - Minor bug fixes.
+* Tweak - The default activation status of group code after creation is now active.
+
+= [4.3.10] =
+
+* Fix - Fixed the Email validation for new domains.
+* Fix - Increased the character limit of course grid title from 20 to 50 characters.
+* Fix - Now the back to groups button on group dash board will be hidden if the user is owner of only one group.
+* Tweak - In the group codes area, a new "Copy URL" capability has been added; you can now copy the URL and the group code registration page will automatically fill in the input field with the group code.
+* Tweak - We have added a new button "Add more seats" on the groups dashboard that will take you to the specific product of the group to increase the seats.
+* Tweak - Added HelpScout integration with LDGR now you can connect directly to our support team from admin panel itself.
+
+= [4.3.9] =
+
+* Feature - Added setting to hide courses associated with the group product on product page.
+* Feature - Added setting to hide the group information sticky footer bar on the product page.
+* Fix - Search and pagination fixes for filtered results on groups dashboard.
+* Tweak - Updated the group product sticky footer bar to display final group discounted price.
+
+= [4.3.8] =
+
+* Fix - Fixed total seats and seats left count for groups.
+* Fix - Fixed addition and removal of group seats from group edit page.
+* Fix - Updated group seats calculation logic to consider users enrolled in group by admin from backend.
+
+= [4.3.7] =
+
+* Fix - Fixed issue with seat count not updating for groups created from backend.
+
+= [4.3.6] =
+
+* Fix - Fixed minor UI and styling issues.
+* Fix - Updated JS validations for sub group creation/updation.
+* Tweak - Updated class methods to have no HTML and moved them to templates.
+
+= [4.3.5] =
+
+* Fix - Fixed freeze first input issue for configuring custom fields.
+
+= [4.3.4] =
+
+* Feature - Added dynamic field options for user registration through CSV, add new user form and group code registration form.
+
+= [4.3.3] =
+
+* Fix - Added compatibility fixes for variable products.
+
+= [4.3.2] =
+
+* Fix - Fixed subscription warnings thrown for subscriptions that do not have a parent order.
+* Fix - Fixed product validation being thrown for resubscription/renewals.
+* Fix - Fixed validation bug restricting group creation on group subscription purchases.
+* Fix - Fixed loader and button styling on the groups dashboard.
+* Fix - Translation fixes for group strings
+* Fix - Updated total seat count on groups created from backend.
+* Fix - Fixed loader and button styling on the groups dashboard.
+* Fix - Fixed compatibility for simple variable products
+* Fix - Fix to now show warning for multisite when adding existing users to group.
+* Tweak - Updated group image template to pass group id as a parameter and added common function to fetch variation ids from a product.
+
+= [4.3.1] =
+
+* Fix - Fixed issues related to compatibility with PHP 8+.
+* Fix - Header string formating in product page sticky footer.
+
+= [4.3.0] =
+
+* Feature - Additional groups option for group purchase.
+* Fix - Fixed price for unlimited members field accepts negative numbers as input.
+* Fix - Fixed not able to input value more than 100 for fixed bulk discounts.
+* Fix - Fixed infinite loop when trying to upload CSV with users more than group limit.
+
+= [4.2.3] =
+
+* Fix - Fixed loading icon issue on reports screen.
+* Fix - Fixed sub-group user enrollment issue which removed other users from the group.
+* Fix - Fixed rewards column being added multiple times in reports table.
+* Fix - Fixed subscription notice on expiration on groups dashboard.
+* Fix - Updated template functions to properly filter arguments.
+* Fix - Fixed group code registration form displaying multiple times on the page.
+* Fix - Added fixes to hide unlimited seats checkbox if individual option chosen on product page.
+* Tweak - Updated hooks to filter localized variables and skip group creation process on order completion.
+
+= [4.2.2] =
+
+* Fix - Fixed hardcoded groups dashboard tab ids issue.
+* Fix - Fixed Select 2 library UI fixes on sub-group creation/edit page.
+* Fix - Fixed Nonce verification for group user removal.
+* Fix - Added no reports text for empty group course reports.
+* Fix - Fixed fatal error when trying to upload users via CSV.
+* Fix - Enforce minimum quantity for group products.
+* Tweak - New settings to set banner and accent color for the groups dashboard.
+* Tweak - New settings to set default image for group and course to be used on the groups dashboard.
+* Tweak - Group code registration form design updates.
+* Tweak - Hide Enroll new user button on groups dashboard if no seats remaining.
+* Tweak - Added new filter hooks for the sub-groups module.
+* Tweak - Updated sub-groups design when listing groups on groups dashboard.
+
+= [4.2.1] =
+
+* Fix - Parent seat limit reducing even for the normal sub-group update.
+* Fix - Sub-group leaders not able to see groups on the groups dashboard.
+* Fix - Lesson count in dashboard reports.
+* Fix - Product ID was called incorrectly.
+* Fix - GDPR links adding slashes.
+* Fix - Missing translation strings.
+* Fix - Groups dashboard not displaying sub-groups.
+* Fix - Group leader privilege update to allow image uploads for group image update.
+* Fix - No group code message fix when adding new group codes from groups dashboard.
+* Tweak - Add new user modal to only show 1 user upload box instead of 2.
+
+= [4.2.0] =
+
+* Feature - New and improved designs for the groups dashboard.
+* Feature - Sub-groups feature on the groups dashboard.
+* Feature - Bulk discounts for group purchases by woocommerce.
+* Tweak - Added product setup wizard.
+
+= [4.1.5] =
+
+* Fix - Removed display animation for product single page causing issues with quantity box.
+* Fix - Fixed escaping slashes for single quotes when entering group names.
+* Fix - Removed utf8 encoding while reading CSV data during CSV uploads.
+* Tweak - Added new filter hooks for group course list and group code form validation.
+* Tweak - Updated plugin language files.
+
+= [4.1.4] =
+
+* Fix - Fixed date format issue causing wrong date displayed for group codes and also updated mailing to allow additional filters.
+* Tweak - Updated quantity box animation to simple transition.
+* Tweak - Updated seat count updation for unlimited groups.
+* Tweak - Updated scrolling animation for notifications.
+* Tweak - Added additional hidden order item meta to track group purchases to avoid translation conflicts.
+* Tweak - Added a new filter for tab users and fixed indentation issues.
+
+= [4.1.3] =
+
+* Feature - Added new settings to support GDPR for the group code registration form.
+* Fix - Fixed group code date validation to check for start of the day for the from and end of day for the to date.
+* Fix - Styling fixes for group registration notifications.
+* Fix - Updated group code notification animations to cancel current animation if another is queued.
+* Fix - Fix to clear group code registration form after successful submission.
+
+= [4.1.2] =
+
+* Fix - Fixed the infinite loading icon on group reports page while loading student statistics.
+* Fix - Fixed a bug with a static recaptcha test key being used instead of the configured one causing recaptcha issues.
+* Fix - Fixed an admin privilege check for sending reinvite emails.
+* Fix - Fixed group code image and updated the reports image for mobile view.
+* Tweak - Updated the 'ldgr_send_group_mails' function to take in additional parameters to identify type of email and get related group ID.
+* Tweak - Updated report class template callbacks from include to ldgr_get_template and added filter to customize ajax course report data.
+* Tweak - Added a fix to support the quick view feature from the neve theme.
+* Tweak - Updated 'ldgr_get_template' function to add a new filter for arguments and updated action hooks arguments.
+* Tweak - Updated group name feature to work with package option.
+* Tweak - Added new action hook to allow adding custom fields before the group code field.
+
+= [4.1.1] =
+
+* Fix - Removed the default seat limit when creating a group code instead added a filter to it.
+* Tweak - Select whether to redirect users enrolled from group code to a page or display a custom message.
+
+= [4.1.0] =
+
+* Feature - Group Enrollment Code. Users can add themselves to the groups using enrollment code. Secure, easy to create and manage with expiry dates to the code.
+* Feature - A new [ldgr-group-code-registration-form] shortcode to enroll new as well as existing users using group code. A new user can register on the same page using the email address.
+* Feature - An option to allow unlimited seats in the group.
+* Fix - An issue with default or empty emails being set for emails configured in group registration email settings.
+* Fix - An issue with individual and group checkbox selected for variable products.
+* Tweak - A placeholder to use in the registration email notification to reset the password.
+* Tweak - Styling improvements in the group management page.
+* Tweak - A toggle to enable/disable group registration email notifications.
+
+= [4.0.3] =
+
+* Fix - Added fixes for group emails settings for reinvite email subject and group removal email body.
+* Fix - Fixed admin privileges for performing group registration functions.
+
+= [4.0.2] =
+
+* Tweak - Added additional hooks and filters to the user registration and enrollment flow.
+
+= [4.0.1] =
+
+* Fix - Group name support for variable products.
+* Tweak - Implemented ajax based batch processing for bulk user csv uploads.
+* Tweak - Added additional filters hooks.
+
+= [4.0.0] =
+
+* Tweak - Updated the entire plugin structure and also updated coding standards to WordPress.
+* Tweak - Optimized the bulk user upload process on group registration page.
+
+= [3.8.3] =
+
+* Feature - Added functionality for bulk user removal request accept and remove for admin.
+* Fix - Updated survey form code and email setting templates and placeholders.
+
+= [3.8.2] =
+
+* Feature - Custom group name feature with compatibility with some themes.
+* Feature - Ajax based bulk student removal.
+* Fix - Added fixes for hidden group name and description field on group edit page on admin end.
+* Fix - Code optimization for checking empty course lists fetches.
+* Tweak - Updated 'wdm_modify_total_number_of_registrations' hook for additional parameters for order ID.
+* Tweak - Updated 'wdm_change_group_quantity' hook for additional parameters for order item details.
+
+= [3.8.1] =
+
+* Feature - Ajax based user CSV upload.
+* Feature - Show detailed course progress report to group leaders.
+* Feature - Settings in the backend to redirect users on certain pages after login. Role based login redirection.
+* Fix - Changed text ‘select product’ word to Group’ on leader page.
+* Fix - Remove uppercase transform for header tags.
+* Tweak - Added default messages in email settings.
+* Tweak - Added settings link on plugins page.
+* Tweak - Improve user removal alert message.
+* Tweak - Updated the group registration settings on woocommerce product edit page.
+
+= [3.8.0] =
+
+* Feature - Display course wise report of group users on Group Registration Page.
+* Tweak - Added support for resubscribe when a group leader cancels and resubscribes.
+
+= [3.7.1] =
+
+* Fix - For the Paid Course when subscription gets activated Group Leader gets access of courses.
+* Fix - Minor Fixes.
+
+= [3.7.0] =
+
+* Fix - MAC users not able to work with CSV enrollment in group.
+* Tweak - New Layout with responsiveness.
+
+= [3.6.4] =
+
+* Fix - Minor fixes related license.
+* Fix - Related Course selection gets removed on Product save.
+* Security - Security Update for CSV enrollment.
+* Tweak - Add filter to display the Remove button to Group Leader for user.
+
+= [3.6.3] =
+
+* Feature - Allow Group Leader to reinvite Group Users.
+* Feature - Display Courses associated with Group on Group Registration Page.
+* Fix - Minor Fixes.
+* Fix - Enroll user into course(s) for variable product for individual purchase.
+* Tweak - POT File.
+* Tweak - Compatible with LearnDash WooCommerce Integration version 1.5.0.
+
+= [3.6.2] =
+
+* Fix - Minor Fixes.
+* Fix - For variable products Group Leader was able to access the course even if he has not paid for it.
+* Tweak - Compatibility of License code as per GDPR.
+
+= [3.6.1] =
+
+* Fix - Minor Fixes.
+
+= [3.6.0] =
+
+* Feature - Added setting for admin to avail the group's courses to Group Leader.
+* Feature - Added setting for admin to select default option on Product Page for Group Registration.
+* Fix - Fixed Price packages for Group Purchase (WooCommerce Only).
+* Fix - Minor Fixes.
+* Tweak - Make compatible with WooCommerce Variable Product type.
+* Tweak - Update .pot files.
+
+= [3.5.2] =
+
+* Fix - Minor Fixes.
+* Tweak - Updated .pot file.
+
+= [3.5.1] =
+
+* Fix - Minor Fixes.
+* Tweak - Make Group Registration page Responsive.
+* Tweak - Added all Group Registration setting under one page.
+* Tweak - Change the sequence of parameters for the 'wdm_group_registration_label_below_product_name' filter.
+* Tweak - Added missing strings for translation ready in /languages folder.
+
+= [3.5.0] =
+
+* Feature - Modify email templates from learndash admin menu.
+
+= [3.4.0] =
+
+* Feature - Restrict Product Quantity if Purchased for Single User.
+* Feature - Allow Group Leader to Remove User without Admin Approval.
+* Feature - Fix the Group Limit on User Removal.
+* Fix - Multiple Subscription Issue.
+
+= [3.3.0] =
+
+* Tweak - Admin can add multiple group leaders and these group leaders will be able to access the group registration page.
+
+= [3.2.0] =
+
+* Fix - Bug Fixes.
+
+= [3.1.1] =
+
+* Fix - Resolved issue with function check for subscriptions function.
+
+= [3.1.0] =
+
+* Fix - Resolved issue with subscription renewals.
+* Tweak - Compatible with WooCommerce Zapier.
+
+= [3.0.0] =
+
+* Feature - Group Purchase for WooCommerce Subscription Products.
+* Tweak - WordPress 4.8 compatible.
+
+= [2.1.0] =
+
+* Tweak - Compatible with LearnDash 2.4.2 & WooCommerce 3.0.1.
+
+= [2.0.2] =
+
+* Fix - Resolved plugin dependency issue.
+* Tweak - Updated License Integration.
+
+= [2.0.1] =
+
+* Fix - Bug Fixes.
+
+= [2.0.0] =
+
+* Feature - Made plugin integration with EDD plugin.
+
+= [1.2.0] =
+
+* Tweak - Made plugin compatible with LearnDash version 2.2.1.1.
+* Feature - Added new feature for enabling group registration checkbox on frontend.
+
+= [1.0.1] =
+
+* Tweak - PSR2 Standards compatible and code optimization to pass through all PHPMD checks.
+
+= [1.0.0] =
+
+* Feature - Plugin Released.

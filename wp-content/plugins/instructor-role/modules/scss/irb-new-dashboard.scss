@@ -1,0 +1,789 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&display=swap");
+@import "admin-icons.scss";
+@import "irb-new-dashboard-icons.scss";
+@import "new-dashboard/new.scss";
+@import "course-editor-page";
+@import "quiz-editor-page";
+
+
+//left sidebar starts
+#adminmenuback, #adminmenuwrap, #adminmenu, #adminmenu .wp-submenu{
+	width: 300px;
+	box-sizing: border-box;
+}
+
+#adminmenu .wp-submenu{
+	left: 300px;
+}
+
+
+
+#adminmenu li.wp-has-submenu.wp-not-current-submenu:hover:after{
+	content: none;
+}
+
+#adminmenuback, #adminmenuwrap, #adminmenu, #adminmenu .wp-submenu{
+	background-color: #ffffff;
+}
+
+#adminmenuback{
+	box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.08);
+	z-index: 1002 !important;
+}
+
+#adminmenu .wp-submenu, .wp-menu-open, #adminmenu li.menu-top.current, #adminmenu li.menu-top.current:hover,
+#adminmenu li.menu-top.wp-has-current-submenu:hover{
+	background-color: #E7F1FF;
+}
+#adminmenu li.menu-top.wp-has-current-submenu{
+	padding-bottom: 20px;
+}
+
+#adminmenu .wp-submenu a:hover, #adminmenu .wp-submenu a:focus{
+	color: #F26440;
+}
+#adminmenu a:hover, #adminmenu a:focus, .folded #adminmenu .wp-submenu-head:hover{
+	box-shadow: none;
+}
+#adminmenu a.menu-top{
+	padding: 30px;
+	display: flex;
+	align-items: center;
+	line-height: 1;
+}
+#adminmenu .wp-submenu a, #adminmenu .wp-submenu li.current a{
+	color: #021768;
+	font-size: 14px;
+	display: flex;
+    align-items: center;
+}
+
+#adminmenu .wp-submenu li.current a:hover, #adminmenu .wp-submenu li.current a:focus, #adminmenu .opensub .wp-submenu li.current a{
+	color: #021768;
+}
+#adminmenu .wp-has-current-submenu div.wp-menu-image:before, #adminmenu .current div.wp-menu-image:before,
+#adminmenu li.wp-has-current-submenu:hover div.wp-menu-image:before{
+	color: #021768;	
+}
+#adminmenu li.wp-has-current-submenu a:focus div.wp-menu-image:before{
+	color: #021768;	
+}
+#adminmenu .wp-submenu{
+	padding: 0 18px 0 30px;
+}
+.wp-menu-name, .wp-menu-image{
+	color: #021768;
+	font-weight: 700;
+	font-size: 16px;
+}
+
+#adminmenu li.menu-top:hover, #adminmenu li.menu-top:hover, #adminmenu li.opensub > a.menu-top, #adminmenu li > a.menu-top:focus{
+	background-color: transparent;
+}
+
+.dashicons-admin-comments:before{
+	content: "\e901";
+	font-family: 'ir-dashboard' !important;
+}
+
+.menu-icon-product .dashicons-archive:before{
+	content: "\e905";
+	font-family: 'ir-dashboard' !important;
+}
+
+.dashicons-admin-users:before{
+	content: "\e906";
+	font-family: 'ir-dashboard' !important;
+}
+
+.dashicons-migrate:before{
+	content: "\e904";
+	font-family: 'ir-dashboard' !important;
+}
+
+#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu, #adminmenu li.current a.menu-top, #adminmenu .wp-menu-arrow, #adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head, #adminmenu .wp-menu-arrow div{
+	background: transparent;
+}
+
+.toplevel_page_learndash-lms{
+	.wp-menu-image{
+		background-image: none !important;
+		&:before{
+			content: "\e903";
+			font-family: 'ir-dashboard' !important;
+		}
+	}
+}
+
+#adminmenu div.wp-menu-image{
+	width: auto;
+	height: auto;
+}
+
+#adminmenu div.wp-menu-image:before{
+	color: #021768;
+	width: auto;
+	height: auto;
+	font-size: 34px;
+	padding: 0;
+	font-weight: 400;
+}
+
+#adminmenu div.wp-menu-name{
+	padding-left: 26px;
+}
+
+#adminmenu ul.wp-submenu > li > a{
+	padding: 10px 10px 10px 35px;
+	&:before{
+		content: "\e900";
+		font-family: 'ir-dashboard' !important;
+		transform: rotate(-90deg) !important;
+	    display: inline-block;
+	    font-size: 8px;
+	    font-weight: 600;
+	    margin-right: 10px;
+	}
+}
+
+#adminmenu .wp-not-current-submenu.wp-has-submenu:hover > a{
+	background-color: #E7F1FF;
+}
+
+#adminmenu .wp-not-current-submenu ul.wp-submenu > li > a{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#adminmenu .wp-not-current-submenu .wp-submenu, .folded #adminmenu .wp-has-current-submenu .wp-submenu{
+	min-width: 230px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	@media screen and (max-width: 782px){
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}
+.folded #adminmenu li.menu-top .wp-submenu{
+		padding-left: 20px;
+}
+.folded #adminmenu li.menu-top .wp-submenu > li > a {
+    padding: 10px 0;
+    padding-left: 20px;
+    @media screen and (max-width: 782px){
+    	padding: 10px 10px 10px 35px;
+    }
+}
+
+body.learndash-user-group-leader #adminmenumain .toplevel_page_learndash-lms .wp-submenu > li.submenu-ldlms-topics:after, body.learndash-user-group-leader #adminmenumain .toplevel_page_learndash-lms .wp-submenu > li.submenu-ldlms-groups:after, body.learndash-user-group-leader #adminmenumain .toplevel_page_learndash-lms .wp-submenu > li.submenu-ldlms-exam-questions:after{
+	content: none !important;
+}
+
+#adminmenu .wp-submenu li.current{
+	background-color: #FFFFFF;
+}
+
+li.menu-top:hover{
+	.wp-menu-name{
+		color: #F26440;
+	}
+}
+
+#adminmenu li a:focus div.wp-menu-image:before{
+	color: #F26440;
+}
+
+li.wp-has-current-submenu.menu-top:hover .wp-menu-name{
+	color: #021768;
+}
+
+
+#adminmenu li:hover div.wp-menu-image:before{
+	color: #F26440;	
+}
+
+#adminmenuback{
+	z-index: 999;
+}
+
+@media screen and (max-width: 782px){
+		#adminmenu{
+			position: fixed !important;
+			height: 100%;
+			overflow: auto;
+		}
+	}
+
+.folded #adminmenuback, .folded #adminmenuwrap, .folded #adminmenu, .folded #adminmenu li.menu-top{
+	width: 100px;
+	@media screen and (max-width: 782px){
+		width: 300px;
+	}
+}
+
+.folded div#ir-primary-navigation {
+    width: calc(100% - 100px);
+    left: 100px;
+    top: 0;
+}
+
+.folded #adminmenu .wp-submenu.sub-open,
+.folded #adminmenu .opensub .wp-submenu,
+.folded #adminmenu .wp-has-current-submenu .wp-submenu.sub-open,
+.folded #adminmenu .wp-has-current-submenu.opensub .wp-submenu,
+.folded #adminmenu a.menu-top:focus + .wp-submenu,
+.folded #adminmenu .wp-has-current-submenu a.menu-top:focus + .wp-submenu,
+.no-js.folded #adminmenu .wp-has-submenu:hover .wp-submenu {
+	left: 100px;
+}
+
+#ir-admin-logo-item{
+	height: 80px;
+	@media screen and (max-width: 782px){
+		height: auto;
+	}
+	div.ir-admin-image{
+		padding: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 80px;
+		img{
+			max-height: 80px;
+			width: auto;
+			height: auto;
+			margin: 0;
+		}
+	} 
+}
+
+#ir-collapse-menu-item{
+	> div{
+		padding: 15px 18px 15px 30px;
+		display: flex;
+	    align-items: center;
+	    justify-content: space-between;
+	    box-sizing: border-box;
+	    > span{
+	    	font-weight: 400;
+	    	font-size: 20px;
+	    	color: #021768;
+	    	line-height: 27px;
+	    }
+	    #collapse-button{
+	    	width: auto;
+    	    height: auto;
+    	    line-height: 1;
+    	    color: #021768;
+	    }
+	    .dashicons{
+	    	&:before {
+	    	    content: "\e900";
+	    	    font-family: 'ir-dashboard';
+	    	    transform: rotate(90deg) !important;
+    	        display: inline-block;
+    	        font-size: 18px;
+	    	}
+	    }
+	}
+}
+
+.folded #adminmenu{
+	#ir-collapse-menu-item{
+		> div{
+			padding-left: 41px;
+			@media only screen and (max-width: 782px){
+				padding-left: 30px;
+			}
+			> span{
+				display: none;
+				@media only screen and (max-width: 782px){
+					display: block;
+				}
+			}
+			.dashicons{
+				@media only screen and (max-width: 782px){
+					display: none;
+				}
+				&:before{
+					transform: rotate(-90deg) !important;
+				}
+			}
+		} 
+	}
+}
+
+#adminmenu .wp-submenu .wp-submenu-head{
+	display: none;
+}
+@media (max-width: 960px){
+	.auto-fold #wpwrap #adminmenuwrap, .auto-fold #wpwrap #adminmenuback, .auto-fold #wpwrap #adminmenuwrap, .auto-fold #wpwrap #adminmenu, .auto-fold #wpwrap #adminmenu .wp-submenu{
+		#ir-collapse-menu-item{
+			> div{
+				padding-left: 41px;
+				@media only screen and (max-width: 782px){
+					padding-left: 30px;
+				}
+				> span{
+					display: none;
+					@media only screen and (max-width: 782px){
+						display: block;
+					}
+				}
+				.dashicons{
+					@media only screen and (max-width: 782px){
+						display: none;
+					}
+					&:before{
+						transform: rotate(-90deg) !important;
+					}
+				}
+			} 
+		}
+	}
+}
+
+.auto-fold #adminmenu div.wp-menu-image {
+    left: auto;
+}
+@media (max-width: 960px){
+	.auto-fold #wpcontent, .auto-fold #wpfooter {
+    	margin-left: 100px;
+	}
+}
+#ir-collapse-button-mobile{
+	display: none;
+}
+@media screen and (max-width: 782px){
+	.auto-fold #wpcontent {
+	    margin-left: 0;
+	}
+	.auto-fold div#ir-primary-navigation{
+		left: 0;
+	    width: 100%;
+	}
+
+	
+	.auto-fold #wpwrap #adminmenuwrap #ir-collapse-menu-item>div #collapse-button{
+		display: none;
+	}
+	#ir-collapse-button-mobile{
+		display: block;
+		margin: 0;
+	    border: none;
+	    padding: 0;
+	    position: relative;
+	    overflow: visible;
+	    background: none;
+	}
+	.auto-fold #wpwrap #adminmenuwrap #ir-collapse-menu-item>div #ir-collapse-button-mobile .dashicons{
+		display: block;
+	}
+	.auto-fold #wpwrap #adminmenuwrap #ir-collapse-menu-item>div button#ir-collapse-button-mobile .dashicons:before {
+		transform: rotate(90deg) !important;
+	}
+}
+@media screen and (max-width: 1024px){
+	div#ir-primary-navigation ul#ir-primary-menu{
+			display: none;
+		}
+}
+
+//left sidebar ends
+
+//overview starts
+
+.cpb-wrap, .notice{
+	display: none;
+}
+
+#wpcontent, #wpfooter{
+	margin-left: 300px;
+}
+
+.folded #wpcontent, .folded #wpfooter {
+    margin-left: 100px;
+    @media screen and (max-width: 782px){
+    	margin-left: 0;
+    }
+}
+
+body{
+	background-color: #edf0f8;
+	font-family: "Poppins", sans-serif;
+}
+.irbn-container{
+	width: 100%;
+	max-width: 1085px;
+	margin: auto;
+}
+
+.irbn-overview-wrap{
+	line-height: 1;
+	*{
+		box-sizing: border-box;
+	}
+	.irbn-overview{
+		padding: 45px;
+		@media screen and (max-width: 1366px){
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		@media screen and (max-width: 782px){
+			padding: 0;
+			padding-top: 20px;
+		}
+		> h1{
+			margin: 0;
+			margin-bottom: 25px;
+			font-weight: 700;
+			font-size: 28px;
+			color: #333333;
+		}
+		.irbn-tiles-wrap{
+			display: flex;
+			flex-wrap: wrap;
+			.irbn-tile{
+				width: calc(33.33% - 27px);
+				@media screen and (max-width: 1268px){
+					width: calc(50% - 20px);
+				}
+				@media screen and (max-width: 620px){
+					width: 100%;
+					margin-right: 0;
+				}
+				background: #FFFFFF;
+				border: 1px solid #E5E5E5;
+				box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
+				border-radius: 6px;
+				margin-right: 40px;
+				padding: 15px 0; 
+				display: flex;
+			    align-items: center;
+			    margin-bottom: 35px;
+			    .irbn-tile-left{
+			    	min-width: 110px;
+			    	min-height: 90px;
+			    	display: flex;
+			    	align-items: center;
+			    	justify-content: center;
+			    	border-right: 1px solid #E5E5E5;
+			    	.irbn-icon{
+			    		i{
+			    			font-size: 44px;
+			    			color: #2067FA;
+			    		}
+			    	}
+			    }
+			    .irbn-tile-right{
+			    	padding-left: 28px;
+			    	display: flex;
+		    	    flex-direction: column;
+		    	    color: #021768;
+		    	    .irbn-tile-value{
+		    	    	font-weight: 700;
+		    	    	font-size: 40px;
+		    	    	line-height: 54px;
+		    	    }
+		    	    .irbn-text{
+		    	    	font-weight: 400;
+		    	    	font-size: 20px;
+		    	    	line-height: 27px;
+		    	    }
+			    }
+			    &:nth-of-type(3){
+			    	margin-right: 0;
+			    }
+			    &:nth-of-type(2){
+			    	@media screen and (max-width: 1268px){
+			    		margin-right: 0;
+			    	}
+			    	
+			    }
+			}
+		}
+		.irbn-charts, .irbn-sub{
+			.irbn-tile{
+				flex-wrap: wrap;
+				padding: 20px;
+				align-items: flex-start;
+				.irbn-tile-header{
+					flex: 0 0 100%;
+					font-weight: 400;
+					font-size: 20px;
+					color: #021768;
+				}
+			}
+		}
+		.irbn-charts{
+			.irbn-tile{
+				.irbn-tile-header{
+					@media screen and (max-width: 620px){
+						flex-wrap: wrap;
+						.ir-instructor-course-select-wrap{
+							flex: 0 0 100%;
+							margin-top: 20px;
+							select{
+								max-width: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+		.irbn-sub{
+			.irbn-tile, .irbn-tile-content{
+				width: 100%;
+			}
+			.ir-assignment-table-header{
+				background-color: #F7F7F7;
+				border-radius: 4px;
+				th{
+					font-weight: 700;
+					font-size: 14px;
+					color: #021768;
+					border-bottom: none;
+				}
+			}
+			.irbn-tile-header{
+				margin-bottom: 15px;
+			}
+			.ir-assignment-table-header th::after{
+				position: static;
+				vertical-align: middle;
+				margin-left: 9px;
+			}
+			.ir-assignment-table-body{
+				td{
+					font-weight: 400;
+					font-size: 14px;
+					color: #666666;
+					a{
+						font-weight: 400;
+						font-size: 14px;
+						color: #666666;
+					}
+				}
+				tr.ir-assignment-row:nth-child(odd){
+					background-color: transparent;
+				}
+			}
+			.irbn-large{
+				margin-right: 0;
+			}
+		}
+		.irbn-tiles-wrap .irbn-medium{
+			width: calc(50% - 20px);
+			margin-right: 40px;
+			@media screen and (max-width: 1268px){
+				width: 100%;
+				margin-right: 0;
+			}
+		}
+
+		.irbn-charts{
+			> .irbn-medium{
+				align-content: flex-start;
+				&:nth-of-type(2){
+					margin-right: 0;
+				}
+				.irbn-tile-content{
+					width: 100%;
+					margin-top: 25px;
+					.no-reports-message{
+						margin: 0;
+						font-size: 14px;
+						text-align: center;
+						margin-top: 60px;
+					}
+				}
+			}
+			.irbn-tile-header{
+				display: flex;
+			    align-items: center;
+			    justify-content: space-between;
+			}
+		}
+	}
+	.ir-sub-table-foot, .ir-sub-table-head {
+	    display: flex;
+	    justify-content: space-between;
+	}
+
+	.ir-extra-div {
+	    visibility: hidden;
+	}
+
+	.ir-earnings-chart-y-label {
+	    font-family: inherit;
+	    fill: #149200;
+	}
+
+	.ir-earnings-chart-y-label:last-child {
+	    fill: #BB0000;
+	}
+
+	.ir-instructor-course-select-wrap {
+	    float: right;
+	}
+
+	#ir-collapse-menu-item button {
+	    transform: rotate(0deg);
+	    transition: ease-in-out;
+	}
+	.ir-instructor-course-select-wrap {
+	    border-bottom: none;
+	}
+	select#instructor-courses-select{
+		background: #FFFFFF;
+	    border: 1px solid #C4C4C4 !important;
+	    border-radius: 4px;
+	    height: 30px;
+	    padding: 0 11px;
+	    padding-right: 40px;
+	    font-weight: 400;
+	    font-size: 14px;
+	    line-height: 19px;
+	    color: #666666;
+	}
+}
+
+//overview ends
+
+div#ir-primary-navigation{
+	position: fixed;
+    background-color: #ffffff;
+    width: calc(100% - 300px);
+    left: 300px;
+    z-index: 99;
+    padding: 0;
+	height: 80px;
+	left: 300px;
+	box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.1);	
+	border: none;
+	@media screen and (max-width: 1024px){
+		height: 70px;
+	}	
+	ul#ir-primary-menu{
+		height: 80px;
+
+		li{
+			a{
+				font-weight: 400;
+				font-size: 16px;
+				color: #333333;
+			}
+		} 
+		> li {
+			margin-right: 40px;
+			.sub-menu{
+				box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.16);
+				&:before{
+					content: none;
+				}
+				li{
+					background-color: #f5f5f5;
+					border-bottom: 1px solid #ddd;
+					a{
+						background-color: #f5f5f5;
+					}
+				}
+				> li:nth-last-child(1){
+					border-bottom: none;
+				}
+			}
+		}
+		@media screen and (max-width: 1024px){
+			position: absolute;
+			right: 20px;
+			top: 70px;
+			box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.16);
+			height: auto;
+		    background-color: #fff;
+		    padding: 0;
+		    li{
+		    	padding: 14px 20px;
+		    	margin-right: 0;
+		    	border-bottom: 1px solid #ddd;
+		    }
+		    &:after{
+		    	content: "";
+	    	    position: absolute;
+	    	    bottom: 100%;
+	    	    left: calc(100% - 20px);
+	    	    margin-left: -5px;
+	    	    border-width: 10px;
+	    	    border-style: solid;
+	    	    border-color: transparent transparent #edf0f8 transparent;
+		    }
+		    li.menu-item a, li.menu-item, li.page_item a, li.page_item{
+		    	background-color: #edf0f8;
+		    }
+		    li .sub-menu{
+		    	right: 100%;
+	    	    top: 0;
+	    	    li{
+	    	    	background-color: #edf0f8;
+	    	    	a{
+	    	    		background-color: transparent;
+	    	    	}
+	    	    }
+		    }
+
+		}
+	}
+	ul#ir-primary-menu.irb-menu-open{
+		display: block;
+	}
+	.wdm-mob-menu{
+		display: none;
+		.dashicons{
+			font-size: 34px;
+			width: auto;
+			height: auto;
+			color: #2067fa;
+		}
+		@media screen and (max-width: 1024px){
+			display: block;
+			position: absolute;
+			top: calc(50% - 17px);
+		    left: 15px;
+		}
+	} 
+	.ir-mob-dashboard-menu{
+		display: none;
+		.dashicons{
+			font-size: 20px;
+			width: auto;
+			height: auto;
+			transform: rotate(90deg);
+		}
+		@media screen and (max-width: 1024px){
+			position: absolute;
+		    right: 0;
+		    top: 0;
+		    width: 60px;
+		    height: 100%;
+		    display: flex;
+
+		}
+	}
+}
+ul#ir-primary-menu li.menu-item-has-children:hover>ul.sub-menu>li:nth-child(1){
+	margin-top: 0;
+}
+ul#ir-primary-menu ul.sub-menu{
+	top: 65px;
+}
+ul#ir-primary-menu li.menu-item-has-children:hover>ul.sub-menu li.menu-item-has-children>ul.sub-menu{
+	top: 0;
+}
+#wpcontent #wpbody{
+	padding-top: 80px;
+	@media screen and (max-width: 782px){
+		padding-top: 70px;
+	}
+}
+.popover-slot div {
+    color: #000;
+}

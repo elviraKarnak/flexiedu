@@ -1,0 +1,57 @@
+.ldgr_bulk_discount_table , .ldgr_bulk_discount_table th, .ldgr_bulk_discount_table td, .ldgr_bulk_discount_table tr {
+    text-align: center;
+    padding: 5px;
+    border-collapse: collapse;
+    padding-bottom: 15px;
+}
+
+.ldgr_bulk_discount_setting_input {
+    width: 80px;
+}
+
+.addel-delete {
+    /* background-color: red; */
+    padding: 2px;
+    /* color: white; */
+    /* border-radius: 15px; */
+    /* width: 18px; */
+    cursor: pointer;
+}
+
+.addel-add {
+    /* width: 40px; */
+    padding: 5px 20px;
+    background-color: #4caf50;
+    text-align: center;
+    margin: 10px 0px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.ldgr_bulk_discount_setting_data .addel-container{
+    padding: 20px;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+ .ldgr_enforce-qty, .ldgr_bulk_discount_min_qty_details{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+ }
+
+.ldgr_enforce-qty .ldgr-checkbox-wrap{
+    margin-right: 5px;
+    display: block;
+}
+
+.ldgr_bulk_discount_min_qty_details .ldgr-label{
+    margin-right: 10px;
+}
+
+.ldgr_bulk_discount_on_product_setting .addel-container{
+    padding: 0;
+}

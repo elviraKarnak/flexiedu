@@ -1,0 +1,549 @@
+.wp-block-instructor-role-wisdm-tabs * {
+  box-sizing: border-box !important;
+}
+.page-template-ir-wisdm-dashboard-template.ir-collapse.ir-xs
+  #content
+  > .ast-container,
+.page-template-ir-wisdm-dashboard-template.ir-lg.theme-buddyboss-theme
+  #page
+  .site-header,
+.page-template-ir-wisdm-dashboard-template.ir-lg.theme-elumine
+  #page
+  .site-header,
+.page-template-ir-wisdm-dashboard-template.ir-md.theme-buddyboss-theme
+  #page
+  .site-header,
+.page-template-ir-wisdm-dashboard-template.ir-md.theme-elumine
+  #page
+  .site-header,
+.page-template-ir-wisdm-dashboard-template.ir-sm.theme-buddyboss-theme
+  #page
+  .site-header,
+.page-template-ir-wisdm-dashboard-template.ir-sm.theme-elumine
+  #page
+  .site-header,
+.page-template-ir-wisdm-dashboard-template.ir-xs #content > .ast-container,
+.wp-block-instructor-role-wisdm-tabs .tab-labels {
+  padding-right: 0;
+}
+.wp-block-instructor-role-wisdm-tabs .tab-labels .tab-label {
+  align-items: center;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #3c3c3e;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 0.875rem;
+  gap: 10px;
+  line-height: 1;
+  list-style: none;
+  margin: 0 0 10px !important;
+  padding: 8px 45px 8px 10px;
+}
+.wp-block-instructor-role-wisdm-tabs .tab-labels .tab-label.active {
+  color: #2067fa;
+  font-weight: 600;
+}
+.wp-block-instructor-role-wisdm-tabs .tab-labels .tab-label .tab-icon {
+  height: 1.5rem;
+  margin-left: 5px;
+  min-width: 1.5rem;
+}
+.elumine-theme.page-template-ir-wisdm-dashboard-template .breadcrumbs-listing,
+.wp-block-instructor-role-wisdm-tabs .tab-content .tab-panel {
+  display: none;
+}
+.wp-block-instructor-role-wisdm-tabs .tab-content .tab-panel.active,
+.wp-block-instructor-role-wisdm-tabs
+  > .tab-labels
+  .tab-label:hover
+  .ir-tooltip {
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  .wp-block-instructor-role-wisdm-tabs.side-tab-layout {
+    display: flex;
+    width: 100%;
+  }
+  .wp-block-instructor-role-wisdm-tabs.side-tab-layout .tab-labels {
+    border-left: 1px solid #bababa;
+    display: flex;
+    flex-direction: column;
+  }
+  .wp-block-instructor-role-wisdm-tabs.side-tab-layout .tab-content,
+  .wp-block-instructor-role-wisdm-tabs.side-tab-layout
+    .tab-content
+    .tab-panel.active {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+  .wp-block-instructor-role-wisdm-tabs.side-tab-layout
+    .tab-content
+    .tab-panel.active
+    .wp-block-cgb-block-page-section {
+    flex: 1;
+  }
+  .wp-block-instructor-role-wisdm-tabs.side-tab-layout
+    .tab-content
+    .tab-panel.active
+    > * {
+    padding: 0 2rem;
+  }
+}
+.ir-cursor-initial {
+  cursor: auto;
+}
+.ir-icon-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.wp-block-instructor-role-wisdm-tabs {
+  display: flex;
+}
+.wp-block-instructor-role-wisdm-tabs > .tab-labels {
+  border: 1px solid #d6d8e7;
+  margin: 0;
+  padding-right: 25px;
+  padding-left: 25px;
+  padding-top: 20px;
+  transition: 0.3s ease-in-out;
+  width: 250px;
+}
+.wp-block-instructor-role-wisdm-tabs > .tab-labels .topButton {
+  align-items: center;
+  border-radius: 6px;
+  color: #fff;
+  display: flex;
+  font-size: 14px;
+  font-weight: 600;
+  height: 40px;
+  justify-content: center;
+  margin-bottom: 15px;
+  padding: 0;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+  width: 200px;
+}
+.wp-block-instructor-role-wisdm-tabs > .tab-labels .tab-label {
+  padding-right: 18px;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  width: 100%;
+}
+.wp-block-instructor-role-wisdm-tabs > .tab-labels .tab-label .ir-label {
+  transition: 0.3s ease-in-out;
+}
+.wp-block-instructor-role-wisdm-tabs > .tab-labels .tab-label .ir-tooltip {
+  background: #131822;
+  border-radius: 4px;
+  color: #fff;
+  display: none;
+  font-size: 12px;
+  font-weight: 600;
+  right: 100%;
+  line-height: 1;
+  padding: 10px 14px;
+  position: absolute;
+  white-space: nowrap;
+  z-index: 9;
+}
+.wp-block-instructor-role-wisdm-tabs > .tab-labels .ir-toggle-sidebar {
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-right: 18px;
+  margin-top: 10px;
+  transform: rotate(-180deg);
+  transition: 0.3s ease-in-out;
+}
+.wp-block-instructor-role-wisdm-tabs > .tab-labels .ir-divider {
+  background-color: #d6d8e7;
+  display: inline-block;
+  height: 1px;
+  margin: 10px;
+  width: calc(100% - 20px);
+}
+.wp-block-instructor-role-wisdm-tabs > .tab-content {
+  background-color: #f3f9fb;
+  flex: 1;
+  min-height: 100vh;
+  padding: 16px;
+  transition: 0.3s ease-in-out;
+}
+.wp-block-instructor-role-wisdm-tabs .ir-primary-button:hover,
+.wp-block-instructor-role-wisdm-tabs button.ir-primary-bg:hover {
+  border-color: transparent !important;
+  filter: brightness(95%);
+}
+.ir-collapse .wp-block-instructor-role-wisdm-tabs > .tab-labels {
+  width: 90px;
+}
+.ir-collapse .wp-block-instructor-role-wisdm-tabs > .tab-labels .tab-label {
+  padding-right: 6px;
+}
+.ir-collapse
+  .wp-block-instructor-role-wisdm-tabs
+  > .tab-labels
+  .tab-label
+  .ir-label,
+.ir-collapse .wp-block-instructor-role-wisdm-tabs > .tab-labels .topButton {
+  opacity: 0;
+}
+.ir-collapse
+  .wp-block-instructor-role-wisdm-tabs
+  > .tab-labels
+  .ir-toggle-sidebar {
+  margin-right: 6px;
+  transform: rotate(0);
+}
+.page-template-ir-wisdm-dashboard-template
+  .wp-block-instructor-role-wisdm-tabs
+  > .tab-labels {
+  background-color: #fff;
+  height: 100%;
+  right: 0;
+  position: fixed;
+  top: 0;
+  z-index: 9999999;
+}
+.page-template-ir-wisdm-dashboard-template
+  .wp-block-instructor-role-wisdm-tabs
+  > .tab-content
+  > .wp-block-instructor-role-wisdm-tab-item {
+  margin: auto;
+  max-width: 1152px;
+}
+.page-template-ir-wisdm-dashboard-template .site-header {
+  padding-right: 250px;
+  transition: 0.3s ease-in-out !important;
+}
+.buddyboss-theme.page-template-ir-wisdm-dashboard-template .container,
+.page-template-ir-wisdm-dashboard-template .site-header .ast-container {
+  max-width: 100%;
+}
+.page-template-ir-wisdm-dashboard-template footer {
+  padding-right: 250px;
+}
+.page-template-ir-wisdm-dashboard-template #content > .ast-container {
+  max-width: 100%;
+  padding-right: 250px;
+  padding-left: 0;
+  transition: 0.3s ease-in-out;
+  width: 100%;
+}
+.page-template-ir-wisdm-dashboard-template
+  #content
+  > .ast-container
+  .wp-block-instructor-role-wisdm-tabs
+  ~ *,
+.page-template-ir-wisdm-dashboard-template
+  #page
+  .wp-block-instructor-role-wisdm-tabs
+  ~ *,
+.page-template-ir-wisdm-dashboard-template.theme-astra
+  #page
+  .wp-block-instructor-role-wisdm-tabs
+  ~ *,
+.page-template-ir-wisdm-dashboard-template.theme-buddyboss-theme
+  #page
+  .wp-block-instructor-role-wisdm-tabs
+  ~ *,
+.page-template-ir-wisdm-dashboard-template.theme-elumine
+  #page
+  .wp-block-instructor-role-wisdm-tabs
+  ~ * {
+  margin: 0 auto;
+  max-width: 1152px;
+  padding: 16px;
+}
+.page-template-ir-wisdm-dashboard-template #page,
+.page-template-ir-wisdm-dashboard-template.theme-buddyboss-theme #page,
+.page-template-ir-wisdm-dashboard-template.theme-elumine #page,
+.page-template-ir-wisdm-dashboard-template.theme-kadence #wrapper {
+  margin-right: 250px;
+  transition: 0.3s ease-in-out;
+}
+.page-template-ir-wisdm-dashboard-template.theme-astra #page {
+  margin-right: 0;
+  transition: 0.3s ease-in-out;
+}
+.page-template-ir-wisdm-dashboard-template.theme-buddyboss-theme #page #content,
+.page-template-ir-wisdm-dashboard-template.theme-buddyboss-theme
+  #page
+  .ir-frontend-dashboard-template-body {
+  padding-right: 0;
+  padding-left: 0;
+}
+.page-template-ir-wisdm-dashboard-template.ir-collapse.ir-xs
+  #content
+  > .ast-container
+  .wp-block-instructor-role-wisdm-tabs
+  .tab-content,
+.page-template-ir-wisdm-dashboard-template.ir-collapse.ir-xs
+  #page
+  .wp-block-instructor-role-wisdm-tabs
+  .tab-content,
+.page-template-ir-wisdm-dashboard-template.ir-collapse.ir-xs.theme-buddyboss-theme
+  #page
+  .wp-block-instructor-role-wisdm-tabs
+  .tab-content,
+.page-template-ir-wisdm-dashboard-template.ir-collapse.ir-xs.theme-elumine
+  #page
+  .wp-block-instructor-role-wisdm-tabs
+  .tab-content,
+.page-template-ir-wisdm-dashboard-template.ir-collapse.ir-xs.theme-kadence
+  .tab-content,
+.page-template-ir-wisdm-dashboard-template.ir-lg
+  #content
+  > .ast-container
+  .wp-block-instructor-role-wisdm-tabs
+  .tab-content,
+.page-template-ir-wisdm-dashboard-template.ir-lg
+  #page
+  .wp-block-instructor-role-wisdm-tabs
+  .tab-content,
+.page-template-ir-wisdm-dashboard-template.ir-lg.theme-buddyboss-theme
+  #page
+  .wp-block-instructor-role-wisdm-tabs
+  .tab-content,
+.page-template-ir-wisdm-dashboard-template.ir-lg.theme-elumine
+  #page
+  .wp-block-instructor-role-wisdm-tabs
+  .tab-content,
+.page-template-ir-wisdm-dashboard-template.ir-lg.theme-kadence .tab-content,
+.page-template-ir-wisdm-dashboard-template.ir-md
+  #content
+  > .ast-container
+  .wp-block-instructor-role-wisdm-tabs
+  .tab-content,
+.page-template-ir-wisdm-dashboard-template.ir-md
+  #page
+  .wp-block-instructor-role-wisdm-tabs
+  .tab-content,
+.page-template-ir-wisdm-dashboard-template.ir-md.theme-buddyboss-theme
+  #page
+  .wp-block-instructor-role-wisdm-tabs
+  .tab-content,
+.page-template-ir-wisdm-dashboard-template.ir-md.theme-elumine
+  #page
+  .wp-block-instructor-role-wisdm-tabs
+  .tab-content,
+.page-template-ir-wisdm-dashboard-template.ir-md.theme-kadence .tab-content,
+.page-template-ir-wisdm-dashboard-template.ir-sm
+  #content
+  > .ast-container
+  .wp-block-instructor-role-wisdm-tabs
+  .tab-content,
+.page-template-ir-wisdm-dashboard-template.ir-sm
+  #page
+  .wp-block-instructor-role-wisdm-tabs
+  .tab-content,
+.page-template-ir-wisdm-dashboard-template.ir-sm.theme-buddyboss-theme
+  #page
+  .wp-block-instructor-role-wisdm-tabs
+  .tab-content,
+.page-template-ir-wisdm-dashboard-template.ir-sm.theme-elumine
+  #page
+  .wp-block-instructor-role-wisdm-tabs
+  .tab-content,
+.page-template-ir-wisdm-dashboard-template.ir-sm.theme-kadence .tab-content,
+.page-template-ir-wisdm-dashboard-template.ir-xs
+  #content
+  > .ast-container
+  .wp-block-instructor-role-wisdm-tabs
+  .tab-content,
+.page-template-ir-wisdm-dashboard-template.ir-xs
+  #page
+  .wp-block-instructor-role-wisdm-tabs
+  .tab-content,
+.page-template-ir-wisdm-dashboard-template.ir-xs.theme-buddyboss-theme
+  #page
+  .wp-block-instructor-role-wisdm-tabs
+  .tab-content,
+.page-template-ir-wisdm-dashboard-template.ir-xs.theme-elumine
+  #page
+  .wp-block-instructor-role-wisdm-tabs
+  .tab-content,
+.page-template-ir-wisdm-dashboard-template.ir-xs.theme-kadence .tab-content,
+.page-template-ir-wisdm-dashboard-template.theme-elumine #page #colophon {
+  padding-right: 16px;
+}
+.page-template-ir-wisdm-dashboard-template.theme-kadence #colophon,
+.page-template-ir-wisdm-dashboard-template.theme-kadence header {
+  padding-right: 0;
+  transition: 0.3s ease-in-out;
+}
+.page-template-ir-wisdm-dashboard-template.ir-collapse
+  #content
+  > .ast-container,
+.page-template-ir-wisdm-dashboard-template.ir-collapse .site-header,
+.page-template-ir-wisdm-dashboard-template.ir-collapse footer,
+.page-template-ir-wisdm-dashboard-template.ir-collapse.ir-xs .site-header,
+.page-template-ir-wisdm-dashboard-template.ir-collapse.ir-xs.theme-buddyboss-theme
+  #page
+  .site-header,
+.page-template-ir-wisdm-dashboard-template.ir-collapse.ir-xs.theme-elumine
+  #page
+  .site-header,
+.page-template-ir-wisdm-dashboard-template.ir-lg #content > .ast-container,
+.page-template-ir-wisdm-dashboard-template.ir-lg .site-header,
+.page-template-ir-wisdm-dashboard-template.ir-lg.theme-elumine
+  #page
+  .site-header,
+.page-template-ir-wisdm-dashboard-template.ir-md #content > .ast-container,
+.page-template-ir-wisdm-dashboard-template.ir-md .site-header,
+.page-template-ir-wisdm-dashboard-template.ir-md.theme-elumine
+  #page
+  .site-header,
+.page-template-ir-wisdm-dashboard-template.ir-sm #content > .ast-container,
+.page-template-ir-wisdm-dashboard-template.ir-sm .site-header,
+.page-template-ir-wisdm-dashboard-template.ir-sm.theme-elumine
+  #page
+  .site-header,
+.page-template-ir-wisdm-dashboard-template.ir-xs .site-header,
+.page-template-ir-wisdm-dashboard-template.ir-xs.theme-buddyboss-theme
+  #page
+  .site-header,
+.page-template-ir-wisdm-dashboard-template.ir-xs.theme-elumine
+  #page
+  .site-header,
+.page-template-ir-wisdm-dashboard-template.ir-xs.theme-twentytwentythree
+  #header,
+.page-template-ir-wisdm-dashboard-template.ir-xs.theme-twentytwentytwo #header {
+  padding-right: 90px;
+}
+.page-template-ir-wisdm-dashboard-template.ir-collapse.elumine-theme #page,
+.page-template-ir-wisdm-dashboard-template.ir-collapse.theme-buddyboss-theme
+  #page,
+.page-template-ir-wisdm-dashboard-template.ir-collapse.theme-kadence #wrapper,
+.page-template-ir-wisdm-dashboard-template.ir-lg #page,
+.page-template-ir-wisdm-dashboard-template.ir-lg.theme-buddyboss-theme #page,
+.page-template-ir-wisdm-dashboard-template.ir-lg.theme-elumine #page,
+.page-template-ir-wisdm-dashboard-template.ir-lg.theme-kadence #wrapper,
+.page-template-ir-wisdm-dashboard-template.ir-md #page,
+.page-template-ir-wisdm-dashboard-template.ir-md.theme-buddyboss-theme #page,
+.page-template-ir-wisdm-dashboard-template.ir-md.theme-elumine #page,
+.page-template-ir-wisdm-dashboard-template.ir-md.theme-kadence #wrapper,
+.page-template-ir-wisdm-dashboard-template.ir-sm #page,
+.page-template-ir-wisdm-dashboard-template.ir-sm.theme-buddyboss-theme #page,
+.page-template-ir-wisdm-dashboard-template.ir-sm.theme-elumine #page,
+.page-template-ir-wisdm-dashboard-template.ir-sm.theme-kadence #wrapper,
+.page-template-ir-wisdm-dashboard-template.ir-xs.ir-collapse
+  .wp-block-instructor-role-wisdm-tabs
+  .ir-toggle-sidebar {
+  margin-right: 90px;
+}
+.page-template-ir-wisdm-dashboard-template.ir-collapse.ir-xs #page,
+.page-template-ir-wisdm-dashboard-template.ir-collapse.ir-xs.theme-astra #page,
+.page-template-ir-wisdm-dashboard-template.ir-collapse.ir-xs.theme-buddyboss-theme
+  #page,
+.page-template-ir-wisdm-dashboard-template.ir-collapse.ir-xs.theme-elumine
+  #page,
+.page-template-ir-wisdm-dashboard-template.ir-collapse.ir-xs.theme-kadence
+  #wrapper,
+.page-template-ir-wisdm-dashboard-template.ir-lg.theme-astra #page,
+.page-template-ir-wisdm-dashboard-template.ir-md.theme-astra #page,
+.page-template-ir-wisdm-dashboard-template.ir-sm.theme-astra #page,
+.page-template-ir-wisdm-dashboard-template.ir-xs #page,
+.page-template-ir-wisdm-dashboard-template.ir-xs.theme-astra #page,
+.page-template-ir-wisdm-dashboard-template.ir-xs.theme-buddyboss-theme #page,
+.page-template-ir-wisdm-dashboard-template.ir-xs.theme-elumine #page,
+.page-template-ir-wisdm-dashboard-template.ir-xs.theme-kadence #wrapper {
+  margin-right: 0;
+}
+.page-template-ir-wisdm-dashboard-template #wpadminbar {
+  position: fixed !important;
+}
+.ir-lg .wp-block-instructor-role-wisdm-tabs,
+.ir-md .wp-block-instructor-role-wisdm-tabs,
+.ir-sm .wp-block-instructor-role-wisdm-tabs,
+.ir-xs .wp-block-instructor-role-wisdm-tabs {
+  position: relative;
+}
+.ir-lg .tab-labels,
+.ir-md .tab-labels,
+.ir-sm .tab-labels,
+.ir-xs .tab-labels {
+  height: 100%;
+  right: 0;
+  position: absolute;
+  top: 0;
+  z-index: 9;
+}
+.ir-lg .tab-content,
+.ir-md .tab-content,
+.ir-sm .tab-content,
+.ir-xs .tab-content {
+  padding-right: 106px;
+}
+.page-template-ir-wisdm-dashboard-template.admin-bar
+  .wp-block-instructor-role-wisdm-tabs
+  > .tab-labels {
+  height: calc(100% - 32px);
+  top: 32px;
+}
+@media screen and (max-width: 782px) {
+  .page-template-ir-wisdm-dashboard-template.admin-bar
+    .wp-block-instructor-role-wisdm-tabs
+    > .tab-labels {
+    height: calc(100% - 46px);
+    top: 46px;
+  }
+}
+.page-template-ir-wisdm-dashboard-template.ir-collapse.ir-xs .tab-labels {
+  transform: translateX(90px);
+}
+.page-template-ir-wisdm-dashboard-template.ir-collapse.ir-xs.theme-elumine
+  #page
+  .ir-toggle-sidebar {
+  margin-top: -7px;
+}
+.page-template-ir-wisdm-dashboard-template.ir-collapse.ir-xs.ir-collapse
+  .wp-block-instructor-role-wisdm-tabs
+  .ir-toggle-sidebar {
+  color: #444 !important;
+  margin-right: 90px;
+}
+.elumine-theme.page-template-ir-wisdm-dashboard-template .site-content-contain {
+  padding: 0;
+}
+.elumine-theme.page-template-ir-wisdm-dashboard-template footer#colophon {
+  margin-top: 0 !important;
+}
+.elumine-theme button,
+.elumine-theme.page-template-ir-wisdm-dashboard-template button {
+  box-shadow: none !important;
+}
+.ast-container > div {
+  width: 100%;
+}
+.mantine-Notification-root {
+  background-color: #333 !important;
+}
+.mantine-Notification-root .mantine-Text-root {
+  color: #fff !important;
+}
+.mantine-Notification-root button svg {
+  fill: #fff !important;
+  stroke: #fff !important;
+}
+.mantine-Input-input,
+.mantine-MultiSelect-item,
+.mantine-Select-item {
+  text-align: right;
+}
+.mantine-Input-rightSection.mantine-Select-rightSection {
+  left: 0;
+  right: auto;
+}
+.mantine-Group-root.mantine-1dib7ec button:first-child,
+.mantine-Group-root.mantine-1dib7ec button:last-child {
+  transform: rotate(180deg);
+}
+.mantine-Notification-root {
+  left: 8px;
+  bottom: 8px;
+  position: fixed;
+}

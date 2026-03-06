@@ -1,0 +1,450 @@
+.wp-block-instructor-role-wisdm-course-reports .mantine-Select-root {
+    max-width: 240px
+}
+
+.wp-block-instructor-role-wisdm-course-reports .mantine-Input-input {
+    border-radius: 6px!important;
+    line-height: 20px;
+    padding: 10px
+}
+
+.wp-block-instructor-role-wisdm-course-reports .mantine-Select-withIcon {
+    padding-right: 36px
+}
+
+.wp-block-instructor-role-wisdm-course-reports .ir-overview-values>.mantine-Group-root {
+    border-left: 1px solid
+}
+
+.wp-block-instructor-role-wisdm-course-reports .ir-no-border {
+    border: none!important
+}
+
+.wp-block-instructor-role-wisdm-course-reports .ir-course-reports-section {
+    background-color: #fff;
+    border: 1px solid;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    padding: 16px 28px
+}
+
+.wp-block-instructor-role-wisdm-course-reports .ir-course-report-progress-section {
+    padding: 32px
+}
+
+.wp-block-instructor-role-wisdm-course-reports .ir-cr-learner-info {
+    padding: 16px
+}
+
+.wp-block-instructor-role-wisdm-course-reports .ir-cp-tile {
+    border: 1px solid;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    min-width: 310px;
+    padding: 26px 38px
+}
+
+.wp-block-instructor-role-wisdm-course-reports .ir-icon-wrap {
+    align-items: center;
+    background-color: #f1efef;
+    border-radius: 50%;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    width: 40px
+}
+
+.wp-block-instructor-role-wisdm-course-reports .ir-cr-courses {
+    background-color: #fff;
+    border: 1px solid;
+    border-radius: 16px;
+    padding: 5px 16px
+}
+
+.wp-block-instructor-role-wisdm-course-reports .ir-course-info {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    padding-top: 15px
+}
+
+.wp-block-instructor-role-wisdm-course-reports .ir-course-content>.ir-border-color {
+    border-left: 1px solid
+}
+
+.wp-block-instructor-role-wisdm-course-reports .ir-per-page {
+    width: 140px
+}
+
+.wp-block-instructor-role-wisdm-course-reports .mantine-Input-withIcon {
+    padding-right: 32px
+}
+
+.wp-block-instructor-role-wisdm-course-reports .ir-flex-1 {
+    flex: 1
+}
+
+.wp-block-instructor-role-wisdm-course-reports .ir-email {
+    border: 1px solid!important
+}
+
+.wp-block-instructor-role-wisdm-course-reports .ir-no-data {
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.wp-block-instructor-role-wisdm-course-reports .ir-date-presets {
+    border-radius: 4px;
+    width: 48px
+}
+
+.wp-block-instructor-role-wisdm-course-reports .ir-date-presets .mantine-Select-dropdown {
+    width: 150px!important
+}
+
+.wp-block-instructor-role-wisdm-course-reports .ir-date-presets .mantine-Select-rightSection {
+    display: none
+}
+
+.wp-block-instructor-role-wisdm-course-reports .ir-date-presets .mantine-Input-input {
+    background-color: transparent!important;
+    font-size: 0;
+    height: 42px;
+    text-align: center
+}
+
+.wp-block-instructor-role-wisdm-course-reports .ir-date-presets .mantine-Select-icon {
+    right: 5px
+}
+
+.wp-block-instructor-role-wisdm-course-reports .mantine-DateRangePicker-root {
+    max-width: 240px
+}
+
+.wp-block-instructor-role-wisdm-course-reports .mantine-DateRangePicker-input {
+    height: auto;
+    padding-left: 30px
+}
+
+.wp-block-instructor-role-wisdm-course-reports table {
+    border-collapse: inherit;
+    border-radius: 10px
+}
+
+.wp-block-instructor-role-wisdm-course-reports table thead tr>th {
+    background-color: #f3f9fb;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap
+}
+
+.wp-block-instructor-role-wisdm-course-reports table thead tr>th:first-child {
+    border-top-right-radius: 10px
+}
+
+.wp-block-instructor-role-wisdm-course-reports table thead tr>th:last-child {
+    border-top-left-radius: 10px
+}
+
+.wp-block-instructor-role-wisdm-course-reports table thead tr>.ir-left {
+    text-align: right
+}
+
+.wp-block-instructor-role-wisdm-course-reports table tbody td {
+    text-align: center
+}
+
+.wp-block-instructor-role-wisdm-course-reports table tbody .ir-left {
+    text-align: right
+}
+
+.wp-block-instructor-role-wisdm-course-reports .ir-table-wrap {
+    max-width: 100%;
+    overflow: auto
+}
+
+.wp-block-instructor-role-wisdm-course-reports .mantine-Tabs-tab:focus {
+    background-color: transparent!important
+}
+
+.wp-block-instructor-role-wisdm-course-reports .mantine-Tabs-tab:hover {
+    color: #444!important
+}
+
+.wp-block-instructor-role-wisdm-course-reports .ir-cp-tile {
+    cursor: pointer
+}
+
+.wp-block-instructor-role-wisdm-course-reports .mantine-DateRangePicker-root button,.wp-block-instructor-role-wisdm-course-reports .mantine-DateRangePicker-root button:hover {
+    color: #444
+}
+
+.wp-block-instructor-role-wisdm-course-reports .mantine-DateRangePicker-root button[data-autofocus=true],.wp-block-instructor-role-wisdm-course-reports .mantine-DateRangePicker-root button[data-autofocus=true]:hover {
+    background-color: transparent;
+    color: #444
+}
+
+.wp-block-instructor-role-wisdm-course-reports .mantine-DateRangePicker-root button[data-in-range=true],.wp-block-instructor-role-wisdm-course-reports .mantine-DateRangePicker-root button[data-in-range=true]:hover {
+    background-color: #e7f5ff;
+    color: #444
+}
+
+.wp-block-instructor-role-wisdm-course-reports .mantine-DateRangePicker-root button[data-selected=true],.wp-block-instructor-role-wisdm-course-reports .mantine-DateRangePicker-root button[data-selected=true]:hover {
+    background-color: #228be6;
+    color: #fff
+}
+
+.wp-block-instructor-role-wisdm-course-reports .mantine-DateRangePicker-root .mantine-DatePicker-rightSection>.mantine-ActionIcon-root:hover,.wp-block-instructor-role-wisdm-course-reports .mantine-DateRangePicker-root .mantine-DateRangePicker-calendarHeaderControl,.wp-block-instructor-role-wisdm-course-reports .mantine-DateRangePicker-root .mantine-DateRangePicker-calendarHeaderControl:hover {
+    background-color: transparent;
+    color: #444
+}
+
+.wp-block-instructor-role-wisdm-course-reports .mantine-DateRangePicker-root button[disabled] {
+    color: #ced4da!important
+}
+
+.wp-block-instructor-role-wisdm-course-reports .mantine-DateRangePicker-root .mantine-DateRangePicker-monthPickerControlActive,.wp-block-instructor-role-wisdm-course-reports .mantine-DateRangePicker-root .mantine-DateRangePicker-yearPickerControlActive {
+    color: #fff!important
+}
+
+.wp-block-instructor-role-wisdm-course-reports .mantine-Select-withIcon {
+    padding-left: 23px
+}
+
+.wp-block-instructor-role-wisdm-course-reports .ir-date-presets .mantine-Select-withIcon {
+    padding-left: 0
+}
+
+.wp-block-instructor-role-wisdm-course-reports .ir-module-name>.mantine-Text-root {
+    max-width: 175px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.wp-block-instructor-role-wisdm-course-reports .ir-course-report-progress-section .apexcharts-tooltip .apexcharts-tooltip-series-group {
+    background-color: #444547!important
+}
+
+.wp-block-instructor-role-wisdm-course-reports .mce-container.mce-panel.mce-floatpanel {
+    position: fixed
+}
+
+.wp-block-instructor-role-wisdm-course-reports #ir-coures-progress-donut,.wp-block-instructor-role-wisdm-course-reports #ir-learner-progress-donut {
+    flex: 1
+}
+
+.wp-block-instructor-role-wisdm-course-reports #ir-coures-progress-donut .apexcharts-legend,.wp-block-instructor-role-wisdm-course-reports #ir-learner-progress-donut .apexcharts-legend {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px 20px 15px
+}
+
+.wp-block-instructor-role-wisdm-course-reports #ir-coures-progress-donut .apx-legend-position-right,.wp-block-instructor-role-wisdm-course-reports #ir-learner-progress-donut .apx-legend-position-right {
+    bottom: auto;
+    top: 61px!important
+}
+
+.wp-block-instructor-role-wisdm-course-reports #ir-coures-progress-donut .apexcharts-series[rel="1"]>path,.wp-block-instructor-role-wisdm-course-reports #ir-learner-progress-donut .apexcharts-series[rel="1"]>path {
+    filter: brightness(120%)
+}
+
+.wp-block-instructor-role-wisdm-course-reports #ir-coures-progress-donut .apexcharts-series[rel="2"]>path,.wp-block-instructor-role-wisdm-course-reports #ir-learner-progress-donut .apexcharts-series[rel="2"]>path {
+    filter: brightness(110%)
+}
+
+.wp-block-instructor-role-wisdm-course-reports #ir-coures-progress-donut .apexcharts-series[rel="3"]>path,.wp-block-instructor-role-wisdm-course-reports #ir-learner-progress-donut .apexcharts-series[rel="3"]>path {
+    filter: brightness(100%)
+}
+
+.wp-block-instructor-role-wisdm-course-reports #ir-coures-progress-donut .apexcharts-series[rel="4"]>path,.wp-block-instructor-role-wisdm-course-reports #ir-learner-progress-donut .apexcharts-series[rel="4"]>path {
+    filter: brightness(80%)
+}
+
+.wp-block-instructor-role-wisdm-course-reports #ir-coures-progress-donut .apexcharts-series[rel="5"]>path,.wp-block-instructor-role-wisdm-course-reports #ir-learner-progress-donut .apexcharts-series[rel="5"]>path {
+    filter: brightness(60%)
+}
+
+.wp-block-instructor-role-wisdm-course-reports #ir-coures-progress-donut .apexcharts-legend-series,.wp-block-instructor-role-wisdm-course-reports #ir-learner-progress-donut .apexcharts-legend-series {
+    margin-bottom: 10px!important;
+    white-space: nowrap
+}
+
+.wp-block-instructor-role-wisdm-course-reports #ir-coures-progress-donut .apexcharts-legend-series .apexcharts-legend-marker,.wp-block-instructor-role-wisdm-course-reports #ir-learner-progress-donut .apexcharts-legend-series .apexcharts-legend-marker {
+    display: inline-block;
+    height: 12px!important;
+    width: 27px!important
+}
+
+.wp-block-instructor-role-wisdm-course-reports #ir-coures-progress-donut .apexcharts-legend-series[rel="1"] .apexcharts-legend-marker,.wp-block-instructor-role-wisdm-course-reports #ir-learner-progress-donut .apexcharts-legend-series[rel="1"] .apexcharts-legend-marker {
+    filter: brightness(120%)!important
+}
+
+.wp-block-instructor-role-wisdm-course-reports #ir-coures-progress-donut .apexcharts-legend-series[rel="2"] .apexcharts-legend-marker,.wp-block-instructor-role-wisdm-course-reports #ir-learner-progress-donut .apexcharts-legend-series[rel="2"] .apexcharts-legend-marker {
+    filter: brightness(110%)!important
+}
+
+.wp-block-instructor-role-wisdm-course-reports #ir-coures-progress-donut .apexcharts-legend-series[rel="3"] .apexcharts-legend-text[rel="3"],.wp-block-instructor-role-wisdm-course-reports #ir-learner-progress-donut .apexcharts-legend-series[rel="3"] .apexcharts-legend-text[rel="3"] {
+    filter: none!important
+}
+
+.wp-block-instructor-role-wisdm-course-reports #ir-coures-progress-donut .apexcharts-legend-series[rel="3"] .apexcharts-legend-marker,.wp-block-instructor-role-wisdm-course-reports #ir-learner-progress-donut .apexcharts-legend-series[rel="3"] .apexcharts-legend-marker {
+    filter: brightness(100%)!important
+}
+
+.wp-block-instructor-role-wisdm-course-reports #ir-coures-progress-donut .apexcharts-legend-series[rel="4"] .apexcharts-legend-marker,.wp-block-instructor-role-wisdm-course-reports #ir-learner-progress-donut .apexcharts-legend-series[rel="4"] .apexcharts-legend-marker {
+    filter: brightness(80%)!important
+}
+
+.wp-block-instructor-role-wisdm-course-reports #ir-coures-progress-donut .apexcharts-legend-series[rel="5"] .apexcharts-legend-marker,.wp-block-instructor-role-wisdm-course-reports #ir-learner-progress-donut .apexcharts-legend-series[rel="5"] .apexcharts-legend-marker {
+    filter: brightness(60%)!important
+}
+
+.wp-block-instructor-role-wisdm-course-reports #ir-coures-progress-donut .ir-learner-count,.wp-block-instructor-role-wisdm-course-reports #ir-learner-progress-donut .ir-learner-count {
+    font-size: .875rem;
+    font-weight: 600;
+    margin-right: 20px
+}
+
+.wp-block-instructor-role-wisdm-course-reports #ir-coures-progress-donut .ir-legend-item,.wp-block-instructor-role-wisdm-course-reports #ir-learner-progress-donut .ir-legend-item {
+    display: inline-block;
+    font-size: .875rem;
+    min-width: 100px
+}
+
+.wp-block-instructor-role-wisdm-course-reports #ir-coures-progress-donut .apexcharts-legend-marker:after,.wp-block-instructor-role-wisdm-course-reports #ir-learner-progress-donut .apexcharts-legend-marker:after {
+    border-radius: 8px;
+    content: "";
+    height: 100%;
+    right: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.wp-block-instructor-role-wisdm-course-reports #ir-coures-progress-donut .apexcharts-datalabels text,.wp-block-instructor-role-wisdm-course-reports #ir-learner-progress-donut .apexcharts-datalabels text {
+    fill: #fff!important
+}
+
+.wp-block-instructor-role-wisdm-course-reports input[type=checkbox] {
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    appearance: auto;
+    background-color: #fff;
+    border: 1px solid #ddd!important;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 20px;
+    width: 20px
+}
+
+.wp-block-instructor-role-wisdm-course-reports .ir-graph-wrap {
+    flex-wrap: nowrap
+}
+
+.wp-block-instructor-role-wisdm-course-reports .mce-btn button:hover {
+    background-color: transparent!important
+}
+
+[name=ir-learner] .mantine-Modal-modal {
+    min-height: 638px
+}
+
+[name=ir-learner] .mantine-Modal-modal .mantine-Input-input {
+    border-radius: 6px!important;
+    line-height: 20px;
+    padding: 10px
+}
+
+[name=ir-learner] .mantine-Modal-modal .mantine-InputWrapper-label {
+    color: #666;
+    font-weight: 600
+}
+
+[name=ir-learner] .mantine-Modal-modal .mantine-Modal-title {
+    color: #444;
+    font-size: 20px;
+    font-weight: 700
+}
+
+.ir-md .wp-block-instructor-role-wisdm-course-reports .ir-graph-wrap {
+    flex-wrap: wrap
+}
+
+.ir-md .wp-block-instructor-role-wisdm-course-reports .ir-graph-wrap>div:first-child {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    width: 100%
+}
+
+.ir-md .wp-block-instructor-role-wisdm-course-reports .ir-graph-wrap>div:first-child .ir-cp-tile {
+    flex: 1;
+    gap: 10px;
+    min-width: auto;
+    padding: 15px
+}
+
+.ir-md .wp-block-instructor-role-wisdm-course-reports .ir-graph-wrap>div:first-child .ir-cp-tile>svg {
+    height: 35px;
+    width: 35px
+}
+
+.ir-md .wp-block-instructor-role-wisdm-course-reports .ir-graph-title {
+    padding-right: 0
+}
+
+.ir-md .wp-block-instructor-role-wisdm-course-reports .ir-course-reports-section {
+    padding: 15px
+}
+
+.ir-sm .wp-block-instructor-role-wisdm-course-reports .ir-graph-wrap,.ir-xs .wp-block-instructor-role-wisdm-course-reports .ir-graph-wrap {
+    flex-direction: column
+}
+
+.ir-sm .wp-block-instructor-role-wisdm-course-reports .ir-graph-wrap>div:first-child,.ir-xs .wp-block-instructor-role-wisdm-course-reports .ir-graph-wrap>div:first-child {
+    width: 100%
+}
+
+.ir-sm .wp-block-instructor-role-wisdm-course-reports .ir-graph-wrap>div:first-child .ir-cp-tile,.ir-xs .wp-block-instructor-role-wisdm-course-reports .ir-graph-wrap>div:first-child .ir-cp-tile {
+    min-width: 100%
+}
+
+.ir-sm .wp-block-instructor-role-wisdm-course-reports .ir-spacing-20,.ir-xs .wp-block-instructor-role-wisdm-course-reports .ir-spacing-20 {
+    gap: 20px;
+    justify-content: space-between;
+    width: 100%
+}
+
+.ir-sm .wp-block-instructor-role-wisdm-course-reports .ir-graph-title,.ir-xs .wp-block-instructor-role-wisdm-course-reports .ir-graph-title {
+    padding-right: 0
+}
+
+.ir-sm .wp-block-instructor-role-wisdm-course-reports .ir-cr-courses,.ir-xs .wp-block-instructor-role-wisdm-course-reports .ir-cr-courses {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0;
+    padding-top: 15px
+}
+
+.ir-sm .wp-block-instructor-role-wisdm-course-reports .ir-cr-courses>.ir-flex-1,.ir-xs .wp-block-instructor-role-wisdm-course-reports .ir-cr-courses>.ir-flex-1 {
+    gap: 0
+}
+.wp-block-instructor-role-wisdm-course-reports .mantine-Input-icon.mantine-Select-icon {
+    left: auto;
+}
+.wp-block-instructor-role-wisdm-course-reports .mantine-9227rz {
+    padding-left: 16px;
+}
+.wp-block-instructor-role-wisdm-course-reports .ir-cr-courses .ir-border-color {
+    border-right: none;
+    padding-left: 16px;
+    padding-right: 0;
+}

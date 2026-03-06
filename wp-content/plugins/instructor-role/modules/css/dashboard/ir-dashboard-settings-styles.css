@@ -1,0 +1,424 @@
+/* cspell:ignore pallete // ignoring misspelled words that we can't change now. */
+
+.ir-dashboard-image-field, .ir-dashboard-text-field {
+    /* display: none; */
+}
+
+.ir-hide {
+    display: none;
+}
+
+#ir-dashboard-image-container img{
+    width: 200px;
+}
+
+.ir-dashboard-settings-form {
+    text-align: left;
+}
+
+.ir-color-scheme{
+    display: flex;
+}
+
+.ir-color-scheme .preset-radio{
+    display: none;
+}
+
+.ir-color-scheme .preset{
+    display: flex;
+    padding: 10px;
+    background: #e8e8f3;
+    margin-right: 20px;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+.ir-layout-2 .ir-color-scheme .preset{
+    flex-direction: column;
+    min-width: 120px;
+}
+
+.ir-layout-2 .ir-color-scheme .preset .preset-name{
+    margin: 0;
+}
+
+.ir-color-scheme .preset-selected{
+    /* border: 2px solid #ddd; */
+    box-shadow: 0 4px 4px rgba(0,0,0,.16);
+}
+
+.ir-color-scheme .preset .pallete-color {
+    width: 18px;
+    height: 18px;
+    background-color: lightgreen;
+    margin: 5px;
+    border-radius: 15%;
+}
+
+.ir-color-scheme .preset .preset-name{
+    vertical-align: middle;
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 5px;
+    font-weight: 500;
+    display: flex;
+}
+
+/* Slide Toggle Styles */
+
+.wdm-switch{
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 26px;
+}
+
+.wdm-switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.wdm-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.wdm-slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .wdm-slider {
+    background-color: #2196F3;
+}
+  
+input:focus + .wdm-slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .wdm-slider:before {
+    -webkit-transform: translateX(22px);
+    -ms-transform: translateX(22px);
+    transform: translateX(22px);
+}
+
+/* Rounded sliders */
+.wdm-slider.round {
+    border-radius: 34px;
+}
+
+.wdm-slider.round:before {
+    border-radius: 50%;
+}
+  
+.ir-example-logo {
+    width: 242px;
+    height: 55px;
+    padding: 0 20px;
+    display: inline-block;
+    float: right;
+    margin-right: 100px;
+}
+
+.ir-example-logo span {
+    font-style: italic;
+    color: grey;
+}
+
+#ir-dashboard-image-container-layout-2, #ir-dashboard-image-container {
+    margin-bottom: 10px;
+}
+
+#ir-dashboard-image-container-layout-2 button.ir_upload_image > img {
+    height: 80px;
+}
+
+form.ir-dashboard-settings-form tr th h2 {
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 30px;
+    border-top: 1px solid #ddd;
+    color: #3C434A;
+    margin-bottom: 15px;
+}
+
+form.ir-dashboard-settings-form tr th h2.no-border{
+    padding-top: 0;
+    border-top: none;
+}
+
+tr.ir-title td, tr.ir-title th{
+    padding:  10px;
+}
+
+tr.ir-title > th{
+    font-weight: 400 !important;
+    padding-left: 15px;
+    vertical-align: top;
+}
+
+.ir-bold.ir-title > th > h2{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+tr.ir-title.ir-bold h2{
+    margin-top: 40px;
+    margin-bottom: 22px;
+}
+
+.ir-title em{
+    font-size: 12px;
+    font-style: italic;
+    color: #3C434A;
+}
+
+#ir_dashboard_layout-old, #ir_dashboard_layout-new{
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ir_dashboard_layout-old:checked::before, #ir_dashboard_layout-new:checked::before{
+    width: 10px;
+    height: 10px;
+    background-color: #3C434A;
+}
+
+.ir-radio{
+    font-size: 16px;
+    margin-right:  35px;
+}
+
+#ir_dashboard_layout-old:checked + label, #ir_dashboard_layout-new:checked + label{ 
+    font-weight: 700; 
+}
+
+.ir-layout-2 .ir-color-scheme .preset div{
+    display: flex;
+    justify-content: center;
+}
+
+/* Banner Styling */
+.ir-settings-banner {
+    display: flex;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 4px rgba(0,0,0,.16);
+    margin-right: 32px;
+    background: #fff;
+    justify-content: space-between;
+}
+
+.ir-banner-img {
+    margin: auto;
+    margin-right: 20px;
+}
+
+.ir-banner-content {
+    padding: 16px 0;
+}
+
+.ir-banner-title {
+    color: #444;
+    font-size: 20px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 16px;
+}
+
+.ir-banner-text {
+    margin-bottom: 16px;
+    color: #363636;
+    font-size: 14px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16.9px;
+}
+
+.ir-banner-text a {
+    color: #007FFF;
+    font-weight: 600;
+}
+
+.ir-banner-help-note {
+    color: #363636;
+    font-size: 12px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.ir-banner-help-note a {
+    color: #007FFF;
+    font-weight: 600;
+}
+
+.ir-backend-dashboard-settings h2{
+    color: #102A43;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 29.9px;
+    margin-bottom: 12px;
+}
+
+.ir-view-setting {
+    display: flex;
+    width: 482px;
+    height: 30px;
+    justify-content: space-between;
+    align-items: center;
+    color: #334E68;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    margin: 24px 0;
+    line-height: 18.2px;
+}
+
+.ir-view-setting select {
+    border-radius: 4px;
+    border: 1px solid #C3CDD4;
+    background: #FFF;
+    width: 220px;
+}
+
+.ir-dropdown {
+    position: relative;
+}
+
+.ir-dropdown span.dashicons-arrow-down-alt2 {
+    position: absolute;
+    right: 5px;
+    top: 9px;
+    pointer-events: none;
+    font-size: 14px;
+    color: #818E9B;
+}
+div#view_settings {
+    display: flex;
+    justify-content: space-between;
+}
+
+div#view_settings p.submit{
+    padding-bottom: 0;
+}
+
+div#view_settings #submit{
+    margin-top: 50px;
+}
+
+
+.ir-additional-help-section {
+    width: 300px;
+    height: 460px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    border: 1px solid #E5E5E5;
+    background: #F7F7F7;
+}
+
+.ir-additional-help-title {
+    color: #444;
+    font-size: 16px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 700;
+    display: flex;
+    line-height: normal;
+    padding: 20px;
+}
+
+.ir-additional-help-content ul {
+    list-style: disc;
+    color: #008AD8;
+    font-size: 14px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    text-decoration-line: underline;
+    padding-left: 20px;
+}
+
+.ir-additional-help-section hr{
+    margin: 0 20px;
+}
+
+.ir-additional-help-content {
+    padding: 20px;
+}
+
+.ir-help-desc {
+    color: #666;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.ir-additional-help-title img {
+    margin-right: 10px;
+}
+
+.ir-disable {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.ir-no-block-editor {
+    display: flex;
+    padding: 16px 25px;
+    align-items: center;
+    gap: 25px;
+    border-radius: 8px;
+	/* cspell:disable-next-line */
+    border: 1px solid var(--colours-border-colour, #D6D8E7); 
+    background: #F9F9F9;
+    margin-bottom: 24px;
+}
+
+.ir-no-block-editor span.dashicons-info-outline {
+    font-size: 50px;
+    color: #787878;
+}
+
+.ir-no-block-editor-img{
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.ir-no-block-editor-content {
+    color: #334E68;
+    font-size: 12px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.ir-no-block-editor-content p {
+    margin: 0;
+    margin-bottom: 5px;
+}

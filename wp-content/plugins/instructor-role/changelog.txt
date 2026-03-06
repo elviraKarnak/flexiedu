@@ -1,0 +1,130 @@
+= [5.9.13] 2026-02-25 =
+
+* Fix - Resolved a JavaScript error when editing existing Quizzes and Quiz Questions via the frontend editor.
+* Fix - Resolved an issue where comment avatars were incorrectly displayed.
+* Fix - Resolved an issue where the UI did not update after editing a existing Quiz Question via the frontend editor.
+* Tweak - Improved grammar for the "Add Instructors" button text and its description on the settings page.
+* Tweak - Improved grammar for the "Instructor Settings" button text and its description on the settings page.
+
+= [5.9.12] 2026-02-11 =
+
+* Fix - Resolved an incompatibility with Archive Templates in Elementor Pro.
+* Tweak - Instructor Commission forms now accept and display decimal amounts using locale-appropriate formatting (e.g., 1,50 for European locales, 1.50 for US locales).
+
+= [5.9.11] 2026-02-04 =
+
+* Fix - Resolved an issue where the "Result messages" list item text would output HTML tags instead of stripping them out.
+* Fix - Resolved an issue when creating or editing a Course using the Frontend Editor with LearnDash LMS v5.0.0 enabled where the "Course points - Required for access" and the "Course points - Awarded on completion" values would be invalid if not set.
+* Fix - Resolved an issue where Administrators could not remove any Groups from a Course and Instructors could not remove all Groups from a Course when using the Frontend Course Editor.
+* Fix - Resolved an issue where all Users could not be removed from a Course when using the Frontend Course Editor.
+* Fix - Resolved an issue where an administrator couldn't submit a comment on an assignment from the instructor dashboard.
+* Fix - Resolved an issue where course prerequisites and course points could not be properly enabled in the frontend course builder.
+* Fix - Resolved an issue where multiple updates to Enrollment-based Quiz Release Schedule via the Frontend Quiz Editor could clears the field.
+* Fix - Resolved an issue where the "Custom Field Name" field would lose focus after each character input.
+* Fix - Resolved an issue where the "Custom Fields" toggle switch value was not saved in the database or output correctly on the frontend quiz builder.
+* Fix - Resolved an issue where the "Result messages" toggle setting value couldn't be stored in database.
+* Fix - Resolved an issue where the Groups custom pagination settings were not persisted in the database.
+* Fix - Resolved an issue where the `ldlms/v2/sfwd-courses/{id}/groups` endpoint would be called twice whenever it was called if the logged in user was an Instructor.
+* Security - Improved security around assignment and essay REST API endpoints.
+* Tweak - Updated the frontend quiz builder to accommodate the LearnDash Core REST API v2 changes.
+
+= [5.9.10] 2026-01-19 =
+
+* Fix - Resolved an issue where existing Lessons or Topics could not be edited via the Frontend Course Editor.
+
+= [5.9.9] =
+
+* Fix - Fixed block compatibility with WP 6.9.
+
+= [5.9.8] =
+
+* Fix - Overview tab content was missing after subsequent page loads if the Page Speed option was enabled for the Instructor Dashboard.
+* Fix - Resolved an issue where creating or updating an essay question on the frontend quiz builder caused the essay to have 0 points.
+* Fix - Resolved an issue where if translation files were not downloaded, a PHP notice would be shown on WordPress 6.8+.
+* Fix - Fixed an issue where the Commissions tab on the instructor dashboard displayed blank for instructors that have earnings.
+
+= [5.9.7] =
+
+* Fix - Resolved an issue where the fields dependent on the course access settings in the frontend course builder appeared for irrelevant parent options.
+* Fix - Fixed missing "Commissions" block on the admin instructor dashboard.
+* Fix - Fixed sidebar overlapping content on the Instructor Dashboard.
+* Fix - Resolved a layout issue on the backend Commission Report page for both the old and the new layout setting.
+* Fix - Fixed issue with YouTube playlist course lessons not updating via Frontend Course Editor.
+* Fix - Resolved an issue where commission payment didn't work in sites that use locales whose number format different than en_US number format.
+* Fix - Fixed a warning error in the Assignments page when filtering by user.
+* Fix - Fixed the frontend instructor dashboard sidebar, which couldn't be expanded if the container width is less than a certain value.
+* Fix - Resolved an issue where the Comments block would not function correctly with One-Time Asset Loading enabled for the Dashboard Tabs block.
+* Tweak - Moved the "Edit via Frontend Quiz Creator" button on the Quiz Edit screen to the "Actions" menu when LearnDash 4.22.1 or higher is installed.
+* Tweak - Updated the description text for the "One-Time Asset Loading" option in the Instructor Role Tabs Block.
+* Tweak - Updated templates: `modules/templates/commission/ir-commission-logs.template.php`.
+
+= [5.9.6] =
+
+* Tweak - Condensed the "add new" buttons within the new split button on LearnDash's Course page.
+
+= [5.9.5] =
+
+* Fix - Resolved an issue that was causing errors on the Instructor Course Builder page when The Events Calendar is active.
+* Fix - Fixed an issue where the date picker months and days names on the frontend instructor dashboard were not translatable.
+* Fix - Fixed an issue where the date on the frontend instructor dashboard was not formatted to the site locale.
+* Fix - Fixed chart's days and months names and a few labels on the frontend instructor dashboard were not translatable.
+* Fix - Fixed course access type and status were not translatable on the courses list page.
+* Fix - Fixed some typo on the frontend instructor dashboard.
+* Fix - Fixed the "Email Learner" feature on Course Reports' Learner tab didn't send out an email to the user.
+* Fix - Fixed the "Email All Learners" feature on Course Reports' Course tab sometimes sent out an email to non-existent recipients.
+* Fix - Resolved an issue where the frontend quiz builder couldn't save or publish the quiz.
+* Fix - Fixed some PHP warnings that were caused by translation loading on WP 6.7+ and PHP deprecation.
+* Fix - Fixed an issue where the frontend course and quiz builder displayed invalid date on Safari browser.
+* Fix - Fixed essay question doesn't have text or upload field on frontend question page when it's created via the frontend quiz builder.
+* Tweak - Added filters: `learndash_instructor_role_days_names`, `learndash_instructor_role_months_names`, `learndash_instructor_role_mo_file_path`.
+* Tweak - Added functions: `learndash_instructor_role_load_translations`.
+
+= [5.9.4] =
+
+* Fix - Resolved an issue where commissions were not tracked for courses purchased via LearnDash Payments.
+* Fix - Resolved an issue where a local timezone that was behind the WordPress site's timezone could result in Courses being scheduled in the future when created via the Frontend Course and Quiz Editors.
+* Fix - Resolved an issue where a user with the instructor role could not manage notes created within Notes by LearnDash (requires version 1.1.2 or above).
+* Fix - Resolved an issue where Quizzes couldn't be published through the frontend dashboard.
+* Fix - Fixed the installation link in documentation.
+* Tweak - Publish dates seen within the Frontend Course and Quiz Editors are now displayed using the local timezone.
+* Tweak - Validated the commission percentage value (must be between 0 and 100, with a maximum of three decimal places).
+* Tweak - Formatted the displayed commission values (added currency symbol and forced two decimal places).
+* Tweak - Set minimum required PHP version to 7.4.
+* Tweak - Added filters: `learndash_instructor_role_commission_percentage_max_value`, `learndash_instructor_role_commission_percentage_min_value`, `learndash_instructor_role_instructor_commission_data`.
+* Tweak - Added functions: `learndash_instructor_role_normalize_float_value`.
+* Tweak - Updated templates: `modules/templates/settings/ir-instructor-setup-settings.template.php`.
+
+= [5.9.3] =
+
+* Fix - Administrators can no longer be added as an Instructor, thereby removing their administrator-level access.
+* Fix - Fixed frontend course builder conflict with Elementor archive template.
+* Fix - Fixed PHP warnings in the Instructor Dashboard page.
+* Fix - Fixed a Full Site Editor incompatibility with the Instructor Dashboard and Profile pages.
+* Fix - Resolved an issue where updating a quiz question using the frontend quiz creator did not update its description.
+* Fix - Resolved an issue where updating a course using the frontend course creator deleted the course featured image.
+* Fix - Fixed instructor admin dashboard menu items alignment and course purchase email page layout.
+* Fix - Resolved an issue where the Gutenberg blocks' text could not be translated.
+* Fix - Resolved an issue where the plugin's assets were loaded on unintended pages.
+* Fix - Fixed an issue where course purchase email settings could not be retrieved properly.
+* Tweak - Updated text wording in new features popup.
+
+= [5.9.2.1] =
+
+* Fix - Resolved an issue where users could not update lesson/topic content or materials using the Frontend Course Creator.
+
+= [5.9.2] =
+
+* Fix - Fixed the Manage Instructors Block not working properly on sites without the default `wp_` database table prefix.
+* Tweak - Added actions: `learndash_instructor_role_uninstall`.
+* Tweak - Updated the required LearnDash version to 4.7.0.
+
+= [5.9.1.1] =
+
+* Fix - Fixes fatal error during activation if an outdated version of LearnDash LMS was installed.
+
+= [5.9.1] =
+
+* Tweak - Updated licensing and branding.
+* Tweak - Licensing changed to point toward www.learndash.com.
+* Tweak - Deprecated classes: `Instructor_Role_License`, `WdmAddLicenseData`, `WdmGetLicenseData`, `WdmLicense`, `WdmPluginUpdater`, `WdmSendDataToServer`.
+* Tweak - Deprecated filters: `instructor_role_license_page_capability`, `ir_in_plugin_update_message`.

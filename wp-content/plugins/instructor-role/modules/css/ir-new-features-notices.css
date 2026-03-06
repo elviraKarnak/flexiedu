@@ -1,0 +1,156 @@
+.ir-admin-notices-container {
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.ir-admin-notice-logo {
+    padding: 55px 35px;
+    border-right: 1px solid #C4C4C4;
+    border-left: 8px solid #235AF3;
+    display: flex;
+    align-items: center;
+}
+
+.ir-admin-notice-heading {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 5px;
+    line-height: 27px;
+}
+
+.ir-admin-notice-text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 12px;
+}
+
+.ir-admin-notice-note {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 10px;
+}
+
+.ir-admin-notice-actions {
+    display: flex;
+}
+
+button.ir-admin-notice-button {
+    padding: 12px 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    background: #008AD8;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.ir-admin-notice-content {
+    padding: 20px 40px;
+}
+
+button.ir-admin-notice-button:hover {
+    box-shadow: none;
+}
+
+.ir-admin-notice-container-actions {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.ir-admin-notice-container-actions span.dashicons-no-alt {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.ir-heading-3 {
+    color: #444;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+    margin-bottom: 7px;
+}
+
+div.ir-pattern-update-actions-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+div.ir-pattern-update-section{
+    width: calc(50% - 60px);
+    border-radius: 4px;
+    border: 1px solid #E5E5E5;
+    background: #FFF;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+div.ir-pattern-update-section > p{
+    margin: 0;
+    margin-bottom: 5px;
+}
+.ir-section-divider {
+    margin: auto;
+    color: #FFF;
+    font-family: Open Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: #444;
+    border-radius: 12px;
+    padding: 4px;
+}
+
+
+.ir-action-link {
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: 1px solid #008AD8;
+    background: #FFF;
+    color: #008AD8;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.30);
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0px 2px 2px 0px #0000004D;
+    width: auto;
+    display: inline-block;
+    align-self: flex-start;
+}
+
+.ir-action-link:hover {
+    color: #008AD8;
+}
+.ir-primary-link:hover {
+    color: #FFF;
+}
+.ir-primary-link {
+    background: #008AD8;
+    color: #FFF;
+    background: #008AD8;
+}
+
+.ir-action-link > .dashicons {
+    margin-left: 10px;
+}

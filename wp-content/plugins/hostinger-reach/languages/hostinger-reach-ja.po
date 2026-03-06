@@ -1,0 +1,715 @@
+# Copyright (C) 2025 Hostinger
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Hostinger Reach 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/hostinger-reach\n"
+"Last-Translator: \n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-07-31T11:19:40+03:00\n"
+"PO-Revision-Date: 2026-02-23 04:06+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: hostinger-reach\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Loco-Version: 2.8.1; wp-6.9; php-8.2.29"
+
+#: src/Setup/Assets.php:154
+msgid "(no title)"
+msgstr "（タイトルなし）"
+
+#: src/Setup/Assets.php:177
+msgid "-"
+msgstr "-"
+
+#: src/Setup/Assets.php:140 src/Setup/Assets.php:157
+msgid "Active"
+msgstr "アクティブ"
+
+#: src/Setup/Assets.php:112
+msgid ""
+"Add a new contact form with Reach or connect a plugin to start collecting "
+"contacts and sending campaigns."
+msgstr "Reachでお問い合わせフォームを追加するか、プラグインを連携して、連絡先を集めてキャンペーン配信を始めましょう。"
+
+#: src/Setup/Assets.php:108
+msgid ""
+"Add an online store to your site, sell products or services, and connect "
+"subscriber tools automatically.."
+msgstr "サイトにオンラインストアを追加して、商品やサービスを販売しながら、メルマガ管理ツールも自動で連携しましょう。"
+
+#: src/Setup/Assets.php:146 src/Setup/Assets.php:160
+msgid "Add form"
+msgstr "フォームを追加"
+
+#: src/Setup/Assets.php:113 src/Setup/Assets.php:114 src/Setup/Assets.php:130
+msgid "Add form or plugin"
+msgstr "フォームまたはプラグインを追加"
+
+#: src/Admin/Surveys/SatisfactionSurvey.php:26
+msgid "Any ideas or feedback to help us improve Hostinger Reach?"
+msgstr "Hostinger Reachを改善するためのアイデアやご意見はありますか？"
+
+#: src/Setup/Assets.php:175
+msgid ""
+"are ready to sync with Reach. Any new contacts you’ll collect with these "
+"forms will sync automatically."
+msgstr "はReachと同期する準備ができています。今後フォームから取得した連絡先は自動的に同期されます。"
+
+#: hostinger-reach.php:52
+msgid "Attention:"
+msgstr "注意："
+
+#: src/Setup/Assets.php:178
+#, fuzzy
+msgid "Auto-sync off"
+msgstr "自動同期オフ"
+
+#: src/Integrations/WooCommerce/WooCommerceIntegration.php:123
+msgid "Automation -  Purchases"
+msgstr "自動化 - 購入"
+
+#: src/Integrations/WooCommerce/WooCommerceIntegration.php:124
+msgid "Automation - Abandoned Carts"
+msgstr "自動化 - カート放棄"
+
+#: src/Setup/Assets.php:97
+msgid "Average CTOR"
+msgstr "平均CTOR"
+
+#: src/Setup/Assets.php:77
+msgid "Back"
+msgstr "戻る"
+
+#: src/Setup/Assets.php:126
+msgid "Background image for"
+msgstr "背景画像の対象："
+
+#: src/Setup/Assets.php:125
+msgid "Banner background image for"
+msgstr "バナー背景画像の対象："
+
+#: frontend/blocks/subscription-block/block.json:1
+msgctxt "block description"
+msgid "Subscription form for Hostinger Reach"
+msgstr "Hostinger Reach用のメルマガ登録フォーム"
+
+#: frontend/blocks/subscription-block/block.json:1
+msgctxt "block title"
+msgid "Reach Subscription Form"
+msgstr "Reachメルマガ登録フォーム"
+
+#: src/Integrations/Brave/BraveIntegration.php:29
+#, fuzzy
+msgid "Brave Popup Builder"
+msgstr "ブレイブポップアップビルダー"
+
+#: src/Setup/Assets.php:95
+msgid "Campaigns"
+msgstr "キャンペーン"
+
+#: src/Setup/Assets.php:133
+msgid "Cancel "
+msgstr "キャンセル"
+
+#: src/Integrations/WooCommerce/WooCommerceIntegration.php:116
+msgid "Checkout"
+msgstr "購入手続き"
+
+#: src/Setup/Assets.php:128
+msgid ""
+"Click-to-open rate tells you what percent of opens resulted in a click too. "
+"A good CTOR is 6-17%, depending on your industry."
+msgstr ""
+"クリック率（CTOR）は、開封されたメールのうち何パーセントがクリックにつながったかを示します。業種にもよりますが、良好なCTORは6～17％とされています。"
+
+#: src/Setup/Assets.php:152
+msgid "Collapse {pluginName} details"
+msgstr "{pluginName}の詳細を非表示にする"
+
+#: src/Setup/Assets.php:167 src/Admin/Notices/ConnectionNotice.php:104
+msgid "Connect"
+msgstr "接続"
+
+#: src/Admin/Notices/ConnectionNotice.php:99
+msgid "Connect Hostinger Reach to start Email Marketing"
+msgstr "Hostinger Reachを連携してメルマガ配信を開始"
+
+#: src/Setup/Assets.php:84
+msgid "Connect site"
+msgstr "サイトを紐づける"
+
+#: src/Setup/Assets.php:107 src/Setup/Assets.php:109
+msgid "Connect WooCommerce"
+msgstr "WooCommerceを連携"
+
+#: src/Admin/Notices/ConnectionNotice.php:100
+msgid ""
+"Connect your Hostinger Reach account to start sending newsletters and "
+"managing subscribers. With Hostinger Reach, it's easy to grow your audience "
+"in just one click."
+msgstr ""
+"Hostinger Reachアカウントを連携して、メルマガ配信と登録者管理を始めましょう。Hostinger "
+"Reachなら、ワンクリックで簡単にオーディエンスを拡大できます。"
+
+#: src/Setup/Assets.php:148 src/Integrations/ContactForm7Integration.php:108
+#: src/Integrations/ContactForm7/ContactForm7Integration.php:91
+msgid "Contact Form 7"
+msgstr "お問い合わせフォーム7"
+
+#: src/Setup/Assets.php:136 src/Setup/Assets.php:169
+msgid "Contacts"
+msgstr "連絡先"
+
+#: src/Setup/Assets.php:174
+msgid "contacts"
+msgstr "件の連絡先"
+
+#: src/Setup/Assets.php:173
+msgid "Contacts to Sync"
+msgstr "同期する連絡先"
+
+#: src/Admin/Notices/ConnectionNotice.php:73
+msgid "Could not generate auth URL"
+msgstr "認証URLを生成できませんでした"
+
+#: src/Setup/Assets.php:102
+msgid "Create campaign"
+msgstr "キャンペーン作成"
+
+#: src/Setup/Assets.php:80
+msgid ""
+"Create email campaigns using AI-crafted templates that match your style. "
+"Instantly sync with your WordPress site and connect with your audience "
+"easily."
+msgstr ""
+"AIが作成したテンプレートを活用して、自分のスタイルに合ったメールキャンペーンを作成できます。WordPressサイトと即座に同期できるので、オーディエンスとつながるのも今まで以上に簡単です。"
+
+#: src/Setup/Assets.php:103
+msgid "Create template"
+msgstr "テンプレートを作成"
+
+#: src/Setup/Assets.php:166
+msgid "Disconnect"
+msgstr "切断"
+
+#: src/Setup/Assets.php:134
+msgid "Disconnect "
+msgstr "切断"
+
+#: src/Setup/Assets.php:82
+msgid "Disconnect it to link this site instead."
+msgstr "このサイトを紐づけるために、現在の設定を解除します。"
+
+#: src/Setup/Assets.php:145
+msgid "Disconnect plugin"
+msgstr "プラグインを切断"
+
+#: src/Setup/Assets.php:131
+msgid "Disconnect plugin?"
+msgstr "プラグインを切断しますか？"
+
+#: src/Setup/Assets.php:132
+msgid ""
+"Disconnecting will stop new contacts from being collected. You can reconnect "
+"or use a different form anytime."
+msgstr "接続を解除すると、新規の顧客情報が収集されなくなります。いつでも再接続または別のフォームを使用できます。"
+
+#: src/Setup/Assets.php:185
+#, fuzzy
+msgid "Don't see your plugin?"
+msgstr "プラグインが見当たらない？"
+
+#: src/Setup/Assets.php:106
+msgid "E-Commerce"
+msgstr "eコマース"
+
+#: src/Setup/Assets.php:143
+msgid "Edit form"
+msgstr "フォームを編集"
+
+#: src/Setup/Assets.php:150
+#: src/Integrations/Elementor/ElementorIntegration.php:112
+msgid "Elementor"
+msgstr "Elementor"
+
+#: src/Blocks/SubscriptionFormBlock.php:75
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:106
+msgid "Email"
+msgstr "メール"
+
+#: src/Admin/Menus.php:20 src/Admin/Menus.php:21 src/Admin/Menus.php:34
+msgid "Email Marketing"
+msgstr "メールマーケティング"
+
+#: src/Setup/Assets.php:87
+msgid "Email marketing background with gradient design"
+msgstr "グラデーションデザインの背景を用いたメールマーケティング"
+
+#: src/Setup/Assets.php:88
+msgid ""
+"Email marketing illustration featuring envelopes and communication icons"
+msgstr "封筒とコミュニケーションのアイコンをフィーチャーしたメールマーケティングのイラスト"
+
+#: src/Setup/Assets.php:92
+msgid "Emails"
+msgstr "メール"
+
+#: src/Setup/Assets.php:151
+msgid "Expand {pluginName} details"
+msgstr "{pluginName}の詳細を表示"
+
+#: src/Setup/Assets.php:117
+msgid "FAQ"
+msgstr "よくある質問"
+
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:50
+msgid "Form"
+msgstr "フォーム"
+
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:58
+msgid "Form ID"
+msgstr "フォームID"
+
+#: src/Integrations/Forminator/ForminatorIntegration.php:34
+msgid "Forminator"
+msgstr "Forminator"
+
+#: src/Setup/Assets.php:110
+msgid "Forms"
+msgstr "フォーム"
+
+#: src/Setup/Assets.php:144
+msgid "Go to plugin"
+msgstr "プラグインへ移動"
+
+#: src/Setup/Assets.php:85
+msgid "Go to Reach"
+msgstr "Reachへ移動"
+
+#. Author of the plugin
+msgid "Hostinger"
+msgstr "Hostinger"
+
+#. Name of the plugin
+#: src/Setup/Assets.php:86 src/Setup/Assets.php:147
+#: src/Integrations/ReachFormIntegration.php:65
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:20
+#: src/Integrations/Reach/ReachFormIntegration.php:71
+msgid "Hostinger Reach"
+msgstr "Hostinger Reach"
+
+#: src/Setup/Assets.php:119
+msgid ""
+"Hostinger Reach is an AI-powered email marketing tool for small businesses "
+"and creators. It supports your entire email marketing journey—from building "
+"contact lists to sending campaigns and tracking results."
+msgstr ""
+"Hostinger "
+"Reachは、中小企業やクリエイターのために設計されたAI搭載型メールマーケティングツールです。顧客リストの作成からキャンペーンの送信、結果のトラッキングまで、メールマーケティング全体をサポートします。"
+
+#: src/Setup/Assets.php:121
+msgid ""
+"Hostinger Reach is built for simplicity, speed, and results – no design or "
+"marketing experience needed. Unlike most email tools, at the core of Reach "
+"is its AI-powered template creator. Whether it is a product launch, special "
+"offer, or newsletter update, it instantly crafts a professional, mobile-"
+"friendly email. It not only writes the content for you; it also suggests the "
+"best layout for your message and saves your style settings so you're never "
+"starting from scratch.<br><br>Every template is customizable, so your emails "
+"reflect your brand's look, feel, and voice. And because the templates are "
+"built using proven best practices, they're optimized for readability, "
+"accessibility, and reader engagement."
+msgstr ""
+"Hostinger "
+"Reachは、シンプルさ、スピード、結果の3点を重視して設計されており、デザインやマーケティングの経験は一切必要ありません。一般的なメールツールとは異なり、Reachの中核を成すのはAIを搭載したテンプレート作成機能です。製品発表、特別オファー、定期配信メールなど、どのような内容であっても、プロ仕様でモバイルにも対応したメールを瞬時に生成します。<br"
+"><br>"
+"すべてのテンプレートはカスタマイズ可能なので、メールにブランドのルック＆フィールやトーンを反映させることができます。また、テンプレートは実績のあるベストプラクティスを使用して構築されているため、読みやすさ、アクセシビリティ、読者のエンゲージメントに向けて最適化されています。"
+
+#: src/Admin/Notices/ConnectionNotice.php:92
+msgid "Hostinger Reach logo"
+msgstr "Hostinger Reachのロゴ"
+
+#. %s: PHP version
+#: hostinger-reach.php:54
+#, php-format
+msgid "Hostinger Reach requires minimum PHP version of <b>%s</b>. "
+msgstr "Hostinger Reachを利用するには、PHPバージョン<b>%s</b>以上が必要です。"
+
+#: src/Setup/Assets.php:120
+msgid "How is Hostinger Reach different from other email marketing apps?"
+msgstr "Hostinger Reachは他のメールマーケティングアプリとどう違うのですか？"
+
+#: src/Setup/Assets.php:122
+msgid "How much does it cost to use Hostinger Reach?"
+msgstr "Hostinger Reachの利用料金はいくらですか？"
+
+#: src/Admin/Surveys/SatisfactionSurvey.php:22
+msgid "How would you rate your experience with Hostinger Reach so far?"
+msgstr "これまでのHostinger Reachのご利用体験を評価してください。"
+
+#. URI of the plugin
+msgid "https://hostinger.com"
+msgstr "https://hostinger.jp"
+
+#. Author URI of the plugin
+msgid "https://www.hostinger.com/email-marketing"
+msgstr "https://www.hostinger.com/jp/email-marketing"
+
+#: src/Api/Handlers/IntegrationsApiHandler.php:117
+msgid "Importing is not available for this integration"
+msgstr "この連携ではインポート機能は利用できません"
+
+#: src/Setup/Assets.php:141
+msgid "Inactive"
+msgstr "非アクティブ"
+
+#: src/Setup/Assets.php:164
+#, fuzzy
+msgid "Install"
+msgstr "インストール"
+
+#: src/Setup/Assets.php:165
+msgid "Install and connect"
+msgstr "インストールと接続"
+
+#: src/Setup/Assets.php:163
+msgid "Installed plugins"
+msgstr "インストールされているプラグイン"
+
+#. Description of the plugin
+msgid "Integrate your WordPress site with Hostinger Reach."
+msgstr "WordPressサイトをHostinger Reachに連携しましょう。"
+
+#: src/Setup/Assets.php:105
+msgid "Integrations"
+msgstr "連携"
+
+#: src/Setup/Assets.php:186
+#, fuzzy
+msgid ""
+"It may not be supported yet. You can upload contacts as a CSV or use another "
+"plugin"
+msgstr "まだサポートされていないかもしれません。連絡先をCSVでアップロードするか、他のプラグインをご利用ください。"
+
+#: src/Setup/Assets.php:184
+msgid "It was an error syncing your contacts to Reach."
+msgstr "連絡先をReachに同期する際にエラーが発生しました。"
+
+#: src/Admin/Notices/ConnectionNotice.php:107
+msgid "Learn more"
+msgstr "詳細を見る"
+
+#: src/Setup/Assets.php:158
+msgid ""
+"Make sure the people you contact expect your emails and are okay with "
+"receiving them."
+msgstr "配信メールの宛先が、受信することを承諾するかを必ず確認しましょう。"
+
+#: src/Setup/Assets.php:83
+msgid "Manage"
+msgstr "管理"
+
+#: src/Blocks/SubscriptionFormBlock.php:83
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:114
+msgid "Name"
+msgstr "名称"
+
+#: src/Setup/Assets.php:159
+msgid "New contact form"
+msgstr "新しいお問い合わせフォーム"
+
+#: src/Setup/Assets.php:115
+msgid "New page"
+msgstr "新しいページ"
+
+#: src/Setup/Assets.php:99
+msgid "New subscribers"
+msgstr "新規登録者"
+
+#: src/Integrations/NinjaForms/NinjaFormsIntegration.php:45
+msgid "Ninja Forms"
+msgstr "Ninja Forms"
+
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:71
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:83
+msgid "No"
+msgstr "いいえ"
+
+#: src/Setup/Assets.php:153
+msgid "No forms found for this integration."
+msgstr "この連携に関するフォームは見つかりませんでした。"
+
+#: src/Setup/Assets.php:116
+msgid "No pages available. Create a new page to get started."
+msgstr "利用可能なページはありません。ページを新規作成してください。"
+
+#: src/Setup/Assets.php:181
+msgid "Not synced"
+msgstr "未同期"
+
+#: src/Setup/Assets.php:138
+msgid "of"
+msgstr "/"
+
+#: src/Setup/Assets.php:124
+msgid "opens in new tab"
+msgstr "新しいタブで開く"
+
+#: src/Integrations/OptInMonster/OptInMonsterIntegration.php:48
+#, fuzzy
+msgid "OptinMonster"
+msgstr "オプチンモンスター"
+
+#: src/Setup/Assets.php:179
+msgid "Partially synced"
+msgstr "一部同期済み"
+
+#: src/Setup/Assets.php:135
+msgid "Plugin"
+msgstr "プラグイン"
+
+#: src/Setup/Assets.php:155
+msgid "Plugin connected successfully"
+msgstr "プラグインが正常に接続されました"
+
+#: src/Setup/Assets.php:156
+msgid "Plugin disconnected successfully"
+msgstr "プラグインは正常に切断されました"
+
+#: src/Setup/Assets.php:81
+msgid "Reach is already connected to another site."
+msgstr "Reachはすでに別のサイトに紐づけられています。"
+
+#: src/Setup/Assets.php:123
+#| msgid ""
+#| "Reach offers a free plan for one year– perfect for getting started. Paid "
+#| "plans are based on how many unique contacts you aim to reach and how many "
+#| "emails you send monthly. As your audience grows, you can upgrade to a "
+#| "plan that fits your needs. Reach does not limit your contact list, so you "
+#| "don't need to worry about lost data and can consistently grow your "
+#| "audience."
+msgid ""
+"Reach offers a <b>free plan</b> for one year– perfect for getting started. "
+"Paid plans are based on how many unique contacts you aim to reach and how "
+"many emails you send monthly. As your audience grows, you can upgrade to a "
+"plan that fits your needs. Reach does not limit your contact list, so you "
+"don't need to worry about lost data and can consistently grow your audience."
+msgstr ""
+"Reachは1年間<b>無料のプラン</b>"
+"を提供しています。有料プランは、顧客情報の数（ユニーク）と毎月配信するメールの数に基づいています。利用者が増えれば、ニーズに合ったプランにアップグレードできます。Reachは顧客リストを制限しないので、データの紛失を心配する必要がなく、一貫してオーディエンスを増やせます。"
+
+#: src/Setup/Assets.php:94
+msgid "Remaining"
+msgstr "残り"
+
+#: src/Setup/Assets.php:129
+msgid "Select page"
+msgstr "ページを選択"
+
+#: src/Setup/Assets.php:93 src/Setup/Assets.php:96
+msgid "Sent"
+msgstr "送信済み"
+
+#: src/Setup/Assets.php:104
+msgid "Settings"
+msgstr "設定"
+
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:68
+msgid "Show Name"
+msgstr "名前を表示"
+
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:80
+msgid "Show Surname"
+msgstr "苗字を表示"
+
+#: src/Setup/Assets.php:171
+msgid ""
+"Some contacts you’ve collected before installing Reach aren’t yet synced. "
+"Sync them now to use them for your email campaigns."
+msgstr "Reachをインストールする前に集めた連絡先の一部は、まだ同期されていません。今すぐ同期して、メールキャンペーンに利用しましょう。"
+
+#: src/Setup/Assets.php:78
+msgid "Something went wrong"
+msgstr "エラーが発生しました"
+
+#: src/Blocks/SubscriptionFormBlock.php:21 src/Api/Handlers/ApiHandler.php:36
+msgid "Something went wrong. Please try again."
+msgstr "エラーが発生しました。もう一度お試しください。"
+
+#: src/Setup/Assets.php:111
+msgid "Start by adding a form or connect a plugin"
+msgstr "フォームを追加するかプラグインを連携して開始"
+
+#: src/Setup/Assets.php:139
+msgid "Status"
+msgstr "ステータス"
+
+#: src/Blocks/SubscriptionFormBlock.php:99
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:130
+msgid "Subscribe"
+msgstr "メルマガ登録"
+
+#: templates/optin-checkbox.php:28
+msgid "Subscribe to our Newsletter"
+msgstr "ニュースレターを購読"
+
+#: src/Integrations/WooCommerce/WooCommerceIntegration.php:73
+msgid "Subscribe to our newsletter"
+msgstr "ニュースレターを購読"
+
+#: src/Setup/Assets.php:98
+msgid "Subscribers"
+msgstr "メルマガ登録者"
+
+#: src/Setup/Assets.php:161
+#| msgid "View supported plugins"
+msgid "Supported plugins"
+msgstr "対応プラグイン"
+
+#: src/Integrations/SureForms/SureFormsIntegration.php:35
+msgid "Sure Forms"
+msgstr "SureForms"
+
+#: src/Blocks/SubscriptionFormBlock.php:91
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:122
+msgid "Surname"
+msgstr "苗字"
+
+#: src/Setup/Assets.php:172
+msgid "Sync"
+msgstr "同期"
+
+#: src/Setup/Assets.php:168
+msgid "Sync Contacts"
+msgstr "連絡先を同期"
+
+#: src/Setup/Assets.php:170
+msgid "Sync your contacts with Reach"
+msgstr "連絡先をReachに同期"
+
+#: src/Setup/Assets.php:180
+msgid "Synced"
+msgstr "同期済み"
+
+#: src/Setup/Assets.php:137
+msgid "Syncing with Reach"
+msgstr "Reachへの同期中"
+
+#: src/Setup/Assets.php:182
+msgid "Syncing..."
+msgstr "同期中..."
+
+#: src/Blocks/SubscriptionFormBlock.php:20
+msgid "Thanks for subscribing."
+msgstr "メルマガにご登録いただきありがとうございます。"
+
+#: src/Setup/Assets.php:183
+msgid "The selected contacts are being synced to Reach."
+msgstr "選択した連絡先をReachに同期しています。"
+
+#: src/Integrations/Integration.php:178
+msgid ""
+"This form has not an email field. Create an email field in the form to allow "
+"it to be synced with Reach"
+msgstr "このフォームにはメールアドレスの項目がありません。Reachと同期できるように、フォームにメールアドレスのフィールドを追加してください。"
+
+#: src/Setup/Assets.php:89
+msgid "This month"
+msgstr "今月"
+
+#: src/Integrations/ThriveLeads/ThriveLeadsIntegration.php:72
+#: src/Integrations/ThriveLeads/ThriveLeadsIntegration.php:88
+#, fuzzy
+msgid "Thrive Leads"
+msgstr "スライブリード"
+
+#: src/Setup/Assets.php:101
+msgid "Total subscribers"
+msgstr "総登録者数"
+
+#: src/Setup/Assets.php:100
+msgid "Unsubscribes"
+msgstr "配信停止"
+
+#: src/Setup/Assets.php:91
+msgid "Upgrade"
+msgstr "アップグレード"
+
+#: src/Setup/Assets.php:187
+#, fuzzy
+msgid "Upload as CSV"
+msgstr "CSVでアップロード"
+
+#: src/Setup/Assets.php:127
+msgid "usage statistics"
+msgstr "利用統計"
+
+#: src/Setup/Assets.php:142
+msgid "View form"
+msgstr "フォームを表示"
+
+#: src/Setup/Assets.php:162
+msgid "View more supported plugins"
+msgstr "対応プラグインをもっと見る"
+
+#: src/Setup/Assets.php:79
+msgid "Welcome to Reach"
+msgstr "Reachをご利用いただきありがとうございます"
+
+#: src/Setup/Assets.php:118
+msgid "What is Hostinger Reach email marketing service?"
+msgstr "Hostinger Reachメールマーケティングサービスとは何ですか？"
+
+#: src/Integrations/WooCommerce/WooCommerceIntegration.php:192
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: src/Integrations/WooCommerce/WooCommerceIntegration.php:211
+msgid "WooCommerce Customers"
+msgstr "WooCommerceの顧客"
+
+#: src/Setup/Assets.php:149 src/Integrations/WpFormsLiteIntegration.php:94
+#: src/Integrations/WPFormsLite/WpFormsLiteIntegration.php:29
+msgid "WP Forms Lite"
+msgstr "WPForms Lite"
+
+#. %s - form id.
+#: src/Integrations/WpFormsLiteIntegration.php:43
+#: src/Integrations/WPFormsLite/WpFormsLiteIntegration.php:63
+#, php-format
+msgid "WP Forms Lite %s"
+msgstr "WPForms Lite %s"
+
+#: src/Integrations/WSForms/WSFormsIntegration.php:22
+msgid "WS Form"
+msgstr "WS Form"
+
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:70
+#: src/Integrations/Elementor/SubscriptionFormElementorWidget.php:82
+msgid "Yes"
+msgstr "はい"
+
+#. %s: PHP version
+#: hostinger-reach.php:58
+#, php-format
+msgid "You are running <b>%s</b> PHP version."
+msgstr "稼働中のPHPバージョンは<b>%s</b>です。"
+
+#: src/Setup/Assets.php:176
+msgid ""
+"You have not selected any forms to sync. Select which forms you want to sync "
+"and then click on the Sync button below."
+msgstr "同期するフォームが選択されていません。同期したいフォームを選択し、下の「同期」ボタンをクリックしてください。"
+
+#: src/Setup/Assets.php:90
+msgid "Your plan"
+msgstr "ご利用中のプラン"
+
+#: src/Api/Handlers/ReachApiHandler.php:33
+#, fuzzy
+msgid "Your site is not connected to Reach. Connect to Reach and try again."
+msgstr "あなたのサイトはReachに接続されていません。Reachに接続してもう一度お試しください。"

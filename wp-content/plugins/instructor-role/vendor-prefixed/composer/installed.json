@@ -1,0 +1,178 @@
+{
+    "packages": [
+        {
+            "name": "stellarwp/arrays",
+            "version": "1.3.1",
+            "version_normalized": "1.3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stellarwp/arrays.git",
+                "reference": "315a9b2018ac6f2475a346c89b1d7120ae07c218"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stellarwp/arrays/zipball/315a9b2018ac6f2475a346c89b1d7120ae07c218",
+                "reference": "315a9b2018ac6f2475a346c89b1d7120ae07c218",
+                "shasum": ""
+            },
+            "require-dev": {
+                "lucatume/wp-browser": "^3.5 || ^4.0",
+                "saggre/phpdocumentor-markdown": "^0.1.3",
+                "symfony/event-dispatcher-contracts": "^2.5.1",
+                "symfony/string": "^5.4",
+                "szepeviktor/phpstan-wordpress": "^1.1"
+            },
+            "time": "2025-02-07T18:23:13+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "LearnDash\\Instructor_Role\\StellarWP\\Arrays\\": "src/Arrays/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "StellarWP",
+                    "email": "dev@stellarwp.com"
+                },
+                {
+                    "name": "Matthew Batchelder",
+                    "email": "matt.batchelder@stellarwp.com"
+                }
+            ],
+            "description": "A library for array manipulation.",
+            "support": {
+                "issues": "https://github.com/stellarwp/arrays/issues",
+                "source": "https://github.com/stellarwp/arrays/tree/1.3.1"
+            },
+            "install-path": "../stellarwp/arrays"
+        },
+        {
+            "name": "stellarwp/assets",
+            "version": "1.5.1",
+            "version_normalized": "1.5.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stellarwp/assets.git",
+                "reference": "d1e1852299f838a54fb5b296e77cc3788bc530ed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stellarwp/assets/zipball/d1e1852299f838a54fb5b296e77cc3788bc530ed",
+                "reference": "d1e1852299f838a54fb5b296e77cc3788bc530ed",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "codeception/module-asserts": "^1.0",
+                "codeception/module-cli": "^1.0",
+                "codeception/module-db": "^1.0",
+                "codeception/module-filesystem": "^1.0",
+                "codeception/module-phpbrowser": "^1.0",
+                "codeception/module-rest": "^1.0",
+                "codeception/module-webdriver": "^1.0",
+                "codeception/util-universalframework": "^1.0",
+                "lucatume/wp-browser": "^3.0.14",
+                "phpunit/phpunit": "~6.0",
+                "symfony/event-dispatcher-contracts": "^2.5.1",
+                "symfony/string": "^5.4",
+                "szepeviktor/phpstan-wordpress": "^1.1"
+            },
+            "time": "2026-01-27T14:39:53+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "LearnDash\\Instructor_Role\\StellarWP\\Assets\\": "src/Assets/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "StellarWP",
+                    "email": "dev@stellarwp.com"
+                },
+                {
+                    "name": "Matthew Batchelder",
+                    "email": "matt.batchelder@stellarwp.com"
+                }
+            ],
+            "description": "A library for managing asset registration and enqueuing in WordPress.",
+            "support": {
+                "issues": "https://github.com/stellarwp/assets/issues",
+                "source": "https://github.com/stellarwp/assets/tree/1.5.1"
+            },
+            "install-path": "../stellarwp/assets"
+        },
+        {
+            "name": "stellarwp/db",
+            "version": "1.2.0",
+            "version_normalized": "1.2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stellarwp/db.git",
+                "reference": "f92d6ae0bcd74a3f526b023bb2d6ecd13227ef96"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stellarwp/db/zipball/f92d6ae0bcd74a3f526b023bb2d6ecd13227ef96",
+                "reference": "f92d6ae0bcd74a3f526b023bb2d6ecd13227ef96",
+                "shasum": ""
+            },
+            "require-dev": {
+                "codeception/module-asserts": "^1.0",
+                "codeception/module-cli": "^1.0",
+                "codeception/module-db": "^1.0",
+                "codeception/module-filesystem": "^1.0",
+                "codeception/module-phpbrowser": "^1.0",
+                "codeception/module-rest": "^1.0",
+                "codeception/module-webdriver": "^1.0",
+                "codeception/util-universalframework": "^1.0",
+                "lucatume/wp-browser": "^3.0.14",
+                "phpunit/phpunit": "~6.0",
+                "symfony/event-dispatcher-contracts": "^2.5.1",
+                "symfony/string": "^5.4",
+                "szepeviktor/phpstan-wordpress": "^1.1"
+            },
+            "time": "2025-11-10T10:55:50+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "LearnDash\\Instructor_Role\\StellarWP\\DB\\": "src/DB/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "StellarWP",
+                    "email": "dev@stellarwp.com"
+                },
+                {
+                    "name": "Matthew Batchelder",
+                    "email": "matt.batchelder@stellarwp.com"
+                }
+            ],
+            "description": "A WPDB wrapper and query builder library.",
+            "support": {
+                "issues": "https://github.com/stellarwp/db/issues",
+                "source": "https://github.com/stellarwp/db/tree/1.2.0"
+            },
+            "install-path": "../stellarwp/db"
+        }
+    ],
+    "dev": false,
+    "dev-package-names": []
+}

@@ -47,7 +47,24 @@
           </div>
         </div>
 
+    
+
         <?php
+        if(is_user_logged_in()){
+
+           
+            wp_nav_menu(
+              array(
+                'container' => '',
+                'container_class' => '',
+                'container_id' => '',
+                'items_wrap' => '<ul id="%1$s menu" class="%2$s header-btn-sc d-flex align-items-center justify-content-end ">%3$s</ul>',
+                'theme_location' => 'menu-5',
+              )
+            );
+
+        }else{
+          
         wp_nav_menu(
           array(
             'container' => '',
@@ -57,7 +74,19 @@
             'theme_location' => 'menu-2',
           )
         );
+        }
+
         ?>
+
+            <div class="header-cart position-relative ms-4">
+            <a href="<?php echo wc_get_cart_url(); ?>" class="text-dark">
+                <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                <span class="cart-count badge rounded-pill position-absolute top-0 start-100 translate-middle"
+                      style="background:#B1D95A;">
+                    <?php echo WC()->cart->get_cart_contents_count(); ?>
+                </span>
+            </a>
+          </div>
 
 
       </div>

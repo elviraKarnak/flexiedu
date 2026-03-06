@@ -1,0 +1,16 @@
+/* Hide default back button on course edit page*/
+.edit-post-fullscreen-mode-close {
+    display: none;
+}
+
+div#post-body-content {
+    padding: 15px;
+}
+
+div#editor div.edit-post-header {
+    display: none;
+}
+
+.ir-course-header{
+    display: inline-block;
+}

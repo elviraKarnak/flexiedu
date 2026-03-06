@@ -53,6 +53,7 @@ register_nav_menus(
 		'menu-2' => __('Login', 'flexiedu'),
 		'menu-3' => __('Footer First Menu', 'flexiedu'),
 		'menu-4' => __('Footer Second Menu', 'flexiedu'),
+		'menu-5' => __('Logged In Menu', 'flexiedu'),
     )
 );
 
@@ -65,7 +66,41 @@ register_nav_menus(
 		}
 		add_action( 'after_setup_theme', 'flexiedu_setup_theme' );
 
+		function flexiedu_add_woocommerce_support() {
+    		add_theme_support('woocommerce');
+		}
+		
+		add_action('after_setup_theme', 'flexiedu_add_woocommerce_support');
+		
+		// 		/**
+		//  * Disable Classic Editor only for LearnDash Certificates
+		//  */
+		// add_filter( 'use_block_editor_for_post_type', function( $use, $post_type ) {
 
-require get_template_directory() . '/inc/custom_functions.php';
+		// 	if ( $post_type === 'sfwd-certificates' ) {
+		// 		return true; // Enable block editor
+		// 	}
 
-require get_template_directory() . '/inc/course_function.php';
+		// 	return $use;
+
+		// }, 100, 2 );
+
+
+		// /**
+		//  * Make sure Certificates support REST (required for builder)
+		//  */
+		// add_action( 'init', function() {
+
+		// 	global $wp_post_types;
+
+		// 	if ( isset( $wp_post_types['sfwd-certificates'] ) ) {
+		// 		$wp_post_types['sfwd-certificates']->show_in_rest = true;
+		// 	}
+
+		// }, 20 );
+
+
+
+require get_template_directory() . '/inc/theme_functions.php';
+
+require get_template_directory() . '/inc/videotile-course.php';

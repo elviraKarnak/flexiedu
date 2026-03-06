@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "instructor-role/submitted-essays",
+  "version": "0.1.0",
+  "title": "Instructor Role: Submitted Essay for LearnDash",
+  "category": "widgets",
+  "icon": "welcome-widgets-menus",
+  "keywords": [
+    "submitted essays"
+  ],
+  "description": "Create Block to display LearnDash submitted essays",
+  "supports": {
+    "html": false,
+    "jsx": true
+  },
+  "textdomain": "wdm_instructor_role",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./pages/questions.js",
+  "script": [
+    "learndash-instructor-role-translations"
+  ]
+}

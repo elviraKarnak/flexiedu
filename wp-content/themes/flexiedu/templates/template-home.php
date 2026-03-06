@@ -4,50 +4,61 @@
 **/
 get_header(); 
 
-$sub_title_hb = get_field('sub_title_hb');
-$title_hb = get_field('title_hb');
-$button_hb = get_field('button_hb');
-$video_url_hb = get_field('video_url_hb');
-$video_cover_hb = get_field('video_cover_hb');
+
 
 ?>
 
-<?php if($video_cover_hb || $video_url_hb): ?>
+<?php if(have_rows('banner_slider_hb')): ?>
 
-  <section class="home-banner position-relative d-flex align-items-end justify-content-center">
-      <div class="banner-or-vd-sc">
-        <!-- <img src="<?php //echo get_template_directory_uri(); ?>/assets/images/banner.jpg" alt=""> -->
-        <video autoplay playsinline muted disablePictureInPicture poster="<?php echo $video_cover_hb['url'];?>">
-          <source src="<?php echo $video_url_hb;?>"
-            type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="container">
-        <?php if($sub_title_hb){ ?>
-          <div class="small-title text-white">
-            <?php echo $sub_title_hb; ?>
+  <section class="home-banner position-relative d-flex align-items-end justify-content-center video_slider">
+    <div class=" banner_slider">
+      <?php while (have_rows('banner_slider_hb')): the_row(); 
+      
+          $sub_title_hb = get_sub_field('sub_title_bs_sin');
+          $title_hb = get_sub_field('title_bs_sin');
+          $button_hb = get_sub_field('button_hb_sin');
+          $video_url_hb = get_sub_field('video_url_hb');
+          $video_cover_hb = get_sub_field('video_cover_hb_sin');
+                
+      
+      ?>
+          <div class="item">
+            <div class="banner-or-vd-sc">
+              <!-- <img src="<?php //echo get_template_directory_uri(); ?>/assets/images/banner.jpg" alt=""> -->
+              <video autoplay playsinline muted disablePictureInPicture poster="<?php echo $video_cover_hb['url'];?>">
+                <source src="<?php echo $video_url_hb;?>"
+                  type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+               <div class="container">
+              <?php if($sub_title_hb){ ?>
+                <div class="small-title text-white">
+                  <?php echo $sub_title_hb; ?>
+                </div>
+              <?php } ?>
+              <?php if($title_hb){ ?>
+              <h1 class="text-white"><?php echo $title_hb; ?></h1>
+              <?php } ?>
+
+              <?php 
+
+                if($button_hb) {
+                    $link_url = $button_hb['url'];
+                    $link_title = $button_hb['title'];
+                    $link_target = $button_hb['target'] ? $button_hb['target'] : '_self';
+                    ?>
+
+                      <a href="<?php echo $link_url; ?>" class="btn btn-custom white-btn " <?php echo $link_target; ?>>
+                        <span> <?php echo $link_title; ?></span>
+                      </a>
+
+              <?php } ?>
+
+            </div>
           </div>
-        <?php } ?>
-        <?php if($title_hb){ ?>
-        <h1 class="text-white"><?php echo $title_hb; ?></h1>
-        <?php } ?>
-
-        <?php 
-
-          if($button_hb) {
-              $link_url = $button_hb['url'];
-              $link_title = $button_hb['title'];
-              $link_target = $button_hb['target'] ? $button_hb['target'] : '_self';
-              ?>
-
-                <a href="<?php echo $link_url; ?>" class="btn btn-custom white-btn " <?php echo $link_target; ?>>
-                  <span> <?php echo $link_title; ?></span>
-                </a>
-
-        <?php } ?>
-
-      </div>
+      <?php endwhile; ?>
+    </div>
     </section>
 <?php endif; ?>
 
@@ -123,15 +134,17 @@ $video_cover_hb = get_field('video_cover_hb');
       $postPerPage = 10;
       $tax_args   = array( 'relation' => 'AND' );
       $meta_args  = array('relation' => 'AND');
+       $courses = get_field('courses_hc');
 
      $args = array(
              
               'posts_per_page'   => $postPerPage,
               'post_type' => 'courses',
               'post_status' => 'publish',
+              'post__in' => $courses,
               // 'meta_query' => $meta_args,
               // 'tax_query' => $tax_args,
-              'order'   => 'DESC',
+              'order'   => 'ASC',
       );
 
       $courses = new WP_Query( $args );
@@ -143,6 +156,7 @@ $video_cover_hb = get_field('video_cover_hb');
         
         $sub_title_hc = get_field('sub_title_hc');
         $title_hc = get_field('title_hc');
+       
         $cta_button_hc = get_field('cta_button_hc');
         
         
@@ -185,28 +199,64 @@ $video_cover_hb = get_field('video_cover_hb');
                 </p>
               </div>
 
-              <div class="course-footer">
-                <?php if($price_course){
-                  $currency_symbol_flexiedu = get_field('currency_symbol_flexiedu', 'option');
-                  ?>
-                  <span class="course-price"><?php echo  $currency_symbol_flexiedu.$price_course; ?></span>
-                <?php } 
+               <div class="course-footer ">
+                            <?php if($price_course){
+                            $currency_symbol_flexiedu = get_field('currency_symbol_flexiedu', 'option');
+                            ?>
+                            <p><?php echo get_field('approved_by_sin');?>
+                            <span class="course-price"><?php echo  $currency_symbol_flexiedu.$price_course; ?></span>
+                            </p>
+                            <?php } 
 
-                  if($button_course) {
-                    $link_url = $button_course['url'];
-                    $link_title = $button_course['title'];
-                    $link_target = $button_course['target'] ? $button_course['target'] : '_self';
 
-                    $link_target = '_self';
-                    $link_url = get_the_permalink();
-                    $link_title = "View Course";
-                ?>
-                    <a href="<?php echo $link_url;  ?>" class="view-course-btn" <?php echo  $link_target; ?>>
-                    <?php echo $link_title;  ?>
-                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow2.svg" alt="arrow">
-                    </a>
-                <?php } ?>
-              </div>
+                              $buyNow = get_field('buy_now_url');
+                              $tryNow = get_field('trial_url_sin');
+
+                              $courseLogin = get_field('course_login_flexedu', 'option');
+                              
+
+                            if($button_course) {
+                                $link_url = $button_course['url'];
+                                $link_title = $button_course['title'];
+                                $link_target = $button_course['target'] ? $button_course['target'] : '_self';
+
+                                $link_target = '_self';
+                                $link_url = get_the_permalink();
+                                $link_title = "View Course";
+                            ?>
+                                <!-- <a href="<?php echo $link_url;  ?>" class="view-course-btn" <?php echo  $link_target; ?>>
+                                <?php echo $link_title;  ?>
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow2.svg" alt="arrow">
+                                </a> -->
+                                <?php } 
+                                
+                                $link_target = '_blank';
+                                
+                                ?>
+                               <div class="course_buttons">
+                                <?php if($tryNow){ ?>
+                                    <a href="<?php echo $tryNow;  ?>" class="view-course-btn" <?php echo  $link_target; ?>>
+                                        <?php echo __("Free Trial", 'flexiedu'); ?>
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow2.svg" alt="arrow">
+                                    </a>
+                                <?php } ?> 
+
+                                <?php if($buyNow){ ?>
+                                    <a href="<?php echo $buyNow;  ?>" class="view-course-btn" <?php echo  $link_target; ?>>
+                                        <?php echo __("Buy Now", 'flexiedu'); ?>
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow2.svg" alt="arrow">
+                                    </a>
+                                <?php } ?> 
+
+                                <?php if($courseLogin){ ?>
+                                    <a href="<?php echo $courseLogin;  ?>" class="view-course-btn" <?php echo  $link_target; ?>>
+                                        <?php echo __("User Login", 'flexiedu'); ?>
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow2.svg" alt="arrow">
+                                    </a>
+                                <?php } ?>
+                                </div> 
+                                 
+                        </div>
             </div>
           </div>
         <?php } ?>
@@ -321,6 +371,59 @@ $video_cover_hb = get_field('video_cover_hb');
 
   <?php } ?>
 
+  <?php if(have_rows('video_banner_slider')): ?>
+
+  <section class="home-banner home-video2-sc position-relative d-flex align-items-end justify-content-center video_slider">
+    <div class="owl-carousel owl-theme banner_slider">
+      <?php while (have_rows('video_banner_slider')): the_row(); 
+      
+          $video_banner_title_ht = get_sub_field('title_bs_sin');
+          $video_banner_description_ht = get_sub_field('sub_title_bs_sin');
+          $video_banner_cta_ht = get_sub_field('button_hb_sin');
+          $video_url_hb = get_sub_field('video_url_hb');
+          $video_cover_hb = get_sub_field('video_cover_hb_sin');
+                
+      
+      ?>
+          <div class="item">
+            <div class="banner-or-vd-sc">
+              <!-- <img src="<?php //echo get_template_directory_uri(); ?>/assets/images/banner.jpg" alt=""> -->
+              <video autoplay playsinline muted disablePictureInPicture poster="<?php echo $video_cover_hb['url'];?>">
+                <source src="<?php echo $video_url_hb;?>"
+                  type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+              <div class="container">
+              <?php if($video_banner_title_ht){ ?>
+                <h2 class="text-white"><?php echo $video_banner_title_ht; ?></h2>
+              <?php } ?>
+              <?php if($video_banner_description_ht){ ?>
+              <p class="text-white mt-4 mb-4"><?php echo $video_banner_description_ht; ?></p>
+              <?php } ?>
+              <?php 
+
+                if($video_banner_cta_ht) {
+                    $link_url = $video_banner_cta_ht['url'];
+                    $link_title = $video_banner_cta_ht['title'];
+                    $link_target = $video_banner_cta_ht['target'] ? $video_banner_cta_ht['target'] : '_self';
+                    ?>
+
+                      <a href="<?php echo $link_url; ?>" class="btn btn-custom white-btn " <?php echo $link_target; ?>>
+                        <span> <?php echo $link_title; ?></span>
+                      </a>
+
+              <?php } ?>
+
+            </div>
+        </div>
+    
+      <?php endwhile; ?>
+    </div>
+    </section>
+<?php endif; ?>
+
+
   <?php 
 
 
@@ -333,41 +436,7 @@ $video_cover_hb = get_field('video_cover_hb');
   
   ?>
 
-  <?php if($video_banner_url_ht || $video_banner_cover_ht){ ?>
-
-    <section class="home-banner home-video2-sc position-relative d-flex align-items-end justify-content-center">
-      <div class="banner-or-vd-sc">
-        <!-- <img src="<?php //echo get_template_directory_uri(); ?>/assets/images/banner.jpg" alt=""> -->
-        <video autoplay playsinline muted disablePictureInPicture poster="<?php echo $video_banner_cover_ht['url'];?>">
-          <source src="<?php echo $video_banner_url_ht;?>"
-            type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="container">
-        <?php if($video_banner_title_ht){ ?>
-          <h2 class="text-white"><?php echo $video_banner_title_ht; ?></h2>
-        <?php } ?>
-        <?php if($video_banner_description_ht){ ?>
-         <p class="text-white mt-4 mb-4"><?php echo $video_banner_description_ht; ?></p>
-        <?php } ?>
-        <?php 
-
-          if($video_banner_cta_ht) {
-              $link_url = $video_banner_cta_ht['url'];
-              $link_title = $video_banner_cta_ht['title'];
-              $link_target = $video_banner_cta_ht['target'] ? $video_banner_cta_ht['target'] : '_self';
-              ?>
-
-                <a href="<?php echo $link_url; ?>" class="btn btn-custom white-btn " <?php echo $link_target; ?>>
-                  <span> <?php echo $link_title; ?></span>
-                </a>
-
-        <?php } ?>
-
-      </div>
-    </section>
-  <?php } ?>
+ 
 
   <?php 
 

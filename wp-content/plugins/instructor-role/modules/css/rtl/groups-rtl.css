@@ -1,0 +1,560 @@
+/*!**********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/groups/style.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************/
+.wp-block-instructor-role-wisdm-groups .mce-ico {
+  font-family: dashicons !important;
+}
+.wp-block-instructor-role-wisdm-groups .ir-search-groups .mantine-Input-input {
+  border-radius: 8px;
+  height: 42px;
+}
+.wp-block-instructor-role-wisdm-groups .textInput-icon input {
+  padding-right: 30px;
+}
+.wp-block-instructor-role-wisdm-groups .ir-create-group,
+.wp-block-instructor-role-wisdm-groups .ir-edit-group {
+  padding: 24px 32px 32px 32px;
+  border: 1px solid;
+  border-radius: 16px;
+  margin-bottom: 48px;
+  background-color: #fff;
+}
+.wp-block-instructor-role-wisdm-groups .ir-group-info-block {
+  padding: 32px;
+  border: 1px solid;
+  border-radius: 16px;
+  background-color: #fff;
+}
+.wp-block-instructor-role-wisdm-groups .ir-group-images {
+  width: 333px;
+  max-width: 40%;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-group-images
+  .ir-featured-image-section {
+  width: 100%;
+  min-height: 188px;
+  border: 1px dashed;
+  padding: 0;
+}
+.wp-block-instructor-role-wisdm-groups .ir-image {
+  border-radius: 8px;
+}
+.wp-block-instructor-role-wisdm-groups .ir-group-info-fields {
+  width: calc(100% - 370px);
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-group-info-fields
+  .mantine-Input-input {
+  padding: 10px;
+  line-height: 20px;
+  border-radius: 6px;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-group-info-fields
+  .mantine-InputWrapper-label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-group-info-fields
+  .mantine-TextInput-label,
+.wp-block-instructor-role-wisdm-groups
+  .ir-group-info-fields
+  .mantine-Textarea-label {
+  margin-bottom: 12px;
+}
+.wp-block-instructor-role-wisdm-groups .ir-remove-replace {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 0 15px;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  min-height: 44px;
+  align-items: center;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-courses-learners
+  .mantine-Input-input {
+  padding: 10px;
+  line-height: 20px;
+  border-radius: 6px;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-courses-learners
+  .mantine-InputWrapper-label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-courses-learners
+  .mantine-MultiSelect-label {
+  margin-bottom: 12px;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-courses-learners
+  .mantine-Checkbox-label {
+  font-size: 0.875rem;
+  color: #879789;
+  font-weight: 400;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-courses-learners
+  .mantine-MultiSelect-searchInput {
+  border: none;
+  border-style: none !important;
+  padding: 0;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-courses-learners
+  .mantine-MultiSelect-values {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-access-controls
+  .mantine-MultiSelect-root {
+  width: 40%;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-access-controls
+  .mantine-MultiSelect-input {
+  padding: 1px 12px !important;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-access-controls
+  .mantine-MultiSelect-searchInput {
+  border: none;
+  border-style: none !important;
+  padding: 0;
+}
+.wp-block-instructor-role-wisdm-groups .ir-access-controls .ir-access-modes {
+  padding-right: 12px;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-access-controls
+  .ir-conditional-settings {
+  display: none;
+  margin-right: 22px;
+  border-right: 1px solid #d6d8e7;
+  padding-right: 16px;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-access-controls
+  [data-checked="true"]
+  + .ir-conditional-settings {
+  display: block;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-access-controls
+  .mantine-Radio-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #2e353c;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-access-controls
+  .mantine-Radio-description {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #868e96;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-access-controls
+  .mantine-Input-input {
+  height: 39px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  width: auto;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-access-controls
+  .mantine-MultiSelect-input {
+  min-height: 39px !important;
+  height: auto !important;
+}
+.wp-block-instructor-role-wisdm-groups .ir-access-controls .ir-min-width-30 {
+  min-width: 210px;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-access-controls
+  .ir-price-setting
+  .mantine-Input-input {
+  width: 135px;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-access-controls
+  .mantine-Input-withIcon {
+  padding-right: 35px !important;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-access-controls
+  .mantine-TimeInput-withIcon {
+  padding-right: 32px !important;
+  padding-top: 2px;
+  padding-bottom: 0;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-access-controls
+  .mantine-TimeInput-withIcon
+  input {
+  padding: 0;
+  border: none;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-settings-tab
+  .mantine-Select-wrapper {
+  width: 50%;
+}
+.wp-block-instructor-role-wisdm-groups .ir-settings-tab .mantine-Select-input {
+  height: 39px;
+}
+.wp-block-instructor-role-wisdm-groups .ir-settings-tab .mantine-Radio-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-settings-tab
+  .mantine-NumberInput-input {
+  padding: 10px;
+  line-height: 20px;
+  border-radius: 6px;
+}
+.wp-block-instructor-role-wisdm-groups .mw-200 {
+  min-width: 180px;
+  padding-top: 4px;
+}
+.wp-block-instructor-role-wisdm-groups .ir-w-50 {
+  width: 50%;
+}
+.wp-block-instructor-role-wisdm-groups .ir-groups-tabs {
+  flex-wrap: wrap;
+}
+.wp-block-instructor-role-wisdm-groups .ir-groups-tabs button {
+  background-color: transparent !important;
+  padding: 10px 16px !important;
+  color: #2e353c;
+  border-radius: 0 !important;
+  font-weight: 400 !important;
+}
+.wp-block-instructor-role-wisdm-groups .ir-groups-tabs button > div {
+  min-height: 18px;
+}
+.wp-block-instructor-role-wisdm-groups .ir-groups-tabs button.active {
+  border-bottom: 1px solid;
+  font-weight: 600 !important;
+}
+.wp-block-instructor-role-wisdm-groups .ir-groups-tabs button.active:hover {
+  border: none !important;
+  border-bottom: 1px solid !important;
+}
+.wp-block-instructor-role-wisdm-groups .ir-groups-tabs button:hover {
+  border: none !important;
+}
+.wp-block-instructor-role-wisdm-groups .ir-groups-tabs button:focus {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.wp-block-instructor-role-wisdm-groups .mantine-Select-input {
+  padding: 1px 12px;
+  border-radius: 4px;
+  background-image: none;
+}
+.wp-block-instructor-role-wisdm-groups .mantine-Input-withIcon,
+.wp-block-instructor-role-wisdm-groups .mantine-Select-withIcon {
+  padding-right: 35px !important;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-additional-filters
+  .mantine-Select-input {
+  padding: 1px 12px;
+  border-radius: 4px;
+  background-image: none;
+}
+.wp-block-instructor-role-wisdm-groups .mantine-Card-cardSection > div {
+  position: relative;
+}
+.wp-block-instructor-role-wisdm-groups .ir-group-listing-container {
+  position: relative;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-group-listing-container
+  .mantine-Checkbox-root {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-group-listing-container
+  .mantine-Checkbox-root
+  input[type="checkbox"] {
+  width: 100%;
+  height: 100%;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-group-listing-container
+  .ir-absolute-badges {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-group-listing-container
+  .ir-absolute-badges
+  > div {
+  background-color: rgba(37, 38, 43, 0.56) !important;
+  text-transform: capitalize;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-group-listing-container
+  .ir-groups-wrap {
+  width: calc(100% + 32px);
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-group-listing-container
+  .ir-groups-wrap
+  > div {
+  max-width: 33.33%;
+  min-width: 33.33%;
+}
+.wp-block-instructor-role-wisdm-groups .ir-group-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.wp-block-instructor-role-wisdm-groups .ir-group-info-tab .mantine-Input-input {
+  padding: 10px;
+  line-height: 20px;
+  border-radius: 6px;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-group-info-tab
+  .mantine-InputWrapper-label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-group-info-tab
+  .mantine-TextInput-label,
+.wp-block-instructor-role-wisdm-groups
+  .ir-group-info-tab
+  .mantine-Textarea-label {
+  margin-bottom: 12px;
+}
+.wp-block-instructor-role-wisdm-groups .ir-no-group {
+  text-align: center;
+  margin-top: 30px;
+}
+.wp-block-instructor-role-wisdm-groups .ir-no-group .mantine-Image-root {
+  margin: auto;
+}
+.wp-block-instructor-role-wisdm-groups .ml-minus {
+  margin-right: -30px;
+}
+.wp-block-instructor-role-wisdm-groups .ir-edit-topbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: none;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-edit-topbar
+  .mantine-Accordion-control {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid #ddd;
+  margin-right: 0px;
+  border-radius: 4px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.wp-block-instructor-role-wisdm-groups
+  .ir-edit-topbar
+  .mantine-Accordion-control
+  .mantine-Accordion-chevron {
+  margin-right: 0;
+  width: 100%;
+}
+.wp-block-instructor-role-wisdm-groups .ir-edit-topbar > .mantine-Group-root {
+  width: calc(100% - 52px);
+}
+.wp-block-instructor-role-wisdm-groups .ir-red-txt {
+  color: #de554b !important;
+}
+.wp-block-instructor-role-wisdm-groups .mantine-Badge-inner {
+  font-size: 1rem;
+}
+.wp-block-instructor-role-wisdm-groups .mantine-Badge-root.ir-drafted {
+  color: #2067fa;
+  background-color: rgba(32, 103, 250, 0.1);
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.wp-block-instructor-role-wisdm-groups .mantine-Badge-root.ir-published {
+  color: #00b61d;
+  background-color: rgba(0, 182, 29, 0.1);
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.wp-block-instructor-role-wisdm-groups .ir-primary-border-button {
+  background-color: transparent !important;
+}
+.wp-block-instructor-role-wisdm-groups .ir-inner-tabs {
+  border-bottom: 2px solid #dee2e6;
+  margin-bottom: 48px;
+}
+.wp-block-instructor-role-wisdm-groups .mantine-Tabs-tab:hover {
+  background-color: transparent !important;
+}
+.wp-block-instructor-role-wisdm-groups .mantine-Tabs-tab:active {
+  background-color: transparent !important;
+}
+.wp-block-instructor-role-wisdm-groups button.mantine-Tabs-tab:focus {
+  background: none !important;
+}
+.wp-block-instructor-role-wisdm-groups .mantine-Input-icon.mantine-Select-icon {
+  left: auto;
+}
+.wp-block-instructor-role-wisdm-groups .mantine-Select-withIcon {
+  padding-left: 35px !important;
+}
+.wp-block-instructor-role-wisdm-groups .ir-right-border {
+  border-left: 1px solid #ddd !important;
+  border-right: none !important;
+}
+.wp-block-instructor-role-wisdm-groups
+  .mantine-Button-icon.mantine-Button-leftIcon {
+  margin-right: 0;
+  margin-left: 10px;
+}
+.wp-block-instructor-role-wisdm-groups .mantine-Group-root.ir-right-border {
+  padding-right: 0px;
+  padding-left: 10px;
+}
+.wp-block-instructor-role-wisdm-groups .ir-courses-learners > div:first-child {
+  padding-left: 32px;
+  padding-right: 0px !important;
+  border-right: none !important;
+  border-left: 1px solid #ddd;
+}
+.wp-block-instructor-role-wisdm-groups .ir-courses-learners > div:last-child {
+  padding-left: 0px !important;
+  padding-right: 32px !important;
+}
+.wp-block-instructor-role-wisdm-groups .ir-access-controls .mantine-DatePicker-root {
+    margin-right: 0px!important;
+    margin-left: 12px;
+}
+.wp-block-instructor-role-wisdm-groups .ir-price-setting .mantine-TextInput-root {
+    margin-right: 0px!important;
+    margin-left: 12px!important;
+}
+.wp-block-instructor-role-wisdm-groups .ir-ml {
+    margin-left: 12px!important;
+}
+.wp-block-instructor-role-wisdm-groups .icon-tabler-info-circle {
+  padding-right: 4px;
+}
+.wp-block-instructor-role-wisdm-groups .ir-switch-label {
+  margin-left: 0px!important;
+  margin-right: 16px!important;
+}
+.wp-block-instructor-role-wisdm-groups .ir-edit-link {
+  padding-right: 0px!important;
+  padding-left: 16px!important;
+}
+.wp-block-instructor-role-wisdm-groups .ir-course-details-accordion .mantine-Accordion-chevron {
+  margin-left: 0px!important;
+}
+.ir-xl .ir-additional-filters {
+  flex-wrap: nowrap;
+}
+
+.ir-md
+  .wp-block-instructor-role-wisdm-groups
+  .ir-group-listing-container
+  .ir-groups-wrap
+  > div {
+  max-width: 50%;
+  min-width: 50%;
+}
+
+.ir-sm
+  .wp-block-instructor-role-wisdm-groups
+  .ir-group-listing-container
+  .ir-groups-wrap
+  > div {
+  max-width: 100%;
+  min-width: 100%;
+}
+.ir-sm
+  .wp-block-instructor-role-wisdm-groups
+  .ir-search-groups
+  .mantine-Input-input {
+  width: 200px;
+}
+.ir-sm .wp-block-instructor-role-wisdm-groups .ir-group-info-fields {
+  width: 100%;
+}
+.ir-sm .wp-block-instructor-role-wisdm-groups .ir-group-images {
+  width: 100%;
+  max-width: 100%;
+}
+.ir-sm .wp-block-instructor-role-wisdm-groups .ir-courses-learners {
+  flex-direction: column;
+}
+.ir-sm .wp-block-instructor-role-wisdm-groups .ir-courses-learners .ir-w-50 {
+  border-left: none !important;
+  width: 100% !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  margin-bottom: 24px;
+}
+
+.ir-xs
+  .wp-block-instructor-role-wisdm-groups
+  .ir-group-listing-container
+  .ir-groups-wrap
+  > div {
+  max-width: 100%;
+  min-width: 100%;
+}
+.ir-xs .wp-block-instructor-role-wisdm-groups .ir-search-groups {
+  width: 100%;
+}
+.ir-xs .wp-block-instructor-role-wisdm-groups .ir-search-groups button svg {
+  display: none;
+}
+.ir-xs .wp-block-instructor-role-wisdm-groups .ir-group-images {
+  max-width: 100%;
+  width: 100%;
+}
+.ir-xs .wp-block-instructor-role-wisdm-groups .ir-group-info-fields {
+  width: 100%;
+}
+.ir-xs .wp-block-instructor-role-wisdm-groups .ir-group-images {
+  width: 100%;
+  max-width: 100%;
+}
+.ir-xs .wp-block-instructor-role-wisdm-groups .ir-courses-learners {
+  flex-direction: column;
+}
+.ir-xs .wp-block-instructor-role-wisdm-groups .ir-courses-learners .ir-w-50 {
+  border-left: none !important;
+  width: 100% !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  margin-bottom: 24px;
+}

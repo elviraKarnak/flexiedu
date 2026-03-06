@@ -1,0 +1,473 @@
+/* cspell:ignore gallary featued // ignoring misspelled words that we can't change now. */
+
+body {
+  direction: rtl;
+} /*!************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/products/style.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************/
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-search-courses
+  .mantine-Input-input,
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-search-products
+  .mantine-Input-input {
+  border-radius: 8px;
+  height: 42px;
+}
+.wp-block-instructor-role-wisdm-instructor-products .textInput-icon input {
+  padding-right: 30px;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-gallary-upload
+  .mantine-Button-inner,
+.wp-block-instructor-role-wisdm-instructor-products .ir-products-tabs {
+  flex-wrap: wrap;
+}
+.wp-block-instructor-role-wisdm-instructor-products .ir-products-tabs button {
+  background-color: transparent !important;
+  padding: 10px 16px !important;
+  color: #2e353c;
+  border-radius: 0 !important;
+  font-weight: 400 !important;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-products-tabs
+  button
+  > div {
+  min-height: 18px;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-products-tabs
+  button.active {
+  border-bottom: 1px solid;
+  font-weight: 600 !important;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-products-tabs
+  button.active:hover {
+  border: none !important;
+  border-bottom: 1px solid !important;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-products-tabs
+  button:hover {
+  border: none !important;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-products-tabs
+  button:focus {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.wp-block-instructor-role-wisdm-instructor-products .ir-course-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-course-listing-container,
+.wp-block-instructor-role-wisdm-instructor-products .ir-gallary-item,
+.wp-block-instructor-role-wisdm-instructor-products
+  .mantine-Card-cardSection
+  > div {
+  position: relative;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-course-listing-container
+  .mantine-Checkbox-root {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-course-listing-container
+  .mantine-Checkbox-root
+  input[type="checkbox"] {
+  width: 100%;
+  height: 100%;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-course-listing-container
+  .ir-absolute-badges {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-course-listing-container
+  .ir-absolute-badges
+  > div {
+  background-color: rgba(37, 38, 43, 0.56) !important;
+  text-transform: capitalize;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-course-listing-container
+  .ir-products-wrap {
+  width: calc(100% + 32px);
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-course-listing-container
+  .ir-products-wrap
+  > div {
+  max-width: 33.33%;
+  min-width: 33.33%;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-additional-filters
+  .mantine-Select-input {
+  padding: 1px 12px;
+  border-radius: 4px;
+  background-image: none;
+}
+.wp-block-instructor-role-wisdm-instructor-products .mantine-Select-input {
+  border: 1px solid #ced4da !important;
+  border-radius: 4px;
+}
+.wp-block-instructor-role-wisdm-instructor-products .mantine-Badge-root,
+.wp-block-instructor-role-wisdm-instructor-products button {
+  font-size: 0.875rem !important;
+}
+.wp-block-instructor-role-wisdm-instructor-products .ir-no-course {
+  text-align: center;
+  margin-top: 30px;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-no-course
+  .mantine-Image-root {
+  margin: auto;
+}
+.wp-block-instructor-role-wisdm-instructor-products .ml-minus {
+  margin-right: -30px;
+}
+.wp-block-instructor-role-wisdm-instructor-products .ir-create-product,
+.wp-block-instructor-role-wisdm-instructor-products .ir-edit-product {
+  padding: 16px 32px 24px;
+  border: 1px solid;
+  border-radius: 16px;
+  margin-bottom: 32px;
+}
+.wp-block-instructor-role-wisdm-instructor-products .ir-product-images {
+  width: 333px;
+  max-width: 40%;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-product-images
+  .ir-featured-image-section {
+  width: 100%;
+  min-height: 188px;
+  border: 1px dashed;
+}
+.wp-block-instructor-role-wisdm-instructor-products .ir-product-info-fields {
+  width: calc(100% - 370px);
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-product-info-fields
+  .mantine-Input-input,
+.wp-block-instructor-role-wisdm-instructor-products .mantine-Input-input {
+  padding: 10px;
+  line-height: 20px;
+  border-radius: 6px;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-product-info-fields
+  .mantine-InputWrapper-label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.wp-block-instructor-role-wisdm-instructor-products .ir-textinfo > button {
+  background-color: transparent !important;
+  padding: 0 !important;
+}
+.wp-block-instructor-role-wisdm-instructor-products .mantine-MultiSelect-input {
+  padding: 5px 10px;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .mantine-MultiSelect-searchInput {
+  border: none !important;
+  padding: 0;
+}
+.wp-block-instructor-role-wisdm-instructor-products .ir-cat-box {
+  border-radius: 6px;
+  border: 1px solid;
+  padding: 16px;
+}
+.wp-block-instructor-role-wisdm-instructor-products .mw-200 {
+  min-width: 200px;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .mantine-Stepper-step:hover {
+  background-color: transparent !important;
+  color: #000;
+}
+.wp-block-instructor-role-wisdm-instructor-products .ir-red-txt {
+  color: #de554b !important;
+}
+.wp-block-instructor-role-wisdm-instructor-products .ir-remove-replace {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 0 15px;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  min-height: 44px;
+  align-items: center;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-sale-dates
+  .mantine-DatePicker-input {
+  width: 180px;
+}
+.wp-block-instructor-role-wisdm-instructor-products .ir-edit-topbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: none;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-edit-topbar
+  .mantine-Accordion-control {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid #ddd;
+  margin-right: 16px;
+  border-radius: 4px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-edit-topbar
+  .mantine-Accordion-control
+  .mantine-Accordion-chevron {
+  margin-right: 0;
+  width: 100%;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-edit-topbar
+  > .mantine-Group-root {
+  width: calc(100% - 52px);
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-publish-on
+  .ir-noborder
+  .mantine-Input-input {
+  padding: 0 35px 0 0;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  button.mantine-Accordion-control:focus,
+.wp-block-instructor-role-wisdm-instructor-products
+  button.mantine-Accordion-control:hover,
+.wp-block-instructor-role-wisdm-instructor-products
+  button.mantine-Accordion-control:visited,
+.wp-block-instructor-role-wisdm-instructor-products
+  button.mantine-Stepper-step:focus,
+.wp-block-instructor-role-wisdm-instructor-products
+  button.mantine-Stepper-step:hover,
+.wp-block-instructor-role-wisdm-instructor-products
+  button.mantine-Stepper-step:visited,
+.wp-block-instructor-role-wisdm-instructor-products
+  button.mantine-Tabs-tab:focus,
+.wp-block-instructor-role-wisdm-instructor-products
+  button.mantine-Tabs-tab:hover,
+.wp-block-instructor-role-wisdm-instructor-products
+  button.mantine-Tabs-tab:visited {
+  background-color: transparent;
+  color: #444;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .mantine-Badge-root.ir-drafted {
+  color: #2067fa;
+  background-color: rgba(32, 103, 250, 0.1);
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .mantine-Badge-root.ir-published {
+  color: #00b61d;
+  background-color: rgba(0, 182, 29, 0.1);
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-gallary-item
+  .ir-trash-item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 33px;
+  height: 33px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  z-index: 9;
+  cursor: pointer;
+}
+.ir-xs
+  .wp-block-instructor-role-wisdm-instructor-products
+  .ir-search-products
+  button
+  svg,
+.wp-block-instructor-role-wisdm-instructor-products
+  .has-featued
+  > div:nth-child(2) {
+  display: none;
+}
+.wp-block-instructor-role-wisdm-instructor-products .ir-gallary-upload {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  border: 1px dashed #ddd;
+  display: flex;
+  align-items: center;
+}
+.wp-block-instructor-role-wisdm-instructor-products .ir-gallary-upload button {
+  height: auto;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-gallary-upload
+  .mantine-Button-inner
+  .mantine-Button-label {
+  white-space: pre-wrap;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+}
+.wp-block-instructor-role-wisdm-instructor-products .mantine-TextInput-error,
+.wp-block-instructor-role-wisdm-instructor-products .mantine-Textarea-error {
+  display: block;
+}
+.wp-block-instructor-role-wisdm-instructor-products button.ir-btn-outline {
+  color: #2067fa !important;
+  border: 1px solid !important;
+}
+.wp-block-instructor-role-wisdm-instructor-products .ir-slug-input input {
+  padding: 6px !important;
+  line-height: 1 !important;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .mantine-DatePicker-root
+  button,
+.wp-block-instructor-role-wisdm-instructor-products
+  .mantine-DatePicker-root
+  button:hover {
+  color: #444;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .mantine-DatePicker-root
+  button[data-autofocus="true"],
+.wp-block-instructor-role-wisdm-instructor-products
+  .mantine-DatePicker-root
+  button[data-autofocus="true"]:hover,
+.wp-block-instructor-role-wisdm-instructor-products
+  .mantine-DatePicker-root
+  button[data-selected="true"],
+.wp-block-instructor-role-wisdm-instructor-products
+  .mantine-DatePicker-root
+  button[data-selected="true"]:hover {
+  color: #fff;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .mantine-DatePicker-root
+  .mantine-DatePicker-leftSection
+  > .mantine-ActionIcon-root:hover {
+  color: #444;
+  background-color: transparent;
+}
+.wp-block-instructor-role-wisdm-instructor-products .ir-add-cat,
+.wp-block-instructor-role-wisdm-instructor-products .ir-add-cat + svg {
+  cursor: pointer;
+}
+.wp-block-instructor-role-wisdm-instructor-products
+  .ir-textinfo
+  > button:hover {
+  border: none;
+}
+.wp-block-instructor-role-wisdm-instructor-products .mantine-Tooltip-tooltip {
+  z-index: 99999999 !important;
+}
+.media-modal {
+  z-index: 9999999 !important;
+}
+.ir-xl .ir-additional-filters {
+  flex-wrap: nowrap;
+}
+.ir-md
+  .wp-block-instructor-role-wisdm-instructor-products
+  .ir-course-listing-container
+  .ir-products-wrap
+  > div {
+  max-width: 50%;
+  min-width: 50%;
+}
+.ir-sm
+  .wp-block-instructor-role-wisdm-instructor-products
+  .ir-course-listing-container
+  .ir-products-wrap
+  > div,
+.ir-xs
+  .wp-block-instructor-role-wisdm-instructor-products
+  .ir-course-listing-container
+  .ir-products-wrap
+  > div {
+  max-width: 100%;
+  min-width: 100%;
+}
+.ir-sm
+  .wp-block-instructor-role-wisdm-instructor-products
+  .ir-search-products
+  .mantine-Input-input,
+.ir-xs
+  .wp-block-instructor-role-wisdm-instructor-products
+  .ir-search-products
+  .mantine-Input-input {
+  width: 200px;
+}
+.ir-sm
+  .wp-block-instructor-role-wisdm-instructor-products
+  .ir-product-info-fields,
+.ir-xs
+  .wp-block-instructor-role-wisdm-instructor-products
+  .ir-product-info-fields {
+  width: 100%;
+}
+.ir-sm .wp-block-instructor-role-wisdm-instructor-products .ir-product-images,
+.ir-xs .wp-block-instructor-role-wisdm-instructor-products .ir-product-images {
+  width: 100%;
+  max-width: 100%;
+}
+.ir-xs
+  .wp-block-instructor-role-wisdm-instructor-products
+  .ir-product-categories,
+.ir-xs .wp-block-instructor-role-wisdm-instructor-products .ir-product-tags {
+  max-width: 100%;
+}
+.mantine-13929wa.mantine-Stepper-stepIcon {
+  margin-left: 10px;
+}
+.mantine-Input-rightSection.mantine-DatePicker-rightSection,
+.mantine-Input-rightSection.mantine-MultiSelect-rightSection,
+.mantine-Input-rightSection.mantine-NumberInput-rightSection,
+.mantine-Input-rightSection.mantine-Select-rightSection {
+  left: 0;
+  right: auto;
+}
+.mantine-Checkbox-label,
+.mantine-MultiSelect-defaultValue.mantine-MultiSelect-value,
+.mantine-Radio-label {
+  padding-left: 0;
+  padding-right: 12px;
+}

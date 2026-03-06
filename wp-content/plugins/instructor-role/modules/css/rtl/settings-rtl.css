@@ -1,0 +1,136 @@
+.wp-block-instructor-role-dashboard-settings input,
+.wp-block-instructor-role-dashboard-settings select {
+  margin: 0;
+}
+.wp-block-instructor-role-dashboard-settings .mantine-Button-label,
+.wp-block-instructor-role-dashboard-settings button {
+  height: auto;
+  line-height: 1.187rem;
+  text-transform: none;
+}
+.wp-block-instructor-role-dashboard-settings .mantine-Tabs-tabLabel {
+  font-size: 1rem !important;
+}
+.wp-block-instructor-role-dashboard-settings .mantine-InputWrapper-label {
+  margin-bottom: 4px;
+  margin-top: 8px;
+}
+.wp-block-instructor-role-dashboard-settings .mantine-Input-wrapper {
+  padding: 6px 0;
+}
+.wp-block-instructor-role-dashboard-settings .mantine-Input-input {
+  background: #fff;
+  border: 1px solid #d6d8e7;
+  border-radius: 4px;
+  height: 50px;
+  padding: 14px 16px;
+}
+.wp-block-instructor-role-dashboard-settings .mantine-Input-input:disabled {
+  background: #fff !important;
+}
+.wp-block-instructor-role-dashboard-settings .mantine-Tabs-tabsList {
+  border-color: transparent;
+}
+.wp-block-instructor-role-dashboard-settings .mantine-Tabs-tab:active,
+.wp-block-instructor-role-dashboard-settings .mantine-Tabs-tab:hover {
+  background-color: transparent !important;
+}
+.wp-block-instructor-role-dashboard-settings .ir-primary-border-button:hover,
+.wp-block-instructor-role-dashboard-settings button.mantine-Tabs-tab:focus {
+  background: 0 0 !important;
+}
+.wp-block-instructor-role-dashboard-settings
+  .mantine-Input-input.mantine-Textarea-input {
+  height: auto;
+}
+.wp-block-instructor-role-dashboard-settings .ir-button-no-bg:active,
+.wp-block-instructor-role-dashboard-settings .ir-button-no-bg:focus,
+.wp-block-instructor-role-dashboard-settings .ir-button-no-bg:hover {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+.wp-block-instructor-role-dashboard-settings .ir-button,
+.wp-block-instructor-role-dashboard-settings .ir-primary-border {
+  border-radius: 6px;
+  padding: 10.5px 23.5px;
+}
+.wp-block-instructor-role-dashboard-settings
+  .mantine-InputWrapper-root.mantine-PasswordInput-root {
+  border: none;
+  width: 50%;
+}
+.wp-block-instructor-role-dashboard-settings
+  .mantine-PasswordInput-input.mantine-Input-input.mantine-PasswordInput-input {
+  border: none;
+  margin: 10px 0;
+}
+.wp-block-instructor-role-dashboard-settings .mantine-PasswordInput-innerInput {
+  background-color: #fff !important;
+  padding: 14px 16px !important;
+}
+.wp-block-instructor-role-dashboard-settings .mantine-Input-rightSection {
+  width: 10%;
+}
+.wp-block-instructor-role-dashboard-settings .paypal-email {
+  width: 50%;
+}
+.wp-block-instructor-role-dashboard-settings .mantine-Select-item {
+  border-radius: 4px;
+  padding: 8px 10px;
+}
+.wp-block-instructor-role-dashboard-settings
+  .below-767
+  .mantine-Group-root.mantine-1ykrv8f {
+  flex: 1;
+  flex-direction: column;
+}
+.wp-block-instructor-role-dashboard-settings .below-767 .mantine-1ykrv8f > * {
+  max-width: 100%;
+}
+.wp-block-instructor-role-dashboard-settings
+  .below-767
+  .mantine-InputWrapper-root,
+.wp-block-instructor-role-dashboard-settings
+  .below-767
+  .mantine-PasswordInput-root,
+.wp-block-instructor-role-dashboard-settings .below-767 .mantine-TextInput-root,
+.wp-block-instructor-role-dashboard-settings .below-767 .username {
+  width: 100%;
+}
+.wp-block-instructor-role-dashboard-settings
+  .below-767.below-500
+  .mantine-ikc8h8 {
+  flex-direction: column;
+}
+.wp-block-instructor-role-dashboard-settings .ir-text-rtl {
+  margin-left: 0;
+  margin-right: 16px;
+}
+.wp-block-instructor-role-dashboard-settings .ir-column-one-rtl {
+  margin-right: 0px;
+  margin-left: 32px;
+}
+.wp-block-instructor-role-dashboard-settings .ir-shortcode-item {
+  flex-direction: row-reverse;
+}
+.wp-block-instructor-role-dashboard-settings
+  .ir-shortcode-item
+  .mantine-Text-root {
+  text-align: end;
+}
+.wp-block-instructor-role-dashboard-settings
+  .ir-margin-top
+  .mantine-Accordion-chevron {
+  margin-left: 0;
+  margin-right: 8px;
+}
+.wp-block-instructor-role-dashboard-settings
+.mantine-Accordion-label .mantine-Text-root {
+  text-align: right;
+  margin-right: 16px;
+}
+.wp-block-instructor-role-dashboard-settings
+.ir-button {
+  margin-left: 0;
+  margin-right: 21px;
+}

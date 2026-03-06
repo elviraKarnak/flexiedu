@@ -1,0 +1,38 @@
+= [1.1.5] 2026-02-25 =
+
+* Fix - Resolved a deprecation warning related to `trim()` usage.
+* Fix - Resolved an issue where background images may not load when viewing a Certificate.
+
+= [1.1.4] 2026-01-08 =
+
+* Fix - Resolved `_load_textdomain_just_in_time()` notice errors that showed up in Wordpress 6.8.
+* Tweak - Improved Block compatibility with WordPress 6.9.
+* Tweak - Updated minimum required WordPress version from 6.1 to 6.6.
+
+= [1.1.3.1] =
+
+* Fix - Resolved a fatal error when rendering certificate download URLs.
+
+= [1.1.3] =
+
+* Fix - Resolved an issue where certificate image upload doesn't attach it to the post directly.
+* Fix - Resolved conflict with LearnDash Integrity hotlinking prevention feature that disabled an image from being loaded in a certificate.
+* Tweak - Added support for .PNG background images.
+
+= [1.1.2] =
+
+* Tweak - Added the ability to filter the blocks that can be used within the certificate builder.
+* Tweak - Added filters: `learndash_certificate_builder_allowed_blocks`, `learndash_certificate_builder_block_fallback`.
+
+= [1.1.1] =
+
+* Fix - Resolved missing blocks on widgets block editor page.
+
+= [1.1.0] =
+
+* Fix - Resolved fatal error related to non-prefixed Composer dependencies
+* Tweak - Added actions: `learndash_certificate_builder_uninstall`.
+
+= [1.0.0] =
+
+* Feature - Initial release.

@@ -62,7 +62,7 @@ do_action('load_filter_scripts');
                     <?php
                     $terms = get_terms(array(
                         'taxonomy'   => 'c-cat',
-                        'hide_empty' => false
+                        'hide_empty' => true
                     ));
 
                     if (!empty($terms) && !is_wp_error($terms)) :
@@ -81,7 +81,7 @@ do_action('load_filter_scripts');
             </div>
 
 
-            <!-- Level -->
+            <!-- Level
             <div class="filter-section">
               <div class="filter-header">
                 <h3>Level</h3>
@@ -91,7 +91,7 @@ do_action('load_filter_scripts');
                     <?php
                     $terms = get_terms(array(
                         'taxonomy'   => 'c-level',
-                        'hide_empty' => false
+                        'hide_empty' => true
                     ));
 
                     if (!empty($terms) && !is_wp_error($terms)) :
@@ -107,7 +107,7 @@ do_action('load_filter_scripts');
                     endif;
                     ?>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Price -->
             <div class="filter-section">
@@ -189,33 +189,69 @@ do_action('load_filter_scripts');
                 <div class="course-content">
                 <div>
                    <a href="<?php the_permalink(); ?>"> <h3 class="course-title"><?php the_title(); ?></h3></a>
-                    <p class="course-description"><?php echo wp_trim_words(get_the_excerpt(), 15, '...' ); ?>
+                    <p class="course-description"><?php //echo wp_trim_words(get_the_excerpt(), 15, '...' ); ?>
+                      <?php echo get_the_excerpt(); ?>
                     </p>
                 </div>
 
-                <div class="course-footer">
-                    <?php if($price_course){
-                    $currency_symbol_flexiedu = get_field('currency_symbol_flexiedu', 'option');
-                    ?>
-                    <span class="course-price"><?php echo  $currency_symbol_flexiedu.$price_course; ?></span>
-                    <?php } 
+            <div class="course-footer ">
+                            <?php if($price_course){
+                            $currency_symbol_flexiedu = get_field('currency_symbol_flexiedu', 'option');
+                            ?>
+                            <p><?php echo get_field('approved_by_sin');?>
+                            <span class="course-price"><?php echo  $currency_symbol_flexiedu.$price_course; ?></span>
+                            </p>
+                            <?php } 
 
-                    if($button_course) {
-                        $link_url = $button_course['url'];
-                        $link_title = $button_course['title'];
-                        $link_target = $button_course['target'] ? $button_course['target'] : '_self';
 
-                        $link_target = '_self';
-                        $link_url = get_the_permalink();
-                        $link_title = "View Course";
+                              $buyNow = get_field('buy_now_url');
+                              $tryNow = get_field('trial_url_sin');
 
-                    ?>
-                        <a href="<?php echo $link_url;  ?>" class="view-course-btn" <?php echo  $link_target; ?>>
-                        <?php echo $link_title;  ?>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow2.svg" alt="arrow">
-                        </a>
-                    <?php } ?>
-                </div>
+                              $courseLogin = get_field('course_login_flexedu', 'option');
+                              
+
+                            if($button_course) {
+                                $link_url = $button_course['url'];
+                                $link_title = $button_course['title'];
+                                $link_target = $button_course['target'] ? $button_course['target'] : '_self';
+
+                                $link_target = '_self';
+                                $link_url = get_the_permalink();
+                                $link_title = "View Course";
+                            ?>
+                                <!-- <a href="<?php echo $link_url;  ?>" class="view-course-btn" <?php echo  $link_target; ?>>
+                                <?php echo $link_title;  ?>
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow2.svg" alt="arrow">
+                                </a> -->
+                                <?php } 
+                                
+                                $link_target = '_blank';
+                                
+                                ?>
+                               <div class="course_buttons">
+                                <?php if($tryNow){ ?>
+                                    <a href="<?php echo $tryNow;  ?>" class="view-course-btn" <?php echo  $link_target; ?>>
+                                        <?php echo __("Free Trial", 'flexiedu'); ?>
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow2.svg" alt="arrow">
+                                    </a>
+                                <?php } ?> 
+
+                                <?php if($buyNow){ ?>
+                                    <a href="<?php echo $buyNow;  ?>" class="view-course-btn" <?php echo  $link_target; ?>>
+                                        <?php echo __("Buy Now", 'flexiedu'); ?>
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow2.svg" alt="arrow">
+                                    </a>
+                                <?php } ?> 
+
+                                <?php if($courseLogin){ ?>
+                                    <a href="<?php echo $courseLogin;  ?>" class="view-course-btn" <?php echo  $link_target; ?>>
+                                        <?php echo __("User Login", 'flexiedu'); ?>
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow2.svg" alt="arrow">
+                                    </a>
+                                <?php } ?>
+                                </div> 
+                                 
+                                </div>
                 </div>
             </div>
           </div>

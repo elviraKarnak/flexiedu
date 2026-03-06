@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "instructor-role/overview-page",
+  "version": "0.1.0",
+  "title": "Instructor Role: Instructor Overview for LearnDash",
+  "category": "widgets",
+  "icon": "feedback",
+  "description": "Block to display the Instructor Role Overview",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "showEarnings": {
+      "type": "boolean",
+      "default": true
+    },
+    "showTopCourses": {
+      "type": "boolean",
+      "default": true
+    },
+    "showLatestSubmissions": {
+      "type": "boolean",
+      "default": true
+    },
+    "showCourseReports": {
+      "type": "boolean",
+      "default": true
+    },
+    "showCoursesCount": {
+      "type": "boolean",
+      "default": true
+    },
+    "showStudentsCount": {
+      "type": "boolean",
+      "default": true
+    },
+    "showSubmissionsCount": {
+      "type": "boolean",
+      "default": true
+    },
+    "showQuizAttemptsCount": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "textdomain": "wdm_instructor_role",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./frontend.js"
+}

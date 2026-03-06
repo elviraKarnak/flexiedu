@@ -1,0 +1,146 @@
+body {
+  direction: rtl;
+} /*!***************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/commissions/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************/
+.wp-block-instructor-role-wisdm-instructor-commissions
+  .ir-commissions-orders-section
+  .mantine-TextInput-input,
+.wp-block-instructor-role-wisdm-instructor-commissions
+  .ir-commissions-transaction-section
+  .mantine-TextInput-input {
+  border-radius: 8px;
+  height: 42px;
+  padding-right: 30px;
+}
+.wp-block-instructor-role-wisdm-instructor-commissions
+  .ir-commissions-orders-section
+  .mantine-Select-input {
+  border-radius: 8px;
+  height: 42px;
+  width: 115px;
+}
+.wp-block-instructor-role-wisdm-instructor-commissions .ir-relative {
+  position: relative;
+}
+.wp-block-instructor-role-wisdm-instructor-commissions .ir-w-100 {
+  width: 100%;
+}
+.wp-block-instructor-role-wisdm-instructor-commissions
+  .ir-commissions-instructor-section
+  .mantine-Select-input {
+  width: 400px;
+  height: 42px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.wp-block-instructor-role-wisdm-instructor-commissions
+  .ir-commissions-instructor-section
+  .ir-instructor-profile {
+  background: #fff;
+  border: 1px solid #d6d8e7;
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+.wp-block-instructor-role-wisdm-instructor-commissions
+  .ir-commissions-dates
+  .mantine-DatePicker-input {
+  width: 210px;
+}
+.wp-block-instructor-role-wisdm-instructor-commissions .ir-commissions-chart {
+  margin: 0 -15px;
+  width: calc(100% + 30px);
+}
+.wp-block-instructor-role-wisdm-instructor-commissions
+  .ir-noborder
+  input[type="text"] {
+  border: none !important;
+  background: 0 0 !important;
+  padding: 0 !important;
+}
+.wp-block-instructor-role-wisdm-instructor-commissions
+  .mantine-DatePicker-root
+  .mantine-DatePicker-leftSection
+  > .mantine-ActionIcon-root:hover,
+.wp-block-instructor-role-wisdm-instructor-commissions
+  button.mantine-Tabs-tab:focus,
+.wp-block-instructor-role-wisdm-instructor-commissions
+  button.mantine-Tabs-tab:hover,
+.wp-block-instructor-role-wisdm-instructor-commissions
+  button.mantine-Tabs-tab:visited {
+  color: #444;
+  background-color: transparent;
+}
+.wp-block-instructor-role-wisdm-instructor-commissions .ir-pointer {
+  cursor: pointer;
+}
+.wp-block-instructor-role-wisdm-instructor-commissions .ir-paypal-details {
+  vertical-align: middle;
+}
+.ir-bordered-section,
+.wp-block-instructor-role-wisdm-instructor-commissions .ir-bordered-section {
+  padding: 16px 18px;
+  border-radius: 8px;
+  border: 1px solid;
+}
+.ir-error-message,
+.wp-block-instructor-role-wisdm-instructor-commissions .ir-error-message {
+  background-color: #fff2f2 !important;
+  border-color: #ffd0d0 !important;
+}
+.wp-block-instructor-role-wisdm-instructor-commissions
+  .mantine-DatePicker-root
+  button,
+.wp-block-instructor-role-wisdm-instructor-commissions
+  .mantine-DatePicker-root
+  button:hover {
+  color: #444;
+}
+.wp-block-instructor-role-wisdm-instructor-commissions
+  .mantine-DatePicker-root
+  button[data-autofocus="true"],
+.wp-block-instructor-role-wisdm-instructor-commissions
+  .mantine-DatePicker-root
+  button[data-autofocus="true"]:hover,
+.wp-block-instructor-role-wisdm-instructor-commissions
+  .mantine-DatePicker-root
+  button[data-selected="true"],
+.wp-block-instructor-role-wisdm-instructor-commissions
+  .mantine-DatePicker-root
+  button[data-selected="true"]:hover {
+  color: #fff;
+}
+.wp-block-instructor-role-wisdm-instructor-commissions .ir-table-wrapper {
+  max-width: 100%;
+  overflow: auto;
+  width: 100%;
+}
+.ir-md .tab-content,
+.ir-sm .tab-content,
+.ir-xs .tab-content {
+  max-width: 100%;
+}
+.ir-edit-transaction-modal .mantine-Modal-title,
+.ir-view-transaction-modal .mantine-Modal-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+.ir-edit-transaction-modal .mantine-TextInput-input,
+.ir-view-transaction-modal .mantine-TextInput-input {
+  height: 40px;
+  border-radius: 6px;
+}
+.ir-edit-transaction-modal .mantine-Group-root > .mantine-Text-root,
+.ir-view-transaction-modal .mantine-Group-root > .mantine-Text-root {
+  min-width: 150px;
+}
+.ir-edit-transaction-modal .mantine-Input-input,
+.ir-view-transaction-modal .mantine-Input-input {
+  line-height: 1;
+}
+.mantine-Text-root.mantine-1jkwq0q {
+  padding-right: 5px;
+}
+.mantine-DatePicker-calendarHeader .mantine-DatePicker-calendarHeaderControl {
+  transform: rotate(180deg);
+}

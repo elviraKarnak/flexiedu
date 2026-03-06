@@ -1,0 +1,148 @@
+/* cspell:ignore iefix visibilty decending accending */
+
+@font-face {
+  font-family: 'ir-admin';
+  src:  url('admin_fonts/icomoon.eot?vqx7rj');
+  src:  url('admin_fonts/icomoon.eot?vqx7rj#iefix') format('embedded-opentype'),
+    url('admin_fonts/icomoon.ttf?vqx7rj') format('truetype'),
+    url('admin_fonts/icomoon.woff?vqx7rj') format('woff'),
+    url('admin_fonts/icomoon.svg?vqx7rj#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="irb-icon-"], [class*=" irb-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'ir-admin' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.irb-icon-accending-decending:before {
+  content: "\e900";
+}
+.irb-icon-accending:before {
+  content: "\e901";
+}
+.irb-icon-add:before {
+  content: "\e902";
+  color: #4553e6;
+}
+.irb-icon-calendar:before {
+  content: "\e903";
+}
+.irb-icon-comment:before {
+  content: "\e904";
+}
+.irb-icon-courses:before {
+  content: "\e905";
+}
+.irb-icon-decending:before {
+  content: "\e906";
+}
+.irb-icon-drag-icon:before {
+  content: "\e907";
+  color: #363763;
+}
+.irb-icon-edit:before {
+  content: "\e908";
+}
+.irb-icon-expand-icon:before {
+  content: "\e909";
+}
+.irb-icon-hamburger:before {
+  content: "\e90a";
+}
+.irb-icon-hand:before {
+  content: "\e90b";
+}
+.irb-icon-help:before {
+  content: "\e90c";
+}
+.irb-icon-learndash:before {
+  content: "\e90d";
+}
+.irb-icon-left-move-arrow:before {
+  content: "\e90e";
+}
+.irb-icon-lesson .path1:before {
+  content: "\e90f";
+  color: rgb(216, 216, 216);
+}
+.irb-icon-lesson .path2:before {
+  content: "\e910";
+  margin-left: -1em;
+  color: rgb(61, 64, 78);
+}
+.irb-icon-logout:before {
+  content: "\e911";
+}
+.irb-icon-move-arrow-combine:before {
+  content: "\e912";
+}
+.irb-icon-nav-bar-right-arrow:before {
+  content: "\e913";
+  color: #696969;
+}
+.irb-icon-play:before {
+  content: "\e914";
+  color: #074ee8;
+}
+.irb-icon-product-1:before {
+  content: "\e915";
+}
+.irb-icon-product:before {
+  content: "\e916";
+}
+.irb-icon-profile:before {
+  content: "\e917";
+}
+.irb-icon-quiz .path1:before {
+  content: "\e918";
+  color: rgb(216, 216, 216);
+}
+.irb-icon-quiz .path2:before {
+  content: "\e919";
+  margin-left: -1em;
+  color: rgb(61, 64, 78);
+}
+.irb-icon-refresh:before {
+  content: "\e91a";
+}
+.irb-icon-right-move-arrow:before {
+  content: "\e91b";
+}
+.irb-icon-settings:before {
+  content: "\e91c";
+  color: #fff;
+}
+.irb-icon-side-bar-expand:before {
+  content: "\e91d";
+}
+.irb-icon-status:before {
+  content: "\e91e";
+}
+.irb-icon-student:before {
+  content: "\e91f";
+}
+.irb-icon-topic .path1:before {
+  content: "\e920";
+  color: rgb(216, 216, 216);
+}
+.irb-icon-topic .path2:before {
+  content: "\e921";
+  margin-left: -1em;
+  color: rgb(61, 64, 78);
+}
+.irb-icon-visibilty:before {
+  content: "\e922";
+}

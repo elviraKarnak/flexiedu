@@ -1,0 +1,135 @@
+// Quiz editor page with fullscreen mode OFF
+.sfwd-quiz.block-editor-page {
+	.ld-global-header-new-settings .edit-post-header__settings {
+		.components-button[aria-expanded="true"] {
+			svg {
+				transform: rotate(180deg);
+			}
+		}
+	}
+	.edit-post-header__settings {
+		.ld-popover.components-popover {
+			top: 68% !important;
+			.components-popover__content {
+				top: -2px;
+			}
+		}
+		.ld-popover.components-popover::before,
+		.ld-popover.components-popover::after {
+			right: 28px;
+		}
+	}
+
+	.edit-post-layout
+		.interface-interface-skeleton__actions
+		.editor-post-publish-panel {
+		margin-bottom: 0;
+		top: 210px;
+	}
+
+	@media (max-width: 781px) {
+		#editor .edit-post-layout {
+			padding-top: 160px;
+		}
+		#editor
+			.edit-post-layout.is-mode-visual.is-sidebar-opened.interface-interface-skeleton {
+			top: 46px;
+		}
+
+		.interface-interface-skeleton__secondary-sidebar,
+		.interface-interface-skeleton__sidebar {
+			top: 160px;
+		}
+	}
+	@media (max-width: 782px) {
+		#editor .edit-post-layout {
+			padding-top: 160px;
+		}
+		#editor
+			.edit-post-layout.is-mode-visual.is-sidebar-opened.interface-interface-skeleton {
+			top: 46px;
+		}
+	}
+	@media (min-width: 783px) {
+		#editor .edit-post-layout {
+			padding-top: 170px;
+		}
+		#editor
+			.edit-post-layout.is-mode-visual.is-sidebar-opened.interface-interface-skeleton {
+			top: 32px;
+		}
+	}
+}
+
+// Quiz editor page with fullscreen mode ON
+.sfwd-quiz.block-editor-page.is-fullscreen-mode {
+	@media (max-width: 781px) {
+		#editor .edit-post-layout {
+			padding-top: 115px;
+		}
+		.edit-post-layout
+			.interface-interface-skeleton__actions
+			.editor-post-publish-panel {
+			top: 160px;
+		}
+		.interface-interface-skeleton__secondary-sidebar,
+		.interface-interface-skeleton__sidebar {
+			top: 115px;
+			padding-bottom: 10px;
+		}
+		.interface-interface-skeleton__content
+			.edit-post-layout__metaboxes:not(:empty) {
+			margin-bottom: 0;
+		}
+	}
+
+	@media (min-width: 782px) {
+		#editor .edit-post-layout {
+			padding-top: 117px;
+		}
+
+		#editor
+			.edit-post-layout.is-mode-visual.is-sidebar-opened.interface-interface-skeleton {
+			top: 47px;
+		}
+		.edit-post-layout
+			.interface-interface-skeleton__actions
+			.editor-post-publish-panel {
+			top: 160px;
+		}
+	}
+
+	@media (min-width: 783px) {
+		#editor .edit-post-layout {
+			padding-top: 112px;
+		}
+		.has-footer .interface-interface-skeleton__body {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.sfwd-quiz.block-editor-page .ld__builder--edit-content-value,
+.sfwd-quiz.block-editor-page .ld__builder--edit-content-value * {
+	white-space: normal;
+}
+
+@media (max-width: 580px) {
+	.sfwd-quiz.block-editor-page {
+		.ld-answer-editor-actions,
+		.ld__builder--quiz-footer,
+		.ld__builder--new-entities form {
+			display: block;
+		}
+	}
+
+	.sfwd-quiz.block-editor-page {
+		.ld-answer-editor-actions {
+			height: fit-content;
+		}
+	}
+}
+
+.sfwd-quiz.block-editor-page .ld-node-header .row-actions {
+	margin-right: 5px;
+}

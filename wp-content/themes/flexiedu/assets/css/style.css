@@ -483,7 +483,24 @@ header.scrolled img {
   background: #3b7f37;
   color: #fff;
 }
-
+.course-footer .course-price{
+	display:block;
+	margin-top:15px;
+	font-size:20px
+}
+.course-footer .course_buttons{
+	display:flex;
+	gap:10px;
+}
+.course-footer .course_buttons a{flex:1;font-size:14px;padding:10px;text-align:center;display:block}
+@media(min-width:1110px) and (max-width:1400px){
+	.course-footer .course_buttons a{
+		padding:4px
+	}
+}
+.course-footer .course_buttons a img{
+	display:none
+}
 /* Price */
 .course-card-rgt .course-price1 {
   font-size: 30px;
@@ -663,12 +680,57 @@ hr {
 #menuClose{
   display:none
 }
+
+a.added_to_cart.wc-forward {
+    vertical-align: middle;
+    padding: 0;
+    margin-left: 20px;
+}
+.woocommerce-MyAccount-content .ld-profile-summary{
+  margin-top: 0 !important;
+  padding-top: 0;
+}
+.woocommerce-MyAccount-content .ld-profile-card{
+  display: none !important;
+}
+
+.woocommerce-MyAccount-content .learndash-wrapper .ld-profile-summary .ld-profile-stats{
+  justify-content: flex-end;
+}
+
+.woocommerce-MyAccount-content  .learndash-wrapper .ld-profile-summary .ld-profile-stats .ld-profile-stat strong {
+    display: block;
+    font-size: 18px;
+}
+
+body .learndash-wrapper .ld-focus .ld-focus-header{
+    height: 100px !important;
+}
+
+body.admin-bar .learndash-wrapper .ld-focus-sidebar{
+    top: 82px !important;
+}
+
+body .learndash-wrapper .ld-focus-sidebar{
+    top: 49x !important;
+}
+
+.ld-focus-header .ld-profile-avatar img{
+  height: 95%;
+  border-radius: 100%;
+}
+
+.learndash-wrapper .ld-focus .ld-focus-header .ld-user-menu {
+  border-style: none !important;
+}
+
+
 /* ============= Responsive ============= */
 @media (max-width: 992px) {
   .menu-sc + ul{
     margin-left: auto;margin-right: 20px;
   }
-  .menu-sc{margin-left: 0;order: 3;}
+  .menu-sc{margin-left: 20px;order: 3;}
   #menuClose{
     display:block;
     position: absolute;
@@ -1889,6 +1951,20 @@ header .container {
   justify-content: space-between;
 }
 
+.page-template-template-themepage .course-content,
+.archive .course-content
+ {
+  height: auto;
+}
+
+
+.page-template-template-themepage .course-card .course-image,
+.archive .course-card .course-image {
+   height: 300px;
+   object-fit: cover;
+   object-position: top;
+}
+
 .course-title {
   font-size: 20px;
   font-weight: 500;
@@ -1904,11 +1980,7 @@ header .container {
   margin-bottom: 10px;
 }
 
-.course-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 
 .course-price {
   font-size: 18px;
@@ -3790,5 +3862,1257 @@ margin-bottom: 40px;
 
   .inner-banner {
     padding: 80px 0px;
+  }
+  
+}
+
+/* style for submenu */
+ul.sub-menu {
+    position: absolute;
+    background: #fff;
+    width: 200px;
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.4s;
+    transform: translateY(10px);
+}
+
+ul.sub-menu li {
+    padding: 5px 10px;
+}
+ul.sub-menu li a {
+    color: #000 !important;
+}
+
+ul.sub-menu li:hover {
+    background: var(--primary-color);
+}
+
+ul.sub-menu li:hover a {
+    color: #000;
+}
+
+.menu>li:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transform: translateY(0);
+}
+
+.menu>li:hover .sub-menu li a::after{
+	display:none;
+}
+.menu>li:has(.sub-menu)::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    transform: rotate(135deg);
+    left: calc(100% + 10px);
+    top: 6px;
+}
+@media(max-width: 1199.98px){
+.menu>li:has(.sub-menu)::before {
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+	 top: 6px;
+	left: calc(100% + -35px);
+}	
+	.menu-wrap .menu>li>a{
+		width: 50%;
+	}
+}
+
+
+/* 29-1-26 css quiz and login form css*/
+.section_wrap.container.p-t.p-b {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.section_wrap.container.p-t.p-b .container {
+    padding: 0;
+    margin-top: 30px;
+}
+
+.learndash-wrapper .ld-breadcrumbs .ld-breadcrumbs-segments li a {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.learndash-wrapper .ld-breadcrumbs .ld-breadcrumbs-segments li:after {
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+.learndash-wrapper .ld-breadcrumbs {
+    padding: 15px 30px;
+		margin-bottom: 30px;
+}
+
+.section_wrap.container.p-t.p-b .wpProQuiz_button {
+    font-size: 18px;
+    padding: 13px 30px;
+    transition: all 0.4s;
+    font-weight: 400;
+    display: inline-block;
+		margin-top: 10px;
+}
+
+.section_wrap.container.p-t.p-b .wpProQuiz_button:hover {
+    color: #fff;
+    background: #000 !important;
+}
+.section_wrap.container.p-t.p-b .ld-progress-bar__label-icon--complete {
+    color: var(--primary-color);
+}
+.section_wrap.container.p-t.p-b .ld-breadcrumbs__items .ld-breadcrumbs__link {
+    font-size: 22px;
+    font-weight: 400;
+    color: #0296b6 !important;
+}
+.learndash-wrapper .ld-breadcrumbs a{
+	 color: #0296b6 !important;
+}
+.section_wrap.container.p-t.p-b .ld-breadcrumbs__items {
+    margin-bottom: 10px;
+}
+.section_wrap.container.p-t.p-b .ld-navigation>div a {
+    border: 2px solid var(--primary-color);
+    background: var(--primary-color);
+    transition: all 0.4s;
+}
+
+.section_wrap.container.p-t.p-b .ld-navigation>div a:hover {
+    color: #4a4a68;
+    background: #fff;
+}
+.section_wrap.container.p-t.p-b .ld-progress-bar__label {
+    font-size: 16px;
+}
+
+.section_wrap.container.p-t.p-b .ld-accordion__item-title.ld-accordion__item-title--quiz:hover {
+    color: #0296b6;
+    text-decoration: none;
+}
+
+.section_wrap.container.p-t.p-b .ld-svgicon.ld-svgicon__quiz-complete {
+    color: #0296b6;
+}
+
+.section_wrap.container.p-t.p-b .ld-navigation__label--completed {
+    color: #0296b6;
+}
+
+.section_wrap.container.p-t.p-b .ld-svgicon.ld-svgicon__lesson-complete {
+    color: #0296b6;
+}
+
+.ld-registration__form input {
+    border: none !important;
+    background: #efefef !important;
+    border-radius: 10px !important;
+}
+
+.ld-registration__form input[type='submit'] {
+    background: var(--primary-color) !important;
+    padding: 10px 30px;
+    border: 1px solid var(--primary-color) !important;
+    transition: all 0.4s;
+	border-radius: 30px !important;
+	margin-bottom: 0 !important;
+}
+
+.ld-registration__form input[type='submit']:hover {
+    background: #efefef !important;
+}
+.page-template-template-login .ld-registration__form {
+    max-width: 100% !important;
+}
+
+.ld-registration__register-link {
+    color: var(--green2);
+	font-weight: 400;
+    text-decoration: underline;
+}
+
+.ld-registration__forgot-password a {
+    color: var(--green2);
+	font-weight: 400;
+    text-decoration: underline;
+}
+.ld-form>p:not(:last-of-type){
+    position: relative;
+    margin-bottom: 35px !important;
+}
+.ld-form>p:not(:last-of-type) label{
+	    position: absolute;
+    background: #fff;
+    transform: translateY(-50%);
+    left: 30px;
+    padding: 0 10px;
+	font-weight: 400;
+}
+.ld-form .ld-form__field {
+    margin: 0 !important;
+    background: #fff !important;
+    padding: 15px !important;
+    border-radius: 30px !important;
+    border: 1px solid #C2C5C1 !important;
+}
+.ld-registration__login {
+    margin-bottom: 40px !important;
+}
+.ld-registration__login_options_wrapper {
+    margin-top: -15px;
+}
+.page-template-template-login .deault-page{
+	background: url("/wp-content/uploads/2026/01/gradient-bg.svg") no-repeat center top/cover;
+}
+a.ld-registration__login-link {
+    color: var(--green2);
+	font-weight: 400;
+    text-decoration: underline;
+	
+}
+.ld-registration__register-form>div{
+	position: relative;
+  margin-bottom: 35px !important;
+}
+.ld-registration__register-form>div:last-of-type{
+  margin-bottom: unset !important;
+}
+.ld-registration__register-form>div>div {
+  margin-bottom: 10px !important;
+}
+.ld-registration__register-form>div label {
+    position: absolute;
+    background: #fff;
+    transform: translateY(-50%);
+    left: 30px;
+    padding: 0 10px;
+	font-weight: 400;
+}
+.ld-registration__register {
+    margin-bottom: 40px !important;
+}
+.login-remember input {
+    accent-color: var(--primary-color);
+}
+.ld-button__password-visibility-toggle {
+    border-radius: 30px !important;
+    border-width: 1px !important;
+}
+/* .learndash-wrapper .ld-accordion__item {
+    background: #EDFFFF;
+} */
+
+.learndash-wrapper a.ld-accordion__item-title {
+    color: #0C0407 !important;
+    font-weight: 400;
+    transition: all 0.4s;
+    text-decoration:  none !important;
+}
+
+.learndash-wrapper a.ld-accordion__item-title:hover {
+    color: #0296b6;
+}
+.learndash-wrapper .ld-accordion__item-attribute>svg {
+    color: #0296b6;
+}
+.ld-registration__outer-wrapper .ld-registration__p {
+    max-width: 600px;
+}
+.ld-registration__outer-wrapper .ld-registration__p a,
+.posted_in a,
+.woocommerce-cart-form__contents td.product-name a {
+    color: var(--green2) !important;
+		font-weight: 400 !important;
+    text-decoration: underline !important;
+}
+
+.learndash-wrapper .ld-accordion .ld-accordion__header {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.ld-accordion .ld-accordion__expand-button--all:hover,
+.ld-accordion .ld-accordion__expand-button:hover,
+.ld-accordion .ld-accordion__expand-button:hover .ld-accordion__expand-button-text{
+	color: #0296b6;
+	border-color: #0296b6 !important;
+}
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_questionListItem:not(.ld-sortable__item) label.is-selected{
+	border-color: #0296b6;
+}
+.wpProQuiz_questionInput {
+    accent-color: #0296b6;
+}
+.ld-quiz-question-item__status--correct,
+.ld-quiz-question-item__status--missed{
+    color: green;
+}
+.ld-quiz-question-item__status--incorrect {
+    color: #db0000;
+}
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_response {
+    min-height: 55px !important;
+    padding: 15px !important;
+    margin-top: 0 !important;
+    margin-bottom: 40px !important;
+}
+.wpProQuiz_points.wpProQuiz_points--message span {
+    color: var(--green2);
+}
+/* 29-1-26 css quiz and login form css end*/
+
+/* new cource, cart, checkout css start */
+.products .type-product.product-type-course {
+    border: 1px solid #C2C5C1;
+    border-radius: 12px;
+    padding: 5px !important;
+}
+
+.products .type-product.product-type-course img {
+    border-radius: 12px;
+}
+
+.products .type-product.product-type-course .woocommerce-loop-product__title {
+    font-size: 20px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+.products a.button.product_type_course.add_to_cart_button {
+    border-radius: 30px;
+    padding: 12px 30px;
+    border: 1px solid var(--green2);
+    background: none;
+    color: var(--green2);
+    margin-left: 10px;
+    margin-bottom: 20px;
+    transition: all 0.4s;
+}
+.products a.button.product_type_course.add_to_cart_button:hover {
+    background: var(--green2);
+    color: #fff;
+}
+.single-product .summary.entry-summary .single_add_to_cart_button{
+    border: 1px solid var(--green2);
+    background: #fff;
+    color: var(--green2);
+    border-radius: 30px;
+    transition: all 0.4s;
+}
+.single-product .summary.entry-summary .single_add_to_cart_button:hover{
+    background: var(--green2);
+    color: #fff;
+}
+.cart_totals {
+    padding: 10px;
+    border: 1px solid var(--green2);
+    border-radius: 10px;
+}
+.wc-proceed-to-checkout{
+  padding-bottom: 0 !important;
+}
+.wc-proceed-to-checkout a.checkout-button{
+    border: 1px solid var(--green2) !important;
+    color: #fff !important;
+    background-color: var(--green2) !important;
+    transition: all 0.4s;
+    border-radius: 10px !important;
+    margin-bottom: 0 !important;
+}
+.wc-proceed-to-checkout a.checkout-button:hover{
+    color: var(--green2) !important;
+    background-color: #fff !important;
+}
+.products span.woocommerce-Price-amount.amount {
+    padding: 10px;
+}
+p.woocommerce-result-count {
+    font-weight: 400;
+    color: #333333;
+    /* font-size: 16px; */
+}
+select.orderby {
+    border: none;
+    outline: none;
+    color: #333333;
+}
+
+form.woocommerce-ordering {
+    padding: 10px;
+    border: 1px solid #EBEBEB;
+}
+
+.woocommerce-cart-form__contents button {
+    background-color: var(--green2) !important;
+    color: #fff !important;
+}
+.cart_totals h2{
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.woocommerce table.shop_table{
+  margin-top: 30px;
+}
+input#coupon_code {
+    border-radius: 5px;
+    border-color: var(--green2);
+}
+.woocommerce-checkout h1{
+  margin-bottom: 30px;
+}
+.woocommerce-checkout .woocommerce-info {
+    border-color: var(--green2);
+}
+.woocommerce-checkout .woocommerce-info a {
+    color: var(--green2);
+		font-weight: 400;
+    text-decoration: underline ;
+}
+.woocommerce-checkout .woocommerce-info::before {
+    color: var(--green2);
+}
+.woocommerce-billing-fields h3,
+.woocommerce-additional-fields h3,
+#order_review_heading {
+  background: linear-gradient(45deg, #f2f2f2, transparent);
+  color: #000;
+  border-left: 3px solid var(--green2);
+  font-size: 28px;
+  padding: 10px 10px;
+  margin-bottom: 10px;
+}
+#order_review_heading{
+  margin-top: 30px;
+}
+
+.woocommerce-checkout input,
+.woocommerce-checkout textarea,
+.woocommerce-checkout select,
+.woocommerce-address-fields input,
+.woocommerce-address-fields textarea,
+.woocommerce-address-fields select,
+.woocommerce-EditAccountForm input,
+.woocommerce-EditAccountForm textarea,
+.woocommerce-EditAccountForm select{
+    width: 100%;
+    padding: 10px !important;
+    line-height: unset !important;
+    border-color: #C2C5C1 !important;
+    font-weight: 300 !important;
+}
+
+.woocommerce-billing-fields__field-wrapper>p,
+.woocommerce-additional-fields p,
+.woocommerce-address-fields p,
+.woocommerce-EditAccountForm p {
+    flex-direction: column;
+    gap: 0px;
+}
+.woocommerce-checkout .select2-container--default .select2-selection--single .select2-selection__arrow,
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 10px;
+}
+.woocommerce-checkout .select2-container .select2-selection--single,
+.woocommerce-address-fields .select2-container .select2-selection--single{
+  height: auto;
+}
+.woocommerce-checkout .woocommerce form .form-row,
+.woocommerce-address-fields .woocommerce form .form-row{
+  margin-bottom: 10px;
+}
+.woocommerce-checkout .woocommerce form .form-row label,
+.woocommerce-address-fields .woocommerce form .form-row label{
+  font-weight: 400;
+}
+.woocommerce-checkout span.select2-dropdown.select2-dropdown--below {
+border: 1px solid #353535;
+}
+.woocommerce-checkout .select2-search__field{
+  width: 100% !important; 
+}
+.woocommerce-checkout .woocommerce-checkout-review-order-table{
+  margin-top: 20px !important;
+  border-collapse: collapse !important;
+}
+.woocommerce-checkout input#terms {
+    width: auto;
+}
+.woocommerce-checkout .woocommerce-checkout-payment a{
+  color: var(--green2);
+  font-weight: 400;
+}
+.woocommerce-checkout .form-row.place-order{
+  align-items: flex-end;
+}
+.woocommerce-checkout #place_order{
+  padding: 15px 40px;
+  white-space: nowrap;
+  border: 1px solid var(--green2);
+  color: #fff;
+  background-color: var(--green2);
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+
+/* new cource, cart, checkout css end */
+
+/* 4-2-26 css start */
+nav.woocommerce-MyAccount-navigation {
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link {
+    padding: 10px 20px;
+}
+
+.woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link.is-active{
+    background: var(--primary-color) !important;
+}
+.woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link:hover {
+    background: #f3fbe1;
+}
+
+.woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link.is-active a{
+    font-weight: 400;
+}
+
+.woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link a {
+    color: var(--green2);
+}
+
+.woocommerce-MyAccount-content a {
+    color: var(--green2);
+}
+.learndash-wrapper h1 {
+    font-size: 32px !important;
+	margin-bottom: 30px !important
+}
+.learndash-wrapper h2 {
+    font-size: 28px !important;
+}
+.learndash-wrapper .ld-progress-bar__label svg {
+    color: var(--primary-color);
+}
+
+
+.learndash-wrapper .ld-accordion__item svg {
+    color: var(--primary-color);
+}
+.ld-navigation__previous-link,
+.ld-navigation__back-to-course-link,
+.ld-navigation__next-link{
+	color: var(--green2) !important;
+	border-color: var(--primary-color) !important;
+	background: var(--primary-color) !important;
+	transition: all 0.3s !important;
+}
+.ld-navigation__previous-link:hover,
+.ld-navigation__back-to-course-link:hover,
+.ld-navigation__next-link:hover{
+	color: var(--green2) !important;
+	border-color: var(--green2) !important;
+	background: #fff !important;
+}
+.ld-navigation__progress-completed-action,
+.ld-navigation__progress-completed-action svg{
+	color: var(--green2) !important;
+}
+.ld-accordion__item--quiz{
+background: #ecffe4;	
+}
+input.wpProQuiz_button {
+    padding: 13px 30px !important;
+    font-size: 16px !important;
+    color: var(--green2) !important;
+}
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_button_reShowQuestion, .learndash-wrapper .wpProQuiz_content .wpProQuiz_button_restartQuiz {
+    background-color: var(--primary-color) !important;
+}
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_button_reShowQuestion:hover, .learndash-wrapper .wpProQuiz_content .wpProQuiz_button_restartQuiz:hover {
+    background-color: var(--primary-color) !important;
+    opacity: 1;
+}
+.ld-breadcrumbs__item a {
+    font-size: 18px;
+}
+.learndash-wrapper .ld-course-navigation .ld-status-icon {
+    flex: 0 0 20px !important;
+    height: 20px !important;
+    width: 20px !important;
+}
+.learndash-wrapper .ld-status-icon .ld-icon:before {
+    font-size: 10px;
+}
+span.ld-icon.ld-icon-quiz::before {
+    font-size: 16px !important;
+}
+
+.ld-topic-title {
+    font-size: 15px !important;
+}
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_questionListItem:not(.ld-sortable__item) label input {
+    accent-color: var(--green2) !important;
+}
+/* 4-2-26 css end */
+
+/* 9-2-26 css start */
+.woocommerce-breadcrumb {
+    box-shadow: none;
+    margin-bottom: 20px;
+}
+.woocommerce-page .woocommerce-result-count {
+    float: unset;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+.woocommerce-page h1{
+  font-size: 42px;
+  } 
+
+.woocommerce-page .quantity input {
+    padding: 7px;
+    border-radius: 30px;
+    border: 1px solid var(--green2);
+    color: var(--green2);
+    vertical-align: middle;
+}
+
+.course-card .course_buttons a,
+.woocommerce-page #commentform input[type='submit'] {
+    background: transparent !important;
+    color: var(--green2) !important;
+    border: 1px solid var(--green2) !important;
+    padding: 10px 20px !important;
+    border-radius: 30px !important;
+    font-size: 16px !important;
+    transition: all 0.4s;
+}
+.woocommerce-address-fields button[type=submit],
+.woocommerce-EditAccountForm button[type='submit'] {
+  margin-top: 20px;
+}
+
+.course-card .course_buttons a:hover,
+.woocommerce-page #commentform input[type='submit']:hover {
+    color: #ffffff !important;
+    background: var(--green2) !important;
+}
+.woocommerce-page .term-individual-courses .woocommerce .woocommerce-ordering select {
+    vertical-align: middle;
+}
+.woocommerce-page .ldgr_group_name input[type='text'] {
+    padding: 7px;
+    border-radius: 5px;
+    border-width: 1px;
+    margin-top: 5px;
+    border: 1px solid #C2C5C1;
+}
+.woocommerce-page .related.products h2,
+.woocommerce-page .woocommerce-Tabs-panel h2 {
+    margin-bottom: 20px;
+}
+header.woocommerce-Address-title.title.scrolled {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+header.woocommerce-Address-title.title.scrolled::after,
+header.woocommerce-Address-title.title.scrolled::before{
+  display: none;
+}
+header.woocommerce-Address-title.title.scrolled h2 {
+    font-size: 36px;
+}
+header.woocommerce-Address-title.title.scrolled a {
+    color: var(--green2);
+    font-size: 18px;
+}
+.woocommerce-MyAccount-content .button{
+  color: var(--green2) !important;
+  border: 1px solid var(--green2) !important;
+  background-color: transparent !important;
+  transition: all 0.4s !important;
+}
+.woocommerce-MyAccount-content .button:hover{
+  color: #fff !important;
+  background-color: var(--green2) !important;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+    border: 1px solid var(--green2);
+    background-color: var(--green2);
+    color: var(--white);
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li a {
+    color: var(--white);
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li:hover a {
+    color: var(--white);
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
+    color: var(--green2) !important;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs::before {
+    border-color: var(--green2);
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li::before {
+    border-color: var(--green2);
+    display: none;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li::after {
+    border-color: var(--green2);
+    display: none;
+}
+/* 9-2-26 css end */
+
+/* 12-2-26 css start */
+#wdm_groups_tab .enroll-new-user.ldgr-btn,
+#wdm_groups_tab .ldgr-btn.cnsg-btn,
+.ldgr-btn.create-sg-cancel{
+  color: var(--green2);
+  background: var(--white) !important;
+  border: 1px solid var(--green2);
+  transition: all 0.4s;
+}
+#wdm_groups_tab .enroll-new-user.ldgr-btn:hover,
+#wdm_groups_tab .ldgr-btn.cnsg-btn:hover,
+.ldgr-btn.create-sg-cancel:hover{
+  color: var(--white);
+  background: var(--green2) !important;
+}
+#wdm_groups_tab .tab-link a{
+  color: var(--green2) !important;
+  border-color: currentColor !important;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation{
+  width: 25%;
+}
+.woocommerce-account .woocommerce-MyAccount-content{
+  width: 73%;
+}
+#bulk_remove,
+.ldgr-btn.create-sub-group-submit{
+  color: var(--white) !important;
+  background: var(--green2) !important;
+  border: 1px solid var(--green2);
+  transition: all 0.4s;
+}
+#bulk_remove:hover,
+.ldgr-btn.create-sub-group-submit:hover{
+  color: var(--green2) !important;
+  background: var(--white) !important;
+}
+#wdm_group_wrapper input[type='checkbox'] {
+  accent-color: var(--green2);
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current{
+  background-color: var(--green2) !important;
+  border-color: var(--green2) !important;
+}
+#wdm_ldgr_group_report_wrapper .wdm-select-wrapper {
+    padding-bottom: 20px;
+}
+#tab-2 #wdm_ldgr_show_report {
+    white-space: normal;
+    padding: 0 20px;
+    border-color: var(--green2);
+    background: var(--green2) !important;
+    color: var(--white);
+}
+table#wdm_ldgr_group_report thead th {
+    background: var(--green2);
+    color: var(--white);
+}
+#tab-2 #wdm_ldgr_group_report td {
+    line-height: 1;
+    padding: 10px;
+    border-width: 1px;
+}
+.ldgr-group-report-item .ldgr-bg-color{
+  background-color: var(--green2) !important;
+}
+.wdm-select-wrapper #wdm_ldgr_course_id {
+    font-weight: 300;
+}
+.ldgr-btn.create-sub-group-submit{
+
+}
+/* 12-2-26 css end */
+
+/* 16-2-26 group setting css strt */
+.groups_plus_container {
+  position: relative;
+}
+.groups_plus_container .team-title h2,
+.groups_plus_container .groups_plus_report_list h3
+{
+  font-size: 36px;
+}
+.groups_plus_container .team-select {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+.groups_plus_container .groups_plus_header .learndash-groups-plus-user-licenses,
+.groups_plus_container .groups_plus_header .learndash-groups-plus-user-licenses-remaining{
+  font-size: 26px;
+}
+.groups_plus_container .groups_plus_header .learndash-groups-plus-user-licenses::before,
+.groups_plus_container .groups_plus_header .learndash-groups-plus-user-licenses-remaining::before{
+  color: var(--green2);
+}
+/* .groups_plus_container .btn_groups_plus,
+.ldgr-popup-content .ldgr-btn.solid {
+color: var(--white) !important;
+  background: var(--green2) !important;
+  border: 1px solid var(--green2);
+  transition: all 0.4s;
+} */
+.groups_plus_container .btn_groups_plus,
+.ldgr-popup-content .ldgr-btn.solid {
+color: var(--green2) !important;
+ background-color: white !important;
+  border: 1px solid var(--green2);
+  transition: all 0.4s;
+  border-radius: 50px;
+}
+
+.groups_plus_container  .manage-buttons a.btn_groups_plus{
+
+padding: 8px 10px;
+  border-radius: 5px;
+  font-size: 15px;
+
+  margin:0px 0px
+
+}
+.groups_plus_container  .manage-buttons{
+  display: flex;
+  gap:10px;
+  flex-wrap:wrap ;
+}
+
+.groups_plus_container .groups_user_table.groups_plus_table th:first-child{
+width: 25%;
+}
+
+.groups_plus_admin_header select, .groups_plus_team_member_filter select{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  border: 1px solid var(--green2);
+  border-radius: 6px;
+  padding: 10px 40px 10px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 220px;
+  background-image: url("data:image/svg+xml,%3Csvg fill='%2334691D' height='20' viewBox='0 0 20 20' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.5 7l4.5 5 4.5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+.groups_plus_report_list strong{
+  font-weight: 400;
+}
+.groups_plus_team_member_filter select{
+  border: 1px solid rgba(0,0,0,0.1);
+}
+.groups_plus_container .groups_plus_header, .groups_user_table.groups_plus_table thead{
+background-color: #f5f5f5;
+}
+.groups_plus_container .groups_plus_header, .groups_plus_container .groups_plus_header_box{
+border: 1px solid #cdcdcd;
+}
+
+
+.groups_plus_container .btn_groups_plus:hover,
+.ldgr-popup-content .ldgr-btn.solid:hover {
+
+  background: var(--primary-color) !important;
+}
+.groups_plus_table th:nth-child(2){
+  width: 30%;
+}
+.ldgr-popup-content {
+  position: relative;
+}
+.ldgr-popup-content .ldgr-tabs li.current{
+  color: var(--green2) !important;
+  border-color: var(--green2) !important;
+}
+.ldgr-popup-content .ldgr-color.ldgr-amu,
+.ldgr-popup-content .ldgr-color{
+  color: var(--primary-color) !important;
+}
+
+
+
+
+/* =========================
+   MODAL WRAPPER
+========================= */
+.groups-plus-modal .groups-plus-modal-content {
+  background: #ffffff;
+  border-radius: 14px;
+  width: 95%;
+  max-width: 1100px;
+  /* margin: 40px auto; */
+  box-shadow: 0 25px 70px rgba(0,0,0,0.18);
+  overflow: auto;
+  position: relative;
+}
+
+/* =========================
+ HEADER / TABS
+========================= */
+.groups-plus-modal .groups-plus-modal-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f4f4f4;
+  padding: 0 25px;
+}
+
+.groups-plus-modal .groups-plus-modal-nav .tabs {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.groups-plus-modal .groups-plus-modal-nav .tab-link:not(.groups-plus-close) {
+  padding: 18px 24px;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--dark-black);
+  transition: all 0.3s ease;
+  position: relative;
+}
+.groups-plus-modal .div-new-team-leader .text-right .text-center{
+  text-align: right !important;
+}
+.groups-plus-modal .groups-plus-modal-nav .tab-link:after{
+  content: none !important;
+}
+.groups-plus-modal .groups-plus-modal-nav .tab-link.current, .groups-plus-modal .groups-plus-modal-nav .link-tab.current {
+
+  color: #ffffff;
+  background: var(--green2);
+}
+
+.groups-plus-modal .groups-plus-modal-nav .tab-link.current::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #ffffff;
+}
+
+.groups-plus-modal .groups-plus-modal-nav .tab-link:hover {
+  color: #ffffff;background: var(--green2);
+}
+
+.groups-plus-modal .groups-plus-close {
+  background: transparent;
+  border: none;
+  font-size: 26px;
+  color: var(--dark-black);
+  cursor: pointer;
+  transition: 0.3s ease;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+
+}
+
+.groups-plus-modal .groups-plus-close:hover {
+  transform: scale(1.1);
+}
+
+.groups-plus-modal .groups-plus-modal-container {
+  padding: 35px;
+
+}
+
+
+.groups-plus-modal table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.05);
+}
+.groups_plus_container .groups_user_table tbody tr td:first-child h5{
+  font-size: 20px;
+}
+.groups-plus-modal table thead {
+  background: #f1f5f9;
+}
+.groups-plus-modal table th, .groups-plus-modal table td{
+ border-width: 1px;text-align: left !important;
+ border: 1px solid #eee;
+}
+.groups-plus-modal table th {
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  text-align: left;
+}
+
+.groups-plus-modal table td {
+  padding: 16px;
+  border-top: 1px solid #eee;
+}
+
+.groups-plus-modal table tr:hover {
+  background: #f3f9ef;
+}
+
+/* Delete Icon */
+.groups-plus-modal .icon-delete-groups-plus {
+  color: #dc2626;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.groups-plus-modal .icon-delete-groups-plus:hover {
+  transform: scale(1.2);
+}
+
+
+.groups-plus-modal .from-modal input[type="text"],
+.groups-plus-modal .from-modal input[type="email"],
+.groups-plus-modal .from-modal input[type="password"],
+.groups-plus-modal .from-modal select,
+
+.groups_plus_container{
+  margin-top: 0;
+}
+.div-table-container .lesson-table .div-table-row , .div-table-container .lesson-table .div-table-row-header{
+  border-radius: 0;
+}
+.groups-plus-modal .form-group input[type="text"],
+.groups-plus-modal .form-group input[type="email"],
+.groups-plus-modal .form-group input[type="password"],
+.groups-plus-modal .form-group select{
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  background: #ffffff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.groups-plus-modal-container .tab-content table{
+  margin-top: 10px;
+}
+.groups-plus-modal .from-modal input:focus,
+.groups-plus-modal .form-group input:focus,
+.groups-plus-modal .from-modal select:focus {
+  border-color: #34691D;
+  box-shadow: 0 0 0 3px rgba(52,105,29,0.15);
+  outline: none;
+}
+
+.groups-plus-modal .groups-plus-form-label,
+.groups-plus-modal .classrrom-form-label {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.groups-plus-modal input[type="checkbox"] {
+  accent-color: #34691D;
+  transform: scale(1.1);
+}
+
+.groups-plus-modal .groups-plus-courses-select {
+  height: 220px;
+  border-radius: 10px;
+}
+
+.groups-plus-modal .groups-plus-courses-actions a {
+  display: inline-block;
+  margin: 12px 0;
+  padding: 10px;
+  background: #34691D;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.groups-plus-modal .groups-plus-courses-actions a:hover {
+  opacity: 0.7;
+}
+.groups-plus-modal .groups-plus-courses-actions a img{
+filter: brightness(0) invert(1);
+}
+.groups_plus_container .groups_plus_header_box{
+  display: flex;
+  justify-content: space-between;
+}
+.groups_plus_container .div-team-container{
+  margin-bottom: 15px;
+}
+#frm_team_member_course_filter .col{
+margin-left: 0;margin-right: 10px;
+}
+.groups-plus-modal .btn_groups_plus {
+  background: #34691D;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  color: #ffffff !important;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.groups-plus-modal .btn_groups_plus:hover {
+  background: #2a5417;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(52,105,29,0.3);
+}
+@media (max-width:767px){
+  .woocommerce-account .woocommerce-MyAccount-content, .woocommerce-account .woocommerce-MyAccount-navigation{
+    width: 100%;
+  }
+  .woocommerce-account .woocommerce-MyAccount-content{margin-top: 50px;}
+  .groups_plus_container .team-title h2, .groups_plus_container .groups_plus_report_list h3{
+    font-size: 25px;margin-bottom: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+/* 16-2-26 group setting css end */
+
+
+
+
+
+/* Dashboard css */
+
+.single-sfwd-courses .ld-breakpoint--small .ld-progress-bar__meter{
+  max-width: 100%;
+}
+.single-sfwd-courses .ld-enrollment__join-button{
+   display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+  background: var(--primary-color) !important;
+  color: #000 !important;
+  border: none !important;
+  border-radius: 40px !important;
+  padding: 12px 0 !important;
+  font-size: 18px !important;
+  font-weight: 300 !important;
+  cursor: pointer !important;
+  transition: background 0.3s !important;
+  font-family: var(--HelveticaNeue-Regular);
+}
+.single-sfwd-courses .ld-enrollment__login-link{
+  color: var(--green2);
+}
+.woocommerce td.product-name .wc-item-meta p, .woocommerce td.product-name .wc-item-meta:last-child, .woocommerce td.product-name dl.variation p, .woocommerce td.product-name dl.variation:last-child{
+  margin-bottom: 10px;
+}
+
+.woocommerce-info{
+  border-top-color: var(--green2) !important;
+
+}
+.woocommerce-info::before{
+
+}
+.learndash-wrapper .ld-focus .ld-focus-sidebar{
+  padding-top: 100px !important;
+}
+.ld-navigation__progress-mark-complete-button, .ld-navigation__progress-mark-complete-button:active, .ld-navigation__progress-mark-complete-button:focus, .ld-navigation__progress-mark-complete-button:focus-visible, .ld-navigation__progress-mark-complete-button:focus-within, .ld-navigation__progress-mark-complete-button:hover{
+  background-color: var(--green2) !important;
+}
+.learndash-wrapper .ld-focus .ld-focus-header #sfwd-mark-complete #learndash_mark_complete_button, .learndash-wrapper .ld-focus .ld-focus-header #sfwd-mark-complete .learndash_mark_complete_button, .learndash-wrapper .ld-focus .ld-focus-header .sfwd-mark-complete #learndash_mark_complete_button, .learndash-wrapper .ld-focus .ld-focus-header .sfwd-mark-complete .learndash_mark_complete_button{
+  color: var(--green2) !important;
+}
+.learndash-wrapper .ld-focus .ld-focus-header #sfwd-mark-complete #learndash_mark_complete_button:hover, .learndash-wrapper .ld-focus .ld-focus-header #sfwd-mark-complete .learndash_mark_complete_button:hover, .learndash-wrapper .ld-focus .ld-focus-header .sfwd-mark-complete #learndash_mark_complete_button:hover, .learndash-wrapper .ld-focus .ld-focus-header .sfwd-mark-complete .learndash_mark_complete_button:hover{
+      outline-color: var(--green2) !important;
+}
+.ldgr-color, ul.tabs li.current a, .ldgr-tabs li.current{
+  color: var(--green2) !important;
+
+}
+.learndash-wrapper .ld-item-list .ld-section-heading .ld-item-list-actions .ld-expand-button{
+      appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff !important;
+    border: 1px solid var(--green2) !important;
+    border-radius: 6px;
+    padding: 10px 40px 10px 14px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 220px;
+    background-image: url(data:image/svg+xml,%3Csvg fill='%2334691D' height='20' viewBox='0 0 20 20' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.5 7l4.5 5 4.5-5z'/%3E%3C/svg%3E);
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+}
+
+.learndash-wrapper .ld-expand-button:focus{
+  outline-color: none !important;
+}
+.learndash-wrapper .ld-focus .ld-focus-main .ld-focus-content{
+  padding: 150px 50px !important;
+}
+.course-footer .course_buttons a{
+  padding: 10px !important;
+  font-size: 14px !important;
+}
+
+@media (max-width: 767px) {
+  .groups-plus-modal-container #manage_groups_plus_courses .form-group,
+  .groups-plus-modal-container #tab-add-groups-plus .form-group {
+      flex-direction: column !important;
+  }
+  .learndash-wrapper .ld-focus .ld-focus-main .ld-focus-content{
+    padding: 30px 15px !important;
+  }
+  .course-listing-row{
+    display: flex;
+    flex-direction: column;
+  }
+  .post-type-archive-product .woocommerce-ordering{
+    display: flex;
+    flex-direction: column;
   }
 }
