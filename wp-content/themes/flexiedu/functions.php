@@ -54,6 +54,7 @@ register_nav_menus(
 		'menu-3' => __('Footer First Menu', 'flexiedu'),
 		'menu-4' => __('Footer Second Menu', 'flexiedu'),
 		'menu-5' => __('Logged In Menu', 'flexiedu'),
+		'menu-6' => __('Dashboard', 'flexiedu'),
     )
 );
 
@@ -104,3 +105,28 @@ register_nav_menus(
 require get_template_directory() . '/inc/theme_functions.php';
 
 require get_template_directory() . '/inc/videotile-course.php';
+
+
+add_filter('use_block_editor_for_post_type', function ($use_block_editor, $post_type) {
+
+    $disable_for = ['organization'];
+
+    if (in_array($post_type, $disable_for)) {
+        return false; // Disable Gutenberg
+    }
+
+    return $use_block_editor;
+
+}, 10, 2);
+
+
+
+add_filter('wp_nav_menu_items', function($items, $args) {
+
+    if (strpos($items, 'Instructor Dashboard') !== false) {
+        $items = preg_replace('/<li[^>]*>.*?Instructor Dashboard.*?<\/li>/i', '', $items);
+    }
+
+    return $items;
+
+}, 999, 2);

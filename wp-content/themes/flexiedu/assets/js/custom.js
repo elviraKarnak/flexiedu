@@ -97,6 +97,21 @@ $(document).on('click', '#menuClose', function(e) {
     }
   });
 
+   $('.banner-slider').owlCarousel({
+      animateOut: 'fadeOut',
+      animateIn: 'fadeIn',
+      autoplay: true,
+      loop: true,
+      margin: 10,
+      nav: false,
+      dots: false,
+      autoHeight: false,
+      mouseDrag: false,
+      autoplayHoverPause: true,
+      items: 1,
+      autoplayTimeout: 3000,
+    });
+
   // Custom navigation
   $('#nextBtn').click(function () {
     owl.trigger('next.owl.carousel');

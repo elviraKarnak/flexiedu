@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Page: About
+ * Template Name: Page: About New dashboard
  **/
 get_header();
 

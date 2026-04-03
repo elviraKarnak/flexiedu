@@ -1,0 +1,50 @@
+2026-03-19T13:37:40+00:00 NOTICE 3.1.0 - No subscription webhooks found using API version 3. No updates needed. CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE 8.3.0 - Updating subscription email settings. CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE Subscription email settings not found: woocommerce_cancelled_subscription_settings. CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE Subscription email settings not found: woocommerce_customer_completed_renewal_order_settings. CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE Subscription email settings not found: woocommerce_customer_completed_switch_order_settings. CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE Subscription email settings not found: woocommerce-subscriptions_customer_notification_auto_renewal_settings. CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE Subscription email settings not found: woocommerce-subscriptions_customer_notification_auto_trial_expiry_settings. CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE Subscription email settings not found: woocommerce-subscriptions_customer_notification_manual_renewal_settings. CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE Subscription email settings not found: woocommerce-subscriptions_customer_notification_manual_trial_expiry_settings. CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE Subscription email settings not found: woocommerce-subscriptions_customer_notification_auto_trial_expiry_settings. CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE Subscription email settings not found: woocommerce_customer_on_hold_renewal_order_settings. CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE Subscription email settings not found: woocommerce_customer_renewal_invoice_settings. CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE Subscription email settings not found: woocommerce_expired_subscription_settings. CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE Subscription email settings not found: woocommerce_new_renewal_order_settings. CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE Subscription email settings not found: woocommerce_new_switch_order_settings. CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE Subscription email settings not found: woocommerce_customer_processing_renewal_order_settings. CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE Subscription email settings not found: woocommerce_suspended_subscription_settings. CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE Checking if the Gifting plugin is enabled... CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE Gifting plugin is not enabled, skipping... CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE Checking if the Downloads plugin is enabled... CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE Downloads plugin is not enabled via active_plugins, skipping... CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE Checking if downloads line items setting needs to be enabled for backward compatibility... CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE Downloadable file sharing is not enabled, skipping. CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE WooCommerce Subscriptions completed its upgrade to 8.5.0 from 0 while WooCommerce WC_VERSION 10.6.1 and database version 10.6.1 was active. CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE Environment info: CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE     WordPress Version : 6.9.4 CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE Active Plugins: CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE     Admin Columns for ACF Fields by Florian Eickhorst – 0.3.2 CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE     Advanced Custom Fields PRO by WP Engine – 6.6.2 CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE     Contact Form 7 by Rock Lobster Inc. – 6.1.5 CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE     Contact Form CFDB7 by Arshid – 1.3.5 CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE     Duplicator Pro by Duplicator – 4.5.24.3 CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE     FlexiEdu Custom OLD LMS by Raihan Reza – 1.0.0 CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE     FlexiEdu Custom LMS by Raihan Reza – 1.0.0 CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE     Instructor Role by LearnDash – 5.9.13 CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE     LearnDash LMS - Group Registration by LearnDash – 4.3.17 CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE     LearnDash LMS - Certificate Builder by LearnDash – 1.1.5 CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE     LearnDash LMS - Groups Plus by LearnDash – 2.1.5 CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE     LearnDash LMS - ProPanel by LearnDash – 3.0.5 CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE     LearnDash LMS - WooCommerce Integration by LearnDash – 2.0.2 CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE     Post Duplicator by Meta4Creations – 3.0.12 CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE     LearnDash LMS by LearnDash – 5.0.3 CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE     Show Current Template by JOTAKI Taisuke – 0.5.4 CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE     SVG Support by Unknown – 2.5.14 CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE     WooCommerce Stripe Gateway by Stripe – 10.5.2 CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE     WooCommerce Subscriptions by WooCommerce – 8.5.0 CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE     WooCommerce by Automattic – 10.6.1 CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE     Wordfence Security by Wordfence – 8.1.4 CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE     WP Database Backup - Unlimited Database & Files Backup by Backup for WP by Backup for WP – 7.10 CONTEXT: {"_legacy":true}
+2026-03-19T13:37:40+00:00 NOTICE     WP Mail SMTP Pro by WP Mail SMTP – 4.7.1 CONTEXT: {"_legacy":true}

@@ -83,7 +83,13 @@
                 <i class="fa-solid fa-cart-shopping fa-lg"></i>
                 <span class="cart-count badge rounded-pill position-absolute top-0 start-100 translate-middle"
                       style="background:#B1D95A;">
-                    <?php echo WC()->cart->get_cart_contents_count(); ?>
+                    <?php $cart_count = 0;
+
+if (function_exists('WC') && WC()->cart) {
+    $cart_count = WC()->cart->get_cart_contents_count();
+}
+
+echo $cart_count; ?>
                 </span>
             </a>
           </div>

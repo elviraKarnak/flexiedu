@@ -22,110 +22,224 @@ if( !class_exists( 'FlexiEdu_Courses' )){
 
     class FlexiEdu_Courses {
 
-        function __construct() {
-            
-			$this->define_constants(); 
+                function __construct() {
+                    
+                    $this->define_constants(); 
 
-                require_once( FlexiEdu_Courses_PATH . 'includes/course-functions.php' );
+                        require_once( FlexiEdu_Courses_PATH . 'includes/function.php');
 
-                require_once( FlexiEdu_Courses_PATH . 'includes/posttype-taxanomy.php' );
-                $FlexiEdu_Courses_Posttype_Taxonomy_Module = new FlexiEdu_Courses_Posttype_Taxonomy_Module();
+                        require_once( FlexiEdu_Courses_PATH . 'includes/event-calender.php');
+                        $flexiedu_Event_calender = new FlexiEdu_Event_calender();
 
-                require_once( FlexiEdu_Courses_PATH . 'includes/mycoursetab-wooaccount.php' );
-                $FlexiEdu_My_Course_Dashboard = new FlexiEdu_My_Course_Dashboard();
-
-                require_once( FlexiEdu_Courses_PATH . 'includes/groupmembers-wooaccount.php' );
-                $FlexiEdu_Group_Members_Dashboard = new FlexiEdu_Group_Members_Dashboard();
-
-                require_once( FlexiEdu_Courses_PATH . 'includes/groupsettings-wooaccount.php' );
-                $FlexiEdu_Group_Settings_Dashboard = new FlexiEdu_Group_Settings_Dashboard();
-
-                add_filter( 'woocommerce_account_menu_items',  array($this,'my_course_query_tab_order'));
-                add_action( 'woocommerce_thankyou',  array($this,'redirect_to_my_courses'), 20);
-                add_action( 'template_redirect', array($this,'redirect_login_to_my_account'));
-
-            }
+                        require_once( FlexiEdu_Courses_PATH . 'includes/sup-admin/inc-super-admin-shortcodes.php');
+                        $FlexiEdu_Admin_Shortcodes = new FlexiEdu_Admin_Shortcodes();
 
 
-            function my_course_query_tab_order( $items ) {
+                        add_action('init', [$this, 'add_rewrite_rules']);
+                        add_filter('query_vars', [$this, 'register_query_vars']);
+                        add_action('template_redirect', [$this, 'template_loader']);
 
-                $ordered = [];
+                        add_action('load_live_classes_scripts', [$this,'flexiedu_calendar_assets']);
+                        add_action('wp_enqueue_scripts', [$this, 'enqueue_admin_assets']);
 
-                // Define preferred order
-                $priority = [
-                    'dashboard',
-                    'my-courses-lms',
-                    'group-members',
-                    'group-settings', // <-- include your new tab here
-                    'orders',
-                    'downloads',
-                    'edit-address',
-                    'payment-methods',
-                    'edit-account',
-                    'customer-logout'
-                ];
-
-                foreach ( $priority as $key ) {
-                    if ( isset( $items[$key] ) ) {
-                        $ordered[$key] = $items[$key];
                     }
-                }
 
-                // Add any remaining items automatically (future-safe)
-                foreach ( $items as $key => $value ) {
-                    if ( ! isset( $ordered[$key] ) ) {
-                        $ordered[$key] = $value;
+                    
+
+                    public function enqueue_admin_assets(){
+                    
+                        if (is_singular('lms-console')) {
+                            $this->flexiedu_calendar_assets();
+                            wp_enqueue_editor();
+                        }
+                    
                     }
-                }
 
-                return $ordered;
-            }
-                 
-            function redirect_to_my_courses( $order_id ) {
+                    public function add_rewrite_rules(){
 
-                        if ( ! $order_id ) {
-                            return;
-                        }
+                            add_rewrite_rule(
+                                '^organization/([^/]+)/([^/]+)/?$',
+                                'index.php?org_name=$matches[1]&org_page=$matches[2]',
+                                'top'
+                            );
 
-                        // Only for logged-in users
-                        if ( ! is_user_logged_in() ) {
-                            return;
-                        }
+                            add_rewrite_rule(
+                                '^organization/([^/]+)/?$',
+                                'index.php?org_name=$matches[1]',
+                                'top'
+                            );
+                    }
 
-                        $order = wc_get_order( $order_id );
 
-                        // Make sure order is valid & paid
-                        if ( ! $order || ! $order->has_status( [ 'processing', 'completed' ] ) ) {
-                            return;
-                        }
+                    public function register_query_vars($vars){
+                        $vars[] = 'org_name';
+                        $vars[] = 'org_page';
+                        return $vars;
+                    }
 
-                        // Prevent redirect loop
-                        if ( is_wc_endpoint_url( 'order-received' ) ) {
-                                wp_safe_redirect( site_url( '/student-profile/my-courses-lms/' ) );
+
+                    public function template_loader(){
+
+                        $org  = get_query_var('org_name');
+                        $page = get_query_var('org_page');
+
+                        if (!$org) return;
+
+                        // Get organization by slug
+                        $organization = get_page_by_path($org, OBJECT, 'organization');
+
+                        if (!$organization) return;
+
+                        // Restrict access (login required)
+                        if (!is_user_logged_in()) {
+                            wp_redirect(home_url('/login'));
                             exit;
                         }
 
+                        // Make org globally available
+                        global $flexi_current_org;
+                        $flexi_current_org = $organization;
+
+                        $base_path   = FlexiEdu_Courses_PATH . 'templates/organization/pages/';
+                        $layout_path = FlexiEdu_Courses_PATH . 'templates/organization/layout/';
+
+                        // Resolve page file
+                        if (!$page) {
+                            $file = $base_path . 'dashboard.php';
+                        } else {
+                            $file = $base_path . sanitize_file_name($page) . '.php';
+                        }
+
+                        // If page exists → render with wrapper
+                        if (file_exists($file)) {
+
+                           get_header('dashboard'); 
+                           
+                           do_action('load_live_classes_scripts');
+                           
+                           ?>
+
+                                <div class="dashboard-content-wrapper">
+
+                                        <div class="learner-dashboard-left">
+                                            <?php  include $layout_path . 'org-l-sidebar.php';?>
+                                        </div>
+
+                                        <div class="learner-dashboard-right">
+
+                                            <div class="top_section">
+                                                <!-- // ===== HEADER ===== -->
+                                            <?php  include $layout_path . 'org-header.php';?>
+                                            </div>
+
+                                            <div class="learner-middle-container">
+                                                <div class="learner-main">
+                                                    <div class="dashboard-main-content">
+                                                        <div class="banner_section">
+                                                            <?php  include $layout_path . 'org-banner.php';?>
+                                                        </div>
+                                                        <!-- // ===== MAIN CONTENT ===== -->
+                                                        <?php  include $file;?>
+                                                    </div>    
+                                                    <!-- // ===== RIGHT SIDEBAR (optional control) ===== -->
+                                                    <div class="learner-sidebar-right">
+                                                        <?php  include $layout_path . 'org-r-sidebar.php';?>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="bottom_section">
+                                            <?php  include $layout_path . 'org-footer.php';?>
+                                            </div>
+                                        </div>
+
+                            <?php get_footer('dashboard');
+
+                            exit;
+                        }
+
+                        // ===== 404 FALLBACK =====
+                        global $wp_query;
+                        $wp_query->set_404();
+                        status_header(404);
+                        get_template_part(404);
+                        exit;
                     }
 
-                        function redirect_login_to_my_account() {
+                    function flexiedu_calendar_assets() {
 
-                            // Target WooCommerce My Account page
-                            if ( is_account_page() && ! is_user_logged_in() ) {
 
-                                $login_url = site_url( '/login/' );
+                       wp_enqueue_style(
+                            'bootstrap-icons',
+                             FlexiEdu_Courses_URL . 'assets/css/bootstrap-icons.min.css',
+                            [],
+                            1.0,
+                        );
 
-                                // Redirect back to My Account after login
-                                $redirect_url = add_query_arg(
-                                    'redirect_to',
-                                    urlencode( wc_get_page_permalink( 'myaccount' ) ),
-                                    $login_url
-                                );
+                        wp_enqueue_style(
+                            'jquery.dataTables-css',
+                             FlexiEdu_Courses_URL . 'assets/css/jquery.dataTables.min.css',
+                            [],
+                            1.0,
+                        );
 
-                                wp_safe_redirect( $redirect_url );
-                                exit;
-                            }
+                        wp_enqueue_style(
+                            'flexiedu-lms-css',
+                             FlexiEdu_Courses_URL . 'assets/css/custom.css',
+                            [],
+                            time(),
+                        );
 
-                        }
+
+                       
+
+                        wp_enqueue_script(
+                            'fullcalendar-js',
+                             FlexiEdu_Courses_URL . 'assets/js/index.global.min.js',
+                            ['jquery'],
+                            null,
+                            true
+                        );
+
+                        wp_enqueue_script(
+                            'jquery.dataTables-js',
+                             FlexiEdu_Courses_URL . 'assets/js/jquery.dataTables.min.js',
+                            ['jquery'],
+                            null,
+                            true
+                        );
+
+                        wp_enqueue_script(
+                            'live-class-calender',
+                            FlexiEdu_Courses_URL . 'assets/js/live-class-clender.js',
+                            ['jquery', 'fullcalendar-js'],
+                            time(),
+                            true
+                        );
+
+                        wp_enqueue_script(
+                        'flexiedu-lms-js',
+                        FlexiEdu_Courses_URL . 'assets/js/custom.js',
+                        ['jquery'],
+                        time(),
+                        true
+                        );
+
+                        wp_localize_script(
+                            'custom-js',
+                            'flexiedu_functions', // JS object name
+                            array(
+                                'ajax_url' => admin_url('admin-ajax.php'),
+                                 'siteURL'=> home_url(),
+                                'nonce'    => wp_create_nonce('flexiedu_nonce'),
+                                'is_user_logged_in' => is_user_logged_in(),
+                            )
+                        );
+
+
+                    }
+
+
 
 
                 public function define_constants(){
@@ -136,9 +250,13 @@ if( !class_exists( 'FlexiEdu_Courses' )){
 
                 public static function activate(){
 
+                require_once FlexiEdu_Courses_PATH . 'database/install.php';
+
+                FlexiEdu_Courses_DB::install();
+
+
                 }
                 
-
                 public static function deactivate(){
                     flush_rewrite_rules();
                 }

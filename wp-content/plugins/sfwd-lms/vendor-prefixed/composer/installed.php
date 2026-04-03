@@ -4,7 +4,7 @@
     'name' => 'learndash/core',
     'pretty_version' => 'dev-main',
     'version' => 'dev-main',
-    'reference' => '8d627b05b4945d4d81b890eac7d380a2046157e5',
+    'reference' => '5a2ff940ff7a575d9cb46ee7baf59e1360f37b00',
     'type' => 'wordpress-plugin',
     'install_path' => __DIR__ . '/../',
     'aliases' => 
@@ -100,9 +100,9 @@
     ),
     'stellarwp/arrays' => 
     array (
-      'pretty_version' => '1.3.1',
-      'version' => '1.3.1.0',
-      'reference' => '315a9b2018ac6f2475a346c89b1d7120ae07c218',
+      'pretty_version' => '1.3.2',
+      'version' => '1.3.2.0',
+      'reference' => 'e994abcdb5d76fb5fdea7f2e1549d0603c13f91e',
       'type' => 'library',
       'install_path' => __DIR__ . '/../stellarwp/arrays',
       'aliases' => 
@@ -136,9 +136,9 @@
     ),
     'stellarwp/db' => 
     array (
-      'pretty_version' => '1.2.0',
-      'version' => '1.2.0.0',
-      'reference' => 'f92d6ae0bcd74a3f526b023bb2d6ecd13227ef96',
+      'pretty_version' => '1.3.0',
+      'version' => '1.3.0.0',
+      'reference' => '34d6c66adf323f4839c2199d6e1119c79fc87a4f',
       'type' => 'library',
       'install_path' => __DIR__ . '/../stellarwp/db',
       'aliases' => 

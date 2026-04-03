@@ -1,0 +1,1 @@
+<?php echo do_shortcode('[ld_profile per_page="10" orderby="title"]'); ?>

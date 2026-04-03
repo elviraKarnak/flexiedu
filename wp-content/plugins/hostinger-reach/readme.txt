@@ -4,7 +4,7 @@ Contributors: hostinger
 Requires at least: 6.0
 Requires PHP: 8.0
 Tested up to: 6.9
-Stable tag: 1.3.9
+Stable tag: 1.4.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -376,3 +376,52 @@ Not yet. Currently, Reach is focused on one-time newsletters and promotional cam
 - Tweak: Update Readme
 - Tweak: Add Add Form Banner
 - Tweak: Improve UX for Connection Banner
+
+1.4.0 (2026-03-10)
+
+- Feature: Improve WooCommerce table UI
+- Feature: Add Coming Soon Banner in Overview page
+- Feature: Add FAQ in Overview Page
+- Fix: Secrets
+- Fix: not aligned admin menu icon
+- Fix: Release automation secrets
+- Fix: Subscription form button border radius
+- Fix: Subscription form button background color
+- Tweak: Update Dependencies
+- Tweak: Tweak Links in Overview page
+- Dev: Improve Release automation
+
+1.4.1 (2026-03-13)
+
+- Tweak: Update translations
+- Fix: Sync modal appears even when import is not supported
+- Tweak: Create Tag from form groups when the tag doesn't exist yet
+- Fix: Automation route link
+- Fix: Don't show Elementor Pro deleted forms
+- Fix: Add Elementor Pro metadata when sending Elementor Pro forms
+- Fix:  Reach Menu alignment
+- Fix: Subscription form button text color
+
+1.4.2 (2026-03-18)
+
+- Fix: Autoload pages on Gutenberg sites
+
+1.4.3 (2026-03-24)
+
+- Tweak: Adjust copy and UI
+
+1.4.4 (2026-03-31)
+
+- Fix: Update dependencies
+- Tweak:  Adjust contact form submission message
+- Fix:  Import contacts opening when no contacts
+- Tweak: Update translations
+- Fix: WooCommerce entries titles not showing for old installed Reach plugins
+- Tweak: Add new FAQ section
+
+1.4.5 (2026-04-02)
+
+- Tweak: Update translations
+- Fix: Prevent subdomains for connecting
+- Fix: Avoid render checkbox when not connected
+- Fix: Add tooltip for Toggle when is disabled (#401)

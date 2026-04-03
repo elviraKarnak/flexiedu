@@ -4,16 +4,22 @@ import { ref } from 'vue';
 import FAQ from '@/components/FAQ.vue';
 import Hero from '@/components/Hero.vue';
 import { useToast } from '@/composables/useToast';
+import { connectFaqData } from '@/data/faq';
 import { reachRepo } from '@/data/repositories/reachRepo';
+import { useGeneralDataStore } from '@/stores';
 import { translate } from '@/utils/translate';
 
 const TRUSTED_AUTH_DOMAINS = /^https:\/\/auth\.hostinger\.(dev|com)/;
+const PREVIEW_DOMAINS = /hostingersite\.com/i;
 
 const { showError } = useToast();
+
+const generalDataStore = useGeneralDataStore();
 
 const isConnectedToAnotherSite = ref(false);
 const isButtonLoading = ref(false);
 const domain = window.location.hostname;
+const rawDomain = generalDataStore.rawDomain;
 
 const handleGetStarted = async () => {
 	isButtonLoading.value = true;
@@ -24,6 +30,12 @@ const handleGetStarted = async () => {
 
 	if (error || !data) {
 		showError(error?.message || translate('hostinger_reach_error_message'));
+
+		return;
+	}
+
+	if (PREVIEW_DOMAINS.test(domain)) {
+		window.location.href = `https://hpanel.hostinger.com/websites/${encodeURIComponent(rawDomain)}`;
 
 		return;
 	}
@@ -42,9 +54,12 @@ const handleGetStarted = async () => {
 			:is-connected-to-another-site="isConnectedToAnotherSite"
 			:is-button-loading="isButtonLoading"
 			:domain="domain"
+			:is-temporary="PREVIEW_DOMAINS.test(domain)"
 			:on-get-started="handleGetStarted"
 		/>
-		<FAQ />
+		<div class="faq-wrap">
+			<FAQ :faq-data="connectFaqData" />
+		</div>
 	</div>
 </template>
 
@@ -62,5 +77,10 @@ const handleGetStarted = async () => {
 	.welcome-view {
 		padding: 0 8px;
 	}
+}
+
+.faq-wrap {
+	max-width: 780px;
+	margin: 24px auto;
 }
 </style>

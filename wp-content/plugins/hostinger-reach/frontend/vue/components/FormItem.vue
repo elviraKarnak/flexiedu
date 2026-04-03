@@ -2,11 +2,9 @@
 import { HIcon, HPopover } from '@hostinger/hcomponents';
 import { computed } from 'vue';
 
-import SyncStatusLabel from '@/components/SyncStatusLabel.vue';
 import Toggle from '@/components/Toggle.vue';
 import { useIntegrationsStore } from '@/stores';
 import type { Form, Integration } from '@/types/models';
-import { IMPORT_STATUSES } from '@/types/models';
 import { translate } from '@/utils/translate';
 
 const { syncContacts } = useIntegrationsStore();
@@ -34,6 +32,11 @@ const pluginTitle = computed(
 
 const supportsImport = computed(() => props.integration.type !== 'ecommerce' && props.integration.importEnabled);
 const hasActions = computed(() => !props.integration.isViewFormHidden || !props.integration.isEditFormHidden);
+const shouldHideToggle = computed(
+	() =>
+		!props.integration.canToggleForms ||
+		(props.integration.id === 'elementor' && !props.form.formId?.startsWith('elementor-hostinger-reach-form'))
+);
 </script>
 
 <template>
@@ -52,31 +55,21 @@ const hasActions = computed(() => !props.integration.isViewFormHidden || !props.
 				{{ translate('hostinger_reach_plugin_entries_table_syncing_header') }}:
 			</span>
 			<Toggle
+				v-if="shouldHideToggle"
+				v-tooltip="{
+					content: translate('hostinger_reach_plugin_cannot_disable'),
+					placement: 'top'
+				}"
 				:value="props.form.isActive"
-				:is-disabled="
-					!props.integration.canToggleForms ||
-					form.isLoading ||
-					form.formId?.startsWith('elementor-hostinger-reach-form')
-				"
+				:is-disabled="true"
 				@toggle="(status) => emit('toggleStatus', props.form, status)"
 			/>
-		</div>
-		<div class="form-item__cell form-item__cell--status">
-			<span class="form-item__mobile-label">
-				{{ translate('hostinger_reach_plugin_entries_table_status_header') }}:
-			</span>
-			<span class="form-item__status-label">
-				<SyncStatusLabel
-					:enabled="supportsImport"
-					:status="
-						!props.form.isActive
-							? IMPORT_STATUSES.OFF
-							: props.integration.id === 'thrive-leads'
-								? props.integration.importStatus?.summary['thriveLeads']?.status
-								: (props.integration.importStatus?.summary[form.formId]?.status ?? IMPORT_STATUSES.NOT_IMPORTED)
-					"
-				/>
-			</span>
+			<Toggle
+				v-else
+				:value="props.form.isActive"
+				:is-disabled="form.isLoading"
+				@toggle="(status) => emit('toggleStatus', props.form, status)"
+			/>
 		</div>
 		<div class="form-item__cell form-item__cell--actions">
 			<HPopover
@@ -134,15 +127,11 @@ const hasActions = computed(() => !props.integration.isViewFormHidden || !props.
 		}
 
 		&--forms {
-			width: 23%;
-		}
-
-		&--status {
-			width: 22%;
+			width: 27%;
 		}
 
 		&--actions {
-			width: 22%;
+			width: 40%;
 			display: flex;
 			justify-content: flex-end;
 		}
