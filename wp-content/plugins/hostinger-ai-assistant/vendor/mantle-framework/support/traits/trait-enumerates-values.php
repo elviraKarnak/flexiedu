@@ -31,7 +31,7 @@ use function Mantle\Support\Helpers\data_get;
  * Enumerate_Values trait.
  *
  * @template TKey of array-key
- * @template TValue
+ * @template TValue of mixed = mixed
  *
  * @property-read Higher_Order_Collection_Proxy $average
  * @property-read Higher_Order_Collection_Proxy $avg
@@ -128,7 +128,7 @@ trait Enumerates_Values {
 	 * @return array<TUnwrapKey, TUnwrapValue>
 	 */
 	public static function unwrap( $value ) {
-		return $value instanceof Enumerable ? $value->all() : $value;
+		return $value instanceof Enumerable ? $value->all() : $value; // @phpstan-ignore-line return.type
 	}
 
 	/**
@@ -193,13 +193,11 @@ trait Enumerates_Values {
 
 	/**
 	 * Dump the items.
+	 *
+	 * @param  mixed ...$args
 	 */
-	public function dump(): static {
-		( new static( func_get_args() ) )
-			->push( $this->all() )
-			->each(
-				fn ( $item ) => VarDumper::dump( $item ),
-			);
+	public function dump( ...$args ): static {
+		dump( $this->all(), ...$args );
 
 		return $this;
 	}
@@ -212,7 +210,7 @@ trait Enumerates_Values {
 	 */
 	public function each( callable $callback ) {
 		foreach ( $this as $key => $item ) {
-			if ( $callback( $item, $key ) === false ) {
+			if ( $callback( $item, $key ) === false ) { // @phpstan-ignore-line argument.type
 				break;
 			}
 		}
@@ -398,7 +396,7 @@ trait Enumerates_Values {
 	 * @param  (callable(TValue, TKey): bool)|TValue|string $key
 	 * @param  TValue|string|null                           $operator
 	 * @param  TValue|null                                  $value
-	 * @return static<int, static<TKey, TValue>>
+	 * @return static<int<0, 1>, static<TKey, TValue>>
 	 */
 	public function partition( $key, $operator = null, $value = null ) {
 		$passed = [];
@@ -416,9 +414,15 @@ trait Enumerates_Values {
 			}
 		}
 
+		/** @var static<TKey, TValue> $passed_collection */
+		$passed_collection = new static( $passed );
+
+		/** @var static<TKey, TValue> $failed_collection */
+		$failed_collection = new static( $failed );
+
 		return new static( [
-			new static( $passed ),
-			new static( $failed ),
+			$passed_collection,
+			$failed_collection,
 		] );
 	}
 
@@ -540,7 +544,7 @@ trait Enumerates_Values {
 	 * @param  bool                                                                   $strict Whether to use strict comparison.
 	 * @return static
 	 */
-	public function where_in( string $key, Arrayable|iterable $values, bool $strict = false ) {
+	public function where_in( string $key, mixed $values, bool $strict = false ) {
 		$values = $this->get_arrayable_items( $values );
 
 		return $this->filter(
@@ -555,7 +559,7 @@ trait Enumerates_Values {
 	 * @param  \Mantle\Contracts\Support\Arrayable<int, string>|iterable<int, string> $values Values to search for.
 	 * @return static
 	 */
-	public function where_in_strict( string $key, Arrayable|iterable $values ) {
+	public function where_in_strict( string $key, mixed $values ) {
 		return $this->where_in( $key, $values, true );
 	}
 
@@ -566,7 +570,7 @@ trait Enumerates_Values {
 	 * @param  \Mantle\Contracts\Support\Arrayable<int, string>|iterable<int, string> $values Values to search for.
 	 * @return static
 	 */
-	public function where_between( string $key, Arrayable|iterable $values ) {
+	public function where_between( string $key, mixed $values ) {
 		return $this->where( $key, '>=', reset( $values ) )->where( $key, '<=', end( $values ) );
 	}
 
@@ -577,7 +581,7 @@ trait Enumerates_Values {
 	 * @param  \Mantle\Contracts\Support\Arrayable<int, string>|iterable<int, string> $values Values to search against.
 	 * @return static
 	 */
-	public function where_not_between( string $key, Arrayable|iterable $values ) {
+	public function where_not_between( string $key, mixed $values ) {
 		return $this->filter(
 			fn ( $item ) => data_get( $item, $key ) < reset( $values ) || data_get( $item, $key ) > end( $values )
 		);
@@ -591,7 +595,7 @@ trait Enumerates_Values {
 	 * @param  bool                                                                   $strict Whether to use strict comparison.
 	 * @return static
 	 */
-	public function where_not_in( string $key, Arrayable|iterable $values, bool $strict = false ) {
+	public function where_not_in( string $key, mixed $values, bool $strict = false ) {
 		$values = $this->get_arrayable_items( $values );
 
 		return $this->reject(
@@ -606,7 +610,7 @@ trait Enumerates_Values {
 	 * @param  \Mantle\Contracts\Support\Arrayable<int, string>|iterable<int, string> $values Values to search against.
 	 * @return static
 	 */
-	public function where_not_in_strict( string $key, Arrayable|iterable $values ) {
+	public function where_not_in_strict( string $key, mixed $values ) {
 		return $this->where_not_in( $key, $values, true );
 	}
 
@@ -768,10 +772,9 @@ trait Enumerates_Values {
 	 * Get the collection of items as JSON.
 	 *
 	 * @param  int $options
-	 * @return string
 	 */
-	public function to_json( $options = 0 ) {
-		return json_encode( $this->jsonSerialize(), $options ); // phpcs:ignore WordPress.WP.AlternativeFunctions.json_encode_json_encode
+	public function to_json( $options = 0 ): string {
+		return (string) json_encode( $this->jsonSerialize(), $options ); // phpcs:ignore WordPress.WP.AlternativeFunctions.json_encode_json_encode
 	}
 
 	/**
@@ -786,7 +789,7 @@ trait Enumerates_Values {
 		}
 
 		return new static(
-			$this->group_by( $callback )->map(
+			$this->group_by( $callback )->map( // @phpstan-ignore-line argument.templateType
 				fn ( $value ) => $value->count()
 			)
 		);
@@ -904,6 +907,7 @@ trait Enumerates_Values {
 	 * Determine if the given value is callable, but not a string.
 	 *
 	 * @param  mixed $value
+	 * @phpstan-return ($value is callable ? true : false)
 	 */
 	protected function use_as_callable( mixed $value ): bool {
 		return ! is_string( $value ) && is_callable( $value );
@@ -915,7 +919,7 @@ trait Enumerates_Values {
 	 * @param  callable|string|null $value
 	 */
 	protected function value_retriever( callable|string|null $value ): callable {
-		if ( $this->use_as_callable( $value ) ) {
+		if ( $this->use_as_callable( $value ) && is_callable( $value ) ) {
 			return $value;
 		}
 
@@ -938,5 +942,158 @@ trait Enumerates_Values {
 	 */
 	protected function negate( Closure $callback ): Closure {
 		return fn ( ...$params ) => ! $callback( ...$params );
+	}
+
+	/**
+	 * Make a function that returns what's passed to it.
+	 *
+	 * @return \Closure(TValue): TValue
+	 */
+	protected function identity(): Closure {
+		return fn ( $value ) => $value;
+	}
+
+	/**
+	 * Create a new instance with no items.
+	 */
+	public static function empty(): static {
+		return new static( [] );
+	}
+
+	/**
+	 * Create a new collection by invoking the callback a given amount of times.
+	 *
+	 * @template TTimesValue
+	 *
+	 * @param  int                               $number
+	 * @param  (callable(int): TTimesValue)|null $callback
+	 * @return static<int, TTimesValue>
+	 */
+	public static function times( int $number, ?callable $callback = null ): static {
+		if ( $number < 1 ) {
+			return new static();
+		}
+
+		return static::range( 1, $number )
+			->unless( $callback === null )
+			->map( $callback );
+	}
+
+	/**
+	 * Get the average value of a given key.
+	 *
+	 * @param  (callable(TValue): float|int)|string|null $callback
+	 */
+	public function avg( $callback = null ): int|float|null {
+		$callback = $this->value_retriever( $callback );
+
+		$reduced = $this->reduce(
+			static function ( &$reduce, $value ) use ( $callback ) {
+				$resolved = $callback( $value );
+
+				if ( ! is_null( $resolved ) ) {
+					$reduce[0] += $resolved;
+					$reduce[1]++;
+				}
+
+				return $reduce;
+			},
+			[ 0, 0 ]
+		);
+
+		return $reduced[1] ? $reduced[0] / $reduced[1] : null;
+	}
+
+	/**
+	 * Reduce the collection to a single value.
+	 *
+	 * @template TReduceInitial
+	 * @template TReduceReturnType
+	 *
+	 * @param  callable(TReduceInitial|TReduceReturnType, TValue, TKey): TReduceReturnType $callback
+	 * @param  TReduceInitial                                                              $initial
+	 * @return TReduceInitial|TReduceReturnType
+	 */
+	public function reduce( callable $callback, $initial = null ) {
+		$result = $initial;
+
+		foreach ( $this as $key => $value ) {
+			$result = $callback( $result, $value, $key );
+		}
+
+		return $result;
+	}
+
+	/**
+	 * Reduce the collection to multiple aggregate values.
+	 *
+	 * @param  callable $callback
+	 * @param  mixed    ...$initial
+	 * @return array<array-key, mixed>
+	 *
+	 * @throws \UnexpectedValueException Throw when the reducer does not return an array.
+	 */
+	public function reduce_spread( callable $callback, ...$initial ): array {
+		$result = $initial;
+
+		foreach ( $this as $key => $value ) {
+			$result = call_user_func_array( $callback, array_merge( $result, [ $value, $key ] ) );
+
+			if ( ! is_array( $result ) ) {
+				throw new \UnexpectedValueException(
+					sprintf(
+						"%s::reduce_spread expects reducer to return an array, but got a '%s' instead.",
+						class_basename( static::class ),
+						gettype( $result )
+					)
+				);
+			}
+		}
+
+		return $result;
+	}
+
+	/**
+	 * Pass the collection into a new class.
+	 *
+	 * @template TPipeIntoValue
+	 *
+	 * @param  class-string<TPipeIntoValue> $class
+	 * @return TPipeIntoValue
+	 */
+	public function pipe_into( $class ) {
+		return new $class( $this );
+	}
+
+	/**
+	 * Pass the collection through a series of callable pipes and return the result.
+	 *
+	 * @param  array<callable> $callbacks
+	 * @return mixed
+	 */
+	public function pipe_through( $callbacks ) {
+		return ( new Collection( $callbacks ) )->reduce(
+			fn ( $carry, $callback ) => $callback( $carry ),
+			$this
+		);
+	}
+
+	/**
+	 * Get the collection of items as pretty print formatted JSON.
+	 *
+	 * @param  int $options
+	 */
+	public function to_pretty_json( int $options = 0 ): string {
+		return $this->to_json( JSON_PRETTY_PRINT | $options );
+	}
+
+	/**
+	 * Get a CachingIterator instance.
+	 *
+	 * @param  int $flags
+	 * @return \CachingIterator<TKey, TValue, \Iterator<TKey, TValue>>
+	 */
+	public function get_caching_iterator( int $flags = \CachingIterator::CALL_TOSTRING ): \CachingIterator {
+		return new \CachingIterator( $this->getIterator(), $flags );
 	}
 }

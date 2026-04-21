@@ -56,7 +56,7 @@ if (in_array('subscriber', (array) $user->roles)) :
 
 <section class="course-details text-center w-100 mt-5">
 
-    <h3 class="mb-5">Available Courses</h3>
+    <h3 class="mb-5"><?php esc_html_e('Available Courses', 'flexiedu-lms-courses'); ?></h3>
 
     <?php if (!empty($unenrolled_courses)) : 
 
@@ -91,7 +91,7 @@ if (in_array('subscriber', (array) $user->roles)) :
 
     <?php else : ?>
 
-        <p>No available courses.</p>
+        <p><?php esc_html_e('No available courses.', 'flexiedu-lms-courses'); ?></p>
 
     <?php endif; ?>
 

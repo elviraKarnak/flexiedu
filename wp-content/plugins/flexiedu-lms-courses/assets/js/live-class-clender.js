@@ -9,11 +9,17 @@ document.addEventListener('DOMContentLoaded', function() {
         width: 'auto',
         contentHeight: 'auto',
         expandRows: true,
+        timeZone: 'UTC',
 
-        eventDisplay: 'block',          // ✅ FIX
-        dayMaxEventRows: 3,             // ✅ FIX
+        eventDisplay: 'block',        
+        dayMaxEventRows: 3,       
+        eventTimeFormat: {
+        hour: 'numeric',
+        minute: '2-digit',
+        meridiem: 'short'
+        },      
 
-        eventContent: function(arg) {   // ✅ FIX
+        eventContent: function(arg) {  
             return {
                 html: `
                     <div style="font-size:12px; line-height:1.3;">
@@ -31,9 +37,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
         initialView: 'dayGridMonth',
 
-        events: "/wp-admin/admin-ajax.php?action=get_live_classes",
+        events: {
+            url: flexiedu_functions.ajax_url,
+            method: 'POST',
+            extraParams: {
+                action: 'get_live_classes',
+                nonce: flexiedu_functions.nonce
+            }
+        },
 
         eventClick: function(info) {
+
+            console.log('Event clicked:', info.event);
             
             info.jsEvent.preventDefault();
 

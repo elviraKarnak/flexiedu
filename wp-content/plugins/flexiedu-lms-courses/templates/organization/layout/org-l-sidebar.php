@@ -23,7 +23,7 @@
             <?php if(!empty($organizationLogo)){ ?>
               <img src="<?php echo $organizationLogo['url']; ?>" alt="<?php echo $organizationLogo['alt']; ?>">
             <?php }else{
-              echo "<h2>".$organization->post_title."</h2>";
+              echo '<h2>' . esc_html($organization->post_title) . '</h2>';
             } ?>
           </a>
         </div>

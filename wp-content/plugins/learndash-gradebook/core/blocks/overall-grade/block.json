@@ -1,0 +1,24 @@
+{
+	"apiVersion": 3,
+	"name": "realbigplugins/overall-grade-block",
+	"category": "learndash-blocks",
+	"icon": "awards",
+	"keywords": [ "course", "score", "grade", "lesson", "quiz", "student", "gradebook", "grade book" ],
+	"version": "1.0.0",
+	"textdomain": "learndash-gradebook",
+	"attributes": {
+		"gradebook": {
+			"type": "string",
+			"default": ""
+		},
+		"user": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"editorScript": "ld-gb-overall-grade-block",
+    "editorStyle": "ld-gb-overall-grade-block"
+}

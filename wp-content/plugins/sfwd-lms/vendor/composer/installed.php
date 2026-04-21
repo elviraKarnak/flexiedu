@@ -3,7 +3,7 @@
         'name' => 'learndash/core',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '5a2ff940ff7a575d9cb46ee7baf59e1360f37b00',
+        'reference' => '4621eab248cfb44ab4aac28156e7c998dca9ab95',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'learndash/core' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '5a2ff940ff7a575d9cb46ee7baf59e1360f37b00',
+            'reference' => '4621eab248cfb44ab4aac28156e7c998dca9ab95',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

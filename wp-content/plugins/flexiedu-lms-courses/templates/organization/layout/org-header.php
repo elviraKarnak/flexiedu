@@ -28,7 +28,7 @@
         <div class="page_title-wrap">
           <div class="toggle">
             <a href="#" class="toggleMenu">
-              <img src="<?php echo FlexiEdu_Courses_URL ?>assets/images/hemburger.svg" alt="hemburger">
+              <img src="<?php echo FlexiEdu_Courses_URL ?>assets/images/hemburger.svg" alt="<?php echo esc_attr__('Menu', 'flexiedu-lms-courses'); ?>">
             </a>
           </div>
           <div class="page_title">
@@ -39,7 +39,7 @@
       <div class="col-lg-6">
         <div class="header_align-end">
         <div class="search_wrap">
-              <input type="text" placeholder="Search">
+              <input type="text" placeholder="<?php echo esc_attr__('Search', 'flexiedu-lms-courses'); ?>">
               
             </div>
           <nav class="navbar">
@@ -63,8 +63,8 @@
                     ?>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="<?php echo $organizationLink; ?>/profile">Profile</a></li>
-                  <li><a class="dropdown-item" href="<?php echo wp_logout_url(); ?>">Logout</a></li>
+                  <li><a class="dropdown-item" href="<?php echo $organizationLink; ?>/profile"><?php esc_html_e('Profile', 'flexiedu-lms-courses'); ?></a></li>
+                  <li><a class="dropdown-item" href="<?php echo wp_logout_url(); ?>"><?php esc_html_e('Logout', 'flexiedu-lms-courses'); ?></a></li>
                 </ul>
               </li>
             </ul>
@@ -72,5 +72,3 @@
         </div>
       </div>
     </div>
-
-

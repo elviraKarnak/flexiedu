@@ -6653,6 +6653,45 @@ wfWAFRuleComparisonSubject::create($this, array('request.body', 'action'), array
     1 => '/.*/',
   ),
 ))))));
+$this->rules[902] = wfWAFRule::create($this, 902, NULL, 'rce', '100', 'WAF-RULE-902', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '/\\/wp\\-admin[\\/]+admin\\-ajax\\.php/i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'equals', 'kaliforms_form_process', array(wfWAFRuleComparisonSubject::create($this, array('request.body', 'action'), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array('request.queryString', 'action'), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'equals', 'nopriv_kaliforms_form_process', array(wfWAFRuleComparisonSubject::create($this, array('request.body', 'action'), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array('request.queryString', 'action'), array (
+))))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'lengthGreaterThan', '0', array(wfWAFRuleComparisonSubject::create($this, array('request.body', 'data', 'entryCounter'), array (
+)))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'lengthGreaterThan', '0', array(wfWAFRuleComparisonSubject::create($this, array('request.body', 'data', 'thisPermalink'), array (
+)))))));
+$this->rules[903] = wfWAFRule::create($this, 903, NULL, 'priv-esc', '100', 'WAF-RULE-903', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '/\\/wp\\-admin[\\/]+admin\\-ajax\\.php/i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'equals', 'acymailing_router', array(wfWAFRuleComparisonSubject::create($this, array('request.body', 'action'), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array('request.queryString', 'action'), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'equals', 'configuration', array(wfWAFRuleComparisonSubject::create($this, array('request.body', 'ctrl'), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array('request.queryString', 'ctrl'), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'equals', 'store', array(wfWAFRuleComparisonSubject::create($this, array('request.body', 'task'), array (
+)),
+wfWAFRuleComparisonSubject::create($this, array('request.queryString', 'task'), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))));
+$this->rules[904] = wfWAFRule::create($this, 904, NULL, 'file_upload', '100', 'WAF-RULE-904', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'versionLessThanEqualTo', '2.4.1', array(wfWAFRuleComparisonSubject::create($this, array('wordpress.plugins', 'breeze'), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparisonGroup(new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '/wp-comments-post\\.php$/i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'match', '/src(?:set)?=["\']?((?:https?:\\/\\/|\\/\\/)(?:.(?!["\']?\\s+(?:\\S+)=|\\s*\\/?[>"\']))*?\\.php(?:.(?!["\']?\\s+(?:\\S+)=|\\s*\\/?[>"\']))*)["\']?/i', array(wfWAFRuleComparisonSubject::create($this, array('request.body', 'author'), array (
+))))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'match', '#/wp\\-admin/profile\\.php$#i', array(wfWAFRuleComparisonSubject::create($this, 'server.script_filename', array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'match', '/src(?:set)?=["\']?((?:https?:\\/\\/|\\/\\/)(?:.(?!["\']?\\s+(?:\\S+)=|\\s*\\/?[>"\']))*?\\.php(?:.(?!["\']?\\s+(?:\\S+)=|\\s*\\/?[>"\']))*)["\']?/i', array(wfWAFRuleComparisonSubject::create($this, array('request.body', 'display_name'), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'equals', 'update', array(wfWAFRuleComparisonSubject::create($this, array('request.body', 'action'), array (
+))))))));
+$this->rules[905] = wfWAFRule::create($this, 905, NULL, 'rce', '100', 'WAF-RULE-905', 0, 'log', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'versionLessThanEqualTo', '5.4.0', array(wfWAFRuleComparisonSubject::create($this, array('wordpress.plugins', 'woo-custom-product-addons-pro'), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'lengthGreaterThan', '0', array(wfWAFRuleComparisonSubject::create($this, array('request.body', 'add-to-cart'), array (
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'contains', '\'', array(wfWAFRuleComparisonSubject::create($this, 'request.body', array (
+  0 => 
+  array (
+    0 => 'filterKeys',
+    1 => '/(text|number)_[0-9]{10}/',
+  ),
+)))), new wfWAFRuleLogicalOperator('AND'), new wfWAFRuleComparison($this, 'currentUserIsNot', 'administrator', array(wfWAFRuleComparisonSubject::create($this, 'server.empty', array (
+))))));
 $this->rules[307] = wfWAFRule::create($this, 307, NULL, 'brute-force', '100', 'Known malicious User-Agents', 0, 'block', new wfWAFRuleComparisonGroup(new wfWAFRuleComparison($this, 'equals', 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)', array(wfWAFRuleComparisonSubject::create($this, array('request.headers', 'User-Agent'), array (
 )))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'match', '#mozlila#i', array(wfWAFRuleComparisonSubject::create($this, array('request.headers', 'User-Agent'), array (
 )))), new wfWAFRuleLogicalOperator('OR'), new wfWAFRuleComparison($this, 'equals', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0', array(wfWAFRuleComparisonSubject::create($this, array('request.headers', 'User-Agent'), array (

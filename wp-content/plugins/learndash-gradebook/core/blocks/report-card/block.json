@@ -1,0 +1,25 @@
+{
+	"apiVersion": 3,
+	"name": "realbigplugins/report-card-block",
+	"category": "learndash-blocks",
+	"icon": "index-card",
+	"keywords": [ "course", "score", "lesson", "quiz", "user", "grade", "gradebook", "grade book" ],
+	"version": "1.0.0",
+	"textdomain": "learndash-gradebook",
+	"attributes": {
+		"gradebook": {
+			"type": "string",
+			"default": null
+		},
+		"user": {
+			"type": "string",
+			"default": ""
+		}
+	},
+    "supports": {
+		"align": [ "wide", "full" ],
+		"html": false
+	},
+    "editorScript": "ld-gb-report-card-block",
+	"editorStyle": "ld-gb-report-card-block"
+}

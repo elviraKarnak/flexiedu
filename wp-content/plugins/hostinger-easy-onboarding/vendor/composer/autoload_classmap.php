@@ -51,6 +51,7 @@ return array(
     'Hostinger\\EasyOnboarding\\Preview\\Assets' => $baseDir . '/includes/Preview/Assets.php',
     'Hostinger\\EasyOnboarding\\Requests\\Client' => $baseDir . '/includes/Requests/Client.php',
     'Hostinger\\EasyOnboarding\\Rest\\HostingRoutes' => $baseDir . '/includes/Rest/HostingRoutes.php',
+    'Hostinger\\EasyOnboarding\\Rest\\OnboardingRoutes' => $baseDir . '/includes/Rest/OnboardingRoutes.php',
     'Hostinger\\EasyOnboarding\\Rest\\Routes' => $baseDir . '/includes/Rest/Routes.php',
     'Hostinger\\EasyOnboarding\\Rest\\StepRoutes' => $baseDir . '/includes/Rest/StepRoutes.php',
     'Hostinger\\EasyOnboarding\\Rest\\TutorialRoutes' => $baseDir . '/includes/Rest/TutorialRoutes.php',

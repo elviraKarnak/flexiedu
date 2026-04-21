@@ -27,7 +27,8 @@ class FileFormField extends FormField
      */
     public function setErrorCode(int $error): void
     {
-        if (!\in_array($error, [\UPLOAD_ERR_INI_SIZE, \UPLOAD_ERR_FORM_SIZE, \UPLOAD_ERR_PARTIAL, \UPLOAD_ERR_NO_FILE, \UPLOAD_ERR_NO_TMP_DIR, \UPLOAD_ERR_CANT_WRITE, \UPLOAD_ERR_EXTENSION], true)) {
+        $codes = [\UPLOAD_ERR_INI_SIZE, \UPLOAD_ERR_FORM_SIZE, \UPLOAD_ERR_PARTIAL, \UPLOAD_ERR_NO_FILE, \UPLOAD_ERR_NO_TMP_DIR, \UPLOAD_ERR_CANT_WRITE, \UPLOAD_ERR_EXTENSION];
+        if (!\in_array($error, $codes)) {
             throw new \InvalidArgumentException(\sprintf('The error code "%s" is not valid.', $error));
         }
 

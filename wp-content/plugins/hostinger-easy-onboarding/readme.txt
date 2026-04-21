@@ -1,9 +1,9 @@
 === Hostinger Easy Onboarding ===
 Tags: onboarding, hostinger
 Requires at least: 5.5
-Tested up to: 6.8
+Tested up to: 6.9
 Requires PHP: 8.0
-Stable tag: 2.0.89
+Stable tag: 2.1.17
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -476,3 +476,164 @@ Watching for Changes: During development, you can use "npm run watch" to continu
 - Feat: Reach banner
 - Fix: Incorrect tutorial url
 - Feat: Added latest translations
+
+2.0.90 (2025-09-18)
+- Feature: Added Reach Banner
+- Feature: Added AI discovery step in onboarding
+- Feature: Updated translations
+
+2.0.91 (2025-09-25)
+- Dev: Increment test coverage
+- Fix: Missed logo in AI Discovery Step
+
+2.0.92 (2025-09-30)
+- Fix: Redirect to website creation page if theme not exist
+- Tweak: Bump dependencies
+- Dev: Fix Release updater
+
+2.0.93 (2025-10-07)
+- Feature: Updated UX for WooCommerce shipping step
+
+2.0.94 (2025-10-14)
+- Feature: Show critical domain status
+- Fix: Reminder banner styling issue
+
+2.0.95 (2025-10-28)
+- Feature: Full screen onboarding
+- Feature: Added new endpoints for full screen onboarding
+- Fix: Hostinger Reach step autocomplete
+- Fix: Deprecated function notice
+- Feature: Use softwareId for API calls
+
+2.0.96 (2025-10-30)
+- Feature: Update onboarding rest endpoints
+
+2.0.97 (2025-11-06)
+- Feature: Update hComponents library
+
+2.0.98 (2025-12-02)
+- Feature: New onboarding changes
+- Fix: Add missing workflow permissions
+- Fix: AI step infinite loader of button
+
+2.0.99 (2025-12-09)
+- Feature: Add WP Proxy client to new hosting calls
+- Feature: New onboarding redirect
+- Fix: New onboarding link
+- Fix: Remove legacy code regarding ratings
+- Fix: Popover not visible
+- Fix: Onboarding redirect
+- Fix: Prevent Cartflow onboarding redirect
+- Dev: Add dex code automation workflow
+
+2.1.0 (2025-12-11)
+- Fix: Onboarding: Add missing param on 'Go to wordpress' button
+- Fix: domain and plan details endpoint fetch
+
+2.1.1 (2026-01-06)
+- Fix: Onboarding: Preselect default plugins for themes
+- Fix: Invalid plugins installation state detect
+- Feature: Update onboarding buttons loading state
+- Feature: Implement PHP Compat WP PHP 8.1
+- Fix: Onboarding: Save onboarding state
+- Fix: Redirect user after onboarding
+- Fix: Autocomplete payment method setup substep
+- Fix: Autocomplete main steps
+- Refactor: Remove old code
+
+2.1.2 (2026-01-20)
+- Fix: Onboarding visual changes
+- Feature: Onboarding: Preserve state
+- Feature: Add homepage edit redirect
+- Fix: Single template view
+- Fix: Onboarding white overlay
+- Fix: Empty pre-built templates list
+- Fix: Other type plugins preselection
+- Feature: Update translations
+- Fix: Onboarding categories translation
+
+2.1.3 (2026-01-27)
+- Fix: Added endpoint to install affiliate theme
+- Fix: Dependencies issues and refactor script build
+- Fix: Auto activate affiliate theme
+- Fix: script load issue
+- Fix: Make AI Builder is available for Single plan
+- Fix: Missing translation for Do not install plugins
+- Tweak: Set the correct base proxy endpoint URI from the config file
+- Tweak: Change edit site button logic
+- Tweak: Update workflow node version
+- Tweak:  Add WooCommerce installed event to Amplitude
+- Tweak: Refactor edit saved event recurrence
+
+2.1.4 (2026-02-03)
+- Tweak: Update amplitude package
+- Feature: Set onboarding completed on exit
+- Fix: DEX code automation workflow
+- Fix: Translation typo
+- Fix: Wrong REST base url and fallback
+
+2.1.5 (2026-02-10)
+- Fix: Onboarding finish amplitude events
+- Feature: Kodee sidebar
+- Fix: Onboarding not completed
+- Fix: Update first step of onboarding image to higher resolution
+- Fix: 400 error on plugins installation when 12 plugins are selected
+
+2.1.6 (2026-02-18)
+- Fix: Skip onboarding redirect for old websites
+- Fix: Skip Kodee Greeting screen when QA automation cookie is present
+
+2.1.7 (2026-02-24)
+- Fix: Update installation location
+- Fix: wordpress/vips package
+
+2.1.8 (2026-03-03)
+- Feature: AI builder selection for premium plans (a/b test)
+- Fix:  Back button visible on premium plans
+- Fix:  Amplitude events once not always working
+
+2.1.9 (2026-03-13)
+- Feature: A/B redirect on start to AI theme
+- Feature: AI first flow updates
+- Fix: Runtime store import error
+- Fix: Update navigation for experiment
+- Fix: Blank screen issues
+- Fix: Redirect loading
+- Fix: Affiliate theme not installed
+- Fix: Add Go to WP button in templates
+- Tweak: Update dependencies
+- Dev: Prevent Changelog automation in canary
+
+2.1.10 (2026-03-17)
+- Feature: Remove onboarding experiment
+- Feature: Overlay loader
+- Fix: Added data-qa attribute
+
+2.1.11 (2026-03-18)
+- Fix: Update dependencies
+
+2.1.12 (2026-03-20)
+- Feature: Send exposure events
+
+2.1.13 (2026-03-24)
+- Feature: Onboarding failsafe
+
+2.1.14 (2026-03-31)
+- Fix: Exposure event on control
+- Tweak: Update dependencies
+- Dev: Release Automation workflows
+
+2.1.15 (2026-04-02)
+- Fix: Menu icons alignment issue
+- Tweak: Update Amplitude events
+
+2.1.16 (2026-04-09)
+- Fix: Add summary finished event when onboarding closed
+
+2.1.17 (2026-04-14)
+
+- Feature: Translations
+- Feature: Change themes CTA
+- Fix: run event only on manual actions
+- Fix: Added edit count property
+- Fix: Autocomplete website created step

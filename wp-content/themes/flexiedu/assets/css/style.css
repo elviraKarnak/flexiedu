@@ -123,7 +123,7 @@ body {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: var(--primary-color);
 }
 
@@ -5660,6 +5660,7 @@ ul.tabs li.current a,
   width: 100%;
   object-fit: cover;
   height: 250px;
+  color: var(--green2);
 }
 .course-card .course-body i {
   color: #6c757d !important;
@@ -5712,6 +5713,11 @@ ul.tabs li.current a,
   transition: all 0.3s;
   margin-bottom: 5px;
 }
+
+.dashboard-main-content .card-body button.live-course-edit {
+  font-size: 14px;
+}
+
 .dashboard-main-content .card-body a:hover,
 .dashboard-main-content .card-body button:hover {
   background-color: var(--green2);

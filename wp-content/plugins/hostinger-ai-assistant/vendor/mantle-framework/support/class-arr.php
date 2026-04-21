@@ -129,7 +129,7 @@ class Arr {
 	 * @param  string[]|string $keys Keys to filter by.
 	 * @return array<mixed>
 	 */
-	public static function except( array $array, $keys ): array {
+	public static function except( array $array, array|string|int|null $keys ): array {
 		static::forget( $array, $keys );
 
 		return $array;
@@ -168,7 +168,7 @@ class Arr {
 		}
 
 		foreach ( $array as $key => $value ) {
-			if ( $callback( $value, $key ) ) {
+			if ( $callback && $callback( $value, $key ) ) {
 				return $value;
 			}
 		}
@@ -223,11 +223,16 @@ class Arr {
 	/**
 	 * Remove one or many array items from a given array using "dot" notation.
 	 *
-	 * @param  array<mixed>    $array Array to handle.
-	 * @param  string[]|string $keys Keys to use.
+	 * @param  array<mixed>        $array Array to handle.
+	 * @param  string[]|string|int $keys Keys to use.
+	 * @phpstan-param array<int|string>|int|string|null $keys
 	 */
-	public static function forget( array &$array, $keys ): void {
+	public static function forget( array &$array, array|string|int|null $keys ): void {
 		$original = &$array;
+
+		if ( is_null( $keys ) ) {
+			return;
+		}
 
 		$keys = (array) $keys;
 
@@ -258,7 +263,10 @@ class Arr {
 				}
 			}
 
-			unset( $array[ array_shift( $parts ) ] );
+			$part = array_shift( $parts );
+			if ( null !== $part ) {
+				unset( $array[ $part ] );
+			}
 		}
 	}
 
@@ -281,6 +289,8 @@ class Arr {
 		if ( static::exists( $array, $key ) ) {
 			return $array[ $key ];
 		}
+
+		$key = (string) $key;
 
 		if ( strpos( $key, '.' ) === false ) {
 			return $array[ $key ] ?? Helpers\value( $default );
@@ -538,7 +548,7 @@ class Arr {
 			$array = &$array[ $key ];
 		}
 
-		$array[ array_shift( $keys ) ] = $value;
+		$array[ array_shift( $keys ) ?? '' ] = $value;
 
 		return $array;
 	}
@@ -569,8 +579,8 @@ class Arr {
 	 * @param  callable|string|null $callback Callback to sort by.
 	 * @return array<mixed>
 	 */
-	public static function sort( $array, $callback = null ) {
-		return Collection::make( $array )->sort_by( $callback )->all();
+	public static function sort( array $array, callable|string|null $callback = null ): array {
+		return Collection::make( $array )->sort_by( $callback )->all(); // @phpstan-ignore-line argument.type
 	}
 
 	/**
@@ -616,7 +626,7 @@ class Arr {
 	 * @phpstan-param (callable(value-of<TData>, key-of<TData>): bool) $callback
 	 */
 	public static function where( array $array, callable $callback ): array {
-		return array_filter( $array, $callback, ARRAY_FILTER_USE_BOTH );
+		return array_filter( $array, $callback, ARRAY_FILTER_USE_BOTH ); // @phpstan-ignore-line return.type
 	}
 
 	/**

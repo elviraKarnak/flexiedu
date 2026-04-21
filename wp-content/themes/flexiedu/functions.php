@@ -130,3 +130,11 @@ add_filter('wp_nav_menu_items', function($items, $args) {
     return $items;
 
 }, 999, 2);
+
+
+
+
+add_action('wp_logout', function () {
+    wp_safe_redirect(home_url('/login'));
+    exit;
+});

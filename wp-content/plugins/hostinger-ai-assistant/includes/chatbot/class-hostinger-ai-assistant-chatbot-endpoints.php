@@ -12,6 +12,8 @@ class Hostinger_Ai_Assistant_Chatbot_Endpoints {
         $this->helper         = new Hostinger_Ai_Assistant_Helper();
         $this->config_handler = new Hostinger_Ai_Assistant_Config();
 
+        $rest_url = rest_url( 'wp/v2/posts' );
+
         $response_data = array(
             'data' => array(
                 'domain'             => implode( ' ', str_split( $this->helper->get_host_info() ) ),
@@ -25,9 +27,10 @@ class Hostinger_Ai_Assistant_Chatbot_Endpoints {
                         'php_version'       => phpversion() ?? '',
                     ),
                     'site_settings'    => array(
-                        'website_url'   => get_site_url() ?? '',
-                        'site_title'    => get_bloginfo( 'name' ) ?? get_site_url(),
-                        'site_language' => get_locale() ?? '',
+                        'website_url'    => get_site_url() ?? '',
+                        'site_title'     => get_bloginfo( 'name' ) ?? get_site_url(),
+                        'site_language'  => get_locale() ?? '',
+                        'permalink_mode' => ( str_contains( $rest_url, '?rest_route=' ) ) ? 'plain' : 'custom',
                     ),
                     'plugin_info'      => array(
                         'active_plugins' => get_option( 'active_plugins', array() ),
@@ -40,6 +43,7 @@ class Hostinger_Ai_Assistant_Chatbot_Endpoints {
                     ),
                 ),
                 'rest_api_endpoints' => array(
+                    'base_rest_api'   => HOSTINGER_AI_ASSISTANT_REST_API_BASE,
                     'base_rest_uri'   => $this->config_handler->get_config_value( 'base_rest_uri', HOSTINGER_AI_ASSISTANT_REST_URI ),
                     'base_hpanel_uri' => $this->config_handler->get_config_value( 'base_hpanel_rest_uri', HOSTINGER_AI_ASSISTANT_HPANEL_REST_URI ),
                 ),
@@ -69,12 +73,18 @@ class Hostinger_Ai_Assistant_Chatbot_Endpoints {
     }
 
     public function permission_check(): bool {
+        if ( has_action( 'litespeed_control_set_nocache' ) ) {
+            do_action(
+                'litespeed_control_set_nocache',
+                'Custom Rest API endpoint, not cacheable.'
+            );
+        }
 
         if ( ! is_user_logged_in() ) {
             return false;
         }
 
-        return true;
+        return current_user_can( 'manage_options' );
     }
 
     private function return_chatbot_base_url(): string {

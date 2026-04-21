@@ -11,7 +11,7 @@ class ComposerStaticInitdbf9d9084b9657b1dd3c14afab51966b
     );
 
     public static $prefixLengthsPsr4 = array (
-        'H' => 
+        'H' =>
         array (
             'Hostinger\\WpMenuManager\\' => 24,
             'Hostinger\\WpHelper\\' => 19,
@@ -20,38 +20,38 @@ class ComposerStaticInitdbf9d9084b9657b1dd3c14afab51966b
             'Hostinger\\EasyOnboarding\\' => 25,
             'Hostinger\\Amplitude\\' => 20,
         ),
-        'A' => 
+        'A' =>
         array (
             'Automattic\\Jetpack\\Autoloader\\' => 30,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Hostinger\\WpMenuManager\\' => 
+        'Hostinger\\WpMenuManager\\' =>
         array (
             0 => __DIR__ . '/..' . '/hostinger/hostinger-wp-menu-manager/src',
         ),
-        'Hostinger\\WpHelper\\' => 
+        'Hostinger\\WpHelper\\' =>
         array (
             0 => __DIR__ . '/..' . '/hostinger/hostinger-wp-helper/src',
         ),
-        'Hostinger\\Tests\\' => 
+        'Hostinger\\Tests\\' =>
         array (
             0 => __DIR__ . '/..' . '/hostinger/hostinger-wp-helper/tests/phpunit',
         ),
-        'Hostinger\\Surveys\\' => 
+        'Hostinger\\Surveys\\' =>
         array (
             0 => __DIR__ . '/..' . '/hostinger/hostinger-wp-surveys/src',
         ),
-        'Hostinger\\EasyOnboarding\\' => 
+        'Hostinger\\EasyOnboarding\\' =>
         array (
             0 => __DIR__ . '/../..' . '/includes',
         ),
-        'Hostinger\\Amplitude\\' => 
+        'Hostinger\\Amplitude\\' =>
         array (
             0 => __DIR__ . '/..' . '/hostinger/hostinger-wp-amplitude/src',
         ),
-        'Automattic\\Jetpack\\Autoloader\\' => 
+        'Automattic\\Jetpack\\Autoloader\\' =>
         array (
             0 => __DIR__ . '/..' . '/automattic/jetpack-autoloader/src',
         ),
@@ -103,6 +103,7 @@ class ComposerStaticInitdbf9d9084b9657b1dd3c14afab51966b
         'Hostinger\\EasyOnboarding\\Preview\\Assets' => __DIR__ . '/../..' . '/includes/Preview/Assets.php',
         'Hostinger\\EasyOnboarding\\Requests\\Client' => __DIR__ . '/../..' . '/includes/Requests/Client.php',
         'Hostinger\\EasyOnboarding\\Rest\\HostingRoutes' => __DIR__ . '/../..' . '/includes/Rest/HostingRoutes.php',
+        'Hostinger\\EasyOnboarding\\Rest\\OnboardingRoutes' => __DIR__ . '/../..' . '/includes/Rest/OnboardingRoutes.php',
         'Hostinger\\EasyOnboarding\\Rest\\Routes' => __DIR__ . '/../..' . '/includes/Rest/Routes.php',
         'Hostinger\\EasyOnboarding\\Rest\\StepRoutes' => __DIR__ . '/../..' . '/includes/Rest/StepRoutes.php',
         'Hostinger\\EasyOnboarding\\Rest\\TutorialRoutes' => __DIR__ . '/../..' . '/includes/Rest/TutorialRoutes.php',

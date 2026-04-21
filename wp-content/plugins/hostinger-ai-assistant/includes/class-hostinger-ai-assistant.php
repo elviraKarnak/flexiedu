@@ -110,6 +110,7 @@ class Hostinger_Ai_Assistant {
             'includes/class-hostinger-ai-assistant-updates.php',
             'includes/class-hostinger-ai-assistant-helper.php',
             'includes/requests/class-hostinger-ai-assistant-requests-client.php',
+            'includes/requests/class-hostinger-ai-assistant-requests-proxy.php',
             'includes/class-hostinger-ai-assistant-i18n.php',
             'includes/amplitude/class-hostinger-ai-assistant-amplitude-actions.php',
             'includes/amplitude/class-hostinger-ai-assistant-amplitude.php',
@@ -124,8 +125,6 @@ class Hostinger_Ai_Assistant {
             'includes/requests/class-hostinger-ai-assistant-requests.php',
             'includes/woocommerce/class-hostinger-ai-assistant-product-ai-metabox.php',
             'includes/chatbot/class-hostinger-ai-assistant-chatbot-endpoints.php',
-            'includes/mcp/class-hostinger-ai-assistant-mcp-endpoints.php',
-            'includes/mcp/class-hostinger-ai-assistant-mcp-hooks.php',
             'admin/class-hostinger-ai-assistant-blocks.php',
             'includes/class-hostinger-ai-assistant-surveys.php',
         );
@@ -170,7 +169,7 @@ class Hostinger_Ai_Assistant {
         $helper         = new Hostinger_Ai_Assistant_Helper();
         $this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
         $this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
-        $this->loader->add_action( 'admin_init', $plugin_admin, 'check_and_update_mcp_settings' );
+        $this->loader->add_action( 'elementor/editor/after_enqueue_scripts', $plugin_admin, 'enqueue_chatbot' );
 
         $this->loader->add_filter( 'hostinger_menu_subpages', $plugin_admin, 'add_ai_assistant_menu_item', 40 );
         $this->loader->add_filter( 'hostinger_admin_menu_bar_items', $plugin_admin, 'add_admin_bar_item', 100 );
@@ -180,6 +179,7 @@ class Hostinger_Ai_Assistant {
         }
 
         $this->loader->add_action( 'admin_footer', $helper, 'add_vue_instance' );
+        $this->loader->add_action( 'elementor/editor/footer', $helper, 'add_vue_instance' );
 
         if ( function_exists( 'register_block_type' ) && stripos( wp_get_theme()->get( 'Name' ), 'Hostinger AI theme' ) === false ) {
             $blocks = new Hostinger_Ai_Assistant_Block();

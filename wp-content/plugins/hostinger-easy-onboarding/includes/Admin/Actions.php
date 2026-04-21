@@ -18,9 +18,10 @@ class Actions {
 
     public const AMAZON_AFFILIATE = 'amazon_affiliate';
 
-    public const GOOGLE_KIT   = 'google_kit';
-    public const REACH        = 'hostinger_reach';
-    public const ACTIONS_LIST = array(
+    public const GOOGLE_KIT          = 'google_kit';
+    public const REACH               = 'hostinger_reach';
+    public const ENABLE_AI_DISCOVERY = 'enable_ai_discovery';
+    public const ACTIONS_LIST        = array(
         self::DOMAIN_IS_CONNECTED,
     );
 
@@ -59,6 +60,10 @@ class Actions {
 
         $list[] = self::GOOGLE_KIT;
 
+        if ( self::is_enable_ai_discovery_step_eligible() ) {
+            $list[] = self::ENABLE_AI_DISCOVERY;
+        }
+
         $list[] = self::REACH;
 
         return $list;
@@ -88,5 +93,14 @@ class Actions {
         }
 
         return $steps;
+    }
+
+    public static function is_enable_ai_discovery_step_eligible(): bool {
+        $free_domains      = '/hostingersite\.com|hostinger\.dev/';
+        $is_active         = is_plugin_active( 'hostinger/hostinger.php' );
+        $is_hostinger_user = ! empty( $_SERVER['H_PLATFORM'] );
+        $is_free_domain    = preg_match( $free_domains, get_site_url() );
+
+        return $is_active && $is_hostinger_user && ! $is_free_domain;
     }
 }

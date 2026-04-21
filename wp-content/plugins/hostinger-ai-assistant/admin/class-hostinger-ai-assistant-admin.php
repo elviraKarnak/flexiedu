@@ -24,11 +24,6 @@ use Hostinger\WpHelper\Utils;
  * @author     Hostinger <info@hostinger.com>
  */
 class Hostinger_Ai_Assistant_Admin {
-    public const MCP_SETTINGS_UPDATED_OPTION     = 'hostinger_mcp_settings_updated';
-    public const MCP_CHOICE_OPTION               = 'hostinger_mcp_choice';
-    public const MCP_ENABLE_DELETE_TOOLS_SETTING = 'enable_delete_tools';
-    public const WORDPRESS_MCP_SETTINGS_OPTION   = 'wordpress_mcp_settings';
-
     /**
      * The ID of this plugin.
      *
@@ -46,6 +41,7 @@ class Hostinger_Ai_Assistant_Admin {
      * @var      string $version The current version of this plugin.
      */
     private string $version;
+    private array $module_scripts = array();
 
     /**
      * Initialize the class and set its properties.
@@ -58,6 +54,16 @@ class Hostinger_Ai_Assistant_Admin {
     public function __construct( string $plugin_name, string $version ) {
         $this->plugin_name = $plugin_name;
         $this->version     = $version;
+
+        add_filter( 'script_loader_tag', array( $this, 'add_module_type_to_scripts' ), 10, 3 );
+    }
+
+    public function add_module_type_to_scripts( string $tag, string $handle, string $src ): string {
+        if ( in_array( $handle, $this->module_scripts, true ) ) {
+            $tag = str_replace( '<script ', '<script type="module" ', $tag );
+        }
+
+        return $tag;
     }
 
     /**
@@ -67,11 +73,11 @@ class Hostinger_Ai_Assistant_Admin {
      */
     public function enqueue_styles(): void {
         if ( $this->is_hostinger_menu_page() ) {
-            wp_enqueue_style( $this->plugin_name, HOSTINGER_AI_ASSISTANT_ASSETS_URL . '/css/hostinger-ai-assistant-admin.css', array(), $this->version, 'all' );
+            wp_enqueue_style( $this->plugin_name, HOSTINGER_AI_ASSISTANT_ASSETS_URL . '/css/hostinger-ai-assistant-admin.min.css', array(), $this->version, 'all' );
         }
 
         if ( class_exists( 'WooCommerce' ) ) {
-            wp_enqueue_style( 'hostinger_ai_assistant_woo_styles', HOSTINGER_AI_ASSISTANT_ASSETS_URL . '/css/woo-styles.css', array(), $this->version, 'all' );
+            wp_enqueue_style( 'hostinger_ai_assistant_woo_styles', HOSTINGER_AI_ASSISTANT_ASSETS_URL . '/css/hostinger-woo-requests.min.css', array(), $this->version, 'all' );
         }
     }
 
@@ -90,59 +96,49 @@ class Hostinger_Ai_Assistant_Admin {
         );
 
         if ( $this->is_hostinger_menu_page() ) {
+            if ( class_exists( 'WooCommerce' ) ) {
+                wp_dequeue_script( 'select2' );
+                wp_deregister_script( 'select2' );
+            }
+
+            wp_register_script(
+                'select2',
+                HOSTINGER_AI_ASSISTANT_ASSETS_URL . '/js/vendor/select2.full.min.js',
+                array( 'jquery' ),
+                '4.1.0',
+                array( 'in_footer' => false )
+            );
+
             wp_enqueue_script(
                 $this->plugin_name,
-                HOSTINGER_AI_ASSISTANT_ASSETS_URL . '/js/hostinger-ai-assistant-admin.js',
+                HOSTINGER_AI_ASSISTANT_ASSETS_URL . '/js/hostinger-ai-assistant-admin.min.js',
                 array(
                     'jquery',
+                    'select2',
                     'wp-i18n',
                 ),
                 $this->version,
-                false
+                array( 'in_footer' => false )
             );
+
             wp_localize_script( $this->plugin_name, 'hostingerAiAssistant', $global_params );
         }
 
         if ( class_exists( 'WooCommerce' ) ) {
             wp_enqueue_script(
                 'hostinger_ai_assistant_woo_requests',
-                HOSTINGER_AI_ASSISTANT_ASSETS_URL . '/js/hostinger-woo-requests.js',
+                HOSTINGER_AI_ASSISTANT_ASSETS_URL . '/js/hostinger-woo-requests.min.js',
                 array(
                     'jquery',
                     'wp-i18n',
                 ),
                 $this->version,
-                false
+                array( 'in_footer' => false )
             );
+            $this->module_scripts[] = 'hostinger_ai_assistant_woo_requests';
         }
 
-        wp_enqueue_script(
-            'hostinger_chatbot',
-            HOSTINGER_AI_ASSISTANT_ASSETS_URL . '/js/hostinger-chatbot.js',
-            array(
-                'jquery',
-                'wp-i18n',
-            ),
-            $this->version,
-            array( 'strategy' => 'defer' ),
-            false
-        );
-
-        $user = wp_get_current_user();
-        wp_localize_script(
-            'hostinger_chatbot',
-            'hostingerChatbot',
-            array_merge(
-                $translations->get_chatbot_translations(),
-                array(
-                    'nonce'             => wp_create_nonce( 'wp_rest' ),
-                    'chatbot_uri'       => esc_url_raw( rest_url() ),
-                    'user_id'           => ! empty( $user->ID ) ? $user->ID : 0,
-                    'mcp_choice'        => get_option( 'hostinger_mcp_choice', '' ),
-                    'mcp_plugin_active' => is_plugin_active( 'wordpress-mcp/wordpress-mcp.php' ),
-                )
-            )
-        );
+        $this->enqueue_chatbot();
     }
 
     public function enqueue_custom_editor_assets(): void {
@@ -174,7 +170,7 @@ class Hostinger_Ai_Assistant_Admin {
         $submenus[] = array(
             'page_title' => __( 'AI Content Creator', 'hostinger-ai-assistant' ),
             'menu_title' => __( 'AI Content Creator', 'hostinger-ai-assistant' ),
-            'capability' => 'edit_posts',
+            'capability' => 'publish_posts',
             'menu_slug'  => 'hostinger-ai-assistant',
             'callback'   => array( $this, 'create_ai_assistant_tab_view' ),
             'menu_order' => 10,
@@ -184,6 +180,10 @@ class Hostinger_Ai_Assistant_Admin {
     }
 
     public function add_admin_bar_item( array $menu_items ): array {
+        if ( ! current_user_can( 'publish_posts' ) ) {
+            return $menu_items;
+        }
+
         $menu_items[] = array(
             'id'    => 'hostinger-ai-assistant-ai-content-creator',
             'title' => esc_html__( 'AI Content Creator', 'hostinger-ai-assistant' ),
@@ -203,18 +203,49 @@ class Hostinger_Ai_Assistant_Admin {
         include_once HOSTINGER_AI_ASSISTANT_ABSPATH . 'admin/partials/hostinger-ai-assistant-tab-view.php';
     }
 
-    public function check_and_update_mcp_settings(): void {
-        if ( get_option( self::MCP_SETTINGS_UPDATED_OPTION, false ) ) {
+    public function enqueue_chatbot(): void {
+        if ( empty( Utils::getApiToken() ) ) {
             return;
         }
 
-        $mcp_choice = get_option( self::MCP_CHOICE_OPTION, 0 );
-        if ( ! $mcp_choice ) {
-            return;
-        }
+        $translations = new Hostinger_Frontend_Translations();
 
-        $this->update_mcp_settings();
-        update_option( self::MCP_SETTINGS_UPDATED_OPTION, true );
+        wp_enqueue_style(
+            'hostinger_chatbot',
+            HOSTINGER_AI_ASSISTANT_ASSETS_URL . '/css/hostinger-chatbot.min.css',
+            array(),
+            $this->version,
+            'all'
+        );
+
+        wp_enqueue_script(
+            'hostinger_chatbot',
+            HOSTINGER_AI_ASSISTANT_ASSETS_URL . '/js/hostinger-chatbot.min.js',
+            array(
+                'jquery',
+                'wp-i18n',
+            ),
+            $this->version,
+            array( 'strategy' => 'defer' )
+        );
+        $this->module_scripts[] = 'hostinger_chatbot';
+
+        $user   = wp_get_current_user();
+        $locale = get_user_locale();
+
+        wp_localize_script(
+            'hostinger_chatbot',
+            'hostingerChatbot',
+            array_merge(
+                $translations->get_chatbot_translations(),
+                array(
+                    'nonce'       => wp_create_nonce( 'wp_rest' ),
+                    'chatbot_uri' => esc_url_raw( rest_url() ),
+                    'user_id'     => ! empty( $user->ID ) ? $user->ID : 0,
+                    'language'    => $locale,
+                )
+            )
+        );
     }
 
     /**
@@ -238,15 +269,5 @@ class Hostinger_Ai_Assistant_Admin {
         }
 
         return false;
-    }
-
-    private function update_mcp_settings(): void {
-        $current_settings = get_option( self::WORDPRESS_MCP_SETTINGS_OPTION, array() );
-        $updated_settings = array_merge(
-            $current_settings,
-            array( self::MCP_ENABLE_DELETE_TOOLS_SETTING => true )
-        );
-
-        update_option( self::WORDPRESS_MCP_SETTINGS_OPTION, $updated_settings );
     }
 }

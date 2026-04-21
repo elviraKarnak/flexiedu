@@ -7,6 +7,10 @@ use Hostinger\EasyOnboarding\Helper;
 use Plugin_Upgrader;
 use Plugin_Upgrader_Skin;
 use Theme_Upgrader;
+use WP_Error;
+use WP_Http;
+use WP_REST_Request;
+use WP_REST_Response;
 use WP_Upgrader_Skin;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -19,12 +23,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 class StepRoutes {
     public const LIST_VISIBILITY_OPTION = 'hostinger_onboarding_list_visibility';
 
+    private const DEFAULT_DOWNLOAD_URI = 'https://wp-update.hostinger.io/';
+    private const CANARY_DOWNLOAD_URI  = 'https://wp-update-canary.hostinger.io/';
+    private const STAGING_DOWNLOAD_URI = 'https://wp-update-stage.hostinger.io/';
+
+    private function get_download_base_url(): string {
+        if ( isset( $_SERVER['H_STAGING'] ) && filter_var( $_SERVER['H_STAGING'], FILTER_VALIDATE_BOOLEAN ) === true ) {
+            return self::STAGING_DOWNLOAD_URI;
+        }
+
+        if ( isset( $_SERVER['H_CANARY'] ) && filter_var( $_SERVER['H_CANARY'], FILTER_VALIDATE_BOOLEAN ) === true ) {
+            return self::CANARY_DOWNLOAD_URI;
+        }
+
+        return self::DEFAULT_DOWNLOAD_URI;
+    }
+
     /**
-     * @param \WP_REST_Request $request
+     * @param WP_REST_Request $request
      *
-     * @return \WP_REST_Response
+     * @return WP_REST_Response
      */
-    public function get_steps( \WP_REST_Request $request ): \WP_REST_Response {
+    public function get_steps( WP_REST_Request $request ): WP_REST_Response {
         $parameters = $request->get_params();
 
         $locale              = ! empty( $parameters['locale'] ) ? sanitize_text_field( $parameters['locale'] ) : '';
@@ -43,17 +63,17 @@ class StepRoutes {
             ),
         );
 
-        $response = new \WP_REST_Response( $data );
+        $response = new WP_REST_Response( $data );
 
         $response->set_headers( array( 'Cache-Control' => 'no-cache' ) );
 
-        $response->set_status( \WP_Http::OK );
+        $response->set_status( WP_Http::OK );
 
         return $response;
     }
 
 
-    public function complete_step( \WP_REST_Request $request ): \WP_Error|\WP_REST_Response {
+    public function complete_step( WP_REST_Request $request ): WP_Error|WP_REST_Response {
         $parameters = $request->get_params();
 
         $errors = array();
@@ -69,11 +89,11 @@ class StepRoutes {
         }
 
         if ( ! empty( $errors ) ) {
-            return new \WP_Error(
+            return new WP_Error(
                 'data_invalid',
                 __( 'Sorry, there are validation errors.', 'hostinger-easy-onboarding' ),
                 array(
-                    'status' => \WP_Http::BAD_REQUEST,
+                    'status' => WP_Http::BAD_REQUEST,
                     'errors' => $errors,
                 )
             );
@@ -88,11 +108,11 @@ class StepRoutes {
         $validate_step = $onboarding->validate_step( $step_category_id, $step_id );
 
         if ( empty( $validate_step ) ) {
-            return new \WP_Error(
+            return new WP_Error(
                 'data_invalid',
                 __( 'Step category and/or step does not exist.', 'hostinger-easy-onboarding' ),
                 array(
-                    'status' => \WP_Http::BAD_REQUEST,
+                    'status' => WP_Http::BAD_REQUEST,
                 )
             );
         }
@@ -107,23 +127,23 @@ class StepRoutes {
             do_action( 'litespeed_purge_all' );
         }
 
-        $response = new \WP_REST_Response( $data );
+        $response = new WP_REST_Response( $data );
 
         $response->set_headers( array( 'Cache-Control' => 'no-cache' ) );
 
-        $response->set_status( \WP_Http::OK );
+        $response->set_status( WP_Http::OK );
 
         return $response;
     }
 
-    public function toggle_list_visibility( \WP_REST_Request $request ) {
+    public function toggle_list_visibility( WP_REST_Request $request ) {
         $current_state = get_option( self::LIST_VISIBILITY_OPTION, 1 );
 
         $new_state = ! (bool) $current_state;
 
         $update = update_option( self::LIST_VISIBILITY_OPTION, (int) $new_state );
 
-        return new \WP_REST_Response(
+        return new WP_REST_Response(
             array(
                 'status'    => $update,
                 'new_state' => $new_state,
@@ -133,11 +153,11 @@ class StepRoutes {
     }
 
     /**
-     * @param \WP_REST_Request $request
+     * @param WP_REST_Request $request
      *
-     * @return \WP_REST_Response|\WP_Error
+     * @return WP_REST_Response|WP_Error
      */
-    public function activate_plugin( \WP_REST_Request $request ): \WP_REST_Response|\WP_Error {
+    public function activate_plugin( WP_REST_Request $request ): WP_REST_Response|WP_Error {
         $parameters = $request->get_params();
 
         $plugin = ! empty( $parameters['plugin'] ) ? sanitize_text_field( $parameters['plugin'] ) : '';
@@ -162,11 +182,11 @@ class StepRoutes {
         }
 
         if ( ! empty( $errors ) ) {
-            return new \WP_Error(
+            return new WP_Error(
                 'data_invalid',
                 __( 'Sorry, there are validation errors.', 'hostinger-easy-onboarding' ),
                 array(
-                    'status' => \WP_Http::BAD_REQUEST,
+                    'status' => WP_Http::BAD_REQUEST,
                     'errors' => $errors,
                 )
             );
@@ -175,31 +195,31 @@ class StepRoutes {
         $activated = activate_plugin( $plugin_path );
 
         if ( is_wp_error( $activated ) ) {
-            return new \WP_Error(
+            return new WP_Error(
                 'data_invalid',
                 __( 'Sorry, there are activation errors.', 'hostinger-easy-onboarding' ),
                 array(
-                    'status' => \WP_Http::BAD_REQUEST,
+                    'status' => WP_Http::BAD_REQUEST,
                     'errors' => $activated->get_error_message(),
                 )
             );
         }
 
-        $response = new \WP_REST_Response( array( 'data' => '' ) );
+        $response = new WP_REST_Response( array( 'data' => '' ) );
 
         $response->set_headers( array( 'Cache-Control' => 'no-cache' ) );
 
-        $response->set_status( \WP_Http::OK );
+        $response->set_status( WP_Http::OK );
 
         return $response;
     }
 
     /**
-     * @param \WP_REST_Request $request
+     * @param WP_REST_Request $request
      *
-     * @return \WP_REST_Response|\WP_Error
+     * @return WP_REST_Response|WP_Error
      */
-    public function activate_theme( \WP_REST_Request $request ): \WP_REST_Response|\WP_Error {
+    public function activate_theme( WP_REST_Request $request ): WP_REST_Response|WP_Error {
         $parameters = $request->get_params();
 
         $theme_slug = ! empty( $parameters['theme_slug'] ) ? sanitize_text_field( $parameters['theme_slug'] ) : '';
@@ -212,11 +232,11 @@ class StepRoutes {
         }
 
         if ( ! empty( $errors ) ) {
-            return new \WP_Error(
+            return new WP_Error(
                 'data_invalid',
                 __( 'Sorry, there are validation errors.', 'hostinger-easy-onboarding' ),
                 array(
-                    'status' => \WP_Http::BAD_REQUEST,
+                    'status' => WP_Http::BAD_REQUEST,
                     'errors' => $errors,
                 )
             );
@@ -224,76 +244,90 @@ class StepRoutes {
 
         switch_theme( $theme_slug );
 
-        $response = new \WP_REST_Response( array( 'data' => '' ) );
+        $response = new WP_REST_Response( array( 'data' => '' ) );
 
         $response->set_headers( array( 'Cache-Control' => 'no-cache' ) );
 
-        $response->set_status( \WP_Http::OK );
+        $response->set_status( WP_Http::OK );
 
         return $response;
     }
 
-    public function install_ai_theme( \WP_REST_Request $request ): \WP_REST_Response|\WP_Error {
+    public function deactivate_ai_theme( WP_REST_Request $request ): WP_REST_Response|WP_Error {
+        $current_theme = wp_get_theme();
+        if ( ! str_contains( $current_theme->get_stylesheet(), 'hostinger-ai-theme' ) ) {
+            return new WP_Error(
+                'theme_not_active',
+                __( 'Hostinger AI theme is not currently active.', 'hostinger-easy-onboarding' ),
+                array( 'status' => WP_Http::BAD_REQUEST )
+            );
+        }
+
+        $default_themes = apply_filters(
+            'hostinger_deactivate_ai_theme_fallback_themes',
+            array(
+                'twentytwentyfive',
+                'twentytwentyfour',
+                'twentytwentythree',
+                'twentytwentytwo',
+                'twentytwentyone',
+                'twentytwenty',
+                'twentynineteen',
+                'twentyseventeen',
+                'twentysixteen',
+            )
+        );
+
+        $fallback_theme = '';
+        foreach ( $default_themes as $theme_slug ) {
+            $theme = wp_get_theme( $theme_slug );
+            if ( $theme->exists() ) {
+                $fallback_theme = $theme_slug;
+                break;
+            }
+        }
+
+        if ( empty( $fallback_theme ) ) {
+            return new WP_Error(
+                'no_default_theme',
+                __( 'No default theme available to switch to.', 'hostinger-easy-onboarding' ),
+                array( 'status' => WP_Http::INTERNAL_SERVER_ERROR )
+            );
+        }
+
+        switch_theme( $fallback_theme );
+
+        $response = new WP_REST_Response( array( 'data' => array( 'theme' => $fallback_theme ) ) );
+        $response->set_headers( array( 'Cache-Control' => 'no-cache' ) );
+        $response->set_status( WP_Http::OK );
+
+        return $response;
+    }
+
+    public function install_ai_theme( WP_REST_Request $request ): WP_REST_Response|WP_Error {
+        return $this->install_theme( 'hostinger-ai-theme' );
+    }
+
+    public function install_affiliate_theme( WP_REST_Request $request ): WP_REST_Response|WP_Error {
+        return $this->install_theme( 'hostinger-affiliate-theme' );
+    }
+
+    public function install_plugin( WP_REST_Request $request ): WP_REST_Response|WP_Error {
         require_once ABSPATH . 'wp-admin/includes/file.php';
         require_once ABSPATH . 'wp-admin/includes/misc.php';
         require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
         require_once ABSPATH . 'wp-admin/includes/theme.php';
 
-        $theme_url = 'https://wp-update.hostinger.io/?action=download&slug=hostinger-ai-theme';
-
-        $temp_file = download_url( $theme_url );
-
-        if ( is_wp_error( $temp_file ) ) {
-            return new \WP_Error(
-                'data_invalid',
-                __( 'Sorry, there are validation errors.', 'hostinger-easy-onboarding' ),
-                array(
-                    'status' => \WP_Http::BAD_REQUEST,
-                    'errors' => $temp_file->get_error_message(),
-                )
-            );
-        }
-
-        $upgrader = new Theme_Upgrader( new WP_Upgrader_Skin() );
-        $result   = $upgrader->install( $temp_file );
-
-        @unlink( $temp_file );
-
-        if ( is_wp_error( $result ) ) {
-            return new \WP_Error(
-                'data_invalid',
-                __( 'Sorry, there are validation errors.', 'hostinger-easy-onboarding' ),
-                array(
-                    'status' => \WP_Http::BAD_REQUEST,
-                    'errors' => $result->get_error_message(),
-                )
-            );
-        }
-
-        $response = new \WP_REST_Response( array( 'data' => '' ) );
-
-        $response->set_headers( array( 'Cache-Control' => 'no-cache' ) );
-
-        $response->set_status( \WP_Http::OK );
-
-        return $response;
-    }
-
-    public function install_plugin( \WP_REST_Request $request ): \WP_REST_Response|\WP_Error {
-        require_once ABSPATH . 'wp-admin/includes/file.php';
-        require_once ABSPATH . 'wp-admin/includes/misc.php';
-        require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
-        require_once ABSPATH . 'wp-admin/includes/theme.php';
-
-        $plugin    = $request->get_param( 'plugin' );
-        $temp_file = download_url( "https://wp-update.hostinger.io/?action=download&slug=$plugin" );
+        $plugin       = $request->get_param( 'plugin' );
+        $download_url = $this->get_download_base_url() . "?action=download&slug=$plugin";
+        $temp_file    = download_url( $download_url );
 
         if ( is_wp_error( $temp_file ) ) {
-            return new \WP_Error(
+            return new WP_Error(
                 'data_invalid',
                 __( 'Sorry, there are validation errors.', 'hostinger-easy-onboarding' ),
                 array(
-                    'status' => \WP_Http::BAD_REQUEST,
+                    'status' => WP_Http::BAD_REQUEST,
                     'errors' => $temp_file->get_error_message(),
                 )
             );
@@ -305,21 +339,64 @@ class StepRoutes {
         wp_delete_file( $temp_file );
 
         if ( is_wp_error( $result ) ) {
-            return new \WP_Error(
+            return new WP_Error(
                 'data_invalid',
                 __( 'Sorry, there are validation errors.', 'hostinger-easy-onboarding' ),
                 array(
-                    'status' => \WP_Http::BAD_REQUEST,
+                    'status' => WP_Http::BAD_REQUEST,
                     'errors' => $result->get_error_message(),
                 )
             );
         }
 
-        $response = new \WP_REST_Response( array( 'data' => '' ) );
+        $response = new WP_REST_Response( array( 'data' => '' ) );
 
         $response->set_headers( array( 'Cache-Control' => 'no-cache' ) );
 
-        $response->set_status( \WP_Http::OK );
+        $response->set_status( WP_Http::OK );
+
+        return $response;
+    }
+
+    private function install_theme( string $theme_slug ): WP_REST_Response|WP_Error {
+        require_once ABSPATH . 'wp-admin/includes/file.php';
+        require_once ABSPATH . 'wp-admin/includes/misc.php';
+        require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
+        require_once ABSPATH . 'wp-admin/includes/theme.php';
+
+        $theme_url = $this->get_download_base_url() . "?action=download&slug=$theme_slug";
+        $temp_file = download_url( $theme_url );
+
+        if ( is_wp_error( $temp_file ) ) {
+            return new WP_Error(
+                'download_failed',
+                __( 'Failed to download theme.', 'hostinger-easy-onboarding' ),
+                array(
+                    'status' => WP_Http::BAD_REQUEST,
+                    'errors' => $temp_file->get_error_message(),
+                )
+            );
+        }
+
+        $upgrader = new Theme_Upgrader( new WP_Upgrader_Skin() );
+        $result   = $upgrader->install( $temp_file );
+
+        wp_delete_file( $temp_file );
+
+        if ( is_wp_error( $result ) ) {
+            return new WP_Error(
+                'install_failed',
+                __( 'Failed to install theme.', 'hostinger-easy-onboarding' ),
+                array(
+                    'status' => WP_Http::BAD_REQUEST,
+                    'errors' => $result->get_error_message(),
+                )
+            );
+        }
+
+        $response = new WP_REST_Response( array( 'data' => '' ) );
+        $response->set_headers( array( 'Cache-Control' => 'no-cache' ) );
+        $response->set_status( WP_Http::OK );
 
         return $response;
     }

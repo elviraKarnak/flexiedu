@@ -2,6 +2,7 @@
 
 namespace Hostinger\EasyOnboarding\Admin\Onboarding;
 
+use Hostinger\EasyOnboarding\Admin\Actions;
 use Hostinger\EasyOnboarding\AmplitudeEvents\Amplitude;
 use Hostinger\EasyOnboarding\AmplitudeEvents\Actions as AmplitudeActions;
 use Hostinger\EasyOnboarding\Helper;
@@ -37,6 +38,7 @@ class AutocompleteSteps {
         add_action( 'woocommerce_shipping_zone_method_added', array( $this, 'shipping_zone_added' ), 10, 3 );
         add_action( 'googlesitekit_authorize_user', array( $this, 'googlesite_connected' ) );
 
+        add_action( 'hostinger_easy_onboarding_step_completed', array( $this, 'woocommerce_steps_completed' ) );
         add_action( 'admin_init', array( $this, 'woocommerce_steps_completed' ) );
 
         if ( is_plugin_active( 'hostinger-affiliate-plugin/hostinger-affiliate-plugin.php' ) ) {
@@ -52,7 +54,10 @@ class AutocompleteSteps {
         }
 
         add_action( 'astra_sites_import_complete', array( $this, 'astra_website_import_completed' ) );
-        add_action( 'admin_init', array( $this, 'ai_website_generated' ) );
+
+        add_action( 'admin_init', array( $this, 'check_ai_website_created' ) );
+
+        add_action( 'admin_init', array( $this, 'check_ai_discovery_is_enabled' ) );
 
         if ( is_plugin_active( 'hostinger-reach/hostinger-reach.php' ) ) {
             add_action( 'admin_init', array( $this, 'reach_plugin_connected' ) );
@@ -61,7 +66,7 @@ class AutocompleteSteps {
         add_action( 'admin_init', array( $this, 'check_onboarding_steps_was_completed' ) );
     }
 
-    public function init_onboarding() {
+    public function init_onboarding(): void {
         $this->onboarding->init();
     }
 
@@ -102,6 +107,12 @@ class AutocompleteSteps {
     }
 
     public function reach_plugin_connected(): void {
+        // Do not try to autocomplete step, because it is not added to steps list.
+        $onboarding_steps_was_completed = get_option( 'hostinger_onboarding_steps_was_completed', 0 );
+        if ( (int) $onboarding_steps_was_completed === 1 ) {
+            return;
+        }
+
         $action      = Admin_Actions::REACH;
         $category_id = $this->find_category_from_actions( $action );
 
@@ -278,7 +289,7 @@ class AutocompleteSteps {
      *
      * @return void
      */
-    public function shipping_zone_added( $instance_id, $type, $zone_id ) {
+    public function shipping_zone_added( int $instance_id, string $type, int $zone_id ): void {
         if ( $this->onboarding->is_completed( Onboarding::HOSTINGER_EASY_ONBOARDING_STORE_STEP_CATEGORY_ID, Admin_Actions::ADD_SHIPPING ) ) {
             return;
         }
@@ -293,7 +304,7 @@ class AutocompleteSteps {
         $this->amplitude->send_event( $params );
     }
 
-    public function googlesite_connected() {
+    public function googlesite_connected(): void {
         $category = Onboarding::HOSTINGER_EASY_ONBOARDING_WEBSITE_STEP_CATEGORY_ID;
 
         if ( $this->onboarding->is_completed( $category, Admin_Actions::GOOGLE_KIT ) ) {
@@ -325,7 +336,23 @@ class AutocompleteSteps {
         $this->onboarding->complete_step( $category_id, $action );
     }
 
-    public function ai_website_generated(): void {
+    public function check_onboarding_steps_was_completed(): void {
+        $onboarding_steps_was_completed = get_option( 'hostinger_onboarding_steps_was_completed', null );
+        if ( ! is_null( $onboarding_steps_was_completed ) ) {
+            return;
+        }
+
+        update_option( 'hostinger_onboarding_steps_was_completed', ( $this->onboarding->is_onboarding_completed_without_reach() ? 1 : 0 ) );
+    }
+
+    public function check_ai_website_created(): void {
+        $ai_website_created = get_option( 'hostinger_ai_website_created', false );
+        $is_ai_theme_active = get_stylesheet() === 'hostinger-ai-theme';
+
+        if ( empty( $ai_website_created ) && ! $is_ai_theme_active ) {
+            return;
+        }
+
         $action      = Admin_Actions::AI_STEP;
         $category_id = $this->find_category_from_actions( $action );
 
@@ -337,21 +364,29 @@ class AutocompleteSteps {
             return;
         }
 
-        $hostinger_ai_version = get_option( 'hostinger_ai_version', false );
-        if ( empty( $hostinger_ai_version ) ) {
-            return;
-        }
-
         $this->onboarding->complete_step( $category_id, $action );
+
+        $params = array(
+            'action'    => AmplitudeActions::ONBOARDING_ITEM_COMPLETED,
+            'step_type' => $action,
+        );
+
+        $this->amplitude->send_event( $params );
     }
 
-    public function check_onboarding_steps_was_completed(): void {
-        $onboarding_steps_was_completed = get_option( 'hostinger_onboarding_steps_was_completed', null );
-        if ( ! is_null( $onboarding_steps_was_completed ) ) {
+    public function check_ai_discovery_is_enabled(): void {
+        if ( ! Actions::is_enable_ai_discovery_step_eligible() ) {
             return;
         }
 
-        update_option( 'hostinger_onboarding_steps_was_completed', ( $this->onboarding->is_onboarding_completed_without_reach() ? 1 : 0 ) );
+        $options_key     = defined( 'HOSTINGER_PLUGIN_SETTINGS_OPTION' ) ? HOSTINGER_PLUGIN_SETTINGS_OPTION : 'hostinger_tools';
+        $settings        = get_option( $options_key, array() );
+        $optin_mcp       = $settings['optin_mcp'] ?? false;
+        $enable_llms_txt = $settings['enable_llms_txt'] ?? false;
+
+        if ( $optin_mcp && $enable_llms_txt ) {
+            $this->onboarding->complete_step( Onboarding::HOSTINGER_EASY_ONBOARDING_WEBSITE_STEP_CATEGORY_ID, Actions::ENABLE_AI_DISCOVERY );
+        }
     }
 
     /**
@@ -359,7 +394,7 @@ class AutocompleteSteps {
      *
      * @return string
      */
-    private function find_category_from_actions( $action ): string {
+    private function find_category_from_actions( string $action ): string {
         foreach ( Admin_Actions::get_category_action_lists() as $category => $actions ) {
             if ( in_array( $action, $actions, true ) ) {
                 return $category;

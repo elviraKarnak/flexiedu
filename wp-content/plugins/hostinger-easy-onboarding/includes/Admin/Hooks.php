@@ -61,9 +61,7 @@ class Hooks {
         $this->onboarding = new Onboarding();
 
         add_action( 'admin_init', array( $this, 'init_onboarding' ), 0 );
-
-        // Admin footer actions.
-        add_action( 'admin_footer', array( $this, 'rate_plugin' ) );
+        add_action( 'admin_init', array( $this, 'handle_onboarding_started_redirect' ) );
 
         // Admin init actions.
         add_action( 'admin_init', array( $this, 'admin_init_actions' ) );
@@ -121,8 +119,10 @@ class Hooks {
         add_action( 'admin_menu', array( $this, 'disable_monsterinsights_redirect' ) );
 
         if ( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
-            add_action( 'updated_option', array( $this, 'check_if_payment_gateway_enabled' ), 20, 3 );
+            add_action( 'admin_init', array( $this, 'check_if_payment_gateway_enabled' ), 20 );
         }
+
+        add_action( 'admin_init', array( $this, 'skip_cartflow_onboarding' ), 0 );
     }
 
     public function init_onboarding() {
@@ -145,6 +145,37 @@ class Hooks {
             }
 
             ?>
+            body.hostinger-onboarding-white-overlay::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #ffffff;
+                z-index: 100000;
+                pointer-events: none;
+            }
+            body.hostinger-onboarding-white-overlay-loader::after {
+                content: "";
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                width: 76px;
+                height: 76px;
+                margin-top: -38px;
+                margin-left: -38px;
+                border: 4px solid #EBE4FF;
+                border-top-color: #673DE6;
+                border-radius: 50%;
+                z-index: 100001;
+                pointer-events: none;
+                animation: hostinger-overlay-spin 0.8s linear infinite;
+                background-color: #ffffff;
+            }
+            @keyframes hostinger-overlay-spin {
+                to { transform: rotate(360deg); }
+            }
             <?php if ( ! $helper->is_woocommerce_onboarding_completed() ) : ?>
             .post-php.post-type-product #wpadminbar .wpforms-menu-notification-counter,
             .post-php.post-type-product #wpadminbar .aioseo-menu-notification-counter,
@@ -332,15 +363,6 @@ class Hooks {
     public function hide_monsterinsight_notice(): void {
         if ( is_plugin_active( 'google-analytics-for-wordpress/googleanalytics.php' ) ) {
             define( 'MONSTERINSIGHTS_DISABLE_TRACKING', true );
-        }
-    }
-
-    public function rate_plugin(): void {
-        $promotional_banner_hidden = get_transient( 'hts_hide_promotional_banner_transient' );
-        $two_hours_in_seconds      = 7200;
-
-        if ( $promotional_banner_hidden && time() > $promotional_banner_hidden + $two_hours_in_seconds ) {
-            require_once HOSTINGER_EASY_ONBOARDING_ABSPATH . 'includes/Admin/Views/Partials/RateUs.php';
         }
     }
 
@@ -563,6 +585,11 @@ class Hooks {
             $classes .= ' hostinger-onboarding-reminder-visible';
         }
 
+        if ( $this->is_onboarding_action_page() ) {
+            $classes .= ' hostinger-onboarding-white-overlay';
+            $classes .= ' hostinger-onboarding-white-overlay-loader';
+        }
+
         return $classes;
     }
 
@@ -651,17 +678,12 @@ class Hooks {
         }
     }
 
-    public function check_if_payment_gateway_enabled( $option, $old_value, $value ) {
-        if ( ! str_contains( $option, 'woocommerce' ) ) {
-            return;
-        }
-
+    public function check_if_payment_gateway_enabled() {
         if ( $this->onboarding->is_completed( Onboarding::HOSTINGER_EASY_ONBOARDING_STORE_STEP_CATEGORY_ID, Admin_Actions::ADD_PAYMENT ) ) {
             return;
         }
 
         $payment_gateway_manager = new GatewayManager( \WC_Payment_Gateways::instance() );
-
         if ( $payment_gateway_manager->is_any_gateway_active() ) {
             $this->onboarding->complete_step( Onboarding::HOSTINGER_EASY_ONBOARDING_STORE_STEP_CATEGORY_ID, Admin_Actions::ADD_PAYMENT );
 
@@ -697,5 +719,40 @@ class Hooks {
             update_option( 'hostinger_onboarding_woo_options_set', true );
         }
     }
-}
 
+    public function handle_onboarding_started_redirect(): void {
+        if ( ! empty( $_GET['onboarding-started'] ) && is_admin() ) {
+            $redirect_url = admin_url( 'admin.php?page=hostinger-full-screen-onboarding' );
+
+            $additional_params = array_map( 'sanitize_text_field', wp_unslash( $_GET ) );
+            unset( $additional_params['onboarding-started'] );
+
+            if ( ! empty( $additional_params ) ) {
+                $redirect_url = add_query_arg( $additional_params, $redirect_url );
+            }
+
+            wp_safe_redirect( $redirect_url );
+            exit;
+        }
+    }
+
+    public function skip_cartflow_onboarding(): void {
+        if ( ! is_plugin_active( 'cartflows/cartflows.php' ) ) {
+            return;
+        }
+
+        if ( get_option( 'wcf_setup_skipped', false ) ) {
+            return;
+        }
+
+        update_option( 'wcf_setup_skipped', true );
+    }
+
+    private function is_onboarding_action_page(): bool {
+        if ( ! isset( $_GET['page'] ) || ! isset( $_GET['action'] ) ) {
+            return false;
+        }
+
+        return $_GET['page'] === 'hostinger' && $_GET['action'] === 'onboarding';
+    }
+}

@@ -44,8 +44,6 @@ class Amplitude {
         $this->options['builder_type']    = get_option( 'hostinger_builder_type', '' );
         $this->options['website_id']      = get_option( 'hostinger_website_id', '' );
         $this->options['subscription_id'] = get_option( 'hostinger_subscription_id', '' );
-        $this->options['event_data']      = get_option( 'hostinger_amplitude_event_data', array() );
-        $this->options['edit_count']      = get_option( 'hostinger_amplitude_edit_count', 0 );
         $this->options['ai_version']      = get_option( 'hostinger_ai_version', '' );
     }
 
@@ -74,9 +72,18 @@ class Amplitude {
         $this->send_event( $params );
     }
 
+    public function increment_amplitude_edit_event_count(): int {
+        $current    = (int) get_option( 'hostinger_amplitude_edit_count', 0 );
+        $edit_count = $current + 1;
+
+        if ( ! update_option( 'hostinger_amplitude_edit_count', $edit_count ) ) {
+            return $current;
+        }
+
+        return $edit_count;
+    }
+
     public function can_send_edit_amplitude_event(): bool {
-        $today                       = wp_date( 'Y-m-d' );
-        $event_data                  = $this->options['event_data'];
         $is_ai_website_not_generated = ! $this->options['ai_version'];
 
         if ( ! $this->options['builder_type'] || ! $this->options['website_id'] || ! $this->options['subscription_id'] ) {
@@ -87,36 +94,6 @@ class Amplitude {
             return false;
         }
 
-        if ( ! is_array( $event_data ) ) {
-            $event_data = array();
-        }
-
-        // Check if we already have data for today.
-        $today_event = $event_data[ $today ] ?? array(
-            'count'      => 0,
-            'last_reset' => 0,
-        );
-
-        // Only update if the event count is less than 3.
-        if ( $today_event['count'] < 3 ) {
-            $today_event['count'] += 1;
-            $event_data[ $today ]  = $today_event;
-
-            update_option( 'hostinger_amplitude_event_data', $event_data );
-            wp_cache_delete( 'hostinger_amplitude_event_data', 'options' );
-
-            return true;
-        }
-
-        return false;
-    }
-
-    public function increment_amplitude_edit_event_count(): int {
-        $edit_count = (int) $this->options['edit_count'] + 1;
-
-        update_option( 'hostinger_amplitude_edit_count', $edit_count );
-        wp_cache_delete( 'hostinger_amplitude_event_data', 'options' );
-
-        return $edit_count;
+        return true;
     }
 }

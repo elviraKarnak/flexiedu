@@ -70,7 +70,12 @@ class Onboarding {
 
         $this->maybe_send_store_events( $onboarding_steps );
 
-        return update_option( self::HOSTINGER_EASY_ONBOARDING_STEPS_OPTION_NAME, $onboarding_steps, false );
+        $updated = update_option( self::HOSTINGER_EASY_ONBOARDING_STEPS_OPTION_NAME, $onboarding_steps, false );
+        if ( $updated ) {
+            do_action( 'hostinger_easy_onboarding_step_completed', $step_category_id, $step_id );
+        }
+
+        return $updated;
     }
 
     /**
@@ -149,18 +154,20 @@ class Onboarding {
         $builder_type = get_option( 'hostinger_builder_type' );
 
         if ( $builder_type === 'ai' ) {
-            $hostinger_ai_version = get_option( 'hostinger_ai_version', false );
+            $themes                = wp_get_themes();
+            $is_ai_theme_installed = array_key_exists( 'hostinger-ai-theme', $themes );
+            $is_ai_theme_active    = ( get_stylesheet() === 'hostinger-ai-theme' );
+            $is_ai_theme_ready     = $is_ai_theme_installed && $is_ai_theme_active;
 
             $step->set_image_url( HOSTINGER_EASY_ONBOARDING_ASSETS_URL . '/images/steps/ai_step.svg' );
 
-            if ( empty( $hostinger_ai_version ) ) {
+            if ( ! $is_ai_theme_ready ) {
                 $step->set_title( __( 'Create a site with AI', 'hostinger-easy-onboarding' ) );
                 $step->set_description( __( 'Build a professional, custom-designed site in moments. Just a few clicks and AI handles the rest.', 'hostinger-easy-onboarding' ) );
 
                 $primary_button = new Button();
                 $primary_button->set_title( __( 'Create site with AI', 'hostinger-easy-onboarding' ) );
-                $primary_button->set_url( admin_url( 'admin.php?page=hostinger-ai-website-creation&redirect=hostinger-easy-onboarding' ) );
-                $primary_button->set_is_completable( false );
+                $primary_button->set_modal_name( 'CreateWebsiteWithAiBuilderModal' );
 
                 $secondary_button = new Button();
                 $secondary_button->set_title( __( 'Not now', 'hostinger-easy-onboarding' ) );
@@ -179,8 +186,10 @@ class Onboarding {
                 $secondary_button->set_is_completable( false );
             }
 
-            $step->set_primary_button( $primary_button );
-            $step->set_secondary_button( $secondary_button );
+            if ( ! $this->is_completed( self::HOSTINGER_EASY_ONBOARDING_WEBSITE_STEP_CATEGORY_ID, Actions::AI_STEP ) ) {
+                $step->set_primary_button( $primary_button );
+                $step->set_secondary_button( $secondary_button );
+            }
 
             return $step;
         }
@@ -336,6 +345,7 @@ class Onboarding {
         }
 
         if ( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
+            $this->send_event( AmplitudeActions::WOO_INSTALLED, true );
             $website_step_category->add_step( $this->get_started_with_store() );
         }
 
@@ -343,6 +353,10 @@ class Onboarding {
         $website_step_category->add_step( $this->get_add_domain_step() );
 
         $website_step_category->add_step( $this->get_google_kit_step() );
+
+        if ( Actions::is_enable_ai_discovery_step_eligible() ) {
+            $website_step_category->add_step( $this->get_enable_ai_discovery_step() );
+        }
 
         if ( $this->is_reach_eliglible() ) {
             $website_step_category->add_step( $this->get_reach_step() );
@@ -386,15 +400,19 @@ class Onboarding {
             }
         }
 
-        $amplitude = new Amplitude();
-
-        $params = array( 'action' => $action );
-
-        $event = $amplitude->send_event( $params );
+        $should_send_event = true;
 
         if ( $once ) {
-            update_option( $option_name, true );
+            $should_send_event = add_option( $option_name, true );
         }
+
+        if ( ! $should_send_event ) {
+            return false;
+        }
+
+        $amplitude = new Amplitude();
+        $params    = array( 'action' => $action );
+        $event     = $amplitude->send_event( $params );
 
         return ! empty( $event );
     }
@@ -461,7 +479,7 @@ class Onboarding {
 
         if ( $this->helper->is_free_subdomain() || $this->helper->is_preview_domain() ) {
             if ( $this->is_completed( self::HOSTINGER_EASY_ONBOARDING_WEBSITE_STEP_CATEGORY_ID, Actions::DOMAIN_IS_CONNECTED ) ) {
-                $step->set_title( __( 'Connect on hPanel', 'hostinger-easy-onboarding' ) );
+                $step->set_title( __( 'Connect domain', 'hostinger-easy-onboarding' ) );
             }
 
             $step->set_description(
@@ -474,7 +492,7 @@ class Onboarding {
             $site_url   = preg_replace( '#^https?://#', '', get_site_url() );
             $hpanel_url = self::HOSTINGER_WEBSITES_URL . '/' . $site_url;
 
-            $button->set_title( __( 'Connect on hPanel', 'hostinger-easy-onboarding' ) );
+            $button->set_title( __( 'Connect domain', 'hostinger-easy-onboarding' ) );
             $button->set_url( $hpanel_url );
 
         } else {
@@ -558,6 +576,29 @@ class Onboarding {
 
         if ( ! $this->is_completed( self::HOSTINGER_EASY_ONBOARDING_WEBSITE_STEP_CATEGORY_ID, Actions::STORE_TASKS ) ) {
             $step->set_primary_button( $primary_button );
+        }
+
+        return $step;
+    }
+
+    private function get_enable_ai_discovery_step(): Step {
+        $step = new Step( Actions::ENABLE_AI_DISCOVERY );
+
+        $step->set_image_url( HOSTINGER_EASY_ONBOARDING_ASSETS_URL . '/images/steps/ai_discovery.svg' );
+
+        $step->set_title( __( 'Make your site discoverable by AI', 'hostinger-easy-onboarding' ) );
+
+        $step->set_description( __( 'Let AI explore, understand, and interact with your site. All content updates are auto-tracked so AI tools stay in sync with your site’s latest version.', 'hostinger-easy-onboarding' ) );
+
+        $primary_button = new Button( __( 'Turn on', 'hostinger-easy-onboarding' ) );
+        $primary_button->set_url( admin_url( 'admin.php?page=hostinger-get-onboarding' ) );
+
+        $secondary_button = new Button( __( 'Not needed', 'hostinger-easy-onboarding' ) );
+        $secondary_button->set_is_skippable( true );
+
+        if ( ! $this->is_completed( self::HOSTINGER_EASY_ONBOARDING_WEBSITE_STEP_CATEGORY_ID, Actions::ENABLE_AI_DISCOVERY ) ) {
+            $step->set_primary_button( $primary_button );
+            $step->set_secondary_button( $secondary_button );
         }
 
         return $step;

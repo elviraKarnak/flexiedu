@@ -3,9 +3,10 @@
  * Plugin Name: Hostinger Easy Onboarding
  * Plugin URI: https://hostinger.com
  * Description: Hostinger Easy Onboarding WordPress plugin.
- * Version: 2.0.89
+ * Version: 2.1.17
  * Requires at least: 5.5
- * Requires PHP: 8.0
+ * Tested up to: 6.9
+ * Requires PHP: 8.1
  * Author: Hostinger
  * License: GPL v3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -19,7 +20,7 @@
 defined( 'ABSPATH' ) || exit;
 
 if ( ! defined( 'HOSTINGER_EASY_ONBOARDING_VERSION' ) ) {
-    define( 'HOSTINGER_EASY_ONBOARDING_VERSION', '2.0.89' );
+    define( 'HOSTINGER_EASY_ONBOARDING_VERSION', '2.1.17' );
 }
 
 if ( ! defined( 'HOSTINGER_EASY_ONBOARDING_ABSPATH' ) ) {
@@ -54,6 +55,10 @@ if ( ! defined( 'HOSTINGER_EASY_ONBOARDING_WP_TOKEN' ) ) {
 
 if ( ! defined( 'HOSTINGER_EASY_ONBOARDING_REST_URI' ) ) {
     define( 'HOSTINGER_EASY_ONBOARDING_REST_URI', 'https://rest-hosting.hostinger.com' );
+}
+
+if ( ! defined( 'HOSTINGER_EASY_ONBOARDING_PROXY_URI' ) ) {
+    define( 'HOSTINGER_EASY_ONBOARDING_PROXY_URI', 'https://wh-wordpress-proxy-api.hostinger.io' );
 }
 
 if ( ! defined( 'HOSTINGER_EASY_ONBOARDING_REST_API_BASE' ) ) {

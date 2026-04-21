@@ -1,0 +1,491 @@
+= [4.3.4] 2026-01-08 =
+
+* Tweak - Improved Block compatibility with WordPress 6.9.
+
+= [4.3.3] =
+
+* Feature - Added a new "Max Percentage Grade: 100%" option to optionally round down grades to 100% if Manual Grades were to increase it over 100%.
+* Fix - Resolved an issue where a shared quiz permalink in the Gradebook list always pointed to the main course even though the quiz was taken in a different course.
+* Fix - Resolved an issue where dropdown fields in the plugin Gutenberg block settings didn't give any option without users typing in a character first.
+* Fix - Resolved the "Function _load_textdomain_just_in_time was called incorrectly" PHP notice in WP 6.7+.
+* Tweak - Updated the required LearnDash version to 4.7.0.
+* Tweak - Bumped minimum WordPress version to 6.6 and "Tested up to" version to 6.8.2.
+* Tweak - Moved the plugin bootstrap to `init` action hook with priority 1.
+
+= [4.3.2] =
+
+* Feature - The Overall Grade Block can now be used with LearnDash Certificates. Note: Requires Certificate Builder v1.1.2.
+* Fix - Resolved LearnDash submenu items order issue.
+* Fix - Resolved PHP deprecated notice started in PHP 8.2.
+* Fix - Gradebook Letter and Color Scales are now more aggressively sanitized to ensure a fatal error cannot be hit if one were saved in an incorrect format.
+* Fix - Fatal error on the gradebook view page when using the UTC timezone.
+* Fix - Multiple typos and non-translatable strings.
+* Fix - Resolved PHP deprecated notice started in PHP 8.2.
+* Fix - Resolved saving styles settings always showing a "Settings save failed" notice even though they have successfully saved.
+* Tweak - Updated functions: `ld_gb_get_timezone_offset`.
+* Tweak - Added actions: `learndash_gradebook_uninstall`.
+* Tweak - Added functions: `learndash_gradebook_sanitize_grade_style_settings`.
+
+= [4.3.1.1] =
+
+* Fix - Added additional validation for shortcodes.
+
+= [4.3.1] =
+
+* Fix - Fixes an issue where certain fields were very large when editing different content types.
+
+= [4.3.0] =
+
+* Feature - A new integration with LearnDash Notifications has been added. If both plugins are active, a new notification trigger for when a Manual Grade is added will show within the Notification creation form. Note: This requires LearnDash Notifications v1.6.2 or higher to be installed.
+* Feature - Ajax search for Gradebooks in the backend Gradebook.
+* Feature - Telemetry functionality added. This will be sent if telemetry is opted in for LearnDash itself.
+* Fix - Ensures that an extra long Grade Name will wrap around properly.
+* Fix - Addresses an edge case where a notice could show telling the user that there was an issue authenticating with the licensing server after it has successfully authenticated.
+* Tweak - Quizzes with ungraded Essay Questions will now show as "Pending" within the Gradebook. The following templates have been updated for this change: `./templates/frontend-gradebook/edit-panel/components/edit-panel-grade-row.php`.
+* Tweak - Improved mobile display for both the backend and frontend Gradebooks.
+* Tweak - Adds additional styling in the event that there's an issue rendering a Gutenberg Block within the editor.
+* Tweak - Improved returned error messages shown if there's an issue authenticating the plugin with the licensing server.
+
+= [4.2.1] =
+
+* Fix - Prevents an issue where some users couldn't access the admin dashboard after upgrading to v4.2.0.
+
+= [4.2.0] =
+
+* Tweak - Renamed to Gradebook by LearnDash.
+* Tweak - Licensing changed to point toward www.learndash.com.
+* Tweak - Documentation links updated to point toward www.learndash.com.
+* Tweak - The following templates have been updated: `./templates/frontend-gradebook/edit-panel/components/edit-panel-component-override.php`, `./templates/frontend-gradebook/edit-panel/components/edit-panel-component.php`, `./templates/frontend-gradebook/edit-panel/components/edit-panel-grade-add.php`, `./templates/frontend-gradebook/edit-panel/components/edit-panel-grade-edit.php`, `./templates/frontend-gradebook/edit-panel/components/edit-panel-grade-row.php`, `./templates/frontend-gradebook/edit-panel/edit-panel-back-to-gradebook.php`, `./templates/frontend-gradebook/edit-panel/edit-panel-user-grade.php`, `./templates/frontend-gradebook/edit-panel/edit-panel.php`, `./templates/frontend-gradebook/errors/no-gradebooks.php`, `./templates/frontend-gradebook/table/table-head.php`, `./templates/frontend-gradebook/table/table-list.php`, `./templates/frontend-gradebook/table/table-row.php`, `./templates/frontend-gradebook/export-buttons.php`, `./templates/frontend-gradebook/frontend-gradebook.php`, `./templates/frontend-gradebook/gradebook-dropdown.php`, `./templates/frontend-gradebook/gradebook-results.php`, `./templates/frontend-gradebook/group-dropdown.php`, `./templates/report-card/title.php`.
+
+= [4.1.3] =
+
+* Fix - Fixes an issue where an empty timestamp could show on Grade Book as a date in late 1969 or early 1970.
+* Tweak - The following templates were updated: `./templates/frontend-gradebook/edit-panel/components/edit-panel-grade-row.php`.
+
+= [4.1.2] =
+
+* Fix - Fixes an issue where non-Admins would not be allowed to take certain actions in the Frontend Grade Book.
+* Fix - Fixes an issue where creating or editing a Manual Grade could result in an empty error message.
+* Fix - Fixes an issue where the "Cancel" button when adding a new Manual Grade wouldn't show any text.
+* Tweak - The following templates were updated: `./templates/frontend-gradebook/edit-panel/edit-panel.php`, `./templates/frontend-gradebook/edit-panel/components/edit-panel-component-grade.php`, `./templates/frontend-gradebook/edit-panel/components/edit-panel-component-override.php`, `./templates/frontend-gradebook/edit-panel/components/edit-panel-component.php`, `./templates/frontend-gradebook/edit-panel/components/edit-panel-components.php`, `./templates/frontend-gradebook/edit-panel/components/edit-panel-grade-add.php`, `./templates/frontend-gradebook/edit-panel/components/edit-panel-grade-edit.php`, `./templates/frontend-gradebook/edit-panel/components/edit-panel-grade-row.php`.
+
+= [4.1.1] =
+
+* Security - Fixes an issue with user visibility in the Frontend Grade Book for Group Leaders when "Include All Users In Grade Book" was checked.
+* Tweak - The following template files were updated: `./templates/frontend-gradebook/frontend-gradebook.php`.
+
+= [4.1.0] =
+
+* Feature - Adds the `ld_gb_is_super_admin()` function. This is a wrapper for the `is_super_admin()` function which is a part of WordPress itself. This was necessary to allow the output of `is_super_admin()` to be filterable if necessary.
+* Fix - Fixes an edge case that could crash the Frontend Grade Book if all of the following conditions were true: The logged in User has the Group Leader User Role, The logged in User is not the Group Leader of any Groups, The logged in User has another User Role in addition to Group Leader, The "Non-Group Leaders only have their own Group Users in their Grade Book" setting is enabled.
+* Tweak - The following template files were updated: `./templates/frontend-gradebook/frontend-gradebook.php`.
+
+= [4.0.4] =
+
+* Security - Fixes an issue where a Group Leader without any Groups could see Grade Book data for Students that they should not be able to see.
+
+= [4.0.3] =
+
+* Fix - Fixes a potential issue when Elementor is active but the current page is not utilizing it.
+
+= [4.0.2] =
+
+* Fix - Fixes a possible issue when "All Courses" is chosen for a Grade Book but a Student doesn't have any Course Progress stored yet.
+
+= [4.0.1] =
+
+* Fix - Fixes some deprecation warnings in PHP 8.x.
+
+= [4.0.0] =
+
+* Deprecate - The Specific Assignment Selector has been removed. This was not a particularly useful feature as it had you select specific _submissions_ for an Assignment Upload to include in your Grade Book rather than choosing the Lesson or Topic that the Assignments are to be uploaded to. It is recommended to either use the "All Assignments" toggle or to use the "Assignments from Lessons" or "Assignments from Topics" fields as is approrpriate for your setup.
+* Deprecate - The "Users" meta box has been removed from the Grade Book Edit screen. This meta box acted as a way to view a specific User's Grades while editing the Grade Book, but given that until you saved your changes to the Grade Book you wouldn't see anything you may have adjusted anyway, it was removed in favor of accessing the View/Edit Grades screen from the Backend (or Frontend) Grade Book itself.
+* Feature - Multiple Courses can now be selected for a single Grade Book! This will allow you to create a Grade Book that only include Grades for 2 or more Courses rather than requiring "All Courses" to be used or to otherwise have a separate Grade Book for every single Course.
+* Feature - Now compatible with Elementor! Previously the necessary styling and scripts for the Report Card and Frontend Grade Book would not load if the page were created using Elementor, but this has now been addressed with GradeBook for LearnDash v4.0.0
+* Feature - Lesson and Topic Completion can now be shown as complete/incomplete when "All Courses" or more than one Course has been added to the Grade Book! Previously this was not supported and any Lessons/Topics that were selected for the Grade Book would not show if "All Courses" were enabled, but this limitation has been removed as of GradeBook for LearnDash v4.0.0.
+* Feature - A new "Per Page" input has been added under "Screen Options" in the upper-right hand of the screen while viewing the Backend Grade Book.
+* Feature - Adds the `ld_gb_backend_gradebook_grade_format` filter for adjusting the Grade Format that is used by the Backend Grade Book and its views.
+* Feature - Adds the `learndash_update_manual_grade` filter so that the saved data for a Manual Grade can be programmatically adjusted or added to if needed.
+* Tweak - Timestamps are now saved for Manual Grades! Any time a Manual Grade is created or updated a timestamp will be saved along with it. This will show within the View/Edit Grades view for the Student within a Grade Book.
+
+= [3.3.0] =
+
+* Feature - Right to Left (RTL) Language support.
+* Tweak - Improved translation file to assist with setting up the plugin within an RTL environment The following template files were updated to accomodate this: `./templates/frontend-gradebook/gradebook-dropdown.php`, `./templates/frontend-gradebook/group-dropdown.php`, `./templates/frontend-gradebook/edit-panel/edit-panel-user-grade.php`, `./templates/frontend-gradebook/edit-panel/components/edit-panel-component-override.php`, `./templates/frontend-gradebook/edit-panel/components/edit-panel-component.php`, `./templates/frontend-gradebook/edit-panel/components/edit-panel-grade-add.php`, `./templates/frontend-gradebook/edit-panel/components/edit-panel-grade-edit.php`, `./templates/frontend-gradebook/edit-panel/components/edit-panel-grade-row.php`, `./templates/frontend-gradebook/table/table-head.php`, `./templates/frontend-gradebook/table/table-row.php`, `./templates/report-card/expand-collapse.php`, `./templates/report-card/overall-grade.php`, `./templates/report-card/title.php`, `./templates/report-card/component/grades-header.php`, `./templates/report-card/component/title.php`.
+
+= [3.2.0] =
+
+* Fix - Fixes an issue with the Overall Grade Shortcode and Gutenberg Block where extra space would show above and below it. This will allow you to utilize it inline within a Certificate more easily.
+* Tweak - Adds missing WordPress Filters for the CSV Headers in the All Grade Book Grades export.
+
+= [3.1.0] =
+
+* Feature - Tested and working with LearnDash 4.
+* Fix - Updates the v3.0.0 upgrade routine to account for the Subscriber Role not existing in rare cases.
+* Fix - Fixes a bug where default settings could not be read correctly, resulting in PHP errors on some sites.
+* Fix - Fixes a bug where our reminder to enter a license key could be shown twice.
+* Fix - Fixes a bug where the "Settings saved." dialog could show twice on our settings pages.
+* Fix - Fixes an issue where Component Grades and Overall Grades wouldn't respect the Rounding settings chosen under LearnDash LMS -> GradeBook -> Settings.
+* Fix - Fixes an issue where 0% grades would not show in CSV Exports.
+* Fix - Fixes an issue with the Backend View/Edit User Grades Panel would always refresh with letter grades no matter what your settings were configured to under LearnDash LMS -> GradeBook -> Settings.
+* Fix - Fixes an issue where decimal values were not being allowed using the Frontend Grade Book Component Grade Override and Manual Grade forms.
+* Fix - Fixes an issue where Component Grade Overrides would not save as a decimal value.
+* Tweak - Adds Timestamps to the Frontend and Backend Grade Book under the View/Edit User Grades Panel.
+* Tweak - Adds Timestamps to the All Grades CSV export.
+* Tweak - Properly support translation throughout the plugin.
+* Tweak - Renames the "Quizzes" option under LearnDash LMS -> GradeBook -> Settings to "Quiz grades used for calculations" to better describe what it does.
+* Tweak - The following Frontend Grade Book templates have been updated: `./templates/frontend-gradebook/edit-panel/components/edit-panel-component-override.php`, `./templates/frontend-gradebook/edit-panel/components/edit-panel-component.php`, `./templates/frontend-gradebook/edit-panel/components/edit-panel-grade-edit.php`, `./templates/frontend-gradebook/edit-panel/components/edit-panel-grade-row.php`.
+* Tweak - Updates our licensing and support module to the latest version.
+
+= [3.0.2] =
+
+* Fix - Ensures that the CSS/JS for Frontend Grade Books and Report Cards are only loaded when they are used.
+* Fix - Fixes an incompatibility with ProPanel where its frontend views would no longer be searchable due to the Frontend Grade Book utilizing a newer version of the Select2 library.
+* Fix - Corrects some grammar mistakes in the Quick Start Guide.
+* Fix - Corrects some PHP errors in the Quick Start Guide.
+* Tweak - Renames "Gradebooks" to "Grade Books" and the main "Gradebook" menu item to "GradeBook".
+* Tweak - Removes the welcome page.
+* Tweak - Bumps the WordPress tested to version to 5.8.2.
+* Tweak - Bumps the LearnDash tested to version to 3.6.0.2.
+
+= [3.0.1] =
+
+* Fix - Fixes a bug where the Letter Grade Scale and Grade Color Scale would not initialize correctly.
+* Tweak - Adds a Description to the "Gradebook" field for the Report Card Block to explain how it works when a Gradebook is not defined.
+
+= [3.0.0] =
+
+* Feature - Adds Gutenberg Blocks for the Frontend Gradebook, Report Cards, and Overall Grades.
+* Fix - Fixes some issues with the Quick Start guide where points of interest could be covered by the dialog.
+* Security - Prevents Subscribers from being able to be granted any capabilities related to viewing or managing the Gradebook. This does not impact their ability to view Report Cards or Overall Grades. An upgrade script will run to forcibly revoke these capabilities from the Subscriber Role.
+* Tweak - Renames plugin from "LearnDash - Gradebook" to "Gradebook for LearnDash". Note: Users updating from v2.1.0 of the plugin or earlier will need to manually update by uploading the ZIP file to their site. Users on v2.1.1 will be able to update normally.
+* Tweak - Adds clickable links to the Report Card so that Students can quickly view the Quiz, Assignment, etc. related to a grade.
+* Tweak - Improves the license activation message on the Plugins page. Now it will link directly to where you need to put in your license key.
+* Tweak - Adds loading indicators to the Frontend Gradebook whenever it is pulling in additional data.
+* Tweak - Gradebooks will now sort to the first listed User Column by default.
+* Tweak - Adds PHP and WordPress minimum versions to readme.txt.
+
+= [2.1.1] =
+
+* Fix - Fixes issue with fallback to a previously saved "Safe Mode" setting.
+* Tweak - Improves updater code.
+
+= [2.1.0] =
+
+* Deprecate - LearnDash Gradebook now requires LearnDash version 3.4 or above.
+* Fix - Fixes an issue where an empty color could be stored for the Grade Color Scale, which caused a PHP fatal error when viewing the Frontend Gradebook.
+* Fix - Fixes an issue where a Letter Grade Scale that was set to "0" would not display on the Settings Page.
+* Fix - Fixes an error on the welcome page.
+* Tweak - Renames "Gradebook Safe Mode" to "Disable Sorting by Grades for the Backend Gradebook" as that is what it was doing. This can be forcibly enabled by adding `define( 'LD_GB_DISABLE_SORTING_BY_GRADES_BACKEND', true );` to your wp-config.php file. If you already had this enabled as "Gradebook Safe Mode" before this update, it will stay enabled properly after you update.
+* Tweak - Adds a fix for sites with a lot of Groups with many Students where Admins were unable to access the dashboard. This is the new "Non-Group Leaders only have their own Group Users in their Gradebook" Setting under LearnDash LMS -> Gradebook -> Settings. This can be forcibly enabled by adding `define( 'LD_GB_NON_GROUP_LEADERS_ONLY_OWN_GROUP_USERS', true );` to your wp-config.php file. Note: This will prevent any Users (Including Admins) from viewing Students in the Gradebook that do not belong to a Group that they are a Group Leader of.
+* Tweak - Replaces deprecated calls to `lesson_hasassignments()` with `learndash_lesson_hasassignments()`.
+* Tweak - Makes some adjustments to how templates are loaded in the Frontend Gradebook so that any fatal PHP errors will be shown as an error box. Further details about these errors will show within the JavaScript console in your browser.
+
+= [2.0.6] =
+
+* Fix - Fixes syntax issue in Quick Start Tutorial.
+
+= [2.0.5] =
+
+* Fix - Fixes issue with Quick Start Tutorial.
+
+= [2.0.4] =
+
+* Feature - Adds an option to show both Percentage and Letter Grade in the Gradebook at once.
+* Fix - Fixes a bug where the User Email would get read incorrectly for the Gradebook.
+* Tweak - Frontend Gradebook: The first column and the top row are now fixed in place as you scroll. This is helpful in scenarios where you have a lot of Components in a Gradebook.
+
+= [2.0.3] =
+
+* Fix - Fixes a PHP syntax error when no Grade Style settings were saved.
+
+= [2.0.2] =
+
+* Fix - Fixes an issue with the Backend Gradebook Exports if more than one page of Students exists.
+* Fix - Fixes a PHP 7.1+ incompatibility if you were to delete all Grade Styles.
+* Fix - Fixes incompatibilities with WisdmLab's Instructor Role plugin.
+* Tweak - Removes the empty lines from the All Grades Exports.
+* Tweak - Adds the `ld_gb_get_gradebook_get_users_args_override` Filter.
+
+= [2.0.1] =
+
+* Fix - Fixes a bug with the "Export All Gradebook Grades" button in the Backend Gradebook.
+* Tweak - Adds the `ld_gb_backend_gradebook_export_per_page` Filter.
+
+= [2.0.0] =
+
+* Feature - A Frontend Gradebook has been included! You can include the Frontend Gradebook on any page of your site with the `[ld_gradebook]` Shortcode. You can find more information in our documentation: https://realbigplugins.com/docs/learndash-gradebook/#frontend-gradebook.
+* Feature - The ability to export Grades to CSV has been added! You can export all Component Grades (the Grades as shown in the main Gradebook view) as well as export all Grades for each Student.
+* Feature - Adds the ability to sort by First Name, Last Name, Email Address, and User Login in addition to the previously used Display Name. This option can be found under LearnDash LMS -> Gradebook -> Settings
+* Fix - Fixes issue where the Letter Grade Scale and Color were not pulled in correctly in WordPress 5.5.x. Requires a database update!
+* Fix - Fixes an issue where some Students were not showing in the Gradebook when they should have been.
+* Fix - Fixes an issue where Assignmetns wouldn't show properly within a User Grade when they were not approved or completed yet.
+* Fix - Fixes an issue where a site has Groups but a Group Leader is viewing the Gradebook without having Groups assigned to them caused the Gradebook to show them all Students.
+* Fix - Fixes an issue where Group Leaders and potentially other User Roles were unable to save Components and other Gradebook settings.
+* Fix - Fixes an issue where a Student had not taken any Quizzes yet and the Gradebook Completion Grading Mode was set to "Fail until completion" or "Mark as Incomplete until completion", it would not mark the relevant Quizzes as failed/incomplete correctly.
+* Fix - Fixes an issue where the Report Card Shortcode wouldn't respect the "Grade Display Mode" setting. This updated the following Report Card template files: `report-card/report-card.php`, `report-card/component/component.php`, `report-card/component/grade.php`, `report-card/overall-grade.php`.
+* Fix - Fixes an issue with displaying the Groups dropdown in the Dashboard Widget.
+* Fix - Prevents a possible issue when pulling saved options.
+* Fix - Removes PHP deprecation warning for ternary else-if format.
+
+= [1.6.6] =
+
+* Feature - Add option to mark Assignments/Quizzes as incomplete until completion.
+* Fix - Fix for removing Component Grade overrides.
+* Fix - If a Course is chosen for a Gradebook, ensure that Quiz Grades that are grabbed are only for that Course. This is important if a Quiz is shared across multiple Courses.
+* Fix - If a User Role can see the Gradebook but cannot create their own Gradebooks, ensure that they do not see the "Create Gradebook" button if no Gradebooks are found.
+
+= [1.6.5] =
+
+* Tweak - Adds a Completion timestamp to the Quiz Grades within Components. This is a developer-centric change for those who may be using the `ld_gb_get_user_grade` Filter.
+
+= [1.6.4] =
+
+* Feature - Adds the Overall Grade Shortcode. This can be a useful utility in LearnDash Certificates. Usage: `[ld_overall_grade gradebook=123]`.
+* Fix - Fixes a potential issue when using the `ld_gb_adminpage_gradebook_select_query_args` filter to ensure that the default Gradebook will always be the first one in the Select dropdown.
+* Fix - If a Quiz was manually marked as "Complete" from the User Edit screen, LearnDash Gradebook will now show a 0% for that Quiz instead of hitting an error
+
+= [1.6.3] =
+
+* Fix - Fixes bug when using `[ld_report_card]` with no Gradebook set.
+
+= [1.6.2] =
+
+* Tweak - Adds Gradebook ID to `ld_gb_gradebook_data` Filter.
+* Tweak - Adds `ld_gb_gradebook_list_table_grade_display` Filter.
+* Tweak - Adds `ld_gb_get_user_grade Filter` which allows overriding the returned value of `ld_gb_get_user_grade()` before anything is processed.
+
+= [1.6.1] =
+
+* Fix - The `ld_gb_adminpage_gradebook_select_query_args` filter was placed on the incorrect query. This will now do what is expected of it.
+
+= [1.6.0] =
+
+* Feature - Now respects the Custom Labels given to LearnDash Content Types in its Settings.
+* Feature - If an Assignment has been submitted but not approved, then it will show “Pending Approval” in their User Grades and within the Report Card and not count toward or against the Student.
+* Feature - If `[ld_report_card]` is used without a gradebook defined, it will attempt to output all relevant Gradebooks for that Student. To help facilitate this, the Gradebook ID needed to be passed into each Report Card template. This means that if you are overriding any Report Card template files in your Theme, they will require updating. These changes only impact if you’re showing multiple Report Cards on the same page.
+* Tweak - Assignment Lesson/Topic fields now will only show results for Assignments that have Assignment Uploads enabled.
+* Tweak - If Lessons or Topics are chosen to pull Assignment Grades for and the Gradebook has “Fail until completion” enabled, then a failing score of 0% will be shown for every Assignment that a Student has not submitted. Note: These will show below other Assignments in their User Grades and in the Report Card regardless of your Component Ordering settings.
+* Tweak - Added the `ld_gb_adminpage_gradebook_select_query_args` filter to allow adjusting the Query Args for the Gradebooks shown in the Gradebooks dropdown on the primary Gradebook admin page.
+* Tweak - Added the `learndash_gradebook_delete_manual_grade()` and `learndash_gradebook_update_manual_grade()` functions to make interacting with Manual Grades programmatically easier.
+* Tweak - Added the `learndash_gradebook_manual_grade_default_score` filter so that a default score for Manual Grades on the User Grades screen can be defined. This does not impact using the functions listed above.
+
+= [1.5.1] =
+
+* Feature - Add ability to disable Manual Grades.
+* Feature - Add ability to disable Component grade Overrides.
+* Feature - Adds the ability to show the containing Lesson/Topic title for Assignment entries in the Gradebook/Report Card rather than the uploaded file name.
+* Fix - Fixes an issue where when choosing a Group, it was possible for the Gradebook to show all Users if no Users within the Group had started the Course yet.
+* Fix - Fixes issue where using a non-existing Gradebook with the Report Card Shortcode would cause a Fatal Error.
+* Fix - Fixes an issue where sometimes elements could be missing from the Gradebook/Report Card.
+* Tweak - The Report Card template file at `templates/report-card/report-card-error.php` has been updated. If any Themes are overriding this file, they will need to update it.
+
+= [1.5.0] =
+
+* Fix - Fixes issue where when a User was granted the ability to view or create/edit Gradebooks, they were unable to within LearnDash v3.x.
+* Fix - Fixes an issue where if a User did not dismiss the Quickstart Guide they were unable to utilize any aspects of the Gradebook.
+* Fix - Fixes some styling with the Gradebook and Report Card shortcode.
+* Performance - If a website had a lot of Course Content, it was possible that when creating a new Gradebook the page would fail to load. The default Course is no longer set to "All Courses" to avoid this. For sites where this is an issue, they will be unable to use "All Courses" at this time.
+* Tweak - The Report Card template file at `templates/report-card/report-card.php` has been updated. If any Themes are overriding this file, they will need to update it.
+
+= [1.4.7] =
+
+* Fix - Fixes incompatibility with Gravity Forms Advanced Post Creation when attempting to create a Post Creation Feed.
+
+= [1.4.6] =
+
+* Fix - Fixes an issue where Gradebooks of Courses where no User had started the Course yet would show all Users even when the "Show All Users" option was disabled.
+
+= [1.4.5] =
+
+* Fix - Fixes issues with loading resources on Windows Servers.
+
+= [1.4.4] =
+
+* Fix - Prevents a possible PHP error when using the `[ld_report_card]` shortcode.
+* Fix - Corrects a PHP warning when using the `[ld_report_card]` shortcode.
+
+= [1.4.3] =
+
+* Fix - Fixes incompatibility with Download Manager Pro.
+
+= [1.4.2] =
+
+* Fix - Fixes incompatibility with WisdmLabs' Instructor Role Plugin causing data to not populate in the Gradebook or User Grade views.
+
+= [1.4.1] =
+
+* Feature - Gradebooks can now have their Author changed via the Edit screen or the Quick Edit dialog. This is useful if you've granted other Roles the ability to Edit Gradebooks, but you want to create one for them and "assign" it to them afterward.
+
+= [1.4.0] =
+
+* Feature - You can now grant any User Role the ability to Create their own Gradebooks. This can be found under LearnDash LMS -> Gradebook -> Settings -> Roles.
+* Tweak - Minimum LearnDash version now set to v2.3.0.
+* Tweak - Minimum WordPress version now set to v4.8.0.
+
+= [1.3.8] =
+
+* Fix - Fixes stying bug when Grade Display Mode is set to "Percentage".
+* Fix - Quiz grades were not showing as failed if the "Fail until completion" setting was checked in the Gradebook Settings.
+
+= [1.3.7] =
+
+* Feature - Added a hierarchy context for each item when Editing a Gradebook. Example: Lesson 2 -> Topic 3 -> Quiz 4. This is helpful if you have multiple different Topics or Quizzes with the same name so that they can be visually differentiated from each other when configuring a Gradebook.
+* Fix - Bug in upgrade routine that caused Gradebook to think the last upgrade preformed was one for v2.0.0.
+* Fix - Adiminstrators are now able to edit Gradebooks made by other Users (Database Upgrade Required).
+
+= [1.3.6] =
+
+* Fix - Components sometimes lost their ID's, not allowing weights to be set properly.
+
+= [1.3.5] =
+
+* Fix - Unable to edit others gradebooks on multisite if not super-admin.
+
+= [1.3.4] =
+
+* Feature - Add ability to manually setup roles.
+* Fix - Gradebook safemode not loading users.
+* Fix - Edge case narrow dropdown for group selector on Gradebook page.
+* Fix - Unable to edit user component grade overrides.
+
+= [1.3.3] =
+
+* Fix - Upgrade RBM FH to prevent Select2 conflict.
+* Fix - Broken capability.
+
+= [1.3.2] =
+
+* Fix - Gradebook not showing pagination.
+
+= [1.3.1] =
+
+* Fix - Gradebook only showing 10 users.
+
+= [1.3.0] =
+
+* Feature - Grade display mode. Allows displaying grades as percentages.
+* Feature - Report Card resource ordering. Allows customization of ordering of resources on Report Card.
+* Feature - Assignments from Topics. Allows adding assignments from topics on Gradebook, similar to assignments form lessons.
+* Tweak - Better select box for group selector on Gradebook page.
+
+= [1.2.101] =
+
+* Fix - Fix assignments not populating dropdown on Gradebook edit page.
+
+= [1.2.10] =
+
+* Tweak - Report Card shortcode user logged out message.
+
+= [1.2.9] =
+
+* Fix - Fix broken setting for Grade Color Scale.
+
+= [1.2.8] =
+
+* Fix - Fix "All Quizzes" in Gradebook with new LearnDash Course Builder.
+
+= [1.2.7] =
+
+* Fix - Fix "disappearing" options in components within Gradebook manaagement.
+
+= [1.2.6] =
+
+* Feature - Allow Group Leaders (or anyone with the `view_gradebook` capability) to view and edit user grades.
+* Fix - Fix incompatibility with the new Shared Course Steps feature.
+
+= [1.2.5] =
+
+* Fix - Fix some PHP notices.
+
+= [1.2.4] =
+
+* Fix - Fix pre PHP 7 conflict.
+
+= [1.2.3] =
+
+* Fix - Gradebook safemode fix.
+* Fix - Pre PHP 7 conflict fix.
+* Tweak - Gradebook page hide users verbiage update.
+
+= [1.2.2] =
+
+* Feature - Filter users in Gradebooks based on Course enrollment.
+* Tweak - Modify upgrade process.
+
+= [1.2.1] =
+
+* Fix: Potential bug with upgrade process
+
+= [1.2.0] =
+
+* Feature - Multiple Gradebooks.
+* Feature - Premium support.
+* Feature - Assignment points integration.
+
+= [1.1.7] =
+
+* Feature - Allow Group Leaders to assign Gradebook Types to Assignments and Quizzes.
+
+= [1.1.6] =
+
+* Fix - Fix new "Gradebook Safe Mode" loading bug.
+
+= [1.1.5] =
+
+* Feature - Add "Gradebook Safe Mode" for faster loading on sites with large databases.
+* Tweak - Improve user searching in Gradebook.
+
+= [1.1.4] =
+
+* Fix - Fix Group Leader edit assignment grade bug.
+
+= [1.1.3] =
+
+* Fix - Fix translatable string in Report Card.
+
+= [1.1.2] =
+
+* Tweak - Require min LearnDash version of 2.1.0.
+
+= [1.1.1] =
+
+* Fix - Fix infinite quickstart loop.
+
+= [1.1.0] =
+
+* Feature - LearnDash groups support.
+* Feature - New report card templating system.
+* Feature - Gradebook role access customization.
+* Feature - Gradebook Type grade override capability.
+* Feature - Gradebook searching and sorting.
+* Feature - Gradebook dashboard widget.
+* Feature - Customizeable grade rounding.
+* Fix - Fix radio select bug.
+* Tweak - New settings page structure and improved settings API.
+* Tweak - Improved Gradebook styles.
+* Tweak - Gradebook Type grade information tool tip.
+
+= [1.0.4] =
+
+* Fix - Fix obtrusive settings page styling.
+
+= [1.0.3] =
+
+* Fix - Fix broken admin Gradebook pagination.
+
+= [1.0.2] =
+
+* Fix - Quickstart can be cutoff on tall admin menus.
+
+= [1.0.1] =
+
+* Feature - Grade Statuses.
+* Fix - Bug fixes.
+* Tweak - Revise user edit screen Gradebook interface.
+* Tweak - Add indicators to the Types page to see what each Type is currently being used by.
+* Tweak - Move licensing to the Gradebook Settings page.
+
+= [1.0.0] =
+
+* Feature - Initial release.

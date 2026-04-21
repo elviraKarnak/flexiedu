@@ -65,52 +65,65 @@
             </div>
         </div>
 
-        <?php if(!$isRequiredCourse){ ?>
+        <?php // var_dump($isRequiredCourse); ?>
+        
 
-        <div class="learndash-wrapper learndash-widget" style="margin-top:10px;">
-        <div class="ld-progress ld-progress-inline">
+        <?php if(!$isRequiredCourse){ 
 
-          <div class="ld-progress-heading">
-            <div class="ld-progress-stats">
+         if (in_array('organizer', (array) $user->roles) || 
+         in_array('administrator', (array) $user->roles) || 
+         in_array('wdm_instructor', (array) $user->roles) ||
+         in_array('group_leader', (array) $user->roles)) { ?>
 
-              <div class="ld-progress-percentage ld-secondary-color">
-                <?php echo $percent; ?>% Complete
-              </div>
-
-              <div class="ld-progress-steps">
-                <?php echo $steps . '/' . $total; ?> Steps
-              </div>
-
-            </div>
-          </div>
-
-          <div class="ld-progress-bar">
-            <div class="ld-progress-bar-percentage ld-secondary-background"
-                 style="width:<?php echo $percent; ?>%">
-            </div>
-          </div>
-
-        </div>
-      </div>
-
- 
-
-            <!-- Actions -->
             <div class="card-actions">
 
-            <button title="Edit" onclick="window.location.href='<?php echo home_url('/course-builder/'.get_the_ID().'/');?>'">
-                <i class="fas fa-pencil-alt"></i>
-            </button>
+                <button title="Edit" onclick="window.location.href='<?php echo home_url('/course-builder/'.get_the_ID().'/');?>'">
+                    <i class="fas fa-pencil-alt"></i>
+                </button>
 
-            <button title="View" onclick="window.location.href='<?php the_permalink(); ?>'">
-                <i class="far fa-eye"></i>
-            </button>
+                <button title="View" onclick="window.location.href='<?php the_permalink(); ?>'">
+                    <i class="far fa-eye"></i>
+                </button>
 
-            <button class="btn-delete" title="Delete" data-id="<?php echo get_the_ID(); ?>">
-                <i class="fas fa-trash"></i>
-            </button>
+                <button class="btn-delete" title="Delete" data-id="<?php echo get_the_ID(); ?>">
+                    <i class="fas fa-trash"></i>
+                </button>
 
             </div>
+
+
+         <?php } else {?>
+
+                <div class="caption" bis_skin_checked="1">
+				
+					<div class="ld_course_grid_button" bis_skin_checked="1">
+                        <a aria-label="Continue Study: Python Refresher" class="btn btn-primary" 
+                        href="<?php the_permalink(); ?>">
+                            Continue Study					
+                        </a>
+				    </div>
+                    <div class="learndash-wrapper learndash-widget" bis_skin_checked="1">
+		                <div class="ld-progress ld-progress-inline" bis_skin_checked="1">
+					        <div class="ld-progress-heading" bis_skin_checked="1">
+								<div class="ld-progress-stats" bis_skin_checked="1">
+					                <div class="ld-progress-percentage ld-secondary-color" bis_skin_checked="1">
+					                    <?php echo $percent; ?>% Complete			
+                                    </div>
+					            </div> <!--/.ld-progress-stats-->
+			                </div>
+
+                            <div class="ld-progress-bar" bis_skin_checked="1">
+                                <div class="ld-progress-bar-percentage ld-secondary-background" style="width:<?php echo $percent; ?>%" bis_skin_checked="1"></div>
+                            </div>
+				        </div> <!--/.ld-progress-->
+	                </div>
+															
+                </div>
+
+
+            <?php } ?>
+
+    
             <?php } else { 
               
               global $wpdb;
@@ -123,6 +136,8 @@
                   WHERE user_id = %d AND course_id = %d",
                   $user_id, $course_id
               ));
+
+              //var_dump($requested);
 
               $status = $requested->status ?? '';
               $reapply_after = $requested->reapply_after ?? '';
@@ -171,12 +186,45 @@
 
                       <!-- Show days -->
                       <a class="btn btn-danger mt-2" disabled>
-                          Reapply after <?php echo $days_left; ?> day<?php echo $days_left > 1 ? 's' : ''; ?>
+                          <?php
+                          printf(
+                              esc_html__('Reapply after %d day%s', 'flexiedu-lms-courses'),
+                              (int) $days_left,
+                              $days_left > 1 ? 's' : ''
+                          );
+                          ?>
                       </a>
 
                   <?php endif; ?>
 
-              <?php endif; ?>
+               <?php elseif ($status === 'approved') : ?>
+
+                <div class="caption" bis_skin_checked="1">
+				
+					<div class="ld_course_grid_button" bis_skin_checked="1">
+                        <a aria-label="Continue Study: Python Refresher" class="btn btn-primary" 
+                        href="<?php the_permalink(); ?>">
+                            Continue Study					
+                        </a>
+				    </div>
+                    <div class="learndash-wrapper learndash-widget" bis_skin_checked="1">
+		                <div class="ld-progress ld-progress-inline" bis_skin_checked="1">
+					        <div class="ld-progress-heading" bis_skin_checked="1">
+								<div class="ld-progress-stats" bis_skin_checked="1">
+					                <div class="ld-progress-percentage ld-secondary-color" bis_skin_checked="1">
+					                    <?php echo $percent; ?>% Complete			
+                                    </div>
+					            </div> <!--/.ld-progress-stats-->
+			                </div>
+
+                            <div class="ld-progress-bar" bis_skin_checked="1">
+                                <div class="ld-progress-bar-percentage ld-secondary-background" style="width:<?php echo $percent; ?>%" bis_skin_checked="1"></div>
+                            </div>
+				        </div> <!--/.ld-progress-->
+	                </div>
+															
+                </div>
+                <?php endif; ?>
 
                             <?php } ?>          
       </div>

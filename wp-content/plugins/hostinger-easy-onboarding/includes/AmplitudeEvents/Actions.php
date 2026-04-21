@@ -6,6 +6,7 @@ defined( 'ABSPATH' ) || exit;
 
 class Actions {
     public const ONBOARDING_ITEM_COMPLETED          = 'wordpress.easy_onboarding.item_completed';
+    public const WOO_INSTALLED                      = 'wordpress.woocommerce.installed';
     public const WOO_ITEM_COMPLETED                 = 'wordpress.woocommerce.item_completed';
     public const WOO_READY_TO_SELL                  = 'wordpress.woocommerce.store.ready_to_sell';
     public const WOO_SETUP_COMPLETED                = 'wordpress.woocommerce.store_setup.completed';
@@ -19,4 +20,5 @@ class Actions {
     public const WP_EASY_ONBOARDING_COMPLETED       = 'wordpress.easy_onboarding.completed';
     public const WP_BLACK_FRIDAY_BANNER_OFFER_SHOWN = 'black_friday.banner.offer_shown';
     public const WP_ADDONS_BANNER_SHOWN             = 'wordpress.addons_banner.shown';
+    public const WP_REACH_BANNER_SHOWN              = 'wordpress.reach_banner.shown';
 }

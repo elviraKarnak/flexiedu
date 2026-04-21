@@ -152,6 +152,15 @@ class Hostinger_Ai_Assistant_Content_Generation {
             // Extract and validate input data.
             $post_data = $this->get_post_data( $action );
 
+            // Verify the current user can publish posts of this type.
+            if ( $action === 'publish' ) {
+                $post_type_obj = get_post_type_object( $post_data['post_type'] );
+                if ( ! $post_type_obj || ! current_user_can( $post_type_obj->cap->publish_posts ) ) {
+                    $this->helper->ajax_error_message( $error_msg, $error_msg );
+                    exit;
+                }
+            }
+
             // Process the post content with images if needed.
             $post_data = $this->process_post_content_with_images( $post_data );
 
@@ -163,6 +172,18 @@ class Hostinger_Ai_Assistant_Content_Generation {
         } catch ( Exception $exception ) {
             $this->helper->ajax_error_message( 'Error: ' . $exception->getMessage(), $server_error );
         }
+    }
+
+    private function convert_content_to_blocks( array $post_data ): array {
+        try {
+            $converter            = new Block_Converter( $post_data['content'] );
+            $post_data['content'] = $converter->convert();
+        } catch ( Exception $e ) {
+            error_log( 'Block conversion error: ' . $e->getMessage() );
+            return $post_data;
+        }
+
+        return $post_data;
     }
 
     /**
@@ -237,6 +258,8 @@ class Hostinger_Ai_Assistant_Content_Generation {
 
         // Process taxonomy data.
         $post_data = $this->process_taxonomies( $post_data );
+
+        $post_data = $this->convert_content_to_blocks( $post_data );
 
         // Handle featured and content images.
         if ( $this->helper->post_type_supports_featured_image( $post_data['post_type'] )
@@ -371,6 +394,10 @@ class Hostinger_Ai_Assistant_Content_Generation {
 
         if ( ! isset( $allowed_lengths[ $content_length ] ) ) {
             $content_length = 'short';
+        }
+
+        if ( $is_product ) {
+            return $content_length;
         }
 
         $length_range = $allowed_lengths[ $content_length ];

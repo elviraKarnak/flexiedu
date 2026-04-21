@@ -4,7 +4,7 @@ Tags: posts, post, duplicate, duplication
 Requires at least: 6.6
 Requires PHP: 7.4
 Tested up to: 6.9.4
-Stable tag: 3.0.13
+Stable tag: 3.0.14
 License: GPL2
 
 Creates functionality to duplicate any and all post types, including taxonomies & custom fields. Perfect for developers and content creators.
@@ -314,6 +314,12 @@ Please report any security bugs found in the source code of this project through
 
 == Changelog ==
 
+= 3.0.14 [2026-04-02] =
+* Added "Excluded Meta Keys" setting on the Advanced tab to allow users to specify meta keys that should never be duplicated or shown in the duplication modal
+* Moved `nestedpages` and `wpca-list` screen slugs from settings default value to hardcoded filter in `hooks.php`
+* Cleared `additional_screens` default value; slugs now shown as placeholder examples in the settings field
+* Fixed post guid being copied to duplicate for non-public post types
+
 = 3.0.13 [2026-03-21] =
 * Added PHP fallback for duplicate row-action link so duplication works on any admin screen even when scripts are not loaded
 * Added `mtphr_post_duplicator_additional_screens` filter and settings field for configuring extra admin screens where scripts should load
@@ -579,4 +585,4 @@ Must upgrade in order for the plugin to work. The file paths where initially wro
 
 == Upgrade Notice ==
 
-Added php fallback for duplication without js. New setting to add custom admin screens for script enqueue.
+Added "Excluded Meta Keys" setting and other updates

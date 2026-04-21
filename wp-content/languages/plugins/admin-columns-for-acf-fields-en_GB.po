@@ -1,0 +1,37 @@
+# Translation of Plugins - Admin Columns for ACF Fields - Stable (latest release) in English (UK)
+# This file is distributed under the same license as the Plugins - Admin Columns for ACF Fields - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2026-04-20 19:31:06+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: en_GB\n"
+"Project-Id-Version: Plugins - Admin Columns for ACF Fields - Stable (latest release)\n"
+
+#. Author URI of the plugin
+#: acf_admin_columns.php
+msgid "http://www.fleimedia.com/"
+msgstr "http://www.fleimedia.com/"
+
+#. Author of the plugin
+#: acf_admin_columns.php
+msgid "Florian Eickhorst"
+msgstr "Florian Eickhorst"
+
+#. Description of the plugin
+#: acf_admin_columns.php
+msgid "Add columns for your ACF fields to post and taxonomy index pages in the WP backend."
+msgstr "Add columns for your ACF fields to post and taxonomy index pages in the WP back-end."
+
+#. Plugin URI of the plugin
+#: acf_admin_columns.php
+msgid "https://wordpress.org/plugins/acf-admin-columns/"
+msgstr "https://wordpress.org/plugins/acf-admin-columns/"
+
+#. Plugin Name of the plugin
+#: acf_admin_columns.php
+msgid "Admin Columns for ACF Fields"
+msgstr "Admin Columns for ACF Fields"

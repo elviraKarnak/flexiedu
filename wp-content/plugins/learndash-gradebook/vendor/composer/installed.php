@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => 'learndash/gradebook',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'e46406773333c2b9e43e402949f1d1726c34612c',
+        'type' => 'wordpress-plugin',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => false,
+    ),
+    'versions' => array(
+        'learndash/gradebook' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'e46406773333c2b9e43e402949f1d1726c34612c',
+            'type' => 'wordpress-plugin',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'ssnepenthe/color-utils' => array(
+            'pretty_version' => '0.4.2',
+            'version' => '0.4.2.0',
+            'reference' => 'a68562f81fd603be0c45d102b4e8064c76ddf863',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../ssnepenthe/color-utils',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'wptrt/admin-notices' => array(
+            'pretty_version' => 'v1.0.4',
+            'version' => '1.0.4.0',
+            'reference' => '1df860950b4198cc93e867873b1b571b51f908b0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../wptrt/admin-notices',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);

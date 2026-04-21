@@ -16,7 +16,7 @@ class Assets {
 
     public function enqueue_preview_css(): void {
         if ( is_user_logged_in() ) {
-            wp_enqueue_style( 'hostinger-onboarding-preview-styles', HOSTINGER_EASY_ONBOARDING_ASSETS_URL . '/css/hts-preview.css', array(), HOSTINGER_EASY_ONBOARDING_VERSION );
+            wp_enqueue_style( 'hostinger-onboarding-preview-styles', HOSTINGER_EASY_ONBOARDING_ASSETS_URL . '/css/hts-preview.min.css', array(), HOSTINGER_EASY_ONBOARDING_VERSION );
         }
     }
 }

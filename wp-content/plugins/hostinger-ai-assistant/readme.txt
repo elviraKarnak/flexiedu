@@ -1,8 +1,8 @@
 === Plugin Name ===
 Tags: AI, AI assistant
 Requires PHP: 8.0
-Tested up to: 6.8
-Stable tag: 3.0.13
+Tested up to: 6.9
+Stable tag: 3.0.33
 Requires at least: 5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -374,3 +374,98 @@ This section describes how to install the plugin and get it working.
 - Fix: Remove duplicate token initialisation
 - Refactor: Improve code structure
 - Feature: Update chatbot widget version
+
+3.0.14 (2025-11-06)
+- Feature: Update chatbot widget version
+
+3.0.15 (2025-11-11)
+- Tweak: Bump up chatbot widget version
+
+3.0.16 (2025-11-18)
+- Fix: Translations not showing up correctly
+- Fix: Admin CSS conflict
+- Feature: Update translations
+
+3.0.17 (2025-12-02)
+- Fix: Website route permission checks
+- Fix: Add missing workflow permissions
+- Fix: Fatal error when no featured image is found
+- Feature: Bump WP 6.9 tested up to flag
+- Feature: Add code automation workflow
+- Fix: Convert AI Created Post to Gutenberg Blocks
+- Feature: Update kodee z-index
+- Feature: Add Kodee to Elementor editor
+
+3.0.18 (2025-12-09)
+- Feature: New MCP integration
+- Feature: Update hComponents
+- Fix: Tooltip not visible
+- Fix: Added missing Rate your conversation label for Kodee
+
+3.0.19 (2025-12-11)
+- Tweak: Bump Chatbot version
+
+3.0.20 (2025-12-18)
+- Fix: Elementor breaking MCP input schema validation
+- Feature: Implement PHP Compat WP PHP 8.1
+- Feature: Remove MCP consent popup
+- Feature: Update translations
+- Fix: Limit survey filled event
+- Feature: Add Elementor MCP tools
+
+3.0.21 (2026-01-06)
+- Dev: Internal workflows
+
+3.0.22 (2026-01-13)
+- Feature: Chatbot greetings screen
+- Fix: AI Product description length
+- Fix: Select input styling
+- Fix: Auto starting Kodee greeting screen in onboarding
+- Dev: Tweak DEX automation workflow
+- Dev: Tweak E2E tests workflow files
+
+3.0.23 (2026-01-15)
+- Tweak: Update dependencies
+
+3.0.24 (2026-01-22)
+- Feature: Update chatbot widget
+
+3.0.25 (2026-02-03)
+- Fix: Dex Code automation
+- Fix: Environment variable name
+- Feature: Permission check for MCP
+- Feature: Convert MCP generated posts to blocks
+
+3.0.26 (2026-02-10)
+- Fix: Hide chatbot widget on AI theme route
+- Feature: Track MCP nudges
+- Feature: Bump up chatbot widget version, add next message suggestions
+
+3.0.27 (2026-02-17)
+- Tweak: Update dependencies
+
+3.0.28 (2026-02-19)
+- Feature: Harden capability check
+
+3.0.29 (2026-03-05)
+- Feature: Updated translations
+
+3.0.30 (2026-03-18)
+- Tweak: Bump up chatbot widget version
+- Tweak: Update dependencies
+- Tweak: Don't load chatbot on non-Hostinger environment
+- Fix: Tone of voice dropdown
+
+3.0.31 (2026-03-26)
+- Feature: MCP for plugin & theme management
+- Feature: Add WooCommerce coupons MCP tools
+
+3.0.32 (2026-03-31)
+- Fix: Scope abilities registration
+- Tweak: Update product description endpoint
+- Tweak: Update dependencies
+- Dev: Add release Automation Workflow
+
+3.0.33 (2026-04-02)
+- Dev: Fix Workflows for Release automation
+- tweak: Update dependencies

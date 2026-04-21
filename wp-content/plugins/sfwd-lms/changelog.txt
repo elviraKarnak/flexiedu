@@ -1,3 +1,8 @@
+= [5.0.5] 2026-04-08 =
+
+* Fix - Resolved an issue where group leaders with basic settings could not view or grade assignments submitted by users in their groups. Admins and advanced group leaders are unchanged and still see all assignments; author and group filters respect the same visibility rules.
+* Fix - Resolved an issue where, for group leaders assigned to more than one group, exporting group progress could include users beyond those in the exported group.
+
 = [5.0.4] 2026-03-25 =
 
 * Fix - Added delay between scheduled payment actions to prevent overwhelming the payment gateway when many subscriptions are due at once (e.g. on first run after upgrade).

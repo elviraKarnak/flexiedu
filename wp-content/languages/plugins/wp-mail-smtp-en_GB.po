@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Plugins - WP Mail SMTP by WPForms &#8211; The Most Popular SMTP and Email Log Plugin - Stable (latest release)\n"
 
 #. translators: %s - plugin name.
-#: src/WP.php:585
+#: src/WP.php:595
 msgid "WP Core (%s)"
 msgstr "WP Core (%s)"
 
@@ -142,16 +142,16 @@ msgstr "Backup Connection"
 msgid "Additional Connections"
 msgstr "Additional Connections"
 
-#: assets/languages/wp-mail-smtp-vue.php:832 src/Admin/Area.php:146
+#: assets/languages/wp-mail-smtp-vue.php:839 src/Admin/Area.php:146
 msgid "There was an error while processing the authentication request. The state key is invalid. Please try again."
 msgstr "There was an error while processing the authentication request. The state key is invalid. Please try again."
 
-#: assets/languages/wp-mail-smtp-vue.php:818
+#: assets/languages/wp-mail-smtp-vue.php:825
 #: src/Providers/Gmail/Options.php:217
 msgid "Remove OAuth Connection"
 msgstr "Remove OAuth Connection"
 
-#: assets/languages/wp-mail-smtp-vue.php:104
+#: assets/languages/wp-mail-smtp-vue.php:105
 msgid "It looks like we can't remove OAuth connection."
 msgstr "It looks like we can't remove OAuth connection."
 
@@ -163,42 +163,42 @@ msgstr "create the missing DB tables by clicking on this link"
 msgid "Go to WP Mail SMTP settings page."
 msgstr "Go to WP Mail SMTP settings page."
 
-#: src/DBRepair.php:215
+#: src/DBRepair.php:217
 msgid "Some DB Tables are still missing."
 msgstr "Some DB tables are still missing."
 
-#: src/DBRepair.php:189
+#: src/DBRepair.php:191
 msgid "Missing DB tables were created successfully."
 msgstr "Missing DB tables were created successfully."
 
-#: src/DBRepair.php:101
+#: src/DBRepair.php:102
 msgid "Unknown."
 msgstr "Unknown."
 
 #. translators: %d - days count.
-#: src/Admin/Pages/DebugEventsTab.php:585
+#: src/Admin/Pages/DebugEventsTab.php:583
 msgid "%d Day"
 msgid_plural "%d Days"
 msgstr[0] "%d Day"
 msgstr[1] "%d Days"
 
-#: src/Admin/Pages/DebugEventsTab.php:571
+#: src/Admin/Pages/DebugEventsTab.php:569
 msgid "1 Year"
 msgstr "1 Year"
 
-#: src/Admin/Pages/DebugEventsTab.php:570
+#: src/Admin/Pages/DebugEventsTab.php:568
 msgid "6 Months"
 msgstr "6 Months"
 
-#: src/Admin/Pages/DebugEventsTab.php:569
+#: src/Admin/Pages/DebugEventsTab.php:567
 msgid "3 Months"
 msgstr "3 Months"
 
-#: src/Admin/Pages/DebugEventsTab.php:568
+#: src/Admin/Pages/DebugEventsTab.php:566
 msgid "1 Month"
 msgstr "1 Month"
 
-#: src/Admin/Pages/DebugEventsTab.php:567
+#: src/Admin/Pages/DebugEventsTab.php:565
 msgid "1 Week"
 msgstr "1 Week"
 
@@ -230,7 +230,7 @@ msgstr "[%1$d] %2$s called at [%3$s:%4$s]"
 msgid "Backtrace:"
 msgstr "Backtrace:"
 
-#: assets/languages/wp-mail-smtp-vue.php:443
+#: assets/languages/wp-mail-smtp-vue.php:456
 msgid "Track when a link in an email is clicked"
 msgstr "Track when a link in an email is clicked"
 
@@ -250,39 +250,39 @@ msgstr "Get notifications via email, SMS, Slack, or webhook when emails fail to 
 msgid "Instant Email Alerts"
 msgstr "Instant Email Alerts"
 
-#: assets/languages/wp-mail-smtp-vue.php:428
+#: assets/languages/wp-mail-smtp-vue.php:441
 msgid "This option must be enabled if you'd like to be able to resend emails. Please be aware that all email content will be stored in your WordPress database. This may include sensitive data, passwords, and personal details."
 msgstr "This option must be enabled if you'd like to be able to resend emails. Please be aware that all email content will be stored in your WordPress database. This may include sensitive data, passwords, and personal details."
 
-#: assets/languages/wp-mail-smtp-vue.php:422
+#: assets/languages/wp-mail-smtp-vue.php:435
 msgid "Enable these powerful logging features for more control of your WordPress emails."
 msgstr "Enable these powerful logging features for more control of your WordPress emails."
 
-#: assets/languages/wp-mail-smtp-vue.php:446
+#: assets/languages/wp-mail-smtp-vue.php:459
 msgid "See which links were clicked in emails sent from your WordPress site. Click tracking works with emails that are sent in HTML format."
 msgstr "See which links were clicked in emails sent from your WordPress site. Click tracking works with emails that are sent in HTML format."
 
-#: assets/languages/wp-mail-smtp-vue.php:440
+#: assets/languages/wp-mail-smtp-vue.php:453
 msgid "See which emails were opened by the recipients. Email open tracking works with emails that are sent in HTML format."
 msgstr "See which emails were opened by the recipients. Email open tracking works with emails that are sent in HTML format."
 
-#: assets/languages/wp-mail-smtp-vue.php:437
+#: assets/languages/wp-mail-smtp-vue.php:450
 msgid "Track when an email is opened"
 msgstr "Track when an email is opened"
 
-#: assets/languages/wp-mail-smtp-vue.php:434
+#: assets/languages/wp-mail-smtp-vue.php:447
 msgid "All file attachments sent from your site will be saved to the WordPress Uploads folder. Please note that this may reduce available disk space on your server."
 msgstr "All file attachments sent from your site will be saved to the WordPress uploads folder. Please note that this may reduce available disk space on your server."
 
-#: assets/languages/wp-mail-smtp-vue.php:431
+#: assets/languages/wp-mail-smtp-vue.php:444
 msgid "Save file attachments sent from WordPress"
 msgstr "Save file attachments sent from WordPress"
 
-#: assets/languages/wp-mail-smtp-vue.php:425
+#: assets/languages/wp-mail-smtp-vue.php:438
 msgid "Store the content for all sent emails"
 msgstr "Store the content for all sent emails"
 
-#: assets/languages/wp-mail-smtp-vue.php:419
+#: assets/languages/wp-mail-smtp-vue.php:432
 msgid "Configure Email Logs"
 msgstr "Configure Email Logs"
 
@@ -296,25 +296,25 @@ msgid "Let’s see how many emails you’ve sent with WP Mail SMTP."
 msgstr "Let’s see how many emails you’ve sent with WP Mail SMTP."
 
 #. translators: %s - path.
-#: src/Core.php:1373
+#: src/Core.php:1375
 msgid "Current function path: %s"
 msgstr "Current function path: %s"
 
-#: src/Core.php:1368
+#: src/Core.php:1370
 msgid "It looks like it's overwritten in the \"wp-config.php\" file. Please reach out to your hosting provider on how to disable or remove the \"wp_mail\" function overwrite to prevent conflicts with WP Mail SMTP."
 msgstr "It looks like it's overwritten in the \"wp-config.php\" file. Please reach out to your hosting provider on how to disable or remove the \"wp_mail\" function overwrite to prevent conflicts with WP Mail SMTP."
 
 #. translators: %s - must-use plugin name.
-#: src/Core.php:1364
+#: src/Core.php:1366
 msgid "It looks like the \"%s\" must-use plugin is overwriting the \"wp_mail\" function. Please reach out to your hosting provider on how to disable or remove the \"wp_mail\" function overwrite to prevent conflicts with WP Mail SMTP."
 msgstr "It looks like the \"%s\" must-use plugin is overwriting the \"wp_mail\" function. Please reach out to your hosting provider on how to disable or remove the \"wp_mail\" function overwrite to prevent conflicts with WP Mail SMTP."
 
 #. translators: %s - plugin name.
-#: src/Core.php:1358
+#: src/Core.php:1360
 msgid "It looks like the \"%s\" plugin is overwriting the \"wp_mail\" function. Please reach out to the plugin developer on how to disable or remove the \"wp_mail\" function overwrite to prevent conflicts with WP Mail SMTP."
 msgstr "It looks like the \"%s\" plugin is overwriting the \"wp_mail\" function. Please reach out to the plugin developer on how to disable or remove the \"wp_mail\" function overwrite to prevent conflicts with WP Mail SMTP."
 
-#: src/Core.php:1353
+#: src/Core.php:1355
 msgid "WP Mail SMTP has detected incorrect \"wp_mail\" function location. Usually, this means that emails will not be sent successfully!"
 msgstr "WP Mail SMTP has detected incorrect \"wp_mail\" function location. Usually, this means that emails will not be sent successfully!"
 
@@ -391,35 +391,29 @@ msgstr "Enter the email addresses (3 max) you’d like to use to receive alerts 
 msgid "Alerts"
 msgstr "Alerts"
 
-#: assets/languages/wp-mail-smtp-vue.php:790
+#: assets/languages/wp-mail-smtp-vue.php:797
 msgid "There was an error while processing the authentication request. The authorization code is missing. Please try again."
 msgstr "There was an error while processing the authentication request. The authorisation code is missing. Please try again."
 
-#: assets/languages/wp-mail-smtp-vue.php:787 src/Admin/Area.php:153
+#: assets/languages/wp-mail-smtp-vue.php:794 src/Admin/Area.php:153
 msgid "There was an error while processing the authentication request. The nonce is invalid. Please try again."
 msgstr "There was an error while processing the authentication request. The nonce is invalid. Please try again."
 
 #. translators: %s - API key link.
-#: src/Providers/Sendlayer/Options.php:129
+#: src/Providers/Sendlayer/Options.php:210
 msgid "Follow this link to get an API Key from SendLayer: %s."
 msgstr "Follow this link to get an API Key from SendLayer: %s."
 
-#: src/Providers/Sendlayer/Options.php:73
+#: src/Providers/Sendlayer/Options.php:65
 msgid "SendLayer"
 msgstr "SendLayer"
 
-#. translators: %1$s - URL to sendlayer.com; %2$s - URL to SendLayer
-#. documentation on wpmailsmtp.com.
-#: src/Providers/Sendlayer/Options.php:41
-msgid "<strong><a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">SendLayer</a> is our #1 recommended mailer.</strong> Its affordable pricing and simple setup make it the perfect choice for WordPress sites. SendLayer will authenticate your outgoing emails to make sure they always hit customers’ inboxes, and it has detailed documentation to help you authorize your domain.<br><br>You can send hundreds of emails for free when you sign up for a trial.<br><br>To get started, read our <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">SendLayer documentation</a>."
-msgstr "<strong><a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">SendLayer</a> is our #1 recommended mailer.</strong> Its affordable pricing and simple setup make it the perfect choice for WordPress sites. SendLayer will authenticate your outgoing emails to make sure they always hit customers’ inboxes, and it has detailed documentation to help you authorise your domain.<br><br>You can send hundreds of emails for free when you sign up for a trial.<br><br>To get started, read our <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">SendLayer documentation</a>."
-
-#: src/Admin/Pages/TestTab.php:996
+#: src/Admin/Pages/TestTab.php:994
 msgid "Verify your domain Region is correct."
 msgstr "Verify your domain Region is correct."
 
 #. translators: %1$s - Mailgun domains area URL.
-#: src/Admin/Pages/TestTab.php:985
+#: src/Admin/Pages/TestTab.php:983
 msgid "Verify your <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Domain Name</a> is correct."
 msgstr "Verify your <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Domain Name</a> is correct."
 
@@ -431,7 +425,7 @@ msgstr "Hide Announcements"
 msgid "WPForms"
 msgstr "WPForms"
 
-#: src/Admin/ConnectionSettings.php:193
+#: src/Admin/ConnectionSettings.php:216
 msgid "Return Path indicates where non-delivery receipts - or bounce messages - are to be sent."
 msgstr "Return Path indicates where non-delivery receipts - or bounce messages - are to be sent."
 
@@ -439,52 +433,52 @@ msgstr "Return Path indicates where non-delivery receipts - or bounce messages -
 msgid "Save Changes"
 msgstr "Save Changes"
 
-#: src/Admin/Area.php:318 src/Admin/Area.php:319 src/Admin/Area.php:1307
+#: src/Admin/Area.php:318 src/Admin/Area.php:319 src/Admin/Area.php:1316
 msgid "Settings"
 msgstr "Settings"
 
-#: assets/languages/wp-mail-smtp-vue.php:591
+#: assets/languages/wp-mail-smtp-vue.php:604
 #: src/Providers/OptionsAbstract.php:329
 msgid "Authentication"
 msgstr "Authentication"
 
-#: assets/languages/wp-mail-smtp-vue.php:249
-#: src/Admin/ConnectionSettings.php:70 src/Admin/Pages/SmartRoutingTab.php:180
+#: assets/languages/wp-mail-smtp-vue.php:254
+#: src/Admin/ConnectionSettings.php:80 src/Admin/Pages/SmartRoutingTab.php:180
 #: src/Admin/Pages/SmartRoutingTab.php:210
 msgid "From Email"
 msgstr "From Email"
 
-#: assets/languages/wp-mail-smtp-vue.php:242
-#: src/Admin/ConnectionSettings.php:127 src/Admin/Pages/ExportTab.php:111
+#: assets/languages/wp-mail-smtp-vue.php:244
+#: src/Admin/ConnectionSettings.php:150 src/Admin/Pages/ExportTab.php:111
 msgid "From Name"
 msgstr "From Name"
 
-#: assets/languages/wp-mail-smtp-vue.php:579
+#: assets/languages/wp-mail-smtp-vue.php:592
 #: src/Providers/OptionsAbstract.php:293
 msgid "SMTP Port"
 msgstr "SMTP Port"
 
-#: assets/languages/wp-mail-smtp-vue.php:524 src/Admin/Pages/TestTab.php:253
+#: assets/languages/wp-mail-smtp-vue.php:537 src/Admin/Pages/TestTab.php:253
 #: src/SiteHealth.php:352
 msgid "Send a Test Email"
 msgstr "Send a Test Email"
 
-#: assets/languages/wp-mail-smtp-vue.php:576
+#: assets/languages/wp-mail-smtp-vue.php:589
 #: src/Providers/OptionsAbstract.php:253
 msgid "Encryption"
 msgstr "Encryption"
 
-#: assets/languages/wp-mail-smtp-vue.php:573
+#: assets/languages/wp-mail-smtp-vue.php:586
 #: src/Providers/OptionsAbstract.php:239
 msgid "SMTP Host"
 msgstr "SMTP Host"
 
-#: src/Admin/ConnectionSettings.php:177
+#: src/Admin/ConnectionSettings.php:200
 msgid "Return Path"
 msgstr "Return Path"
 
-#: assets/languages/wp-mail-smtp-vue.php:642
-#: src/Admin/ConnectionSettings.php:202 src/Admin/Pages/ExportTab.php:125
+#: assets/languages/wp-mail-smtp-vue.php:655
+#: src/Admin/ConnectionSettings.php:225 src/Admin/Pages/ExportTab.php:125
 msgid "Mailer"
 msgstr "Mailer"
 

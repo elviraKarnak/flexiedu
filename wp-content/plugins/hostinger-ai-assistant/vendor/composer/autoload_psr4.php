@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'voku\\' => array($vendorDir . '/voku/portable-ascii/src/voku'),
+    'WP\\MCP\\' => array($vendorDir . '/wordpress/mcp-adapter/includes'),
     'Symfony\\Polyfill\\Php83\\' => array($vendorDir . '/symfony/polyfill-php83'),
     'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
@@ -32,12 +33,15 @@ return array(
     'League\\Uri\\' => array($vendorDir . '/league/uri', $vendorDir . '/league/uri-interfaces'),
     'League\\Config\\' => array($vendorDir . '/league/config/src'),
     'League\\CommonMark\\' => array($vendorDir . '/league/commonmark/src'),
+    'Laravel\\SerializableClosure\\' => array($vendorDir . '/laravel/serializable-closure/src'),
     'Hostinger\\WpMenuManager\\' => array($vendorDir . '/hostinger/hostinger-wp-menu-manager/src'),
     'Hostinger\\WpHelper\\' => array($vendorDir . '/hostinger/hostinger-wp-helper/src'),
     'Hostinger\\Tests\\' => array($vendorDir . '/hostinger/hostinger-wp-helper/tests/phpunit'),
     'Hostinger\\Surveys\\' => array($vendorDir . '/hostinger/hostinger-wp-surveys/src'),
     'Hostinger\\Amplitude\\' => array($vendorDir . '/hostinger/hostinger-wp-amplitude/src'),
+    'Hostinger\\AiAssistant\\' => array($baseDir . '/includes-psr4'),
     'GrahamCampbell\\ResultType\\' => array($vendorDir . '/graham-campbell/result-type/src'),
+    'Firebase\\JWT\\' => array($vendorDir . '/firebase/php-jwt/src'),
     'Dotenv\\' => array($vendorDir . '/vlucas/phpdotenv/src'),
     'Doctrine\\Inflector\\' => array($vendorDir . '/doctrine/inflector/src'),
     'Dflydev\\DotAccessData\\' => array($vendorDir . '/dflydev/dot-access-data/src'),

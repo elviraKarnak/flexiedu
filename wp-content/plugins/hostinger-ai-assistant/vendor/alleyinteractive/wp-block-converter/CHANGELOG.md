@@ -3,6 +3,37 @@
 
 All notable changes to `WP Block Converter` will be documented in this file.
 
+## 1.8.2
+
+### Changed
+
+- Drop the CLI command added in 1.8.0. It is causing downstream issues that need
+  to be resolved before it can be re-added.
+
+## 1.8.1
+
+### Fixed
+
+- Fix issue with CLI command not being registered in some environments.
+
+## 1.8.0
+
+### Added
+
+- Added CLI command to convert posts to blocks.
+
+### Fixed
+
+- Fix issue with double spaces being removed when converting.
+- Fix issue with `pre` tags not being converted correctly.
+
+## 1.7.0
+
+### Fixed
+
+- Fix issue where parent images were being sideloaded when `sideload_images` was set to false.
+- Fix issue with importing Microsoft Word documents.
+
 ## 1.6.0
 
 ### Added

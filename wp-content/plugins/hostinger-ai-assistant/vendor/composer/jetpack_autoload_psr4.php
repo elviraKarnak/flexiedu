@@ -10,6 +10,10 @@ return array(
 		'version' => '2.0.3.0',
 		'path'    => array( $vendorDir . '/voku/portable-ascii/src/voku' )
 	),
+	'WP\\MCP\\' => array(
+		'version' => '0.3.0.0',
+		'path'    => array( $vendorDir . '/wordpress/mcp-adapter/includes' )
+	),
 	'Symfony\\Polyfill\\Php83\\' => array(
 		'version' => '1.9999999.9999999.9999999-dev',
 		'path'    => array( $vendorDir . '/symfony/polyfill-php83' )
@@ -43,7 +47,7 @@ return array(
 		'path'    => array( $vendorDir . '/symfony/finder' )
 	),
 	'Symfony\\Component\\DomCrawler\\' => array(
-		'version' => '7.4.9999999.9999999-dev',
+		'version' => '7.3.9999999.9999999-dev',
 		'path'    => array( $vendorDir . '/symfony/dom-crawler' )
 	),
 	'Symfony\\Component\\Clock\\' => array(
@@ -110,6 +114,10 @@ return array(
 		'version' => 'dev-main',
 		'path'    => array( $vendorDir . '/league/commonmark/src' )
 	),
+	'Laravel\\SerializableClosure\\' => array(
+		'version' => '2.9999999.9999999.9999999-dev',
+		'path'    => array( $vendorDir . '/laravel/serializable-closure/src' )
+	),
 	'Hostinger\\WpMenuManager\\' => array(
 		'version' => '1.2.20.0',
 		'path'    => array( $vendorDir . '/hostinger/hostinger-wp-menu-manager/src' )
@@ -123,20 +131,28 @@ return array(
 		'path'    => array( $vendorDir . '/hostinger/hostinger-wp-helper/tests/phpunit' )
 	),
 	'Hostinger\\Surveys\\' => array(
-		'version' => '1.1.17.0',
+		'version' => '1.1.19.0',
 		'path'    => array( $vendorDir . '/hostinger/hostinger-wp-surveys/src' )
 	),
 	'Hostinger\\Amplitude\\' => array(
-		'version' => '1.0.15.0',
+		'version' => '1.0.17.0',
 		'path'    => array( $vendorDir . '/hostinger/hostinger-wp-amplitude/src' )
 	),
 	'Hostinger\\AiAssistant\\Tests\\' => array(
 		'version' => 'dev-main',
 		'path'    => array( $baseDir . '/tests/phpunit' )
 	),
+	'Hostinger\\AiAssistant\\' => array(
+		'version' => 'dev-main',
+		'path'    => array( $baseDir . '/includes-psr4' )
+	),
 	'GrahamCampbell\\ResultType\\' => array(
 		'version' => '1.1.9999999.9999999-dev',
 		'path'    => array( $vendorDir . '/graham-campbell/result-type/src' )
+	),
+	'Firebase\\JWT\\' => array(
+		'version' => '7.0.3.0',
+		'path'    => array( $vendorDir . '/firebase/php-jwt/src' )
 	),
 	'Dotenv\\' => array(
 		'version' => 'dev-master',
@@ -163,11 +179,11 @@ return array(
 		'path'    => array( $vendorDir . '/nesbot/carbon/src/Carbon' )
 	),
 	'Brick\\Math\\' => array(
-		'version' => '0.14.0.0',
+		'version' => '0.14.7.0',
 		'path'    => array( $vendorDir . '/brick/math/src' )
 	),
 	'Automattic\\Jetpack\\Autoloader\\' => array(
-		'version' => '5.0.11',
+		'version' => '5.0.15',
 		'path'    => array( $vendorDir . '/automattic/jetpack-autoloader/src' )
 	),
 );

@@ -8,11 +8,13 @@ use Hostinger\WpHelper\Requests\Client;
 use Hostinger\WpHelper\Utils as Helper;
 
 class Hostinger_Ai_Assistant_Requests {
-    private const GENERATE_CONTENT_ACTION = '/v3/wordpress/plugin/generate-content';
-    private const GET_CONTENT_IMAGES_URLS = '/v3/wordpress/plugin/search-images';
-    private const WOO_DESCRIPTION_CREATED = 'hts_woo_product_description_created';
+    private const WP_PROXY_AI_PRODUCT_DESCRIPTION = '/installations/{software_id}/content/product/description';
+    private const GENERATE_CONTENT_ACTION         = '/v3/wordpress/plugin/generate-content';
+    private const GET_CONTENT_IMAGES_URLS         = '/v3/wordpress/plugin/search-images';
+    private const WOO_DESCRIPTION_CREATED         = 'hts_woo_product_description_created';
 
     private Hostinger_Ai_Assistant_Requests_Client $client;
+    private Hostinger_Ai_Assistant_Requests_Proxy $proxy;
     private Hostinger_Ai_Assistant_Amplitude $amplitude;
     private Hostinger_Ai_Assistant_Content_Generation $generate_content;
     private Hostinger_Ai_Assistant_Config $config_handler;
@@ -23,12 +25,25 @@ class Hostinger_Ai_Assistant_Requests {
         $this->helper         = new Hostinger_Ai_Assistant_Helper();
         $this->config_handler = new Hostinger_Ai_Assistant_Config();
         $this->error_handler  = new Hostinger_Ai_Assistant_Errors();
-        $this->client         = new Hostinger_Ai_Assistant_Requests_Client(
+
+        $default_headers = array(
+            Hostinger_Ai_Assistant_Config::TOKEN_HEADER  => $this->helper::get_api_token(),
+            Hostinger_Ai_Assistant_Config::DOMAIN_HEADER => $this->helper->get_host_info(),
+        );
+
+        $this->client = new Hostinger_Ai_Assistant_Requests_Client(
             $this->config_handler->get_config_value( 'base_rest_uri', HOSTINGER_AI_ASSISTANT_REST_URI ),
-            array(
-                Hostinger_Ai_Assistant_Config::TOKEN_HEADER  => $this->helper::get_api_token(),
-                Hostinger_Ai_Assistant_Config::DOMAIN_HEADER => $this->helper->get_host_info(),
-            )
+            $default_headers
+        );
+
+        $proxy_client = new Hostinger_Ai_Assistant_Requests_Client(
+            $this->config_handler->get_config_value( 'wp_proxy_ai_rest_uri', HOSTINGER_AI_ASSISTANT_WP_API_PROXY_URI ),
+            $default_headers
+        );
+
+        $this->proxy = new Hostinger_Ai_Assistant_Requests_Proxy(
+            $proxy_client,
+            $default_headers
         );
 
         $helper = new Helper();
@@ -49,7 +64,7 @@ class Hostinger_Ai_Assistant_Requests {
     }
 
     public function define_ajax_events(): void {
-        if ( ! current_user_can( 'edit_posts' ) ) {
+        if ( ! current_user_can( 'publish_posts' ) ) {
             return;
         }
 
@@ -111,9 +126,7 @@ class Hostinger_Ai_Assistant_Requests {
             $post_type                = $this->generate_content->map_post_type( $validated_post_type );
             $content_length_validated = $this->generate_content->validate_content_length( $content_length );
 
-            if ( $post_type === 'product_description' ) {
-                $content_length_validated = $this->generate_content->validate_content_length( $content_length, true );
-            }
+            $is_product_description = $post_type === 'product_description';
 
             $data = array(
                 'post_type'   => $post_type,
@@ -126,7 +139,20 @@ class Hostinger_Ai_Assistant_Requests {
                 $data['focus_keyword'] = $focus_keywords;
             }
 
-            $response = $this->client->get( self::GENERATE_CONTENT_ACTION, $data, array( 'X-Correlation-ID' => $correlation_id ) );
+            if ( $is_product_description ) {
+                $params = array(
+                    'description' => $description,
+                    'length'      => $this->generate_content->validate_content_length( $content_length, true ),
+                    'tone'        => $voice_tone,
+                );
+
+                if ( isset( $data['focus_keyword'] ) ) {
+                    $params['keywords'] = $data['focus_keyword'];
+                }
+                $response = $this->proxy->post( self::WP_PROXY_AI_PRODUCT_DESCRIPTION, $params, array( 'X-Correlation-ID' => $correlation_id ) );
+            } else {
+                $response = $this->client->get( self::GENERATE_CONTENT_ACTION, $data, array( 'X-Correlation-ID' => $correlation_id ) );
+            }
 
             $response_code = wp_remote_retrieve_response_code( $response );
             $response_body = wp_remote_retrieve_body( $response );
@@ -138,7 +164,23 @@ class Hostinger_Ai_Assistant_Requests {
                 $this->helper->ajax_error_message( $error_message, $server_error );
             } else {
 
-                $generated_content = reset( json_decode( $response['body'] )->data );
+                if ( $is_product_description ) {
+                    $generated_content = json_decode( $response['body'] )->data;
+                } else {
+                    $generated_content = reset( json_decode( $response['body'] )->data );
+                }
+
+				// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+                if ( isset( $generated_content->seoKeywords ) ) {
+	                // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+                    $generated_content->seo_keywords = $generated_content->seoKeywords;
+                }
+
+	            // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+                if ( isset( $generated_content->metaDescription ) ) {
+		            // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+                    $generated_content->meta_description = $generated_content->metaDescription;
+                }
 
                 if ( isset( $generated_content->tags[0] ) && $generated_content->tags[0] !== '' ) {
                     $ai_image_data = $this->get_ai_image_data( $description );

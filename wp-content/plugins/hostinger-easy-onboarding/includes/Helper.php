@@ -73,7 +73,8 @@ class Helper {
 
     private const HPANEL_DOMAIN_URL = 'https://hpanel.hostinger.com/websites/';
 
-    private const HIDE_ADDONS_BANNER = 'hostinger_hide_addons_banner';
+    public const HIDE_ADDONS_BANNER = 'hostinger_hide_addons_banner';
+    public const HIDE_REACH_BANNER  = 'hostinger_hide_reach_banner';
 
     /**
      *
@@ -393,36 +394,30 @@ class Helper {
     }
 
     public function get_addons_banner_status(): bool {
-        // Check if the transient exists and if the user is an administrator.
-        if ( get_transient( self::HIDE_ADDONS_BANNER ) || ! current_user_can( 'administrator' ) ) {
+        if ( get_transient( self::HIDE_ADDONS_BANNER ) || ! current_user_can( 'manage_options' ) ) {
             return false;
         }
 
-        global $wpdb;
+        return $this->is_oldest_user_older_than( '1 week' );
+    }
 
-        $oldest_user_date = $wpdb->get_var( "SELECT user_registered FROM {$wpdb->users} ORDER BY user_registered ASC LIMIT 1" );
-
-        if ( ! $oldest_user_date || strtotime( $oldest_user_date ) >= strtotime( '-1 week' ) ) {
+    public function get_reach_banner_status(): bool {
+        if ( get_transient( self::HIDE_REACH_BANNER ) || ! current_user_can( 'manage_options' ) ) {
             return false;
         }
 
-        return true;
+        return $this->is_oldest_user_older_than( '1 week' );
     }
 
     public function get_edit_site_url(): string {
-        if ( wp_is_block_theme() ) {
-            return add_query_arg(
-                array(
-                    'canvas' => 'edit',
-                ),
-                admin_url( 'site-editor.php' )
-            );
-        }
-
         $show_on_front = get_option( 'show_on_front' );
         $front_page_id = get_option( 'page_on_front' );
 
         if ( $show_on_front === self::HOMEPAGE_DISPLAY && $front_page_id ) {
+            if ( $this->is_page_built_with_elementor( (int) $front_page_id ) ) {
+                return $this->get_elementor_edit_url( (int) $front_page_id );
+            }
+
             return add_query_arg(
                 array(
                     'post'   => $front_page_id,
@@ -432,7 +427,36 @@ class Helper {
             );
         }
 
+        if ( wp_is_block_theme() ) {
+            return add_query_arg(
+                array(
+                    'canvas' => 'edit',
+                ),
+                admin_url( 'site-editor.php' )
+            );
+        }
+
         return '';
+    }
+
+    public function is_page_built_with_elementor( int $post_id ): bool {
+        if ( ! self::is_plugin_active( 'elementor' ) ) {
+            return false;
+        }
+
+        $elementor_edit_mode = get_post_meta( $post_id, '_elementor_edit_mode', true );
+
+        return $elementor_edit_mode === 'builder';
+    }
+
+    public function get_elementor_edit_url( int $post_id ): string {
+        return add_query_arg(
+            array(
+                'post'   => $post_id,
+                'action' => 'elementor',
+            ),
+            admin_url( 'post.php' )
+        );
     }
 
     public function get_reseller_domain(): string {
@@ -446,6 +470,25 @@ class Helper {
         }
 
         return $base_domain;
+    }
+
+    private function is_oldest_user_older_than( string $period = '1 week' ): bool {
+        $oldest_user_date = $this->get_oldest_user_date();
+        if ( ! $oldest_user_date ) {
+            return false;
+        }
+
+        return $this->is_older_than( $oldest_user_date, $period );
+    }
+
+    private function is_older_than( string $date, string $period = '1 week' ): bool {
+        return strtotime( $date ) <= strtotime( '-' . $period );
+    }
+
+    private function get_oldest_user_date(): ?string {
+        global $wpdb;
+
+        return $wpdb->get_var( "SELECT user_registered FROM {$wpdb->users} ORDER BY user_registered ASC LIMIT 1" );
     }
 }
 

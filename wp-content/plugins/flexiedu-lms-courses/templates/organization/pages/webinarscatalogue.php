@@ -48,7 +48,7 @@
 
         <?php else : ?>
 
-        <p>No documents found.</p>
+        <p><?php esc_html_e('No documents found.', 'flexiedu-lms-courses'); ?></p>
 
         <?php endif; ?>
 

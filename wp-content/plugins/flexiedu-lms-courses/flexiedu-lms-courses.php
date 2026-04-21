@@ -122,6 +122,7 @@ if( !class_exists( 'FlexiEdu_Courses' )){
                                 <div class="dashboard-content-wrapper">
 
                                         <div class="learner-dashboard-left">
+                                            <button type="button" class="btn-close d-block d-md-none close-btn"></button>
                                             <?php  include $layout_path . 'org-l-sidebar.php';?>
                                         </div>
 
@@ -168,6 +169,12 @@ if( !class_exists( 'FlexiEdu_Courses' )){
 
                     function flexiedu_calendar_assets() {
 
+                        wp_enqueue_style(
+                            'bootstrap-5',
+                            'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css',
+                            [],
+                            '5.3.3'
+                        );
 
                        wp_enqueue_style(
                             'bootstrap-icons',
@@ -188,15 +195,21 @@ if( !class_exists( 'FlexiEdu_Courses' )){
                              FlexiEdu_Courses_URL . 'assets/css/custom.css',
                             [],
                             time(),
+                       );
+
+
+                        wp_enqueue_script(
+                            'bootstrap-5',
+                            'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js',
+                            [],
+                            '5.3.3',
+                            true
                         );
-
-
-                       
 
                         wp_enqueue_script(
                             'fullcalendar-js',
                              FlexiEdu_Courses_URL . 'assets/js/index.global.min.js',
-                            ['jquery'],
+                            ['jquery', 'bootstrap-5'],
                             null,
                             true
                         );
@@ -212,7 +225,7 @@ if( !class_exists( 'FlexiEdu_Courses' )){
                         wp_enqueue_script(
                             'live-class-calender',
                             FlexiEdu_Courses_URL . 'assets/js/live-class-clender.js',
-                            ['jquery', 'fullcalendar-js'],
+                            ['jquery', 'fullcalendar-js', 'bootstrap-5'],
                             time(),
                             true
                         );
@@ -225,14 +238,35 @@ if( !class_exists( 'FlexiEdu_Courses' )){
                         true
                         );
 
+                        wp_enqueue_script(
+                            'flexiedu-live-class-submission',
+                            FlexiEdu_Courses_URL . 'assets/js/live-class-submission.js',
+                            ['jquery', 'bootstrap-5'],
+                            time(),
+                            true
+                        );
+
                         wp_localize_script(
-                            'custom-js',
-                            'flexiedu_functions', // JS object name
+                            'flexiedu-lms-js',
+                            'flexiedu_functions',
                             array(
                                 'ajax_url' => admin_url('admin-ajax.php'),
                                  'siteURL'=> home_url(),
                                 'nonce'    => wp_create_nonce('flexiedu_nonce'),
                                 'is_user_logged_in' => is_user_logged_in(),
+                            )
+                        );
+
+                        wp_localize_script(
+                            'flexiedu-live-class-submission',
+                            'flexiedu_live_class',
+                            array(
+                                'ajax_url' => admin_url('admin-ajax.php'),
+                                'nonce'    => wp_create_nonce('flexiedu_live_class_action'),
+                                'messages' => array(
+                                    'processing' => __('Creating Live Class...', 'flexiedu-lms-courses'),
+                                    'defaultError' => __('Something went wrong. Please try again.', 'flexiedu-lms-courses'),
+                                ),
                             )
                         );
 

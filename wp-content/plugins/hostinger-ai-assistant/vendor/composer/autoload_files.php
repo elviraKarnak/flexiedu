@@ -19,5 +19,6 @@ return array(
     '667aeda72477189d0494fecd327c3641' => $vendorDir . '/symfony/var-dumper/Resources/functions/dump.php',
     '91dcc74bdd4f7744d05727fdc296d8ae' => $vendorDir . '/mantle-framework/support/autoload.php',
     'b68c986d100cce58b4f7580a7ebd1ae7' => $vendorDir . '/alleyinteractive/wp-block-converter/src/helpers.php',
+    '2d223b650b5c56928c1affa16ee5cfe2' => $vendorDir . '/wordpress/abilities-api/includes/bootstrap.php',
     'f6d4f6bcee7247df6b777884c3e22f98' => $vendorDir . '/yahnis-elsts/plugin-update-checker/load-v5p6.php',
 );

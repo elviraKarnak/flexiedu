@@ -23,12 +23,3 @@ if(have_rows('banner_org', $organizationID)){ ?>
           
         </div>
       <?php } ?>
-
-      <script>
-        jQuery(document).ready(function($) {
-           setTimeout(function () {
-              $('.owl-carousel').trigger('refresh.owl.carousel');
-              }, 600);
-          });
-       
-      </script>

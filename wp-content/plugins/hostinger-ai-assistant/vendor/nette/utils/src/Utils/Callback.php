@@ -22,6 +22,8 @@ final class Callback
 
 	/**
 	 * Invokes internal PHP function with own error handler.
+	 * @param  list<mixed>  $args
+	 * @param  callable(string, int): (bool|void|null)  $onError
 	 */
 	public static function invokeSafe(string $function, array $args, callable $onError): mixed
 	{
@@ -53,7 +55,7 @@ final class Callback
 	 * @return callable
 	 * @throws Nette\InvalidArgumentException
 	 */
-	public static function check(mixed $callable, bool $syntax = false)
+	public static function check(mixed $callable, bool $syntax = false): mixed
 	{
 		if (!is_callable($callable, $syntax)) {
 			throw new Nette\InvalidArgumentException(
@@ -116,6 +118,7 @@ final class Callback
 
 	/**
 	 * Unwraps closure created by Closure::fromCallable().
+	 * @return \Closure|array{object|class-string, string}|callable-string
 	 */
 	public static function unwrap(\Closure $closure): callable|array
 	{

@@ -11,7 +11,7 @@ return array(
 		'path'    => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php'
 	),
 	'Automattic\\Jetpack\\Autoloader\\AutoloadGenerator' => array(
-		'version' => '5.0.11',
+		'version' => '5.0.15',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/AutoloadGenerator.php'
 	),
 	'DateError' => array(

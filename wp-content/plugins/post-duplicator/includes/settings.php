@@ -81,7 +81,8 @@ function initialize_settings() {
 
   // Add default values
   Settings::default_values( 'mtphr_post_duplicator_settings', [
-    'additional_screens' => "nestedpages\nwpca-list",
+    'additional_screens' => '',
+    'excluded_meta_keys' => '',
     'mode' => 'advanced',
     'single_after_duplication_action' => 'notice',
     'list_single_after_duplication_action' => 'notice',
@@ -110,6 +111,7 @@ function initialize_settings() {
 
   // Add sanitize settings
   Settings::sanitize_settings( 'mtphr_post_duplicator_settings', [
+    'excluded_meta_keys' => 'sanitize_textarea_field',
     'time_offset' => 'boolval',
     'time_offset_days' => 'intval',
     'time_offset_hours' => 'intval',
@@ -431,14 +433,27 @@ function initialize_fields() {
     'fields' => [
       [
         'type'  => 'heading',
-        'label' => __( 'Additional Admin Screens', 'post-duplicator' ),
-        'help'  => __( 'Enter admin page slugs (one per line) where Post Duplicator scripts should load. Use this for plugins that display post lists on non-standard admin screens so the full duplication modal is available. Common examples are pre-filled below.', 'post-duplicator' ),
+        'label' => __( 'Excluded Meta Keys', 'post-duplicator' ),
+        'help'  => __( 'Enter meta keys (one per line) that should never be duplicated and will not appear in the duplication modal.', 'post-duplicator' ),
       ],
       [
-        'type'  => 'textarea',
-        'id'    => 'additional_screens',
-        'label' => __( 'Page Slugs', 'post-duplicator' ),
-        'help'  => __( 'One slug prefix per line. Scripts load when the current page slug starts with any entry here.', 'post-duplicator' ),
+        'type'        => 'textarea',
+        'id'          => 'excluded_meta_keys',
+        'label'       => __( 'Meta Keys', 'post-duplicator' ),
+        'help'        => __( 'One meta key per line. These are added to the built-in exclusion list.', 'post-duplicator' ),
+        'placeholder' => "_some_key\nanother_key",
+      ],
+      [
+        'type'  => 'heading',
+        'label' => __( 'Additional Admin Screens', 'post-duplicator' ),
+        'help'  => __( 'Enter admin page slugs (one per line) where Post Duplicator scripts should load. Use this for plugins that display post lists on non-standard admin screens so the full duplication modal is available.', 'post-duplicator' ),
+      ],
+      [
+        'type'        => 'textarea',
+        'id'          => 'additional_screens',
+        'label'       => __( 'Page Slugs', 'post-duplicator' ),
+        'help'        => __( 'One slug prefix per line. Scripts load when the current page slug starts with any entry here.', 'post-duplicator' ),
+        'placeholder' => "nestedpages\nwpca-list",
       ],
       [
         'type'    => 'heading',

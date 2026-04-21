@@ -1,0 +1,21 @@
+{
+	"apiVersion": 3,
+	"name": "realbigplugins/frontend-gradebook-block",
+	"category": "learndash-blocks",
+	"icon": "book-alt",
+	"keywords": [ "course", "score", "lesson", "quiz", "student" ],
+	"version": "1.0.0",
+	"textdomain": "learndash-gradebook",
+	"attributes": {
+		"gradebook": {
+			"type": "string",
+			"default": ""
+		}
+	},
+    "supports": {
+		"align": [ "wide", "full" ],
+		"html": false
+	},
+    "editorScript": "ld-gb-frontend-gradebook-block",
+	"editorStyle": "ld-gb-frontend-gradebook-block"
+}

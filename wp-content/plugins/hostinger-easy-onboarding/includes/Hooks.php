@@ -27,6 +27,7 @@ class Hooks {
         add_action( 'template_redirect', array( $this, 'admin_preview_website' ) );
 
         add_filter( 'hostinger_once_per_day_events', array( $this, 'limit_triggered_amplitude_events' ) );
+        add_filter( 'hostinger_limited_per_day_events', array( $this, 'limit_edit_amplitude_events' ) );
 
         add_action( 'activate_plugin', array( $this, 'prevent_flexible_shipping_redirect' ) );
         add_action( 'activated_plugin', array( $this, 'maybe_mark_payments_step_completed' ) );
@@ -106,8 +107,6 @@ class Hooks {
     }
 
     public function save_post_content( int $post_ID, \WP_Post $post, bool $update ): void {
-        $amplitude_events = new Amplitude();
-
         if ( Helper::should_skip_event() || $this->event_incremented ) {
             return;
         }
@@ -116,6 +115,12 @@ class Hooks {
             return;
         }
 
+        if ( defined( 'REST_REQUEST' ) && REST_REQUEST && empty( $_SERVER['HTTP_X_WP_NONCE'] ) ) {
+            return;
+        }
+
+        $amplitude_events = new Amplitude();
+
         if ( $amplitude_events->can_send_edit_amplitude_event() ) {
             $amplitude_events->send_edit_amplitude_event();
             $this->event_incremented = true;
@@ -123,20 +128,13 @@ class Hooks {
     }
 
     public function save_settings( string $option_name ): void {
-        $amplitude_events    = new Amplitude();
-        $skip_options        = in_array(
-            $option_name,
-            array(
-                'hostinger_amplitude_event_data',
-                'hostinger_amplitude_edit_count',
-            ),
-            true
-        );
         $option_page_not_set = ! isset( $_POST['option_page'] );
 
-        if ( Helper::should_skip_event() || $skip_options || $this->event_incremented || $option_page_not_set ) {
+        if ( Helper::should_skip_event() || $this->event_incremented || $option_page_not_set ) {
             return;
         }
+
+        $amplitude_events = new Amplitude();
 
         if ( $amplitude_events->can_send_edit_amplitude_event() ) {
             $amplitude_events->send_edit_amplitude_event();
@@ -145,11 +143,11 @@ class Hooks {
     }
 
     public function save_customizer_settings(): void {
-        $amplitude_events = new Amplitude();
-
         if ( Helper::should_skip_event() || $this->event_incremented ) {
             return;
         }
+
+        $amplitude_events = new Amplitude();
 
         if ( $amplitude_events->can_send_edit_amplitude_event() ) {
             $amplitude_events->send_edit_amplitude_event();
@@ -214,9 +212,16 @@ class Hooks {
             AmplitudeActions::WP_CHANGED_LANG,
             AmplitudeActions::WP_PASSWORD_RESET,
             AmplitudeActions::WP_ADDONS_BANNER_SHOWN,
+            AmplitudeActions::WP_REACH_BANNER_SHOWN,
         );
 
         return array_merge( $events, $new_events );
+    }
+
+    public function limit_edit_amplitude_events( array $events ): array {
+        $events[ AmplitudeActions::WP_EDIT ] = 3;
+
+        return $events;
     }
 
     // Mark payments step completed if Amazon Pay payment gateway plugin is activated because this payment gateway is enabled after activation right away.
@@ -266,23 +271,24 @@ class Hooks {
     }
 
     public function custom_admin_bar_edit_home_page_link( WP_Admin_Bar $wp_admin_bar ): void {
-        if ( wp_is_block_theme() ) {
+        $front_page_id   = get_option( 'page_on_front' );
+        $show_on_front   = get_option( 'show_on_front' );
+        $has_static_page = $show_on_front === self::HOMEPAGE_DISPLAY && $front_page_id;
+
+        if ( ! $has_static_page ) {
             return;
         }
 
-        $front_page_id = get_option( 'page_on_front' );
-        $show_on_front = get_option( 'show_on_front' );
+        if ( $this->helper->is_page_built_with_elementor( (int) $front_page_id ) ) {
+            $edit_url = $this->helper->get_elementor_edit_url( (int) $front_page_id );
+        } else {
+            $query_args = array(
+                'post'   => $front_page_id,
+                'action' => 'edit',
+            );
 
-        if ( $show_on_front !== self::HOMEPAGE_DISPLAY || ! $front_page_id ) {
-            return;
+            $edit_url = add_query_arg( $query_args, admin_url( 'post.php' ) );
         }
-
-        $query_args = array(
-            'post'   => $front_page_id,
-            'action' => 'edit',
-        );
-
-        $edit_url = add_query_arg( $query_args, admin_url( 'post.php' ) );
 
         $wp_admin_bar->add_node(
             array(

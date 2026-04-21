@@ -1,0 +1,826 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/assets/scss/admin/admin.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * All WP admin styling.
+ *
+ * @since 1.0.0
+ *
+ * @package LearnDash_Gradebook
+ * @subpackage LearnDash_Gradebook/assets/sass/admin
+ */
+/**
+ * Foundation for Sites
+ * Version 6.7.5
+ * https://get.foundation
+ * Licensed under MIT Open Source
+ */
+.foundation-mq {
+  font-family: "small=0em&medium=40em&large=64em&xlarge=75em&xxlarge=90em";
+}
+
+.ld-gb-grade {
+  display: inline-block;
+  color: #fff;
+  width: auto;
+  min-height: 2em;
+  line-height: 2em;
+  text-align: center;
+  padding: 0 0.4em;
+}
+.ld-gb-grade.letter_and_percentage {
+  min-width: 5em;
+}
+.ld-gb-grade.letter {
+  min-width: 1.5em;
+}
+.ld-gb-grade.percentage {
+  min-width: 2.5em;
+}
+
+.ld-gb-cancel {
+  color: #a00;
+}
+.ld-gb-cancel:hover {
+  color: #dd0000;
+}
+
+.ld-gb-button.button {
+  color: #fff;
+  background: #00A2E8;
+  border-color: #007eb5;
+  box-shadow: 0 1px 0 #007eb5;
+}
+.ld-gb-button.button:hover {
+  color: #fff;
+  background: #00a9f2;
+  border-color: #005b82;
+}
+.ld-gb-button.button:active {
+  color: #fff;
+  background: #0090cf;
+  border-color: #006d9c;
+  box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5);
+}
+.ld-gb-button.button:focus {
+  color: #fff;
+  background: #00A2E8;
+  border-color: #007eb5;
+  box-shadow: 0 1px 0 #005b82;
+}
+
+.ld-gb-notice.notice-info {
+  border-left-color: #00A2E8;
+}
+.ld-gb-notice.not-dismissable .notice-dismiss {
+  display: none;
+}
+
+.ld-gb-licensing-menu-nag {
+  font-size: 1em;
+  height: auto;
+  width: auto;
+  line-height: normal;
+  vertical-align: middle;
+}
+
+.ld-gb-clearfix {
+  display: table;
+  clear: both;
+}
+
+.admin_page_learndash-gradebook .ld-tab-buttons > a:not(:first-child), .admin_page_learndash-gradebook-settings .ld-tab-buttons > a:not(:first-child), .post-type-gradebook .ld-tab-buttons > a:not(:first-child) {
+  display: inline-block;
+}
+
+.ld-gb-button {
+  display: inline-block;
+  background: #00A2E8;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5em 1em;
+}
+.ld-gb-button:hover {
+  background: #007eb5;
+  color: #fff;
+}
+.ld-gb-button.ld-gb-button-marketing {
+  font-size: 1.7rem;
+  padding: 0.5em 1.5em;
+}
+.ld-gb-button.ld-gb-button-marketing.button {
+  line-height: 1;
+  height: auto;
+}
+.ld-gb-button.ld-gb-return-button::before {
+  content: "\f340";
+  display: inline;
+  position: relative;
+  font-size: 20px;
+  line-height: 1;
+  font-family: dashicons;
+  text-decoration: inherit;
+  font-weight: 400;
+  font-style: normal;
+  vertical-align: middle;
+  text-align: center;
+  transition: color 0.1s ease-in 0;
+  margin-right: 5px;
+  top: -2px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ld-gb-pointer .wp-pointer-content h3 {
+  border-color: #0090cf;
+  background: #00A2E8;
+}
+
+form[id^=export-gradebook-] {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+#gradebook_widget h2 {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+#gradebook_widget #ld_gb_dashboard_widget_group_selector {
+  margin-bottom: 0.5em;
+}
+#gradebook_widget .ld-gb-widget-user-template {
+  display: none;
+}
+#gradebook_widget .ld-gb-widget-users-container {
+  position: relative;
+}
+#gradebook_widget .ld-gb-widget-users {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+  font-size: 1.2em;
+  border: 1px solid #ccc9c9;
+  margin-bottom: 0.5em;
+}
+#gradebook_widget .ld-gb-widget-users tr:nth-child(even) td {
+  background-color: #ededed;
+}
+#gradebook_widget .ld-gb-widget-users td {
+  padding: 0.5em;
+}
+#gradebook_widget .ld-gb-widget-users td.ld-gb-widget-user-grade {
+  text-align: right;
+}
+#gradebook_widget .ld-gb-widget-users-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#gradebook_widget .ld-gb-widget-users-overlay .spinner {
+  position: absolute;
+  float: none;
+  visibility: visible;
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+.ld_gb-fieldhelpers-field.fieldhelpers-field-select select.widefat + .select2 {
+  width: 100% !important;
+}
+.ld_gb-fieldhelpers-field.fieldhelpers-field-radio .fieldhelpers-field-radio-row.fieldhelpers-field-radio-row-active {
+  background: #00A2E8;
+}
+.ld_gb-fieldhelpers-field.fieldhelpers-field-checkbox .fieldhelpers-field-checkbox-row.fieldhelpers-field-checkbox-row-active {
+  background: #00A2E8;
+}
+.ld_gb-fieldhelpers-field.fieldhelpers-field-number .fieldhelpers-field-number-increase,
+.ld_gb-fieldhelpers-field.fieldhelpers-field-number .fieldhelpers-field-number-decrease {
+  background: #00A2E8;
+  border: 1px solid #0090cf;
+  box-shadow: 0 1px 0 #0090cf;
+}
+.ld_gb-fieldhelpers-field.fieldhelpers-field-number .fieldhelpers-field-number-increase:hover,
+.ld_gb-fieldhelpers-field.fieldhelpers-field-number .fieldhelpers-field-number-decrease:hover {
+  background: #03b3ff;
+  border-color: #00A2E8;
+  box-shadow: 0 1px 0 #00A2E8;
+}
+.ld_gb-fieldhelpers-field.fieldhelpers-field-toggle .fieldhelpers-field-toggle-container.checked .fieldhelpers-field-toggle-slider {
+  background-color: #00A2E8;
+}
+
+.select2-container--default .fieldhelpers-select2.select2-dropdown .select2-results__option--highlighted[aria-selected] {
+  background-color: #00A2E8;
+}
+
+.fieldhelpers-field-tip .fieldhelpers-field-tip-text {
+  background: #00A2E8;
+}
+.fieldhelpers-field-tip .fieldhelpers-field-tip-text::before {
+  border-color: transparent transparent #00A2E8 transparent;
+}
+
+/**
+ * Styles the licensing settings.
+ *
+ * @since 1.0.0
+ */
+.ld-gb-license-status.active span {
+  background: #34ac39;
+}
+.ld-gb-license-status.inactive span {
+  background: #cc4334;
+}
+.ld-gb-license-status span {
+  display: inline-block;
+  padding: 0 0.3em;
+  color: #fff;
+}
+
+.ld-gb-pointer .wp-pointer-buttons .ld-gb-quickstart-buttons {
+  height: 100%;
+}
+.ld-gb-pointer .wp-pointer-buttons .ld-gb-quickstart-buttons::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.ld-gb-pointer .wp-pointer-buttons .quickstart {
+  float: left;
+  margin-right: 0.5em;
+}
+.ld-gb-pointer .wp-pointer-buttons .quickstart-back {
+  float: right;
+  margin-right: 2em;
+}
+
+@media only screen and (min-width: 782px) {
+  .ld-gb-settings-sidebar {
+    float: right;
+    width: 30%;
+  }
+}
+
+.learndash_gradebook-settings-sidebar {
+  width: 400px;
+  max-width: 100%;
+}
+
+/**
+ * Styles the user gradebook.
+ *
+ * @since 1.0.0
+ *
+ * @cspell:ignore overidden .
+ */
+#ld-gb-gradebook {
+  background: #fff;
+  border: 1px solid #ccc9c9;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  display: inline-block;
+  padding: 1em;
+  min-width: 320px;
+  width: 450px;
+  max-width: 100%;
+}
+@media print, screen and (max-width: 39.99875em) {
+  #ld-gb-gradebook, #ld-gb-gradebook select.regular-text {
+    width: auto;
+  }
+}
+#ld-gb-gradebook .user-grade {
+  display: inline-block;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component:not(:last-of-type) {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #ccc9c9;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-header {
+  margin-bottom: 1em;
+  font-size: 1.2em;
+  width: 100%;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-header:hover .ld-gb-gradebook-component-overall-grade > a {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-header .ld-gb-gradebook-component-name {
+  float: left;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-header .ld-gb-gradebook-component-overall-grade {
+  position: relative;
+  float: right;
+  text-align: right;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-header .ld-gb-gradebook-component-overall-grade > * {
+  vertical-align: middle;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-header .ld-gb-gradebook-component-overall-grade.editing .ld-gb-gradebook-component-edit {
+  display: block;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-header .ld-gb-gradebook-component-overall-grade.editing .ld-gb-gradebook-component-edit-open {
+  display: none;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-header .ld-gb-gradebook-component-overall-grade.overridden .ld-gb-gradebook-component-edit-open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-header .ld-gb-gradebook-component-overall-grade.overridden .ld-gb-grade-overidden-icon {
+  display: inline-block;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-header .ld-gb-gradebook-component-overall-grade .ld-gb-grade-overidden-icon {
+  display: none;
+  color: #00A2E8;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-header .ld-gb-gradebook-component-overall-grade .ld-gb-gradebook-component-edit-open {
+  display: inline-block;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: transform 150ms, visibility 150ms, opacity 150ms;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-header .ld-gb-gradebook-component-overall-grade .ld-gb-gradebook-component-edit {
+  display: none;
+  position: absolute;
+  width: 160px;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  background: #fff;
+  padding: 0.5em;
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  z-index: 100;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-header .ld-gb-gradebook-component-overall-grade .ld-gb-gradebook-component-edit .ld-gb-gradebook-component-edit-close {
+  position: absolute;
+  right: 0.2em;
+  top: 0.2em;
+  font-size: 1.5em;
+  color: #aaa;
+  text-decoration: none;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-header .ld-gb-gradebook-component-overall-grade .ld-gb-gradebook-component-edit .ld-gb-gradebook-component-edit-close:hover {
+  color: #777777;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-header .ld-gb-gradebook-component-overall-grade .ld-gb-gradebook-component-edit .ld-gb-gradebook-component-edit-close .dashicons {
+  font-size: inherit;
+  height: auto;
+  width: auto;
+  line-height: normal;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-header .ld-gb-gradebook-component-overall-grade .ld-gb-gradebook-component-edit .ld-gb-gradebook-component-edit-actions {
+  margin-top: 0.5em;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-header .ld-gb-gradebook-component-overall-grade .ld-gb-gradebook-component-edit .ld-gb-gradebook-component-edit-actions::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-header .ld-gb-gradebook-component-overall-grade .ld-gb-gradebook-component-edit .ld-gb-gradebook-component-edit-actions button {
+  vertical-align: middle;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-header .ld-gb-gradebook-component-overall-grade .ld-gb-gradebook-component-edit .ld-gb-gradebook-component-edit-actions .ld-gb-cancel {
+  font-size: 0.8em;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-header .ld-gb-gradebook-component-overall-grade .ld-gb-gradebook-component-edit .ld-gb-field-number {
+  display: inline-block;
+  vertical-align: middle;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-header .ld-gb-gradebook-component-overall-grade .ld-gb-gradebook-component-edit .ld-gb-gradebook-component-overall-grade-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-header .ld-gb-gradebook-component-overall-grade .ld-gb-gradebook-component-edit .ld-gb-gradebook-component-overall-grade-cover .spinner {
+  visibility: visible;
+  float: none;
+  position: relative;
+  top: 50%;
+  margin-top: -20px;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-grades {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+}
+@media print, screen and (max-width: 39.99875em) {
+  #ld-gb-gradebook .ld-gb-gradebook-component-grades {
+    table-layout: fixed;
+  }
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-grades .ld-gb-gradebook-component-grade-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2em;
+  height: 100%;
+  background: #00A2E8;
+  color: #fff;
+  text-align: center;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-grades .ld-gb-gradebook-component-grade-icon .dashicons {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-grades .ld-gb-gradebook-component-grade-name-content {
+  word-break: break-word;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-grades .ld-gb-gradebook-component-grade-display.editing .ld-gb-gradebook-component-grade-actions-container {
+  display: none;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-grades .ld-gb-gradebook-component-grade-editform {
+  display: none;
+  border: 1px solid #ccc9c9;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-grades .ld-gb-gradebook-component-grade-editform.editing {
+  display: table-row;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-grades .ld-gb-gradebook-component-grade-editform .ld-gb-field {
+  margin-bottom: 0.5em;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-grades .ld-gb-gradebook-component-grade-editform .ld-gb-field-label {
+  display: block;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-grades .ld-gb-gradebook-component-grade-name {
+  width: 33%;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-grades .ld-gb-gradebook-component-grade-score {
+  width: 20%;
+  text-align: right;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-grades .ld-gb-gradebook-component-grade-score input[type=text] {
+  text-align: center;
+}
+@media print, screen and (min-width: 64em) {
+  #ld-gb-gradebook .ld-gb-gradebook-component-grades .ld-gb-gradebook-component-grade-actions-container {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: transform 150ms, visibility 150ms, opacity 150ms;
+  }
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-grades thead th {
+  text-align: left;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-grades tbody td {
+  position: relative;
+  padding: 0.5em 0.5em;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-grades tbody tr:hover .ld-gb-gradebook-component-grade-actions-container, #ld-gb-gradebook .ld-gb-gradebook-component-grades tbody tr.editing .ld-gb-gradebook-component-grade-actions-container {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-grades tbody tr.editing .ld-gb-gradebook-component-display {
+  display: none;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-grades tbody tr.editing .ld-gb-gradebook-component-edit {
+  display: block;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-grades tbody tr .ld-gb-gradebook-component-grade-name {
+  padding-left: 2.5em;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-grades tbody tr.even td {
+  background: #ededed;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-grades tbody tr.processing {
+  opacity: 0.5;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-grades tbody tr.processing .spinner {
+  visibility: visible;
+  float: none;
+  opacity: 1;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-grades tbody tr.deleted td {
+  background: #ff8568;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-grades tbody tr[data-template] {
+  display: none;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-grades tbody tr.ld-gb-gradebook-component-no-grades td {
+  padding-left: 0;
+}
+#ld-gb-gradebook .ld-gb-gradebook-add-manual-grade {
+  margin-top: 1em;
+}
+#ld-gb-gradebook .ld-gb-gradebook-add-manual-grade.processing .spinner {
+  display: inline-block;
+}
+#ld-gb-gradebook .ld-gb-gradebook-add-manual-grade.processing .ld-gb-manual-grade-add-text-processing {
+  display: block;
+}
+#ld-gb-gradebook .ld-gb-gradebook-add-manual-grade.processing .ld-gb-manual-grade-add-text {
+  display: none;
+}
+#ld-gb-gradebook .ld-gb-gradebook-add-manual-grade .spinner {
+  display: none;
+  visibility: visible;
+  margin-top: 0;
+}
+#ld-gb-gradebook .ld-gb-gradebook-add-manual-grade .ld-gb-manual-grade-add-text-processing {
+  display: none;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-grade-cancel {
+  float: right;
+}
+#ld-gb-gradebook .ld-gb-gradebook-component-grade-message .notice-error, #ld-gb-gradebook .ld-gb-gradebook-component-grade-message .notice-success {
+  display: none;
+}
+
+.admin_page_learndash-gradebook-settings [data-fieldhelpers-name=ld_gb_letter_grade_scale],
+.admin_page_learndash-gradebook-settings [data-fieldhelpers-name=ld_gb_grade_color_scale] {
+  max-width: 100%;
+}
+.admin_page_learndash-gradebook-settings [data-fieldhelpers-name=ld_gb_letter_grade_scale] .fieldhelpers-field-repeater-row,
+.admin_page_learndash-gradebook-settings [data-fieldhelpers-name=ld_gb_grade_color_scale] .fieldhelpers-field-repeater-row {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+.admin_page_learndash-gradebook-settings [data-fieldhelpers-name=ld_gb_letter_grade_scale] .fieldhelpers-field-repeater-row hr,
+.admin_page_learndash-gradebook-settings [data-fieldhelpers-name=ld_gb_letter_grade_scale] .fieldhelpers-field-repeater-row .clearfix,
+.admin_page_learndash-gradebook-settings [data-fieldhelpers-name=ld_gb_grade_color_scale] .fieldhelpers-field-repeater-row hr,
+.admin_page_learndash-gradebook-settings [data-fieldhelpers-name=ld_gb_grade_color_scale] .fieldhelpers-field-repeater-row .clearfix {
+  display: none;
+}
+.admin_page_learndash-gradebook-settings [data-fieldhelpers-name=ld_gb_letter_grade_scale] .fieldhelpers-field-repeater-row .fieldhelpers-field-repeater-content,
+.admin_page_learndash-gradebook-settings [data-fieldhelpers-name=ld_gb_grade_color_scale] .fieldhelpers-field-repeater-row .fieldhelpers-field-repeater-content {
+  width: 70%;
+  float: left;
+  display: flex;
+  align-items: center;
+}
+.admin_page_learndash-gradebook-settings [data-fieldhelpers-name=ld_gb_letter_grade_scale] .fieldhelpers-field-repeater-row .fieldhelpers-field,
+.admin_page_learndash-gradebook-settings [data-fieldhelpers-name=ld_gb_grade_color_scale] .fieldhelpers-field-repeater-row .fieldhelpers-field {
+  width: 50%;
+  float: left;
+  margin-bottom: 0;
+}
+.admin_page_learndash-gradebook-settings [data-fieldhelpers-name=ld_gb_letter_grade_scale] .fieldhelpers-field-repeater-row [name$="[letter]"],
+.admin_page_learndash-gradebook-settings [data-fieldhelpers-name=ld_gb_grade_color_scale] .fieldhelpers-field-repeater-row [name$="[letter]"] {
+  width: 60px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+.admin_page_learndash-gradebook-settings [data-fieldhelpers-name=ld_gb_letter_grade_scale] .fieldhelpers-field-repeater-row .fieldhelpers-field-repeater-delete-button,
+.admin_page_learndash-gradebook-settings [data-fieldhelpers-name=ld_gb_grade_color_scale] .fieldhelpers-field-repeater-row .fieldhelpers-field-repeater-delete-button {
+  float: right;
+  margin-left: 1em;
+}
+.admin_page_learndash-gradebook-settings [data-fieldhelpers-name=ld_gb_letter_grade_scale] .wp-color-result.button,
+.admin_page_learndash-gradebook-settings [data-fieldhelpers-name=ld_gb_grade_color_scale] .wp-color-result.button {
+  margin-bottom: 0;
+}
+.admin_page_learndash-gradebook-settings [data-fieldhelpers-name=ld_gb_letter_grade_scale] {
+  width: 300px;
+}
+.admin_page_learndash-gradebook-settings [data-fieldhelpers-name=ld_gb_letter_grade_scale] .fieldhelpers-field {
+  text-align: center;
+}
+.admin_page_learndash-gradebook-settings [data-fieldhelpers-name=ld_gb_grade_color_scale] {
+  width: 550px;
+}
+.admin_page_learndash-gradebook-settings [data-fieldhelpers-name=ld_gb_grade_color_scale] .fieldhelpers-field-repeater-row .fieldhelpers-field-colorpicker {
+  width: 70%;
+}
+.admin_page_learndash-gradebook-settings [data-fieldhelpers-name=ld_gb_grade_color_scale] .fieldhelpers-field-repeater-row .fieldhelpers-field-number {
+  width: 40%;
+}
+
+@keyframes ld-gb-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#ld-gb-gradebook-weighting {
+  width: 100%;
+  text-align: left;
+}
+#ld-gb-gradebook-weighting th {
+  text-align: left;
+}
+#ld-gb-gradebook-weighting .ld-gb-gradebook-weighting-component-weight {
+  width: 30%;
+}
+#ld-gb-gradebook-weighting .ld-gb-gradebook-weighting-component-weight input {
+  width: 3em;
+  height: 2em;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.ld-gb-loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  animation: ld-gb-fade-in;
+  animation-duration: 0.5s;
+}
+.ld-gb-loading-overlay .spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  opacity: 1;
+}
+
+[data-fieldhelpers-name=ld_gb_components] {
+  position: relative;
+}
+[data-fieldhelpers-name=ld_gb_components] .fieldhelpers-field-repeater-row {
+  position: relative;
+}
+[data-fieldhelpers-name=ld_gb_components] .fieldhelpers-field-repeater-content::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+[data-fieldhelpers-name=ld_gb_components] [data-fieldhelpers-name$=section_divider] {
+  font-weight: 700;
+  padding-left: 0.5em;
+}
+
+.postbox.ld-gb-component-weighting-error,
+.postbox.ld-gb-component-error {
+  background: #ffd6d5;
+  border-color: #c2a6a6;
+  box-shadow: inset 0 1px 0 #fff5f5;
+}
+.postbox.ld-gb-component-weighting-error .hndle,
+.postbox.ld-gb-component-error .hndle {
+  border-color: #c2a6a6;
+}
+
+.ld-gb-no-gradebooks-page {
+  text-align: center;
+  width: 500px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.ld-gb-no-gradebooks-page-header {
+  font-size: 1.5rem;
+}
+
+.ld-gb-no-gradebooks-page-action {
+  margin: 2rem 0;
+}
+
+.ld-gb-no-gradebooks-page-sub {
+  font-style: italic;
+  color: #888;
+}
+
+.ld-gb-gradebook-table th {
+  position: relative;
+}
+.ld-gb-gradebook-table tfoot th .ld-gb-gradebook-tip-info {
+  display: none;
+}
+.ld-gb-gradebook-table th.column-user {
+  font-weight: 700;
+  width: 14em;
+}
+.ld-gb-gradebook-table th.column-grade {
+  width: 12em;
+}
+.ld-gb-gradebook-table td {
+  vertical-align: middle;
+  border-bottom: 1px solid #e1e1e1;
+}
+.ld-gb-gradebook-table td.column-user {
+  background-color: #ececec;
+  border-right: 1px solid #e1e1e1;
+}
+.ld-gb-gradebook-table td.column-grade {
+  text-align: center;
+  border-right: 5px solid #e1e1e1;
+}
+@media print, screen and (max-width: 39.99875em) {
+  .ld-gb-gradebook-table td.column-grade {
+    text-align: left;
+  }
+}
+.ld-gb-gradebook-table td[class*=column-type_] {
+  text-align: center;
+}
+.ld-gb-gradebook-table td[class*=column-type_]:not(:last-of-type) {
+  border-right: 1px solid #e1e1e1;
+}
+
+.ld-gb-gradebook-tip {
+  position: absolute;
+  top: 100%;
+  margin-top: 10px;
+  padding: 0.5em;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5);
+  background: #fff;
+  border-radius: 3px;
+  min-width: 6em;
+  min-height: 2em;
+  z-index: 100;
+}
+.ld-gb-gradebook-tip::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent #fff transparent;
+}
+.ld-gb-gradebook-tip tr:last-of-type td {
+  padding-bottom: 0;
+}
+.ld-gb-gradebook-tip td, .ld-gb-gradebook-tip th {
+  border-bottom: none !important;
+  vertical-align: middle;
+  padding: 0 0 0.2em 0;
+}
+.ld-gb-gradebook-tip th {
+  padding-right: 0.5em;
+}
+.ld-gb-gradebook-tip .ld-gb-gradebook-tip-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.ld-gb-gradebook-tip .ld-gb-gradebook-tip-cover .spinner {
+  position: absolute;
+  visibility: visible;
+  left: 50%;
+  top: 50%;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+.ld-gb-gradebook-tip .ld-gb-gradebook-tip-stat-label {
+  font-weight: 700;
+}
+.ld-gb-gradebook-tip .ld-gb-gradebook-tip-stat-label::after {
+  content: ":";
+}
+
+.ld-gb-gradebook-selector {
+  font-size: 1.2rem;
+}
+.ld-gb-gradebook-selector .select2-container--default {
+  width: 400px !important;
+  max-width: 100%;
+}
+.ld-gb-gradebook-selector .select2-container--default .fieldhelpers-select2.select2-selection--single .select2-selection__rendered {
+  font-size: inherit;
+  padding: 0.5em;
+}
+.ld-gb-gradebook-selector .select2-container--default .fieldhelpers-select2.select2-selection--single .select2-selection__arrow {
+  height: auto;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+#ld-gb-group-selector {
+  min-width: 10rem;
+}
+
+[data-fieldhelpers-name=ld_group] .fieldhelpers-field-header,
+[data-fieldhelpers-name=ld_group] .fieldhelpers-field-content {
+  display: inline-block;
+}

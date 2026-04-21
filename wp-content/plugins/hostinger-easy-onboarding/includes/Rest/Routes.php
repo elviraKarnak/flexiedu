@@ -38,6 +38,11 @@ class Routes {
     private HostingRoutes $hosting_routes;
 
     /**
+     * @var OnboardingRoutes
+     */
+    private OnboardingRoutes $onboarding_routes;
+
+    /**
      * @var Client
      */
     private $client;
@@ -63,13 +68,14 @@ class Routes {
         Client $client,
         Helper $helper
     ) {
-        $this->welcome_routes  = $welcome_routes;
-        $this->step_routes     = $step_routes;
-        $this->woo_routes      = $woo_routes;
-        $this->tutorial_routes = $tutorial_routes;
-        $this->client          = $client;
-        $this->helper          = $helper;
-        $this->hosting_routes  = new HostingRoutes( $client, $helper );
+        $this->welcome_routes    = $welcome_routes;
+        $this->step_routes       = $step_routes;
+        $this->woo_routes        = $woo_routes;
+        $this->tutorial_routes   = $tutorial_routes;
+        $this->client            = $client;
+        $this->helper            = $helper;
+        $this->hosting_routes    = new HostingRoutes( $helper );
+        $this->onboarding_routes = new OnboardingRoutes( $client, $helper );
     }
 
     /**
@@ -92,6 +98,7 @@ class Routes {
         $this->register_woo_routes();
         $this->register_tutorial_routes();
         $this->register_hosting_routes();
+        $this->register_onboarding_routes();
     }
 
     /**
@@ -151,6 +158,16 @@ class Routes {
             array(
                 'methods'             => 'POST',
                 'callback'            => array( $this->welcome_routes, 'update_addons_banner_status' ),
+                'permission_callback' => array( $this, 'permission_check' ),
+            )
+        );
+
+        register_rest_route(
+            HOSTINGER_EASY_ONBOARDING_REST_API_BASE,
+            'update-reach-banner-status',
+            array(
+                'methods'             => 'POST',
+                'callback'            => array( $this->welcome_routes, 'update_reach_banner_status' ),
                 'permission_callback' => array( $this, 'permission_check' ),
             )
         );
@@ -225,6 +242,17 @@ class Routes {
             )
         );
 
+        // Deactivate AI theme.
+        register_rest_route(
+            HOSTINGER_EASY_ONBOARDING_REST_API_BASE,
+            'deactivate-ai-theme',
+            array(
+                'methods'             => 'POST',
+                'callback'            => array( $this->step_routes, 'deactivate_ai_theme' ),
+                'permission_callback' => array( $this, 'permission_check' ),
+            )
+        );
+
         // Install AI theme.
         register_rest_route(
             HOSTINGER_EASY_ONBOARDING_REST_API_BASE,
@@ -232,6 +260,17 @@ class Routes {
             array(
                 'methods'             => 'POST',
                 'callback'            => array( $this->step_routes, 'install_ai_theme' ),
+                'permission_callback' => array( $this, 'permission_check' ),
+            )
+        );
+
+        // Install affiliate theme.
+        register_rest_route(
+            HOSTINGER_EASY_ONBOARDING_REST_API_BASE,
+            'install-affiliate-theme',
+            array(
+                'methods'             => 'POST',
+                'callback'            => array( $this->step_routes, 'install_affiliate_theme' ),
                 'permission_callback' => array( $this, 'permission_check' ),
             )
         );
@@ -300,6 +339,108 @@ class Routes {
             array(
                 'methods'             => 'GET',
                 'callback'            => array( $this->hosting_routes, 'get_hosting_details' ),
+                'permission_callback' => array( $this, 'permission_check' ),
+            )
+        );
+    }
+
+    private function register_onboarding_routes(): void {
+        register_rest_route(
+            HOSTINGER_EASY_ONBOARDING_REST_API_BASE,
+            'get-suggested-plugins',
+            array(
+                'methods'             => 'GET',
+                'callback'            => array( $this->onboarding_routes, 'get_suggested_plugins' ),
+                'permission_callback' => array( $this, 'permission_check' ),
+            )
+        );
+
+        register_rest_route(
+            HOSTINGER_EASY_ONBOARDING_REST_API_BASE,
+            'get-suggested-themes',
+            array(
+                'methods'             => 'GET',
+                'callback'            => array( $this->onboarding_routes, 'get_suggested_themes' ),
+                'permission_callback' => array( $this, 'permission_check' ),
+            )
+        );
+
+        register_rest_route(
+            HOSTINGER_EASY_ONBOARDING_REST_API_BASE,
+            'get-astra-templates',
+            array(
+                'methods'             => 'GET',
+                'callback'            => array( $this->onboarding_routes, 'get_astra_templates' ),
+                'permission_callback' => array( $this, 'permission_check' ),
+            )
+        );
+
+        register_rest_route(
+            HOSTINGER_EASY_ONBOARDING_REST_API_BASE,
+            'get-website-data',
+            array(
+                'methods'             => 'GET',
+                'callback'            => array( $this->onboarding_routes, 'get_website_data' ),
+                'permission_callback' => array( $this, 'permission_check' ),
+            )
+        );
+
+        register_rest_route(
+            HOSTINGER_EASY_ONBOARDING_REST_API_BASE,
+            'get-astra-template-import-status',
+            array(
+                'methods'             => 'GET',
+                'callback'            => array( $this->onboarding_routes, 'get_astra_template_import_status' ),
+                'permission_callback' => array( $this, 'permission_check' ),
+            )
+        );
+
+        register_rest_route(
+            HOSTINGER_EASY_ONBOARDING_REST_API_BASE,
+            'import-astra-template',
+            array(
+                'methods'             => 'POST',
+                'callback'            => array( $this->onboarding_routes, 'import_astra_template' ),
+                'permission_callback' => array( $this, 'permission_check' ),
+            )
+        );
+
+        register_rest_route(
+            HOSTINGER_EASY_ONBOARDING_REST_API_BASE,
+            'get-available-plugins',
+            array(
+                'methods'             => 'GET',
+                'callback'            => array( $this->onboarding_routes, 'get_available_plugins' ),
+                'permission_callback' => array( $this, 'permission_check' ),
+            )
+        );
+
+        register_rest_route(
+            HOSTINGER_EASY_ONBOARDING_REST_API_BASE,
+            'install-plugins',
+            array(
+                'methods'             => 'POST',
+                'callback'            => array( $this->onboarding_routes, 'install_plugins' ),
+                'permission_callback' => array( $this, 'permission_check' ),
+            )
+        );
+
+        register_rest_route(
+            HOSTINGER_EASY_ONBOARDING_REST_API_BASE,
+            'save-onboarding-options',
+            array(
+                'methods'             => 'POST',
+                'callback'            => array( $this->onboarding_routes, 'save_onboarding_options' ),
+                'permission_callback' => array( $this, 'permission_check' ),
+            )
+        );
+
+        register_rest_route(
+            HOSTINGER_EASY_ONBOARDING_REST_API_BASE,
+            'get-homepage-edit-url',
+            array(
+                'methods'             => 'GET',
+                'callback'            => array( $this->onboarding_routes, 'get_homepage_edit_url' ),
                 'permission_callback' => array( $this, 'permission_check' ),
             )
         );

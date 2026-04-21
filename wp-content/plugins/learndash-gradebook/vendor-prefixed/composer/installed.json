@@ -1,0 +1,136 @@
+{
+    "packages": [
+        {
+            "name": "ssnepenthe/color-utils",
+            "version": "0.4.2",
+            "version_normalized": "0.4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ssnepenthe/color-utils.git",
+                "reference": "a68562f81fd603be0c45d102b4e8064c76ddf863"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ssnepenthe/color-utils/zipball/a68562f81fd603be0c45d102b4e8064c76ddf863",
+                "reference": "a68562f81fd603be0c45d102b4e8064c76ddf863",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phploc/phploc": "^3.0",
+                "phpmd/phpmd": "^2.6",
+                "phpunit/phpunit": "^6.0",
+                "psy/psysh": "^0.8",
+                "squizlabs/php_codesniffer": "^2.8",
+                "vimeo/psalm": "^0.3"
+            },
+            "time": "2017-06-19T16:48:17+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "inc/colors.php",
+                    "inc/helpers.php",
+                    "inc/transformations.php"
+                ],
+                "psr-4": {
+                    "LearnDash\\Gradebook\\SSNepenthe\\ColorUtils\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "description": "A PHP library for performing SASS-like color manipulations.",
+            "homepage": "https://github.com/ssnepenthe/color-utils",
+            "keywords": [
+                "Brightness",
+                "alpha",
+                "blue",
+                "color",
+                "conversion",
+                "convert",
+                "green",
+                "hex",
+                "hexadecimal",
+                "hsl",
+                "hsla",
+                "hue",
+                "lightness",
+                "luminance",
+                "manipulation",
+                "red",
+                "rgb",
+                "rgba",
+                "sass",
+                "saturation",
+                "scss",
+                "transformation"
+            ],
+            "support": {
+                "issues": "https://github.com/ssnepenthe/color-utils/issues",
+                "source": "https://github.com/ssnepenthe/color-utils/tree/master"
+            },
+            "install-path": "../ssnepenthe/color-utils"
+        },
+        {
+            "name": "wptrt/admin-notices",
+            "version": "v1.0.4",
+            "version_normalized": "1.0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/WPTT/admin-notices.git",
+                "reference": "1df860950b4198cc93e867873b1b571b51f908b0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/WPTT/admin-notices/zipball/1df860950b4198cc93e867873b1b571b51f908b0",
+                "reference": "1df860950b4198cc93e867873b1b571b51f908b0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2",
+                "php": "~7.1",
+                "szepeviktor/phpstan-wordpress": "^0.6.0",
+                "wp-coding-standards/wpcs": "^2.3"
+            },
+            "time": "2023-10-06T03:42:42+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "LearnDash\\Gradebook\\WPTRT\\AdminNotices\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "WordPress.org Theme Review Team",
+                    "email": "themes@wordpress.org",
+                    "homepage": "https://make.wordpress.org/themes",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A class to create admin-notices for the WordPress dashboard.",
+            "homepage": "https://github.com/WPTRT/admin-notices",
+            "keywords": [
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/WPTRT/admin-notices/issues",
+                "source": "https://github.com/WPTT/admin-notices/tree/v1.0.4"
+            },
+            "install-path": "../wptrt/admin-notices"
+        }
+    ],
+    "dev": false,
+    "dev-package-names": []
+}

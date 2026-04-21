@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit6d98b74f597e7674b4e502dab72fafa7
+class ComposerStaticInit87e6dab7ebc2276d20278ed9fabe93ce
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -20,15 +20,20 @@ class ComposerStaticInit6d98b74f597e7674b4e502dab72fafa7
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '91dcc74bdd4f7744d05727fdc296d8ae' => __DIR__ . '/..' . '/mantle-framework/support/autoload.php',
         'b68c986d100cce58b4f7580a7ebd1ae7' => __DIR__ . '/..' . '/alleyinteractive/wp-block-converter/src/helpers.php',
+        '2d223b650b5c56928c1affa16ee5cfe2' => __DIR__ . '/..' . '/wordpress/abilities-api/includes/bootstrap.php',
         'f6d4f6bcee7247df6b777884c3e22f98' => __DIR__ . '/..' . '/yahnis-elsts/plugin-update-checker/load-v5p6.php',
     );
 
     public static $prefixLengthsPsr4 = array (
-        'v' => 
+        'v' =>
         array (
             'voku\\' => 5,
         ),
-        'S' => 
+        'W' =>
+        array (
+            'WP\\MCP\\' => 7,
+        ),
+        'S' =>
         array (
             'Symfony\\Polyfill\\Php83\\' => 23,
             'Symfony\\Polyfill\\Php80\\' => 23,
@@ -42,12 +47,12 @@ class ComposerStaticInit6d98b74f597e7674b4e502dab72fafa7
             'Symfony\\Component\\Clock\\' => 24,
             'Spatie\\Backtrace\\' => 17,
         ),
-        'R' => 
+        'R' =>
         array (
             'Ramsey\\Uuid\\' => 12,
             'Ramsey\\Collection\\' => 18,
         ),
-        'P' => 
+        'P' =>
         array (
             'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
@@ -56,216 +61,238 @@ class ComposerStaticInit6d98b74f597e7674b4e502dab72fafa7
             'Psr\\Clock\\' => 10,
             'PhpOption\\' => 10,
         ),
-        'N' => 
+        'N' =>
         array (
             'Nette\\' => 6,
         ),
-        'M' => 
+        'M' =>
         array (
             'Monolog\\' => 8,
             'Masterminds\\' => 12,
         ),
-        'L' => 
+        'L' =>
         array (
             'League\\Uri\\' => 11,
             'League\\Config\\' => 14,
             'League\\CommonMark\\' => 18,
+            'Laravel\\SerializableClosure\\' => 28,
         ),
-        'H' => 
+        'H' =>
         array (
             'Hostinger\\WpMenuManager\\' => 24,
             'Hostinger\\WpHelper\\' => 19,
             'Hostinger\\Tests\\' => 16,
             'Hostinger\\Surveys\\' => 18,
             'Hostinger\\Amplitude\\' => 20,
+            'Hostinger\\AiAssistant\\' => 22,
         ),
-        'G' => 
+        'G' =>
         array (
             'GrahamCampbell\\ResultType\\' => 26,
         ),
-        'D' => 
+        'F' =>
+        array (
+            'Firebase\\JWT\\' => 13,
+        ),
+        'D' =>
         array (
             'Dotenv\\' => 7,
             'Doctrine\\Inflector\\' => 19,
             'Dflydev\\DotAccessData\\' => 22,
         ),
-        'C' => 
+        'C' =>
         array (
             'ComposerWordPressAutoloader\\' => 28,
             'Carbon\\Doctrine\\' => 16,
             'Carbon\\' => 7,
         ),
-        'B' => 
+        'B' =>
         array (
             'Brick\\Math\\' => 11,
         ),
-        'A' => 
+        'A' =>
         array (
             'Automattic\\Jetpack\\Autoloader\\' => 30,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'voku\\' => 
+        'voku\\' =>
         array (
             0 => __DIR__ . '/..' . '/voku/portable-ascii/src/voku',
         ),
-        'Symfony\\Polyfill\\Php83\\' => 
+        'WP\\MCP\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/wordpress/mcp-adapter/includes',
+        ),
+        'Symfony\\Polyfill\\Php83\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php83',
         ),
-        'Symfony\\Polyfill\\Php80\\' => 
+        'Symfony\\Polyfill\\Php80\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
         ),
-        'Symfony\\Polyfill\\Mbstring\\' => 
+        'Symfony\\Polyfill\\Mbstring\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
         ),
-        'Symfony\\Polyfill\\Ctype\\' => 
+        'Symfony\\Polyfill\\Ctype\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
         ),
-        'Symfony\\Contracts\\Translation\\' => 
+        'Symfony\\Contracts\\Translation\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/translation-contracts',
         ),
-        'Symfony\\Component\\VarDumper\\' => 
+        'Symfony\\Component\\VarDumper\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/var-dumper',
         ),
-        'Symfony\\Component\\Translation\\' => 
+        'Symfony\\Component\\Translation\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/translation',
         ),
-        'Symfony\\Component\\Finder\\' => 
+        'Symfony\\Component\\Finder\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/finder',
         ),
-        'Symfony\\Component\\DomCrawler\\' => 
+        'Symfony\\Component\\DomCrawler\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/dom-crawler',
         ),
-        'Symfony\\Component\\Clock\\' => 
+        'Symfony\\Component\\Clock\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/clock',
         ),
-        'Spatie\\Backtrace\\' => 
+        'Spatie\\Backtrace\\' =>
         array (
             0 => __DIR__ . '/..' . '/spatie/backtrace/src',
         ),
-        'Ramsey\\Uuid\\' => 
+        'Ramsey\\Uuid\\' =>
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
         ),
-        'Ramsey\\Collection\\' => 
+        'Ramsey\\Collection\\' =>
         array (
             0 => __DIR__ . '/..' . '/ramsey/collection/src',
         ),
-        'Psr\\Log\\' => 
+        'Psr\\Log\\' =>
         array (
             0 => __DIR__ . '/..' . '/psr/log/src',
         ),
-        'Psr\\Http\\Message\\' => 
+        'Psr\\Http\\Message\\' =>
         array (
             0 => __DIR__ . '/..' . '/psr/http-factory/src',
             1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
-        'Psr\\EventDispatcher\\' => 
+        'Psr\\EventDispatcher\\' =>
         array (
             0 => __DIR__ . '/..' . '/psr/event-dispatcher/src',
         ),
-        'Psr\\Container\\' => 
+        'Psr\\Container\\' =>
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
         ),
-        'Psr\\Clock\\' => 
+        'Psr\\Clock\\' =>
         array (
             0 => __DIR__ . '/..' . '/psr/clock/src',
         ),
-        'PhpOption\\' => 
+        'PhpOption\\' =>
         array (
             0 => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption',
         ),
-        'Nette\\' => 
+        'Nette\\' =>
         array (
             0 => __DIR__ . '/..' . '/nette/schema/src',
             1 => __DIR__ . '/..' . '/nette/utils/src',
         ),
-        'Monolog\\' => 
+        'Monolog\\' =>
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
-        'Masterminds\\' => 
+        'Masterminds\\' =>
         array (
             0 => __DIR__ . '/..' . '/masterminds/html5/src',
         ),
-        'League\\Uri\\' => 
+        'League\\Uri\\' =>
         array (
             0 => __DIR__ . '/..' . '/league/uri',
             1 => __DIR__ . '/..' . '/league/uri-interfaces',
         ),
-        'League\\Config\\' => 
+        'League\\Config\\' =>
         array (
             0 => __DIR__ . '/..' . '/league/config/src',
         ),
-        'League\\CommonMark\\' => 
+        'League\\CommonMark\\' =>
         array (
             0 => __DIR__ . '/..' . '/league/commonmark/src',
         ),
-        'Hostinger\\WpMenuManager\\' => 
+        'Laravel\\SerializableClosure\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/laravel/serializable-closure/src',
+        ),
+        'Hostinger\\WpMenuManager\\' =>
         array (
             0 => __DIR__ . '/..' . '/hostinger/hostinger-wp-menu-manager/src',
         ),
-        'Hostinger\\WpHelper\\' => 
+        'Hostinger\\WpHelper\\' =>
         array (
             0 => __DIR__ . '/..' . '/hostinger/hostinger-wp-helper/src',
         ),
-        'Hostinger\\Tests\\' => 
+        'Hostinger\\Tests\\' =>
         array (
             0 => __DIR__ . '/..' . '/hostinger/hostinger-wp-helper/tests/phpunit',
         ),
-        'Hostinger\\Surveys\\' => 
+        'Hostinger\\Surveys\\' =>
         array (
             0 => __DIR__ . '/..' . '/hostinger/hostinger-wp-surveys/src',
         ),
-        'Hostinger\\Amplitude\\' => 
+        'Hostinger\\Amplitude\\' =>
         array (
             0 => __DIR__ . '/..' . '/hostinger/hostinger-wp-amplitude/src',
         ),
-        'GrahamCampbell\\ResultType\\' => 
+        'Hostinger\\AiAssistant\\' =>
+        array (
+            0 => __DIR__ . '/../..' . '/includes-psr4',
+        ),
+        'GrahamCampbell\\ResultType\\' =>
         array (
             0 => __DIR__ . '/..' . '/graham-campbell/result-type/src',
         ),
-        'Dotenv\\' => 
+        'Firebase\\JWT\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
+        ),
+        'Dotenv\\' =>
         array (
             0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
         ),
-        'Doctrine\\Inflector\\' => 
+        'Doctrine\\Inflector\\' =>
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/src',
         ),
-        'Dflydev\\DotAccessData\\' => 
+        'Dflydev\\DotAccessData\\' =>
         array (
             0 => __DIR__ . '/..' . '/dflydev/dot-access-data/src',
         ),
-        'ComposerWordPressAutoloader\\' => 
+        'ComposerWordPressAutoloader\\' =>
         array (
             0 => __DIR__ . '/..' . '/alleyinteractive/composer-wordpress-autoloader/src',
         ),
-        'Carbon\\Doctrine\\' => 
+        'Carbon\\Doctrine\\' =>
         array (
             0 => __DIR__ . '/..' . '/carbonphp/carbon-doctrine-types/src/Carbon/Doctrine',
         ),
-        'Carbon\\' => 
+        'Carbon\\' =>
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
         ),
-        'Brick\\Math\\' => 
+        'Brick\\Math\\' =>
         array (
             0 => __DIR__ . '/..' . '/brick/math/src',
         ),
-        'Automattic\\Jetpack\\Autoloader\\' => 
+        'Automattic\\Jetpack\\Autoloader\\' =>
         array (
             0 => __DIR__ . '/..' . '/automattic/jetpack-autoloader/src',
         ),
@@ -357,9 +384,9 @@ class ComposerStaticInit6d98b74f597e7674b4e502dab72fafa7
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit6d98b74f597e7674b4e502dab72fafa7::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit6d98b74f597e7674b4e502dab72fafa7::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit6d98b74f597e7674b4e502dab72fafa7::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit87e6dab7ebc2276d20278ed9fabe93ce::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit87e6dab7ebc2276d20278ed9fabe93ce::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit87e6dab7ebc2276d20278ed9fabe93ce::$classMap;
 
         }, null, ClassLoader::class);
     }
